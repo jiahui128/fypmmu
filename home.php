@@ -32,9 +32,11 @@ if($email != false && $password != false){
     
 	<title>Welcome to SoFo</title>
 	
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	
+	<script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
 	
 	<style type="text/css">
         body
@@ -335,6 +337,17 @@ if($email != false && $password != false){
 		{
 			margin-bottom:20px;
 		}
+		
+		.fa {
+			font-size: 20px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.fa:hover {
+			color: darkblue;
+			transform: scale(1.2);
+		}
     </style>
     
 </head>
@@ -362,7 +375,6 @@ if($email != false && $password != false){
 				<div id="myDropdown" class="dropdown-content">
 					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
 					<a href="logout-user.php">Log Out</a>
-					<a href="reset-password.php">Reset Your Password</a>
 				</div>
 				
 				</div>
@@ -385,7 +397,7 @@ if($email != false && $password != false){
 				<label for="i2" class="pre"></label>
 				<label for="i2" class="nxt"></label>
 				<div class="btext">
-				<h1><span style="color: black; font-size:50px;"><i class="fa fa-music"></i>SoFo</span></h1>
+				<h1><span style="color: black; font-size:50px;">SoFo</span></h1>
 				<a href="#" id="a1">Create Playlist Now</a>
 				</div>
 		</div>
@@ -394,7 +406,7 @@ if($email != false && $password != false){
 				<label for="i1" class="pre"></label>
 				<label for="i1" class="nxt"></label>
 				<div class="btext">
-				<h1><span style="color: black; font-size:50px;"><i class="fa fa-music"></i>SoFo</span></h1>
+				<h1><span style="color: black; font-size:50px;">SoFo</span></h1>
 				<a href="#" id="a1">Listen to Music Now</a>
 				</div>
 		</div>
@@ -433,8 +445,9 @@ if($email != false && $password != false){
 											<br>
 											<strong>Album</strong>: Code89757 &nbsp;|&nbsp; <strong>Type</strong>: Chinese &nbsp;|&nbsp; <strong>Singer</strong>: JJ Lim
 											<audio id="myAudio" src="songs/onethousandyears.mp3" preload="auto"></audio>
-											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay()"><i class="fa fa-volume-up"></i></a></span>
+											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay()"><i class="fa fa-play"></i></a></span>
 										</p>
+										
 									</div>
 								</li>
 							
@@ -447,7 +460,7 @@ if($email != false && $password != false){
 											<br>
 											<strong>Album</strong>: Moana &nbsp;|&nbsp; <strong>Type</strong>: English &nbsp;|&nbsp; <strong>Singer</strong>: Disney Music Vevo
 											<audio id="myAudio2" src="songs/whereyouare.mp3" preload="auto"></audio>
-											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay2()"><i class="fa fa-volume-up"></i></a></span>
+											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay2()"><i onclick="myFunction(this)" class="fa fa-play"></i></a></span>
 										</p>
 									</div>
 								</li>
@@ -461,7 +474,7 @@ if($email != false && $password != false){
 											<br>
 											<strong>Album</strong>: To The Moon &nbsp;|&nbsp; <strong>Type</strong>: English &nbsp;|&nbsp; <strong>Singer</strong>: Laura Shigihara
 											<audio id="myAudio3" src="songs/every.mp3" preload="auto"></audio>
-											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay3()"><i class="fa fa-volume-up"></i></a></span>
+											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay3()"><i class="fa fa-play"></i></a></span>
 										</p>
 									</div>
 								</li>
@@ -476,7 +489,7 @@ if($email != false && $password != false){
 											<br>
 											<strong>Album</strong>: Kimi ni Todoke &nbsp;|&nbsp; <strong>Type</strong>: Japanese &nbsp;|&nbsp; <strong>Singer</strong>: Tanizawa Tomofumi
 											<audio id="myAudio4" src="songs/Kimi_Ni_Todoke.mp3" preload="auto"></audio>
-											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay4()"><i class="fa fa-volume-up"></i></a></span>
+											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay4()"><i class="fa fa-play"></i></a></span>
 										</p>
 									</div>
 								</li>
@@ -490,7 +503,21 @@ if($email != false && $password != false){
 											<br>
 											<strong>Album</strong>: National Anthem &nbsp;|&nbsp; <strong>Type</strong>: Malay &nbsp;|&nbsp; <strong>Singer</strong>: Pierre-Jean de Béranger
 											<audio id="myAudio5" src="songs/Negaraku.mp3" preload="auto"></audio>
-											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay5()"><i class="fa fa-volume-up"></i></a></span>
+											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay5()"><i class="fa fa-play"></i></a></span>
+										</p>
+									</div>
+								</li>
+								
+								<li>
+								
+								<!-- song information -->
+									<div class="n">
+										<p>
+											<b class="s">Something There</b>
+											<br>
+											<strong>Album</strong>: Beauty and the Beast &nbsp;|&nbsp; <strong>Type</strong>: English &nbsp;|&nbsp; <strong>Singer</strong>: Disney: Emma and Dans
+											<audio id="myAudio6" src="songs/something.mp3" preload="auto"></audio>
+											<span id="icon"><a style="text-decoration: none;" onClick="togglePlay6()"><i class="fa fa-play"></i></a></span>
 										</p>
 									</div>
 								</li>
@@ -615,12 +642,14 @@ var myAudio2 = document.getElementById("myAudio2");
 var myAudio3 = document.getElementById("myAudio3");
 var myAudio4 = document.getElementById("myAudio4");
 var myAudio5 = document.getElementById("myAudio5");
+var myAudio6 = document.getElementById("myAudio6");
 
 var isPlaying = false;
 var isPlaying2 = false;
 var isPlaying3 = false;
 var isPlaying4 = false;
 var isPlaying5 = false;
+var isPlaying6 = false;
 
 //Song 1
 function togglePlay() {
@@ -686,6 +715,23 @@ myAudio5.onplaying = function() {
 myAudio5.onpause = function() {
   isPlaying5 = false;
 };
+
+//Song 6
+function togglePlay6() {
+  isPlaying6 ? myAudio6.pause() : myAudio6.play();
+};
+
+myAudio6.onplaying = function() {
+  isPlaying6 = true;
+};
+
+myAudio6.onpause = function() {
+  isPlaying6 = false;
+};
+
+$('.fa-play').click(function() {
+  $(this).toggleClass('fa-pause');
+})
 
 </script>
 
