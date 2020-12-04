@@ -367,9 +367,9 @@ if($email != false && $password != false){
 			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
 	
 				<button onclick="myFunction()" class="dropbtn">
-					<i class="far" style="color: black;">&#xf2bd;</i>
-					<sup>Account</sup>
-					<i class='fas fa-angle-down' style="color: black;"></i>
+					<i class="fa fa-account" style="color: black;">&#xf2bd;</i>
+					Account
+					<i class='fa fa-angle-down' style="color: black;"></i>
 				</button>
 				
 				<div id="myDropdown" class="dropdown-content">
@@ -430,10 +430,15 @@ if($email != false && $password != false){
 				<!-- paragraph -->
 				<p style="font-size:20px;">Let <strong style="color:#9932CC;">Music</strong> into your <strong style="color:#9932CC;">Soul</strong></p>
 			</div>
+			
 			<div style="margin-top:30px;">
+				
 				<div class="row">
+					
 					<div class="col-md-6 col-sm-6">
+						
 						<div class="playlist">
+						
 							<ul class="list-unstyled">
 							
 								<li>
@@ -729,6 +734,7 @@ myAudio6.onpause = function() {
   isPlaying6 = false;
 };
 
+//Icon will be changed while pressing the icon
 $('.fa-play').click(function() {
   $(this).toggleClass('fa-pause');
 })
