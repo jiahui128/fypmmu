@@ -27,16 +27,23 @@ if($email != false && $password != false){
 
 <head>
 
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
     <title>Account - Profile</title>
 	
+	<!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- Main System CSS -->
 	<link rel="stylesheet" href="style.css">
 	
+	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 	
 	<style>
 		 body
@@ -70,6 +77,7 @@ if($email != false && $password != false){
 			padding: 15px;
 			border-radius: 30%;
 		}
+		
 		#myBtn:hover 
 		{
 			background-color: #555;
@@ -84,19 +92,23 @@ if($email != false && $password != false){
 			height:90px;
 			width:100%;
 		}
+		
 		.far
 		{
 			font-size:30px;
 		}
+		
 		.fas
 		{
 			font-size:20px;
 		}
+		
 		#header
 		{
 			list-style:none;
 			float:right;
 		}
+		
 		#header li
 		{
 			width:140px;
@@ -109,6 +121,7 @@ if($email != false && $password != false){
 			float:right;
 			margin-top:10px;
 		}
+		
 		#header li a
 		{
 			text-decoration:none;
@@ -118,25 +131,30 @@ if($email != false && $password != false){
 			padding:5px;
 			font-family: Comic Sans MS;
 		}
+		
 		#header a:hover
 		{
 			background:darkgrey;
 		}
+		
 		.dropbtn 
 		{
 			background-color:grey;
 			border: none;
 			cursor: pointer;
 		}
+		
 		.dropbtn:hover, .dropbtn:focus 
 		{
 			background-color:darkgrey;
 		}
+		
 		.dropdown 
 		{
 			position: relative;
 			display: inline-block;
 		}
+		
 		.dropdown-content 
 		{
 			display: none;
@@ -146,6 +164,7 @@ if($email != false && $password != false){
 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 			z-index: 100;
 		}
+		
 		.dropdown-content a 
 		{
 			color: white;
@@ -154,6 +173,7 @@ if($email != false && $password != false){
 			text-decoration: none;
 			display: block;
 		}
+		
 		.dropdown-content a:hover
 		{
 			background-color:darkgrey;
@@ -168,17 +188,20 @@ if($email != false && $password != false){
 			padding-bottom:35%;
 			padding-left:0%;
 		}
+		
 		.slide_img
 		{
 			position:absolute;
 			width;100%;
 			height:100%;
 		}
+		
 		.slide_img img
 		{
 			width:100%;
 			height:100%;
 		}	
+		
 		.banner input[type=radio]
 		{display:none;}
 		.pre, .nxt
@@ -192,6 +215,7 @@ if($email != false && $password != false){
 			z-index:99;
 			cursor:pointer;
 		}
+		
 		.pre{left:0;}
 		.nxt{right:0;}
 		.nav
@@ -203,6 +227,7 @@ if($email != false && $password != false){
 			text-align:center;
 			z-index:99;
 		}
+		
 		.dots
 		{
 			top:-5px;
@@ -214,10 +239,12 @@ if($email != false && $password != false){
 			display:inline-block;
 			background:rgba(0,0,0,.4);
 		}
+		
 		.slide_img
 		{
 			z-index:-1;
 		}
+		
 		#i1:checked ~ #banner1,
 		#i2:checked ~ #banner2
 		{z-index:9;}
@@ -225,6 +252,7 @@ if($email != false && $password != false){
 		#i1:checked ~ .nav #dot1,
 		#i2:checked ~ .nav #dot2
 		{background:#fff;}
+		
 		.btext
 		{			
 			color: #f2f2f2;
@@ -236,6 +264,7 @@ if($email != false && $password != false){
 			transform:transparent(-50%,-50%);
 			width: 100%;
 		}
+		
 		.btext a
 		{
 			text-decoration:none;
@@ -245,21 +274,25 @@ if($email != false && $password != false){
 			margin-top:20px;
 			border:1px solid 
 		}
+		
 		.btext #a1
 		{
 			background:#555;
 			border-color:#555;
 		}
+		
 		.btext #a1:hover
 		{
 			background:#728FCE;
 			border:1px solid #728FCE;
 		}
+		
 		.btext #a2
 		{
 			background:#b7a7c7;
 			border-color:#b7a7c7;
 		}
+		
 		.btext #a2:hover
 		{
 			background:#3c3c;
@@ -272,6 +305,7 @@ if($email != false && $password != false){
 			background-color:gray;
 			padding:10px;
 		}
+		
 		footer a
 		{
 			color:white;
@@ -287,6 +321,7 @@ if($email != false && $password != false){
 			margin-bottom:10px;
 			float:right;
 		}
+		
 		.s {float:left;}
 		.playlist a
 		{
@@ -305,12 +340,14 @@ if($email != false && $password != false){
 			text-align: center;
 			letter-spacing: 0.1em;
 		}
+		
 		.example h4 
 		{
 			font-size: 22px;
 			line-height: 32px;
 			text-transform: uppercase;
 		}
+		
 		.example h5 
 		{
 			margin-top: 15px;
@@ -319,6 +356,7 @@ if($email != false && $password != false){
 			font-weight: 400;
 			color: #aaa;
 		}
+		
 		.example p 
 		{
 			margin-bottom: 30px;
@@ -333,10 +371,30 @@ if($email != false && $password != false){
 			high:100px;
 			margin-bottom:15px;
 		}
+		
 		#aboutus
 		{
 			margin-bottom:20px;
 		}
+		
+		.extra_margin
+		{
+			margin-top: 10px;
+		}
+		
+		#profilepicture
+		{
+			border-radius: 50%;
+			height: 150px;
+			width: 150px;
+			background-size: cover;
+			background-position: center;
+			background-blend-mode: multiply;
+			color: transparent;
+			transition: all .3s ease;
+			@include object-center;
+		}
+
 	</style>
 	
 </head>
@@ -353,17 +411,18 @@ if($email != false && $password != false){
 
 		<ul id="header">
 		
-			<li><div class="dropdown">
-			
+			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
+				
 				<button onclick="myFunction()" class="dropbtn">
-					<i class="far">&#xf2bd;</i>
+					<i class="fa fa-account" style="font-size: 18px; color: black;">&#xf2bd;</i>
 					Account
-					<i class='fas fa-angle-down'></i>
+					<i class='fa fa-angle-down' style="font-size: 18px; color: black;"></i>
 				</button>
 				
 				<div id="myDropdown" class="dropdown-content">
 					<a href="logout-user.php">Log Out</a>
-					<a href="reset-password.php">Reset Your Password</a>
+					<a href="feedback.php">Feedback</a>
+					<a href="home.php">Back to Home</a>
 				</div>
 				
 				</div>
@@ -371,6 +430,90 @@ if($email != false && $password != false){
 		</ul>
 
     </div>
+	
+	<!--Main container. Everything must be contained within a top-level container.-->
+	<div class="container-fluid">
+
+    <!--First row (only row)-->
+    <div class="row extra_margin">
+
+		<!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
+		<div class="col-md-4 col-sm-12 col-xs-12">
+
+			<!-- Div to center the header image/name/social buttons -->
+			<div class="text-center">
+				
+			<br><br><br><br><br><br><br>
+				
+            <!-- Placeholder image -->
+			<img id="profilepicture" src="images/aboutus.png" class="image-rounded">
+
+			<br><br>
+
+			<p><a href="#"><i class="icon-cog" style="color: black;"></i>Edit profile image</a></p>
+
+			<!-- Header text (Person's name) -->
+			<h2><?php echo $fetch_info['name'] ?></h2>
+			
+			<br>
+			
+			<!-- Social buttons using anchor elements and btn-primary class to style -->
+            <p>
+                <a class="btn btn-primary btn-xs" href="#" role="button">Friend List</a>
+                <a class="btn btn-primary btn-xs" href="#" role="button">Album</a>
+                <a class="btn btn-primary btn-xs" href="#" role="button">Playlist</a>
+            </p>
+			
+			<a href="reset-password.php">Change Your Password</a>
+
+			</div> <!-- End Col 1 -->
+			
+		</div>
+	
+		<!-- Second column - for small and extra-small screens, will use whatever # cols is available -->
+		<div class="col-md-8 col-sm-* col-xs-*">
+
+		<div class="example">
+
+        <!-- "Lead" text at top of column. -->
+        <h4 class="lead">Personal Playlist</h4>
+
+		</div>
+
+        <!-- Horizontal rule to add some spacing between the "lead" and body text -->
+        <hr />
+		
+		<br>
+		
+		<h1>Contents of Profile Page In Here</h1>
+
+		<br>
+
+        <!-- Body text (paragraph 1) -->
+        <p>
+          Vestibulum ac dui ut arcu pulvinar aliquet. In hac habitasse platea dictumst. Fusce porttitor at quam sit amet placerat. Phasellus placerat nunc vitae enim bibendum interdum. Nunc dapibus nisi a leo tincidunt, vitae dapibus nulla pretium. Etiam eu magna felis. Sed eleifend ligula eget augue consectetur varius. Etiam cursus ex mollis, efficitur eros non, molestie turpis. Nunc malesuada porta semper. Curabitur interdum finibus tortor at semper. Aliquam ornare ut tellus sit amet vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin risus lorem, dignissim id auctor ac, fringilla sit amet erat. In quis accumsan urna, ut ullamcorper risus. Duis id tempor libero.
+        </p>
+
+        <!-- Body text (paragraph 2) -->
+        <p>
+        Aenean hendrerit augue id venenatis mollis. Nunc euismod lorem id interdum tempor. Maecenas euismod euismod arcu blandit rhoncus. Aliquam mattis ornare enim, id molestie nibh dapibus eget. Donec accumsan libero ac ante lobortis, at porttitor neque pretium. Phasellus quis nibh dolor. In nunc mi, cursus quis nunc sit amet, blandit pulvinar nisi. Aenean vel egestas nisl, eu bibendum enim. Mauris ut turpis vel lacus sollicitudin ultrices eu sit amet sapien. Fusce facilisis tempus ligula, et laoreet ligula fringilla eget.
+        </p>
+
+        <!-- Body text (paragraph 3) -->
+        <p>
+        Nam odio leo, convallis non suscipit eu, ullamcorper a ipsum. Morbi vel porttitor arcu. Praesent sed urna consequat, eleifend nisl in, sodales lectus. Praesent diam neque, efficitur vitae euismod sodales, facilisis interdum orci. Quisque ultrices lacus id lorem feugiat auctor. Ut elementum placerat pulvinar. Donec vel nisi erat. Etiam leo dolor, scelerisque vel congue a, tempor nec mi. Vivamus fringilla non lectus non suscipit. Vestibulum iaculis turpis sit amet egestas semper. Suspendisse non ipsum nec purus laoreet venenatis. Nulla vel turpis porta, consequat arcu vitae, condimentum ante.
+        </p>
+
+        <!-- Body text (paragraph 4) -->
+        <p>
+        Pellentesque interdum faucibus faucibus. Donec eu mi et erat semper molestie. Donec volutpat, leo sed bibendum eleifend, nibh odio elementum urna, vel mattis ipsum est vel orci. Proin ac porta nisl, at ultrices enim. Maecenas eu nisl venenatis, accumsan odio ut, ultricies felis. Fusce eget mattis velit, id consectetur nisi. In pharetra arcu orci, ut ultricies ligula pellentesque eget. Suspendisse imperdiet libero magna, in lacinia nibh rutrum ut. Nam non augue a lorem aliquet volutpat. Vivamus vel varius dolor.</p>
+
+
+		</div> <!-- End column 2 -->
+
+		</div> <!-- End row 1 -->
+
+	</div> <!-- End main container -->
 
 </body>
 
