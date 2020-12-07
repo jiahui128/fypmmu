@@ -8,6 +8,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 	
+	<style>
+	.form-element
+	{
+		position:relative;
+	}
+	.form-element input
+	{
+		width:100%
+		padding:10px;
+		font-size:20px;
+	}
+	.form-element .toggle-password
+	{
+		position:absolute;
+		width:40px;
+		height:40px;
+		top:2px;
+		right:2px;
+		border-radius:50%;
+		text-align:center;
+		line-height:35px;
+		font-size:20px;
+		cursor:pointer;
+	}
+	.form-element .toggle-password.active i.fa-eye
+	{
+		display:none;
+	}
+	.form-element .toggle-password.active i.fa-eye-slash
+	{
+		display:inline;
+	}
+	.form-element .toggle-password i.fa-eye-slash
+	{
+		display:none;
+	}
+	.form-element .password-policies
+	{
+		position:realtive;
+		text-align:left;
+		width:90%;
+		padding:0px;
+		height:0px;
+		background:#f5f5f5;
+		border-radius:5px;
+		margin:10px 45px 10px;
+		box-sizing:border-box;
+		opacity:0;
+		overflow:hidden;
+		transition:height 200ms ease-in-out,
+					opacity 200ms ease-in-out;
+	}
+	.form-element .password-policies.active
+	{
+		opacity:1;
+		padding:10px;
+		height:170px;
+	}
+	.form-element .password-policies > div
+	{
+		margin:15px 10px;
+		font-weight:600;
+		color:#888;
+	}
+	.form-element .password-policies > div.active
+	{
+		color:#111;
+	}
+	</style>
+	
 </head>
 
 <body>
@@ -143,76 +213,8 @@
 	
     
 </body>
-	<style>
-	.form-element
-	{
-		position:relative;
-	}
-	.form-element input
-	{
-		width:100%
-		padding:10px;
-		font-size:20px;
-	}
-	.form-element .toggle-password
-	{
-		position:absolute;
-		width:40px;
-		height:40px;
-		top:2px;
-		right:2px;
-		border-radius:50%;
-		text-align:center;
-		line-height:35px;
-		font-size:20px;
-		cursor:pointer;
-	}
-	.form-element .toggle-password.active i.fa-eye
-	{
-		display:none;
-	}
-	.form-element .toggle-password.active i.fa-eye-slash
-	{
-		display:inline;
-	}
-	.form-element .toggle-password i.fa-eye-slash
-	{
-		display:none;
-	}
-	.form-element .password-policies
-	{
-		position:realtive;
-		text-align:left;
-		width:90%;
-		padding:0px;
-		height:0px;
-		background:#f5f5f5;
-		border-radius:5px;
-		margin:10px 45px 10px;
-		box-sizing:border-box;
-		opacity:0;
-		overflow:hidden;
-		transition:height 200ms ease-in-out,
-					opacity 200ms ease-in-out;
-	}
-	.form-element .password-policies.active
-	{
-		opacity:1;
-		padding:10px;
-		height:170px;
-	}
-	.form-element .password-policies > div
-	{
-		margin:15px 10px;
-		font-weight:600;
-		color:#888;
-	}
-	.form-element .password-policies > div.active
-	{
-		color:#111;
-	}
-	</style>
-	<script>
+
+<script>
 	function _id(name)
 	{
 		return document.getElementById(name);
@@ -294,5 +296,6 @@
 			_class("policy-length")[0].classList.remove("active");
 		}
 		});
-	</script>
+</script>
+
 </html>
