@@ -103,7 +103,7 @@ if($email != false && $password != false){
 		<input type="radio" name="img" id="i1" checked>
 		<input type="radio" name="img" id="i2">
 		<div class="slide_img" id="banner1">
-				<img src="images/banner3.jpg" style="width: 1264px;">
+				<img src="images/banner3.jpg">
 				<label for="i2" class="pre"></label>
 				<label for="i2" class="nxt"></label>
 				<div class="btext">
@@ -112,9 +112,9 @@ if($email != false && $password != false){
 				</div>
 		</div>
 		<div class="slide_img" id="banner2" style="text-align: center;">
-				<img src="images/banner3.jpg" style="width: 1264px;">
-				<label for="i2" class="pre"></label>
-				<label for="i2" class="nxt"></label>
+				<img src="images/banner3.jpg">
+				<label for="i1" class="pre"></label>
+				<label for="i1" class="nxt"></label>
 				<div class="btext">
 				<h1><span style="color: black; font-size:50px;">SoFo</span></h1>
 				<a href="playlist.php" id="a1">Listen to Music Now</a>
