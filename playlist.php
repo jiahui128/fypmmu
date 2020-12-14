@@ -33,7 +33,7 @@ if($email != false && $password != false){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-	<title>SoFo Music Streaming Website</title>
+	<title>SoFo Music Playlist</title>
 	
 	<!-- Font Awesome (Icons) CSS -->
 	
@@ -60,6 +60,78 @@ if($email != false && $password != false){
 	
 	<link rel="icon" href="images/sofomusic.jpg">
 
+	<style>
+		form.search input[type=text] {
+			padding: 10px;
+			font-size: 17px;
+			border: 1px solid grey;
+			float: left;
+			width: 80%;
+			background: #f1f1f1;
+		}
+
+		form.search button {
+			float: left;
+			width: 20%;
+			padding: 10px;
+			background: grey;
+			color: white;
+			font-size: 17px;
+			border: 1px solid grey;
+			border-left: none;
+			cursor: pointer;
+		}
+
+		form.search button:hover {
+			background: darkgrey;
+		}
+
+		form.search::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	
+	</style>
+	
+	<script type='text/javascript'>
+        function redirect() {
+           //look for text inside the NEW textbox
+           var input = document.getElementById('query').value.toLowerCase();
+            switch(input) {
+                case 'kimi ni todoke':
+                    window.location.replace('sgpf1.php');
+                    break;
+                case 'where you are':
+                    window.location.replace('sgpf2.php');
+                    break;
+				case 'everything is alright':
+                    window.location.replace('sgpf3.php');
+                    break;
+				case 'something there':
+                    window.location.replace('sgpf4.php');
+                    break;
+				case 'negaraku':
+                    window.location.replace('sgpf5.php');
+                    break;
+				case 'one thousand years later':
+                    window.location.replace('sgpf6.php');
+                    break;
+				case 'as a light smoke':
+                    window.location.replace('sgpf7.php');
+                    break;
+				case 'amazing grace':
+                    window.location.replace('sgpf8.php');
+                    break;
+					
+                default://no keyword detected so we submit the form.
+                    return true;
+                    break;
+            }
+            return false;//don't let the form submit
+        }
+	</script>
+
 </head>
 	
 <body>
@@ -85,15 +157,13 @@ if($email != false && $password != false){
 				<div id="myDropdown" class="dropdown-content">
 					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
 					<a href="logout-user.php">Log Out</a>
+					<a href="feedback.php">Feedback</a>
+					<a href="home.php">Back to Home</a>
 				</div>
 				
 				</div>
 			
 			</li>
-			
-			<li><a href="#aboutus">About Us</a></li>			
-			
-			<li><a href="#newreleases">New Releases</a></li>
 		
 		</ul>
 		
@@ -106,15 +176,52 @@ if($email != false && $password != false){
 			<div class="row">
 				
 				<div id="newreleases" class="col-md-12">
+
+					<div>
+					
+						<br>
+						
+						<!--<form class="search" action=""  style="margin: auto; max-width: 630px;">
+							
+							<input type="text" id="myText" placeholder="Search Songs, Artists, Albums, Playlists">
+							
+							<button type="submit" onclick="SearchBtn"><i class="fa fa-search"></i></button>
+							
+						</form>
+						
+						<script>
+						
+						</script>-->
+						
+						<form class="search" style="margin: auto; max-width: 630px;" action="playlist.php" method="get" onsubmit='return redirect();'>
+							<!-- pretty much the same thing except you remove the return false  !-->
+							<input type="text" name="query" id="query" align="center"  placeholder="Type the song name in lowercase" columns="2" autocomplete="off" delay="1500"  onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" >
+							<!--<input type="submit" value="" id="submit">-->
+							<input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit" width="45px" height="45px">
+							<input type="hidden" name="search" value="1">
+						</form> 
+					
+						<br><br>
+					
+					</div>
+					
+					<div class="col-md-12">
+					
+					<p style="font-family: Comic Sans MS; font-size: 12px;">Checkout our playlists to enjoy a variety of popular songs to fit your mood. Enjoy your music anytime, anywhere.</p>
+					
+					<br>
+					
+					<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
 				
-					<p>Progress Needed : a search function, categories, and every song has an own profile with lyrics</p>
-					<h3>This Page is Still On Progress</h3>
+					<h3>Updated Playlists</h3>
+								
+					</div>
 				
 				</div>
 			
 				<div class="col-md-3">
 					
-					<a href="javascript:void();" class="album-poster" data-switch="0">
+					<a href="sgpf1.php" class="album-poster" data-switch="0">
 					<img class="songimg" src="images/sawako.jpg" alt="Kimi_Ni_Todoke">
 					</a>
 				
@@ -125,7 +232,7 @@ if($email != false && $password != false){
 			
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="1">
+					<a href="sgpf2.php" class="album-poster" data-switch="1">
 					<img class="songimg" src="images/moana.jpg" alt="Moana Movie Clip">
 					</a>
 				
@@ -136,7 +243,7 @@ if($email != false && $password != false){
 				
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="2">
+					<a href="sgpf3.php" class="album-poster" data-switch="2">
 					<img class="songimg" src="images/every.jpg" alt="To The Moon">
 					</a>
 				
@@ -147,7 +254,7 @@ if($email != false && $password != false){
 
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="3">
+					<a href="sgpf4.php" class="album-poster" data-switch="3">
 					<img class="songimg" src="images/beautyandthebeast.jpg" style="height: 250px;" alt="Beauty and the Beast">
 					</a>
 				
@@ -158,7 +265,7 @@ if($email != false && $password != false){
 			
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="4">
+					<a href="sgpf5.php" class="album-poster" data-switch="4">
 					<img class="songimg" src="images/negaraku.jpg" alt="National Anthem">
 					</a>
 					
@@ -169,18 +276,18 @@ if($email != false && $password != false){
 			
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="5">
+					<a href="sgpf6.php" class="album-poster" data-switch="5">
 					<img class="songimg" src="images/jjlim.jpg" alt="Chinese Song">
 					</a>
 				
 					<h4>One Thousand Years Later</h4>
-					<p>JJ Lim</p>
+					<p>Wayne Lin Jun Jie</p>
 			
 				</div>
 			
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="6">
+					<a href="sgpf7.php" class="album-poster" data-switch="6">
 					<img class="songimg" src="images/yohime.jpg" style="height: 250px;" alt="Onmyoji Song">
 					</a>
 					
@@ -191,86 +298,13 @@ if($email != false && $password != false){
 			
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="7">
+					<a href="sgpf8.php" class="album-poster" data-switch="7">
 					<img class="songimg" src="images/amazinggrace.jpg" alt="Amazing Grace">
 					</a>
 				
 					<h4>Amazing Grace</h4>
 					<p>John Newton</p>
 			
-				</div>
-			
-			</div>
-
-
-			<div class="row">
-				
-				<div class="col-md-12">
-				
-				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
-				
-					<h3>Releasing Soon</h3>
-			
-				</div>
-			
-				<div class="col-md-2">
-					
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Lorem ipsum</h4>
-				
-				</div>
-			
-				<div class="col-md-2">
-					
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/838702/pexels-photo-838702.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Repellat illo</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-				
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>adipisicing elit</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-				
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/2118046/pexels-photo-2118046.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Atque ab</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-				
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/1735240/pexels-photo-1735240.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Fugiat Silly</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-					
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/2272854/pexels-photo-2272854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>veniam expedita</h4>
-				
 				</div>
 			
 			</div>
@@ -341,13 +375,13 @@ if($email != false && $password != false){
 		        name: 'Kimi Ni Todoke', // SONG NAME
 		        artist: 'Tanizawa Tomofumi', //ARTIST NAME
 		        url: 'songs/Kimi_Ni_Todoke.mp3', // PATH NAME AND SONG URL
-		        cover: 'images/sawako.jpg'
+		        cover: 'images/sawako.jpg',
 		    },
 			{
 		        name: 'Where You Are',  
 		        artist: 'Disney Music Vevo', 
 		        url: 'songs/whereyouare.mp3', 
-		        cover: 'images/moana.jpg' 
+		        cover: 'images/moana.jpg', 
 		    },
 			{
 				name: 'Everything is Alright',
@@ -391,6 +425,14 @@ if($email != false && $password != false){
 		});
 	
 	</script>
+	
+	<footer style="text-align: center;">
+			<p>Posted By : SoFo Team</p>
+			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
+			/ <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
+		
+			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
+	</footer>
 
 </body>
 	

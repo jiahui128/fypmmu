@@ -56,10 +56,27 @@ if($email != false && $password != false){
 	
 	<script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
 	
+	<!-- Font Header Javascript -->
+	<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js'></script>
+	
     <!-- Favicon of the Website -->
 	
 	<link rel="icon" href="images/sofomusic.jpg">
     
+	<!-- Text Javascript -->
+	
+	<script>
+		window.console = window.console || function(t) {};
+	</script>
+
+	<script>
+		if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		}
+	</script>
+	
 </head>
 
 <body>
@@ -85,6 +102,7 @@ if($email != false && $password != false){
 				<div id="myDropdown" class="dropdown-content">
 					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
 					<a href="logout-user.php">Log Out</a>
+					<a href="feedback.php">Feedback</a>
 				</div>
 				
 				</div>
@@ -107,17 +125,24 @@ if($email != false && $password != false){
 				<label for="i2" class="pre"></label>
 				<label for="i2" class="nxt"></label>
 				<div class="btext">
-				<h1><span style="color: black; font-size:50px;">SoFo</span></h1>
-				<a href="playlist.php" id="a1">Create Playlist Now</a>
+				<h1><span style="color: black; font-size:50px; font-style: italic; font-family: Georgia;">Welcome to SoFo</span></h1>
+				<!--<a href="playlist.php" id="a1">Create Playlist Now</a>-->
+				
+				<blockquote contenteditable="true"><q style="color: black;">Music is love in search of a word - Sidney Lanier</q>
+					<!-- <cite style="color: black;">Sidney Lanier</cite>-->
+				</blockquote>
+				
 				</div>
 		</div>
 		<div class="slide_img" id="banner2" style="text-align: center;">
-				<img src="images/banner3.jpg">
+				<img src="images/banner4.jpg">
 				<label for="i1" class="pre"></label>
 				<label for="i1" class="nxt"></label>
 				<div class="btext">
-				<h1><span style="color: black; font-size:50px;">SoFo</span></h1>
+				<h1><span style="color: black; font-size:50px; font-style: italic; font-family: Georgia;">Where Music Plays</span></h1>
 				<a href="playlist.php" id="a1">Listen to Music Now</a>
+				</blockquote>
+				
 				</div>
 		</div>
 		<div class="nav">
@@ -180,10 +205,16 @@ if($email != false && $password != false){
 				
 					<h4>Something There</h4>
 					<p>Disney Music Vevo</p>
+					
+					<br>
+				
+					<p style="text-align: right;">
+						<a href="playlist.php" class="MoreBtn">More >></a>
+					</p>
 				
 				</div>
 			
-				<div class="col-md-3">
+				<!--<div class="col-md-3">
 					
 					<a href="#" class="album-poster" data-switch="4">
 					<img class="songimg" src="images/negaraku.jpg" style="height: 250px; object-fit: cover;" alt="National Anthem">
@@ -224,8 +255,10 @@ if($email != false && $password != false){
 				
 					<h4>Amazing Grace</h4>
 					<p>John Newton</p>
+					
+					<br>
 			
-				</div>
+				</div>-->
 			
 			</div>
 
@@ -241,7 +274,7 @@ if($email != false && $password != false){
 			
 				<div class="col-md-2">
 					
-					<a href="#">
+					<a href="#" class="album-poster">
 					<img class="songimg" src="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
 					</a>
 				
@@ -303,9 +336,8 @@ if($email != false && $password != false){
 			
 			<div id="aboutus">
 
-		<div class="col-md-12">
-					
-					<br><br>
+			<div class="col-md-12">
+						
 					
 					<h3>About Us</h3>
 			
@@ -354,7 +386,7 @@ if($email != false && $password != false){
 	
 	</div>
 
-		</div>
+	</div>
 	
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>
@@ -467,36 +499,62 @@ if($email != false && $password != false){
 				url: 'songs/something.mp3',
 				cover: 'images/beautyandthebeast.jpg',
 			},
-			{
-				name: 'Negaraku',
-				artist: 'Pierre-Jean de Béranger',
-				url: 'songs/Negaraku.mp3',
-				cover: 'images/negaraku.jpg',
-			},
-			{
-				name: 'One Thousand Years Later',
-				artist: 'JJ Lim',
-				url: 'songs/onethousandyears.mp3',
-				cover: 'images/jjlim.jpg',
-			},
-			{
-				name: 'As A Light Smoke',
-				artist: 'IRiS (Tomo)',
-				url: 'songs/onmyoji.mp3',
-				cover: 'images/yohime.jpg',
-			},
-			{
-				name: 'Amazing Grace',
-				artist: 'John Newton',
-				url: 'songs/amazinggrace.mp3',
-				cover: 'images/amazinggrace.jpg',
-			},
-
 
 		    ]
 		});
 	
 	</script>
+	
+	<script id="rendered-js" >
+		function splitWords() {
+			let quote = document.querySelector("blockquote q");
+			quote.innerText.replace(/(<([^>]+)>)/ig, "");
+			quotewords = quote.innerText.split(" "),
+			wordCount = quotewords.length;
+			quote.innerHTML = "";
+  
+			for (let i = 0; i < wordCount; i++) {if (window.CP.shouldStopExecution(0)) break;
+				quote.innerHTML += "<span>" + quotewords[i] + "</span>";
+    
+				if (i < quotewords.length - 1) {
+					quote.innerHTML += " ";
+				}
+			
+			}window.CP.exitedLoop(0);
+  
+		quotewords = document.querySelectorAll("blockquote q span");
+		fadeWords(quotewords);
+	
+		}
+
+		function getRandom(min, max) {
+		return Math.random() * (max - min) + min;
+	}
+
+	function fadeWords(quotewords) {
+		Array.prototype.forEach.call(quotewords, function (word) {
+    
+		let animate = word.animate([{
+			opacity: 0,
+			filter: "blur(" + getRandom(2, 5) + "px)" },
+		
+		{
+			opacity: 1,
+			filter: "blur(0px)" }],
+
+		{
+			
+			duration: 1000,
+			delay: getRandom(500, 3300),
+			fill: 'forwards' });
+
+
+		});
+	}
+
+	splitWords();
+	//# sourceURL=pen.js
+    </script>
 	
 </body>
 

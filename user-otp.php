@@ -13,6 +13,9 @@ if($email == false){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
+	
+	<!-- Favicon of the Website -->
+	<link rel="icon" href="images/sofomusic.jpg">
 </head>
 
 <body>
@@ -60,8 +63,16 @@ if($email == false){
                     </div>
 					
                     <div class="form-group">
-                        <input class="form-control button" type="submit" name="check" value="Submit">
+                        <input class="form-control button" type="submit" name="check" value="Submit" onclick="codeverified();">
                     </div>
+					
+					<script>
+					
+						function codeverified(){
+							alert('Code succesfully verified! Please login again');
+							window.location.href = 'login-user.php';
+						}
+					</script>
 					
                 </form>
 				
