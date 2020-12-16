@@ -113,10 +113,9 @@ if($email != false && $password != false){
 				
 				<div id="myDropdown" class="dropdown-content">
 					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
-					<a href="logout-user.php">Log Out</a>
 					<a href="feedback.php">Feedback</a>
 					<a href="home.php">Back to Home</a>
-		
+					<a href="logout-user.php">Log Out</a>
 				</div>
 				
 				</div>

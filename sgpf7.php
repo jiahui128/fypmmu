@@ -113,9 +113,9 @@ if($email != false && $password != false){
 				
 				<div id="myDropdown" class="dropdown-content">
 					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
-					<a href="logout-user.php">Log Out</a>
 					<a href="feedback.php">Feedback</a>
 					<a href="home.php">Back to Home</a>
+					<a href="logout-user.php">Log Out</a>
 				</div>
 				
 				</div>
@@ -150,7 +150,7 @@ if($email != false && $password != false){
 			
 			<!-- Social buttons using anchor elements and btn-primary class to style -->
             <p>
-				<a class="btn btn-primary btn-xs" href="sgpf7.php" role="button">Previous</a>
+				<a class="btn btn-primary btn-xs" href="sgpf6.php" role="button">Previous</a>
                 <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
 				<a class="btn btn-primary btn-xs" href="sgpf8.php" role="button">Next</a>
 			</p>
