@@ -272,7 +272,7 @@ if($email != false && $password != false){
 			
 				</div>
 			
-				<div class="col-md-2">
+				<!--<div class="col-md-2">
 					
 					<a href="#" class="album-poster">
 					<img class="songimg" src="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
@@ -330,6 +330,20 @@ if($email != false && $password != false){
 				
 					<h4>From Vivian</h4>
 				
+				</div>-->
+				
+				<div>
+					
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				</div>
+				
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			
+				<div>
+					
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZrX6gsAYVcM" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
 				</div>
 			
 			</div>
