@@ -133,25 +133,28 @@ if($email != false && $password != false){
 		<!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
 		<div class="col-md-4 col-sm-12 col-xs-12">
 
-			<!-- Div to center the header image/name/social buttons -->
-			<div class="text-center">
-				
-			<br><br><br><br><br><br><br>
+			<!-- Div to decorate the border of the profile of the song -->
+			<div class="songbox">
 				
             <!-- Placeholder image -->
-			<a href="javascript:void();" class="songprofilepic" data-switch="0"><img id="profilepicture" src="images/sawako.jpg"></a>
+			<a href="javascript:void();" class="songprofilepic" style="text-align: left;" data-switch="0"><img id="profilepicture" src="images/sawako.jpg"></a>
 				
-			<p class="example" style="font-family: Garamond; font-weight: bold;">Click here for music <i class='fa fa-arrow-up'></i></p>
+			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for music <i class='fa fa-arrow-up'></i></p>
 				
-			<p class="example" style="font-family: Garamond; font-weight: bold;">Album: Kimi ni Todoke Original Soundtrack<br />
-			Song: Kimi ni Todoke<br />
-			Artist: Tanizawa Tomofumi<br />
+			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album: <br />Kimi ni Todoke Original Soundtrack<br />
+			Song: <br />Kimi ni Todoke<br />
+			Artist: <br />Tanizawa Tomofumi<br />
 			Released: 2010</p>
 			
+			<p style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;"><a href="pdf/songlyrics1.pdf" role="button" download>Download Lyrics</a></p>
+			
+			<br>
+			
 			<!-- Social buttons using anchor elements and btn-primary class to style -->
-            <p>
-				<!--<a class="btn btn-primary btn-xs" href="sgpf1.php" role="button">Previous</a>-->
-                <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
+			
+			<!--<a class="btn btn-primary btn-xs" href="sgpf1.php" role="button">Previous</a>-->	
+			<p style="text-align: left;">
+				<a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
 				<a class="btn btn-primary btn-xs" href="sgpf2.php" role="button">Next</a>
 			</p>
 			
@@ -173,31 +176,113 @@ if($email != false && $password != false){
 		</div>
 		
 		<p style="font-family: Times New Roman; font-size: 16px; font-weight: bold; text-align: center;">
-			Romaji:<br><br>
-			Yasashii hidamari ni chaimu ga direi suru<br>
-			Hoho wo naderu kaze ibuki wa fukakunatteku<br>
+			在溫和的日光下上課鈴放慢了腳步<br>
+			やさしい日だまりに チャイムがディレイする<br>
+			Yasashii hidamari ni chaimu ga direi suru<br><br>
+
+			撫摸著臉頰的微風 使呼吸也變得平靜<br>
+			ほほをなでる風　息吹は深くなってく<br>
+			Hoho wo naderu kaze ibuki wa fukakunatteku<br><br>
+
+			嘗過曲折的淚珠 想過明天的稱呼 當未來的輪廓線 漸漸與你同步<br>
+			遠まわりの涙 名前つけた明日 重なる未来色のライン<br>
 			Toomawari no namida namae tsuketa ashita kasanaru miraiiro no rain<br><br>
-			Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br>
-			Taisetsu ni sodateteikeru youni<br>
-			Togiretogire no toki wo koete takusan no hajimete wo kureta<br>
+
+			無論是這份純真的感情 還是一起縱情大笑的日子<br>
+			あどけないこんな気持ちも はじけ飛ぶほど笑い合えた日も<br>
+			Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br><br>
+
+			我都希望永遠細心呵護下去<br>
+			大切に育てていけるように<br>
+			Taisetsu ni sodateteikeru youni<br><br>
+
+			帶我走過了最難過的時光 給了我數不清的第一次<br>
+			とぎれとぎれの時を越えて たくさんの初めてをくれた<br>
+			Togiretogire no toki wo koete takusan no hajimete wo kureta<br><br>
+
+			只想將這份心意 告訴你<br>
+			つながってゆけ とどけ<br>
 			Tsunagatteyuke todoke<br><br>
-			Houkago no yuuyami warau kimi no senaka<br>
-			Hisokana sasayaki fureta koto no nai omoi no naka<br>
-			Boku no naka no kimi to kimi no naka no boku de<br>
+
+			放學後的黃昏 望著笑著的你的背影<br>
+			放課後の夕闇 笑うきみの背中<br>
+			Houkago no yuuyami warau kimi no senaka<br><br>
+
+			我默默自語　品味著從未體會的心情<br>
+			ひそかなささやき 触れたことのない想いの中<br>
+			Hisokana sasayaki fureta koto no nai omoi no naka<br><br>
+
+			在我心中的你 與你心中的我之間<br>
+			僕の中のきみと きみの中の僕で<br>
+			Boku no naka no kimi to kimi no naka no boku de<br><br>
+
+
+			未來的輪廓線 漸漸交疊在一起<br>
+			絡まる未来色のライン<br>
 			Karamaru miraiiro no rain<br><br>
-			Ameagari no machi no nioi to yumemitaina himitsu wo mune ni daite<br>
-			Nandomo nakisou ni natte mata warau<br>
-			Kangaeru yori zutto hayaku<br>
-			Sono mune ni tobikometara ii<br>
+
+			擁抱著雨過天晴的芬芳 懷著與夢一般的秘密心事<br>
+			雨上がりの街の匂いと 夢みたいな秘密を胸に抱いて<br>
+			Ameagari no machi no nioi to yumemitaina himitsu wo mune ni daite<br><br>
+
+			多少次因為有你才破涕為笑<br>
+			何度も泣きそうになってまた笑う<br>
+			Nandomo nakisou ni natte mata warau<br><br>
+
+			要是我能拋開重重的心緒<br>
+			考えるよりずっとはやく<br>
+			Kangaeru yori zutto hayaku<br><br>
+
+			飛快地撲到你的懷中該多好<br>
+			その胸に飛び込めたらいい<br>
+			Sono mune ni tobikometara ii<br><br>
+
+			只想將這份心意 告訴你<br>
+			つながってゆけ とどけ<br>
 			Tsunagatteyuke todoke<br><br>
-			Nani yori mo daijina kimi no mae de<br>
-			Kizutsukanai youni daiji ni shiteta no wa sou jibun<br>
-			Sono hitogoto ga moshimo sayonara no kawari ni natteshimattemo<br>
+
+			明明面對著最在意的你<br>
+			何よりも大事なきみの前で<br>
+			Nani yori mo daijina kimi no mae de<br><br>
+
+			為何從前的我卻更在意自己會受傷<br>
+			傷つかないように大事にしてたのは そう自分<br>
+			Kizutsukanai youni daiji ni shiteta no wa sou jibun<br><br>
+
+			即使這一句話說出口就意味著再見<br>
+			その一言がもしもサヨナラのかわりになってしまっても<br>
+			Sono hitogoto ga moshimo sayonara no kawari ni natteshimattemo<br><br>
+
+			我也要說出　心中的一切<br>
+			ありのまま すべて<br>
 			Ari no mama subete<br><br>
-			Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br>
-			Honno sukoshi otona ni natteku<br>
-			Kimi ni naritai boku wo koete tsunagatteyuke<br>
+
+			無論是這份純真的感情 還是一起縱情大笑的日子<br>
+			あどけないこんな気持ちも はじけ飛ぶほど笑いあえた日も<br>
+			Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br><br>
+
+			我都希望永遠細心呵護下去<br>
+			大切に育てていけるように<br>
+			Taisetsu ni sodateteikeru youni<br><br>
+
+			我要一點點學會長大成人<br>
+			ほんの少し大人になってく<br>
+			Honno sukoshi otona ni natteku<br><br>
+
+			超越只會憧憬著你的自己<br>
+			君になりたい僕を超えて<br>
+			Kimi ni naritai boku wo koete<br><br>
+
+			只想將這份心意<br>
+			つながってゆけ<br>
+			Tsunagatteyuke<br><br>
+
+			馬上將這份心意<br>
+			今すぐきみに<br>
 			Ima sugu kimi ni<br><br>
+
+			告訴你<br>
+			とどけ<br>
 			Todoke<br><br>
 		</p>
 
@@ -302,6 +387,7 @@ function topFunction() {
 
 		    ]
 		});
+		
 </script>
 
 </html>

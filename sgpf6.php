@@ -133,20 +133,22 @@ if($email != false && $password != false){
 		<!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
 		<div class="col-md-4 col-sm-12 col-xs-12">
 
-			<!-- Div to center the header image/name/social buttons -->
-			<div class="text-center">
-				
-			<br><br><br><br><br><br><br>
+			<!-- Div to decorate the border of the profile of the song -->
+			<div class="songbox">
 				
             <!-- Placeholder image -->
-			<a href="javascript:void();" class="songprofilepic" data-switch="0"><img id="profilepicture" src="images/jjlim.jpg"></a>
+			<a href="javascript:void();" class="songprofilepic" style="text-align: center;" data-switch="0"><img id="profilepicture" src="images/jjlim.jpg"></a>
 				
-			<p class="example" style="font-family: Garamond; font-weight: bold;">Click here for music <i class='fa fa-arrow-up'></i></p>
+			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for music <i class='fa fa-arrow-up'></i></p>
 				
-			<p class="example" style="font-family: Garamond; font-weight: bold;">Album: Code 89757 Original Soundtrack<br />
-			Song: One Thousand Years Later<br />
-			Artist: Wayne Lim Jun Jie<br />
+			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album: Code 89757 Original Soundtrack<br />
+			Song: <br />One Thousand Years Later<br />
+			Artist: <br />Wayne Lim Jun Jie<br />
 			Released: 2011</p>
+			
+			<p><a href="pdf/songlyrics6.pdf" style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button" download>Download Lyrics</a></p>
+			
+			<br>
 			
 			<!-- Social buttons using anchor elements and btn-primary class to style -->
             <p>
