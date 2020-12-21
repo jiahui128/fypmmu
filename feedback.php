@@ -33,171 +33,124 @@ if($email != false && $password != false){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-	<title>SoFo Music Streaming Website</title>
+	<title>SoFo Music Feedback Page</title>
 	
 	<!-- Font Awesome (Icons) CSS -->
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	
+	<!-- Bootstrap CSS Version 3.37 and 4.4.1 -->
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+	<!-- Home Page CSS -->
+	
+	<link rel="stylesheet" href="css/homepage.css">
+	
     <!-- Favicon of the Website -->
 	
 	<link rel="icon" href="images/sofomusic.jpg">
-    
-	<style>    
-	body {    
-		background: url("images/lightgray.png") no-repeat center center fixed; 
-	}    
-	
-	*{
-		box-sizing: border-box;  
-	}
-    
-	input[type=text], select, textarea {    
-		width: 100%;    
-		padding: 12px;    
-		border: 1px solid rgb(70, 68, 68);    
-		border-radius: 4px;    
-		resize: vertical;    
-	}    
 
-	input[type=email], select, textarea {    
-		width: 100%;    
-		padding: 12px;    
-		border: 1px solid rgb(70, 68, 68);    
-		border-radius: 4px;    
-		resize: vertical;    
-	}    
-    
-	label {    
-		padding: 12px 12px 12px 0;    
-		display: inline-block;    
-	}    
-    
-	input[type=submit] {    
-		background-color: rgb(37, 116, 161);    
-		color: white;    
-		padding: 12px 20px;    
-		border: none;    
-		border-radius: 4px;    
-		cursor: pointer;    
-		float: right;    
-	}    
-    
-	input[type=submit]:hover {    
-		background-color: #45a049;    
-	}    
-    
-	.container {    
-		border-radius: 5px;    
-		background-color: #f2f2f2;    
-		padding: 20px;    
-	}    
-    
-	.col-25 {    
-	float: left;    
-	width: 25%;    
-	margin-top: 6px;    
-	}    
-    
-	.col-75 {    
-		float: left;    
-		width: 75%;    
-		margin-top: 6px;    
-	}    
-    
-	/* Clear floats after the columns */    
-	.row:after {    
-		content: "";    
-		display: table;    
-		clear: both;    
-	}    
-    
-	/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */    
-	</style>    
+	<style>
+		body{
+			background: lightgray;
+		}
+	</style>
 
 </head>    
 
 <body>    
 
-	<h2>FEED BACK FORM</h2>    
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+		<i class="fa">&#xf102;</i>
+	</button>
+	
+	<div class="page-header" style="text-align: center;">
+	
+		<a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
+	
+		<ul id="header">
+	
+			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
+	
+				<button onclick="myFunction()" class="dropbtn">
+					<i class="fa fa-account" style="color: black;">&#xf2bd;</i>
+					Account
+					<i class='fa fa-angle-down' style="color: black;"></i>
+				</button>
+				
+				<div id="myDropdown" class="dropdown-content">
+					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
+					<a href="feedback.php">Feedback</a>
+					<a href="home.php">Back to Home</a>
+					<a href="logout-user.php">Log Out</a>
+				</div>
+				
+				</div>
+			
+			</li>
+			
+		</ul>
+		
+	</div>
 	
 	<div class="container">    
  
-		<form>    
+		<!-- form.123formbuilder.com script begins here --><script type="text/javascript" defer src="https://form.123formbuilder.com/embed/5759697.js" data-role="form" data-default-width="650px"></script><!-- form.123formbuilder.com script ends here -->
 		
-		<div class="row">    
-     
-			<div class="col-25">    
-      
-				<label for="fname">First Name</label>    
-      
-			</div>    
-		
-			<div class="col-75">    
-        
-				<input type="text" id="fname" name="firstname" placeholder="Your name..">    
-			
-			</div>    
-		
-		</div>    
-    
-		<div class="row">    
-			
-			<div class="col-25">    
-			
-				<label for="lname">Last Name</label>    
-			
-			</div>    
-      
-			<div class="col-75">    
-				
-				<input type="text" id="lname" name="lastname" placeholder="Your last name..">    
-      
-			</div>    
-   
-		</div>    
-   
-		<div class="row">    
-        
-			<div class="col-25">    
-        
-				<label for="email">Email</label>    
-			
-			</div>    
-        
-			<div class="col-75">    
-				
-				<input type="email" id="email" name="mailid" placeholder="Your email address..">    
-        
-			</div>    
-      
-		</div>      
-    
-		<div class="row">    
-     
-			<div class="col-25">    
-      
-				<label for="feed_back">Feed Back</label>    
-      
-			</div>    
-     
-			<div class="col-75">    
-       
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    
-			
-			</div>    
-   
-		</div>    
-    
-		<div class="row">    
-      
-			<input type="submit" value="Submit">    
-    
-		</div>    
- 
-		</form>    
+	</div>   
 
-	</div>    
+	<script>
+	// Latest Album
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() 
+	{
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) 
+	{
+		if (!event.target.matches('.dropbtn')) 
+		{
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) 
+			{
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) 
+				{
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
+
+	//Scroll top button
+	//Get the button
+	var mybutton = document.getElementById("myBtn");
+	
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
+	
     
 </body>   
  

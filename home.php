@@ -109,9 +109,13 @@ if($email != false && $password != false){
 			
 			</li>
 			
-			<li><a href="#aboutus">About Us</a></li>			
+			<li><a href="#aboutus">About Us</a></li>
+
+			<li><a href="#discovermore">Discover More</a></li>			
 			
-			<li><a href="#newreleases">New Releases</a></li>
+			<li><a href="#latestreleases">Latest Releases</a></li>
+			
+			<li><a href="#releasingsoon">Releasing Soon</a></li>
 		
 		</ul>
     </div>
@@ -156,11 +160,11 @@ if($email != false && $password != false){
 			
 			<div class="row">
 				
-				<div id="newreleases" class="col-md-12">
+				<div id="latestreleases" class="col-md-12">
 					
 					<br><br>
 				
-					<h3>New Releases</h3>
+					<h3>Latest Releases</h3>
 				
 				</div>
 			
@@ -264,7 +268,7 @@ if($email != false && $password != false){
 
 			<div class="row">
 				
-				<div class="col-md-12">
+				<div id="releasingsoon" class="col-md-12">
 				
 				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
 				
@@ -332,21 +336,48 @@ if($email != false && $password != false){
 				
 				</div>-->
 				
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				
 				<div>
 					
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				
 				</div>
 				
-				<div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			
 				<div>
 					
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZrX6gsAYVcM" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;">Album: <br />MarBlue Original Soundtrack<br />
+					<br />Song: <br />故海潮生<br />
+					<br />Artist: <br />三无Marblue<br />
+					<br />Released: Nov 1, 2020<br />
+					<br />Requested by: <?php echo $fetch_info['name'] ?>
+					</p>
 					
 				</div>
 			
 			</div>
+			
+			<br><br><br><br>
+			
+			<div class="row">
+				
+				<div id="discovermore" class="col-md-12">
+				
+				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
+				
+					<h3>Discover More</h3>
+					
+					<div></div>
+					
+			
+				</div>
+			
+			
+			</div>
+			
+			<br><br><br><br>
 			
 			<div id="aboutus">
 
@@ -355,9 +386,9 @@ if($email != false && $password != false){
 					
 					<h3>About Us</h3>
 			
-		</div>
+			</div>
 		
-		<div style="margin-top:30px;">
+			<div style="margin-top:30px;">
 				
 			<div class="row">
 				
