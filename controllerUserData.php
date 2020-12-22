@@ -208,5 +208,18 @@ if(isset($_POST['signup'])){
 			}
 		}
 	}
+	
+	//change user profile image
+		if(isset($_POST['change_pic']))
+		{
+			move_uploaded_file($_FILES['file']['tmp_name'],"uploads/".$_FILES['file']['name']);
+			$q = mysqli_query($con,"UPDATE usertable SET profile_image = '".$_FILES['file']['name']."' WHERE email = '".$_SESSION['email']."' limit 1");
+			header('Location:profile.php');
+			die;
+		}
+		else
+		{
+			echo "<script>('Please upload a valid image!') </script>";
+		}
 
 ?>

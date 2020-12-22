@@ -120,11 +120,26 @@ if($email != false && $password != false){
 			<br><br><br><br><br><br><br>
 				
             <!-- Placeholder image -->
-			<img id="profilepicture" src="images/aboutus.png" class="image-rounded">
-
+			<span>
+			<?php
+				$email = $_SESSION["email"];
+				$q=mysqli_query($con,"SELECT * FROM usertable WHERE email= '$email'");
+				while($row=mysqli_fetch_assoc($q))
+				{
+					if($row['profile_image'] == "")
+					{
+						echo "<img id='profilepicture' class='image-rounded' src='images/aboutus'  alt='Default Profile Pic'>";
+					}
+					else
+					{
+						echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
+					}
+				}
+			?>
+			</span>
 			<br><br>
 
-			<p><a href="#"><i class="icon-cog" style="color: black;"></i>Edit profile image</a></p>
+			<p><a href="profile_image.php"><i class="icon-cog" style="color: black;"></i>Edit profile image</a></p>
 
 			<!-- Header text (Person's name) -->
 			<h2><?php echo $fetch_info['name'] ?></h2>
