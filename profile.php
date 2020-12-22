@@ -133,9 +133,9 @@ if($email != false && $password != false){
 			
 			<!-- Social buttons using anchor elements and btn-primary class to style -->
             <p>
-                <a class="btn btn-primary btn-xs" href="#" role="button">Friend List</a>
+                <a class="btn btn-primary btn-xs" href="friend-system.html" role="button">Friend List</a>
                 <a class="btn btn-primary btn-xs" href="#" role="button">Album</a>
-                <a class="btn btn-primary btn-xs" href="#" role="button">Playlist</a>
+                <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
             </p>
 			
 			<a href="change-password.php">Change Your Password</a>
@@ -165,23 +165,23 @@ if($email != false && $password != false){
 
         <!-- Body text (paragraph 1) -->
         <p>
-          Vestibulum ac dui ut arcu pulvinar aliquet. In hac habitasse platea dictumst. Fusce porttitor at quam sit amet placerat. Phasellus placerat nunc vitae enim bibendum interdum. Nunc dapibus nisi a leo tincidunt, vitae dapibus nulla pretium. Etiam eu magna felis. Sed eleifend ligula eget augue consectetur varius. Etiam cursus ex mollis, efficitur eros non, molestie turpis. Nunc malesuada porta semper. Curabitur interdum finibus tortor at semper. Aliquam ornare ut tellus sit amet vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin risus lorem, dignissim id auctor ac, fringilla sit amet erat. In quis accumsan urna, ut ullamcorper risus. Duis id tempor libero.
+        Music is composed and performed for many purposes, ranging from aesthetic pleasure, religious or ceremonial purposes, or as an entertainment product for the marketplace.
         </p>
 
         <!-- Body text (paragraph 2) -->
         <p>
-        Aenean hendrerit augue id venenatis mollis. Nunc euismod lorem id interdum tempor. Maecenas euismod euismod arcu blandit rhoncus. Aliquam mattis ornare enim, id molestie nibh dapibus eget. Donec accumsan libero ac ante lobortis, at porttitor neque pretium. Phasellus quis nibh dolor. In nunc mi, cursus quis nunc sit amet, blandit pulvinar nisi. Aenean vel egestas nisl, eu bibendum enim. Mauris ut turpis vel lacus sollicitudin ultrices eu sit amet sapien. Fusce facilisis tempus ligula, et laoreet ligula fringilla eget.
-        </p>
+		When music was only available through sheet music scores, such as during the Classical and Romantic eras, music lovers would buy the sheet music of their favourite pieces and songs so that they could perform them at home on the piano.
+		</p>
 
         <!-- Body text (paragraph 3) -->
         <p>
-        Nam odio leo, convallis non suscipit eu, ullamcorper a ipsum. Morbi vel porttitor arcu. Praesent sed urna consequat, eleifend nisl in, sodales lectus. Praesent diam neque, efficitur vitae euismod sodales, facilisis interdum orci. Quisque ultrices lacus id lorem feugiat auctor. Ut elementum placerat pulvinar. Donec vel nisi erat. Etiam leo dolor, scelerisque vel congue a, tempor nec mi. Vivamus fringilla non lectus non suscipit. Vestibulum iaculis turpis sit amet egestas semper. Suspendisse non ipsum nec purus laoreet venenatis. Nulla vel turpis porta, consequat arcu vitae, condimentum ante.
-        </p>
-
+		With the advent of the phonograph, records of popular songs, rather than sheet music became the dominant way that music lovers would enjoy their favourite songs.
+		</p>
+		
         <!-- Body text (paragraph 4) -->
         <p>
-        Pellentesque interdum faucibus faucibus. Donec eu mi et erat semper molestie. Donec volutpat, leo sed bibendum eleifend, nibh odio elementum urna, vel mattis ipsum est vel orci. Proin ac porta nisl, at ultrices enim. Maecenas eu nisl venenatis, accumsan odio ut, ultricies felis. Fusce eget mattis velit, id consectetur nisi. In pharetra arcu orci, ut ultricies ligula pellentesque eget. Suspendisse imperdiet libero magna, in lacinia nibh rutrum ut. Nam non augue a lorem aliquet volutpat. Vivamus vel varius dolor.</p>
-
+		All right reserved. No part of this website may be reproduced or used in any manner without written permission of the copyright owner except for the use of quotations in a website review.
+		</p>
 
 		</div> <!-- End column 2 -->
 

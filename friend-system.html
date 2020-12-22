@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sofo Friend List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+  <script>
+      
+ 
+  </script>
+</head>
+<body>
+
+<div class="container" >
+    
+    
+    
+     
+    
+     
+  <div class="header" style="height:120px;background-color:white;">
+      
+      <table>
+          
+          <tr>
+              <td> <img src="images/SoFo.png" class="img-rounded img-responsive" alt="SoFo Logo" style="width: 110px; height: 40px; float:left; " title="This is SoFo Logo">  </td>
+			  
+              <td> <div class="header">Sofo Friend List</div> </td>
+          </tr>
+      </table>
+      
+      </div>
+  <!-- Trigger the modal with a button -->
+ 
+   <button type="button" onClick="show()" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal1" style="width:100%">View Current Friends</button>
+   
+  <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal2" style="width:100%">Add New Friend</button>
+  
+  
+  
+
+  <!-- Modal 1 -->
+  
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sofo Friend List</h4>
+        </div>
+        <div class="modal-body">
+            
+            
+           <div id="display">list here</div>
+            
+             
+                
+        </div>
+        
+        
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!--end of modal 1-->
+  
+
+  <!-- Modal 2  dont forget to check modal id -->
+  
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add New Sofo Friend List</h4>
+        </div>
+        <div class="modal-body">
+            
+          <form id="form" action="#">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="friend_name" type="text" class="form-control" name="friend_name" placeholder="friend's name" required>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                    <input id="country_name" type="text" class="form-control" name="country_name" placeholder="country" required>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-download-alt"></i></span>
+                    <button id="submit" type="button"  onclick="insert()" class="btn btn-primary" name="submit">Add New Friend</button>
+                  </div>
+                </form> 
+                
+                
+                
+                
+        </div>
+        
+        
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!--end of modal 2-->
+  <div>
+      
+     
+      
+  </div>
+  
+  
+  
+</div>
+
+</body>
+</html>

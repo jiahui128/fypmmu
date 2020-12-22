@@ -1,0 +1,19 @@
+.header{
+    
+    width:100%;
+    height:80px;
+    text-align:center;
+    font-family:tahoma;
+    color:blue;
+    padding-top:30px;
+    font-size:25px;
+    
+}
+
+#submit{
+    
+    width:100%;
+    height:30px;
+}
+
+
