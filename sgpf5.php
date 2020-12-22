@@ -146,7 +146,11 @@ if($email != false && $password != false){
 			Artist: <br />Pierre-Jean de Béranger<br />
 			Released: 1957</p>
 			
-			<p><a href="pdf/songlyrics5.pdf" style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button" download>Download Lyrics</a></p>
+			<p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="songs/Negaraku.mp3" role="button" download style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download MP3</a></p>
+			
+			<br>
+			
+			<p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="pdf/songlyrics5.pdf" style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button" download>Download Lyrics</a></p>
 			
 			<br>
 			

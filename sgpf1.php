@@ -146,7 +146,11 @@ if($email != false && $password != false){
 			Artist: <br />Tanizawa Tomofumi<br />
 			Released: 2010</p>
 			
-			<p style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;"><a href="pdf/songlyrics1.pdf" role="button" download>Download Lyrics</a></p>
+			<p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="songs/Kimi_Ni_Todoke.mp3" role="button" download style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download MP3</a></p>
+			
+			<br>
+			
+			<p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="pdf/songlyrics1.pdf" role="button" download style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download Lyrics</a></p>
 			
 			<br>
 			
