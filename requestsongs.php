@@ -33,7 +33,7 @@ if($email != false && $password != false){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-	<title>SoFo Music Feedback Page</title>
+	<title>SoFo Music About Us Page</title>
 	
 	<!-- Font Awesome (Icons) CSS -->
 	
@@ -106,18 +106,40 @@ if($email != false && $password != false){
 		
 	</div>
 	
-	<div class="container">   
-		
-		<div>
+	<div class="container">    
  
-		<!-- form.123formbuilder.com script begins here --><script type="text/javascript" defer src="https://form.123formbuilder.com/embed/5759697.js" data-role="form" data-default-width="650px"></script><!-- form.123formbuilder.com script ends here -->
-		
-		</div>
-		
-	</div> 
-
-	<br>
+			<div class="header_under" style="color: black;"></div>
+				<div class="container_wrapper" style="color: black;"><!--Start Container for the web content-->
+				<div class="sidebar_menu" style="color: black;"><!--Sidebar-->
+    	
+				<p class="header_1" style="color: black;">SoFo Music</p>
+					<br>
+					
+					<ul>
+						<li><a href="aboutus.php">About Us</a></li>
+						<li><a href="requestsongs.php">Request Songs</a></li>
+						<li><a href="friend-system.php">Friend List</a></li>
+						<li><a href="feedback.php">Feedback</a></li>
+					</ul>
+			</div><!--End sidebar-->
+    
+			<div class="col2"><!--Start second column-->
+   
+			<div id="header_title" style="color: black;">Request Songs</div>
+        	<div class="content1_info">
+			
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				
+				<p style="text-align: right;"><img src="images/anime.jpg" alt="SoFo Logo" style="width: 270px; height: 160px; float:right; " title="This is SoFo Logo" /></p>
+        	
+			</div>
+    </div><!--End second column-->
+	</div>
+ 
+	</div>  
 	
+	<br><br>
+
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>
 			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>

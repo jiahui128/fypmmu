@@ -134,7 +134,7 @@ if($email != false && $password != false){
 			<!-- Social buttons using anchor elements and btn-primary class to style -->
             <p>
                 <a class="btn btn-primary btn-xs" href="friend-system.html" role="button">Friend List</a>
-                <a class="btn btn-primary btn-xs" href="#" role="button">Album</a>
+                <a class="btn btn-primary btn-xs" href="album.php" role="button">Album</a>
                 <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
             </p>
 			
@@ -182,12 +182,28 @@ if($email != false && $password != false){
         <p>
 		All right reserved. No part of this website may be reproduced or used in any manner without written permission of the copyright owner except for the use of quotations in a website review.
 		</p>
+		
+		<br>
+		
+		<p>
+		PS # Why the content of profile is about strict laws and policy ? xD
+		</p>
 
 		</div> <!-- End column 2 -->
 
 		</div> <!-- End row 1 -->
 
 	</div> <!-- End main container -->
+	
+	<br><br><br><br>
+	
+	<footer style="text-align: center;">
+			<p>Posted By : SoFo Team</p>
+			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
+			/ <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
+		
+			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
+	</footer>
 
 </body>
 
