@@ -1,26 +1,4 @@
 <?php require_once "controllerUserData.php"; ?>
-<?php 
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM usertable WHERE email = '$email'";
-    $run_Sql = mysqli_query($con, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $status = $fetch_info['status'];
-        $code = $fetch_info['code'];
-        if($status == "verified"){
-            if($code != 0){
-                header('Location: reset-code.php');
-            }
-        }else{
-            header('Location: user-otp.php');
-        }
-    }
-}else{
-    header('Location: newhome.php');
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +33,7 @@ if($email != false && $password != false){
 	<!-- JQuery Library -->
 	
 	<script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 	
 	<!-- Font Header Javascript -->
 	<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
@@ -77,61 +56,9 @@ if($email != false && $password != false){
 		}
 	</script>
 	
-	<style>
-	
-	.Dbutton {
-		display: inline-block;
-		text-align: center;
-		vertical-align: middle;
-		padding: 10px 10px;
-		border: 1px solid #000000;
-		border-radius: 8px;
-		background: #fff2f2;
-		background: -webkit-gradient(linear, left top, left bottom, from(#fff2f2), to(#a19e9e));
-		background: -moz-linear-gradient(top, #fff2f2, #a19e9e);
-		background: linear-gradient(to bottom, #fff2f2, #a19e9e);
-		text-shadow: #591717 1px 1px 1px;
-		font: normal normal bold 20px comic sans ms;
-		color: #ffffff;
-		text-decoration: none;
-	}
-	
-	.Dbutton:hover,
-		.button:focus {
-		background: #ffffff;
-		background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#c1bebe));
-		background: -moz-linear-gradient(top, #ffffff, #c1bebe);
-		background: linear-gradient(to bottom, #ffffff, #c1bebe);
-		color: #ffffff;
-		text-decoration: none;
-	}
-
-	.Dbutton:active {
-		background: #999191;
-		background: -webkit-gradient(linear, left top, left bottom, from(#999191), to(#a19e9e));
-		background: -moz-linear-gradient(top, #999191, #a19e9e);
-		background: linear-gradient(to bottom, #999191, #a19e9e);
-	}
-	
-	.Dbutton:before{
-		content:  "\0000a0";
-		display: inline-block;
-		height: 24px;
-		width: 24px;
-		line-height: 24px;
-		margin: 0 4px -6px -4px;
-		position: relative;
-		top: 0px;
-		left: 0px;
-		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOklEQVRIibWVPU4DMRCFv1gpIqAPVNyAA1BEUNDnFhHislwAGoRCUiFFiVYIHIrM7FqOB/8oPMlae9Z+43m2Z0aA4x8xlq83HDlgUsnZCV/PGRPreA68A9vKtpS1LiaMxytg39iWiDqjhAPFzx8ywCCF4izo74ApsAvPINx9uNAivxYixSYxzyvhBQf9NtFOLPiI3MTYsJde3VXmv7Mc5CRS5KL1LY+sq5lsOUjZX4F74Ap4AL5K+R3DIW+lD8d3+y6xAesd9DylEnXAczD22BfkOIQC+wS4Ebu221L+UolegJk4m8k4K1GNg5qWPQMHrAsksPDJ4dyc5cADi0Yna+CJoSaYEp0EqatWkuxSSCY/rQcOeAMurYkFOBeeMPX3uegbeAQ+GskVPu5rBFqgW4q8wozcqskn6f8CqVV+vpABbsUAAAAASUVORK5CYII=") no-repeat left center transparent;
-		background-size: 100% 100%;
-	}
-
-	</style>
-	
 </head>
 
-<body>
+<body> 
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<i class="fa">&#xf102;</i>
@@ -141,40 +68,17 @@ if($email != false && $password != false){
 	
 		<a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
 	
-	<ul id="header">
+		<ul id="header">
 	
-			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
-	
-				<button onclick="myFunction()" class="dropbtn">
-					<i class="fa fa-account" style="color: black;">&#xf2bd;</i>
-					Account
-					<i class='fa fa-angle-down' style="color: black;"></i>
-				</button>
-				
-				<div id="myDropdown" class="dropdown-content">
-					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
-					<a href="feedback.php">Feedback</a>
-					<a href="logout-user.php">Log Out</a>
-				</div>
-				
-				</div>
+			<li><a href="login-user.php">Login</a></li>	
 			
-			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
-				?>
-			</li>
-			
-			<li><a href="#discover">Discover</a></li>	
-			
+			<li><a href="signup-user.php">Sign Up</a></li>	
+
 			<li><a href="#aboutus">About Us</a></li>		
 			
 			<li><a href="#latestreleases">Latest Releases</a></li>
 			
-			<li><a href="#releasingsoon">Releasing Soon</a></li>
+			<li><a href="#releasingsoon">Releasing Soon</a></li>			
 		
 		</ul>
     </div>
@@ -271,57 +175,37 @@ if($email != false && $password != false){
 					
 					<br>
 				
-					<p style="text-align: right;">
-						<a href="playlist.php" class="MoreBtn">More >></a>
-					</p>
+					<div id="content" style="text-align: right;">
+						<button class="clickmore MoreBtn">More >></button>
+					</div>
+
+					<div id="overlay"></div>
+
+					<div id="popupBox">
+					
+					<div id="popupContent" style="text-align: center;">
+	
+						<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" />
+		
+						<br><br>
+				
+						<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+						
+						<br><br>
+						
+						<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+									
+						<br><br><br>
+								
+						<a class="accountbtn" href="signup-user.php">Register User</a>
+    
+					</div>
+    
+					<span class="closebtn">&times;</span>
+	
+					</div>
 				
 				</div>
-			
-				<!--<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="4">
-					<img class="songimg" src="images/negaraku.jpg" style="height: 250px; object-fit: cover;" alt="National Anthem">
-					</a>
-					
-					<h4>Negaraku</h4>
-					<p>Pierre-Jean de Béranger</p>
-				
-				</div>
-			
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="5">
-					<img class="songimg" src="images/jjlim.jpg" style="height: 250px; object-fit: cover;" alt="Chinese Song">
-					</a>
-				
-					<h4>One Thousand Years Later</h4>
-					<p>JJ Lim</p>
-			
-				</div>
-			
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="6">
-					<img class="songimg" src="images/yohime.jpg" style="height: 250px; object-fit: cover;" alt="Onmyoji Song">
-					</a>
-					
-					<h4>As A Light Smoke</h4>
-					<p>IRiS (Tomo)</p>
-				
-				</div>
-			
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="7">
-					<img class="songimg" src="images/amazinggrace.jpg" style="height: 250px; object-fit: cover;" alt="Amazing Grace">
-					</a>
-				
-					<h4>Amazing Grace</h4>
-					<p>John Newton</p>
-					
-					<br>
-			
-				</div>-->
 			
 			</div>
 
@@ -334,66 +218,6 @@ if($email != false && $password != false){
 					<h3>Releasing Soon</h3>
 			
 				</div>
-			
-				<!--<div class="col-md-2">
-					
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>This Line</h4>
-				
-				</div>
-			
-				<div class="col-md-2">
-					
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/838702/pexels-photo-838702.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Is Empty</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-				
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Don't Know</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-				
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/2118046/pexels-photo-2118046.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>What To</h4>
-			
-				</div>
-			
-				<div class="col-md-2" class="album-poster">
-				
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/1735240/pexels-photo-1735240.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>Write Here</h4>
-			
-				</div>
-			
-				<div class="col-md-2">
-					
-					<a href="#" class="album-poster">
-					<img class="songimg" src="https://images.pexels.com/photos/2272854/pexels-photo-2272854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-					</a>
-				
-					<h4>From Vivian</h4>
-				
-				</div>-->
 				
 				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				
@@ -466,37 +290,41 @@ if($email != false && $password != false){
 					</div>
 					
 					<br><br><br>
+					
+					<div id="content" style="text-align: right;">
+						<button class="clickmore MoreBtn">More >></button>
+					</div>
+					
+					<div id="overlay"></div>
 				
-					<p style="text-align: right;">
-						<a href="aboutus.php" class="MoreBtn">More >></a>
-					</p>
+					<div id="popupBox">
+					
+					<div id="popupContent" style="text-align: center;">
+	
+						<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" />
+		
+						<br><br>
+				
+						<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+						
+						<br><br>
+						
+						<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+									
+						<br><br><br>
+								
+						<a class="accountbtn" href="signup-user.php">Register User</a>
+    
+					</div>
+    
+					<span class="closebtn">&times;</span>
+	
+					</div>
 				
 				</div>
 			
 			</div>
 		
-		</div>
-		
-		<br><br>
-		
-		<div class="row">
-				
-				<div id="discover" class="col-md-12">
-				
-				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
-				
-					<h3>Discover</h3>
-					
-					<div><a class="Dbutton" href="playlist.php">Playlists</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="album.php">Albums</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="aboutus.php">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="requestsongs.php">Request Songs</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="friend-system.php">Friend List</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="feedback.php">Feedback</a></div>
-			
-				</div>
-			
-			
 		</div>
 	
 	</div>
@@ -669,7 +497,37 @@ if($email != false && $password != false){
 
 	splitWords();
 	//# sourceURL=pen.js
+	
     </script>
+	
+	<script>
+		$('.clickmore').click(function () {
+		$('#overlay').fadeIn('slow');
+		$('#popupBox').fadeIn('slow');
+		$('#popupContent').fadeIn('slow');
+		});
+
+		// added .closebtn into the selectors
+		$('#overlay, .closebtn').click(function () {
+		$('#overlay').fadeOut('slow');
+		$('#popupBox').fadeOut('slow');
+		$('#popupContent').fadeOut('slow');
+		});
+
+		$('.clickbtn').click(function () {
+		$('#popupContent').fadeOut('slow');
+		$('#overlay').delay(1300).fadeOut('slow');
+		$('#popupBox').delay(1300).fadeOut('slow');
+		});
+
+		function redirect() {
+			window.location.href = "login-user.php";
+		}
+	
+		function redirect2() {
+			window.location.href = "signup-user.php";
+		}
+	</script>
 	
 </body>
 
