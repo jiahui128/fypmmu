@@ -91,7 +91,7 @@ if($email != false && $password != false){
 	
 </head>
 
-<body>
+<body style="background: lightgray;">
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<i class="fa">&#xf102;</i>
@@ -120,6 +120,14 @@ if($email != false && $password != false){
 				
 				</div>
 			</li>
+			
+			<li style="font-size: 14px; color: white; font-weight: bold;" >
+				<?php
+					$today = date("F j, Y");
+					echo $today;
+				?>
+			</li>
+			
 		</ul>
 
     </div>
@@ -141,7 +149,7 @@ if($email != false && $password != false){
 				
 			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for music <i class='fa fa-arrow-up'></i></p>
 				
-			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album: <br /> Moana Original Soundtrack<br />
+			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album: <br /> Moana Original Soundtrack (Disney)<br />
 			Song: <br />
 			Where You Are<br />
 			Artist: <br />

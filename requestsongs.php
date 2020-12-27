@@ -1,203 +1,166 @@
-<?php require_once "controllerUserData.php"; ?>
-<?php 
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM usertable WHERE email = '$email'";
-    $run_Sql = mysqli_query($con, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $status = $fetch_info['status'];
-        $code = $fetch_info['code'];
-        if($status == "verified"){
-            if($code != 0){
-                header('Location: reset-code.php');
-            }
-        }else{
-            header('Location: user-otp.php');
-        }
-    }
-}else{
-    header('Location: login-user.php');
-}
-?>
+<?php require_once "requestcon.php"; ?>
 
-<!DOCTYPE html>    
-<html>    
-
-<head>    
-
-	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Songs Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
 	
-	<title>SoFo Music About Us Page</title>
-	
-	<!-- Font Awesome (Icons) CSS -->
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-	
-	<!-- Bootstrap CSS Version 3.37 and 4.4.1 -->
-	
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-	
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    
-	<!-- Home Page CSS -->
-	
-	<link rel="stylesheet" href="css/homepage.css">
-	
-	<!-- Several Pages CSS -->
-	
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	
-    <!-- Favicon of the Website -->
-	
+	<!-- Favicon of the Website -->
 	<link rel="icon" href="images/sofomusic.jpg">
-
+	
 	<style>
-		body{
-			background: lightgray;
-		}
+	.form-element
+	{
+		position:relative;
+	}
+	.form-element input
+	{
+		width:100%
+		padding:10px;
+		font-size:20px;
+	}
+	.form-element .toggle-password
+	{
+		position:absolute;
+		width:40px;
+		height:40px;
+		top:2px;
+		right:2px;
+		border-radius:50%;
+		text-align:center;
+		line-height:35px;
+		font-size:20px;
+		cursor:pointer;
+	}
+	.form-element .toggle-password.active i.fa-eye
+	{
+		display:none;
+	}
+	.form-element .toggle-password.active i.fa-eye-slash
+	{
+		display:inline;
+	}
+	.form-element .toggle-password i.fa-eye-slash
+	{
+		display:none;
+	}
+	.form-element .password-policies
+	{
+		position:realtive;
+		text-align:left;
+		width:90%;
+		padding:0px;
+		height:0px;
+		background:#f5f5f5;
+		border-radius:5px;
+		margin:10px 45px 10px;
+		box-sizing:border-box;
+		opacity:0;
+		overflow:hidden;
+		transition:height 200ms ease-in-out,
+					opacity 200ms ease-in-out;
+	}
+	.form-element .password-policies.active
+	{
+		opacity:1;
+		padding:10px;
+		height:170px;
+	}
+	.form-element .password-policies > div
+	{
+		margin:15px 10px;
+		font-weight:600;
+		color:#888;
+	}
+	.form-element .password-policies > div.active
+	{
+		color:#111;
+	}
 	</style>
+	
+</head>
 
-</head>    
+<body>
 
-<body>    
-
-	<button onclick="topFunction()" id="myBtn" title="Go to top">
-		<i class="fa">&#xf102;</i>
-	</button>
+    <div class="container">
 	
-	<div class="page-header" style="text-align: center;">
-	
-		<a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
-	
-		<ul id="header">
-	
-			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
-	
-				<button onclick="myFunction()" class="dropbtn">
-					<i class="fa fa-account" style="color: black;">&#xf2bd;</i>
-					Account
-					<i class='fa fa-angle-down' style="color: black;"></i>
-				</button>
-				
-				<div id="myDropdown" class="dropdown-content">
-					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
-					<a href="home.php">Back to Home</a>
-					<a href="logout-user.php">Log Out</a>
-				</div>
-				
-				</div>
-			
-			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
-				?>
-			</li>
-			
-		</ul>
+        <div class="row">
 		
-	</div>
-	
-	<div class="container">    
- 
-			<div class="header_under" style="color: black;"></div>
-				<div class="container_wrapper" style="color: black;"><!--Start Container for the web content-->
-				<div class="sidebar_menu" style="color: black;"><!--Sidebar-->
-    	
-				<p class="header_1" style="color: black;">SoFo Music</p>
-					<br>
+            <div class="col-md-4 offset-md-4 form">
+				
+				<h1 style="text-align: center;"><a href="index.html"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" /></a></h1>
+				
+				<br>
+				
+				<h2 class="text-align: center;">Request Songs</h2>
+						
+                <p class="text-align: center;">Please enter the song's information</p>
+			
+                <form action="requestsongs.php" method="POST" autocomplete="">
 					
-					<ul>
-						<li><a href="aboutus.php">About Us</a></li>
-						<li><a href="requestsongs.php">Request Songs</a></li>
-						<li><a href="friend-system.php">Friend List</a></li>
-						<li><a href="feedback.php">Feedback</a></li>
-					</ul>
-			</div><!--End sidebar-->
-    
-			<div class="col2"><!--Start second column-->
-   
-			<div id="header_title" style="color: black;">Request Songs</div>
-        	<div class="content1_info">
-			
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					
+                    <div class="form-group input-container">
+					
+						<i class="fa fa-music icon"></i>
+						
+                        <input class="form-control" type="text" name="name" placeholder="Enter song name" required>
+                    </div>
+					
+                    <div class="form-group input-container">
+					
+						<i class="fa fa-book icon"></i>
+						
+                        <input class="form-control" type="text" name="album" placeholder="Enter album name" required>
+                    </div>
+					
+					<div class="form-element">
+					
+						<div class="form-group input-container">
+						
+							<i class="fa fa-user icon"></i>
+							
+							<input class="form-control" type="text" name="artist" placeholder="Enter artist name" required>
+						</div>	
+							
+					</div>
+					
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" onclick="submitForm()" name="submitbtn" value="Request Songs">
+                    </div>
+					</script>	
+					
+                    <div class="link login-link text-center"><a href="home.php">Back to Home Page</a></div>
+                </form>
 				
-				<p style="text-align: right;"><img src="images/anime.jpg" alt="SoFo Logo" style="width: 270px; height: 160px; float:right; " title="This is SoFo Logo" /></p>
-        	
-			</div>
-    </div><!--End second column-->
-	</div>
- 
-	</div>  
-	
-	<br><br>
-
-	<footer style="text-align: center;">
-			<p>Posted By : SoFo Team</p>
-			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
-			/ <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
-		
-			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
-	</footer>	
-
-	<script>
-	// Latest Album
-	/* When the user clicks on the button, 
-	toggle between hiding and showing the dropdown content */
-	function myFunction() 
-	{
-		document.getElementById("myDropdown").classList.toggle("show");
-	}
-
-	// Close the dropdown if the user clicks outside of it
-	window.onclick = function(event) 
-	{
-		if (!event.target.matches('.dropbtn')) 
-		{
-			var dropdowns = document.getElementsByClassName("dropdown-content");
-			var i;
-			for (i = 0; i < dropdowns.length; i++) 
-			{
-				var openDropdown = dropdowns[i];
-				if (openDropdown.classList.contains('show')) 
-				{
-					openDropdown.classList.remove('show');
+				<?php		
+					if(isset($_POST['submitbtn']))
+					{
+						$sp1= $_POST['name'];
+						$sp2= $_POST['album'];
+						$sp3= $_POST['artist'];
+			
+						mysqli_query($con, "INSERT INTO songtable (song_name,song_album,song_artist) VALUES('$sp1','$sp2','$sp3')");
 				}
-			}
-		}
-	}
-
-	//Scroll top button
-	//Get the button
-	var mybutton = document.getElementById("myBtn");
-	
-	// When the user scrolls down 20px from the top of the document, show the button
-	window.onscroll = function() {scrollFunction()};
-	
-	function scrollFunction() {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "block";
-		} else {
-			mybutton.style.display = "none";
-		}
-	}
-
-	// When the user clicks on the button, scroll to the top of the document
-	function topFunction() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
-	</script>
+				
+				?>
+				
+				<script>
+				function submitForm() {
+					alert("Thank you! We will update your wished song soon!");
+				}
+				</script>
+				
+            </div>
+			
+        </div>
+		
+    </div>
 	
     
-</body>   
- 
-</html> 
+</body>
+
+</html>
