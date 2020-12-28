@@ -91,7 +91,7 @@
 		
             <div class="col-md-4 offset-md-4 form">
 				
-				<h1 style="text-align: center;"><a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" /></a></h1>
+				<h1 style="text-align: center;"><a href="index.html"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" /></a></h1>
 				
 				<br>
 				
@@ -190,12 +190,6 @@
                         <input class="form-control button" type="submit" name="signup" value="Create Account" onclick="register();">
                     </div>
 					
-					<!--<br>
-					
-					<div class="form-group">
-                        <input class="form-control button" type="reset" name="reset" value="Reset">
-                    </div>-->
-					
 					<script>
 					
 						function register(){
@@ -208,6 +202,11 @@
 					
                     <div class="link login-link text-center">Already have an account? <a href="login-user.php">Login here</a></div>
                 </form>
+		
+				<!--<br>
+		
+				<p><small style="font: 10px sans-serif;  color: black;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small></p>
+				-->
 				
             </div>
 			

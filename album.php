@@ -52,10 +52,6 @@ if($email != false && $password != false){
 	
 	<link rel="stylesheet" href="css/homepage.css">
 	
-	<!-- Several Pages CSS -->
-	
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	
 	<!-- JQuery Library -->
 	
 	<script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
@@ -104,28 +100,28 @@ if($email != false && $password != false){
            //look for text inside the NEW textbox
            var input = document.getElementById('query').value.toLowerCase();
             switch(input) {
-                case 'kimi ni todoke', '1':
+                case 'kimi ni todoke':
                     window.location.replace('sgpf1.php');
                     break;
-                case 'moana', '2':
+                case 'where you are':
                     window.location.replace('sgpf2.php');
                     break;
-				case 'to the moon', '3':
+				case 'everything is alright':
                     window.location.replace('sgpf3.php');
                     break;
-				case 'beauty and the beast', '4':
+				case 'something there':
                     window.location.replace('sgpf4.php');
                     break;
-				case 'malaysia record', '5':
+				case 'negaraku':
                     window.location.replace('sgpf5.php');
                     break;
-				case 'code 89757', '6':
+				case 'one thousand years later':
                     window.location.replace('sgpf6.php');
                     break;
-				case 'unknown', '7':
+				case 'as a light smoke':
                     window.location.replace('sgpf7.php');
                     break;
-				case 'on a blue ridge sunday', '8':
+				case 'amazing grace':
                     window.location.replace('sgpf8.php');
                     break;
 					
@@ -139,7 +135,7 @@ if($email != false && $password != false){
 
 </head>
 	
-<body style="background: lightgray;">
+<body>
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<i class="fa">&#xf102;</i>
@@ -169,176 +165,154 @@ if($email != false && $password != false){
 				</div>
 			
 			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
-				?>
-			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<a href="playlist.php">Playlist</a>
-			</li>
 		
 		</ul>
 		
     </div>
-	
-	<div style="text-align: center;">
-	
-		<br><br>
-	
-		<form class="search" style="margin: auto; max-width: 630px;" action="playlist.php" method="get" onsubmit='return redirect();'>
-			<!-- pretty much the same thing except you remove the return false  !-->
-			<input type="text" name="query" id="query" align="center"  placeholder="Type the album name or code no, e.g. 1" columns="2" autocomplete="off" delay="1500"  onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" >
-			<!--<input type="submit" value="" id="submit">-->
-			<input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit" width="45px" height="45px">
-			<input type="hidden" name="search" value="1">
-		</form> 
-					
-		<br><br>
-					
-	</div>
-					
-	<div class="col-md-12" style="text-align: center;">
-					
-		<p style="font-family: Comic Sans MS; font-size: 12px;">Checkout our playlists to enjoy a variety of popular songs to fit your mood. Enjoy your music anytime, anywhere.</p>
-					
-	<br>
-	
-	</div>
 
-	<div class="header_under"></div>
-	<!--Start Container for the web content-->
-	<div class="playlist_wrapper">
-	
-		<div class="submenu">
-        	
-			<ul>     
-           
-				<li><a href="sgpf1.php">#1</a></li>
-                <li><a href="sgpf2.php">#2</a></li>
-                <li><a href="sgpf3.php">#3</a></li>  
-				<li><a href="sgpf4.php">#4</a></li>       				
-				<li><a href="sgpf5.php">#5</a></li> 
-				<li><a href="sgpf6.php">#6</a></li> 
-				<li><a href="sgpf7.php">#7</a></li> 
-				<li><a href="sgpf7.php">#8</a></li> 
-			
-			</ul>
+	<div class="main" style="text-align: center;">
 		
-		</div>
-		
-        <div class="pcontainer">
-        	
-			<br>
+		<div class="container">
 			
-			<h3 style="text-align: center;">Album Lists</h3>
-			
-			<br>
-        	
-			<div class="col-md-3">
+			<div class="row">
+				
+				<div id="newreleases" class="col-md-12">
+
+					<div>
 					
-					<a href="#" class="album-poster" data-switch="0">
-					<img class="songimg" src="album/ab1.jpg" alt="Kimi_Ni_Todoke">
-					</a>
+						<br>
+						
+						<!--<form class="search" action=""  style="margin: auto; max-width: 630px;">
+							
+							<input type="text" id="myText" placeholder="Search Songs, Artists, Albums, Playlists">
+							
+							<button type="submit" onclick="SearchBtn"><i class="fa fa-search"></i></button>
+							
+						</form>
+						
+						<script>
+						
+						</script>-->
+						
+						<form class="search" style="text-align: center; margin: auto; max-width: 630px;" action="playlist.php" method="get" onsubmit='return redirect();'>
+							<!-- pretty much the same thing except you remove the return false  !-->
+							<input type="text" name="query" id="query" align="center"  placeholder="Type the song name" columns="2" autocomplete="off" delay="1500"  onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" >
+							<!--<input type="submit" value="" id="submit">-->
+							<input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit" width="45px" height="45px">
+							<input type="hidden" name="search" value="1">
+						</form> 
+					
+						<br><br>
+					
+					</div>
+					
+					<div class="col-md-12">
+					
+					<p style="font-family: Comic Sans MS; font-size: 12px;">Checkout our playlists to enjoy a variety of popular songs to fit your mood. Enjoy your music anytime, anywhere.</p>
 					
 					<br>
+					
+					<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
 				
-					<h4 style="text-align: center;">Kimi Ni Todoke</h4>
+					<h3>Latest Album</h3>
+								
+					</div>
+				
+				</div>
+			
+				<div class="col-md-3">
+					
+					<a href="sgpf1.php" class="album-poster" data-switch="0">
+					<img class="songimg" src="images/sawako.jpg" alt="Kimi_Ni_Todoke">
+					</a>
+				
+					<h4>Kimi Ni Todoke</h4>
+					<p>Tanizawa Tomofumi</p>
 			
 				</div>
 			
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="1">
-					<img class="songimg" src="album/ab2.jpg" alt="Walts Disney Record 1">
+					<a href="sgpf2.php" class="album-poster" data-switch="1">
+					<img class="songimg" src="images/moana.jpg" alt="Moana Movie Clip">
 					</a>
-					
-					<br>
 				
-					<h4 style="text-align: center;">Moana</h4>
+					<h4>Where You Are</h4>
+					<p>Disney Music Vevo</p>
 				
 				</div>
 				
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="2">
-					<img class="songimg" src="album/ab3.jpg" alt="To The Moon">
+					<a href="sgpf3.php" class="album-poster" data-switch="2">
+					<img class="songimg" src="images/every.jpg" alt="To The Moon">
 					</a>
-					
-					<br>
 				
-					<h4 style="text-align: center;">To The Moon</h4>
-				
-				</div>
-				
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="3">
-					<img class="songimg" src="album/ab8.jpg" alt="Walts Disney Record 2">
-					</a>
-					
-					<br>
-				
-					<h4 style="text-align: center;">Beauty and the Beast</h4>
+					<h4>Everything&#180s Alright</h4>
+					<p>Laura Shigihara</p>
 				
 				</div>
 
 				<div class="col-md-3">
 					
-					<a href="#" class="album-poster" data-switch="4">
-					<img class="songimg" src="album/ab4.jpg" style="height: 250px;" alt="National Anthem">
+					<a href="sgpf4.php" class="album-poster" data-switch="3">
+					<img class="songimg" src="images/beautyandthebeast.jpg" style="height: 250px;" alt="Beauty and the Beast">
 					</a>
-					
-					<br>
 				
-					<h4 style="text-align: center;">Malaysia Records</h4>
-				
-				</div>
-				
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="5">
-					<img class="songimg" src="album/ab5.jpg" style="height: 250px;" alt="Wayne Lin Jun Jie">
-					</a>
-					
-					<br>
-				
-					<h4 style="text-align: center;">Code 89757</h4>
-				
-				</div>
-				
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="6">
-					<img class="songimg" src="album/ab6.jpg" style="height: 250px;" alt="Onmyoji Records">
-					</a>
-					
-					<br>
-				
-					<h4 style="text-align: center;">Unknown</h4>
-				
-				</div>
-				
-				<div class="col-md-3">
-					
-					<a href="#" class="album-poster" data-switch="7">
-					<img class="songimg" src="album/ab7.jpg" style="height: 250px;" alt="Amazing Grace">
-					</a>
-					
-					<br>
-				
-					<h4 style="text-align: center;">On a Blue Ridge Sunday</h4>
+					<h4>Something There</h4>
+					<p>Disney Music Vevo</p>
 				
 				</div>
 			
+				<div class="col-md-3">
+					
+					<a href="sgpf5.php" class="album-poster" data-switch="4">
+					<img class="songimg" src="images/negaraku.jpg" alt="National Anthem">
+					</a>
+					
+					<h4>Negaraku</h4>
+					<p>Pierre-Jean de Béranger</p>
+				
+				</div>
+			
+				<div class="col-md-3">
+					
+					<a href="sgpf6.php" class="album-poster" data-switch="5">
+					<img class="songimg" src="images/jjlim.jpg" alt="Chinese Song">
+					</a>
+				
+					<h4>One Thousand Years Later</h4>
+					<p>Wayne Lin Jun Jie</p>
+			
+				</div>
+			
+				<div class="col-md-3">
+					
+					<a href="sgpf7.php" class="album-poster" data-switch="6">
+					<img class="songimg" src="images/yohime.jpg" style="height: 250px;" alt="Onmyoji Song">
+					</a>
+					
+					<h4>As A Light Smoke</h4>
+					<p>IRiS (Tomo)</p>
+				
+				</div>
+			
+				<div class="col-md-3">
+					
+					<a href="sgpf8.php" class="album-poster" data-switch="7">
+					<img class="songimg" src="images/amazinggrace.jpg" alt="Amazing Grace">
+					</a>
+				
+					<h4>Amazing Grace</h4>
+					<p>John Newton</p>
+			
+				</div>
+			
+			</div>
+
 		</div>
-		
-	</div><!--End Container-->
 	
-	<br><br>
+	</div>
 
 	<div id="aplayer"></div>
 
@@ -397,7 +371,7 @@ if($email != false && $password != false){
 		const ap = new APlayer({
 		    container: document.getElementById('aplayer'),
 		    listFolded: true,
-		   audio: [
+		    audio: [
 		    {
 		        name: 'Kimi Ni Todoke', // SONG NAME
 		        artist: 'Tanizawa Tomofumi', //ARTIST NAME
@@ -450,27 +424,6 @@ if($email != false && $password != false){
 
 		    ]
 		});
-		
-		//Scroll top button
-		//Get the button
-		var mybutton = document.getElementById("myBtn");
-
-		// When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
-			} else {
-				mybutton.style.display = "none";
-			}
-		}
-		
-		// When the user clicks on the button, scroll to the top of the document
-		function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
 	
 	</script>
 	

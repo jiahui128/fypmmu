@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header('location: newhome.php');
+header('location: login-user.php');
 ?>

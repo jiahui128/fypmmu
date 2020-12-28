@@ -18,7 +18,7 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: newhome.php');
+    header('Location: login-user.php');
 }
 ?>
 
@@ -77,58 +77,6 @@ if($email != false && $password != false){
 		}
 	</script>
 	
-	<style>
-	
-	.Dbutton {
-		display: inline-block;
-		text-align: center;
-		vertical-align: middle;
-		padding: 10px 10px;
-		border: 1px solid #000000;
-		border-radius: 8px;
-		background: #fff2f2;
-		background: -webkit-gradient(linear, left top, left bottom, from(#fff2f2), to(#a19e9e));
-		background: -moz-linear-gradient(top, #fff2f2, #a19e9e);
-		background: linear-gradient(to bottom, #fff2f2, #a19e9e);
-		text-shadow: #591717 1px 1px 1px;
-		font: normal normal bold 20px comic sans ms;
-		color: #ffffff;
-		text-decoration: none;
-	}
-	
-	.Dbutton:hover,
-		.button:focus {
-		background: #ffffff;
-		background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#c1bebe));
-		background: -moz-linear-gradient(top, #ffffff, #c1bebe);
-		background: linear-gradient(to bottom, #ffffff, #c1bebe);
-		color: #ffffff;
-		text-decoration: none;
-	}
-
-	.Dbutton:active {
-		background: #999191;
-		background: -webkit-gradient(linear, left top, left bottom, from(#999191), to(#a19e9e));
-		background: -moz-linear-gradient(top, #999191, #a19e9e);
-		background: linear-gradient(to bottom, #999191, #a19e9e);
-	}
-	
-	.Dbutton:before{
-		content:  "\0000a0";
-		display: inline-block;
-		height: 24px;
-		width: 24px;
-		line-height: 24px;
-		margin: 0 4px -6px -4px;
-		position: relative;
-		top: 0px;
-		left: 0px;
-		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOklEQVRIibWVPU4DMRCFv1gpIqAPVNyAA1BEUNDnFhHislwAGoRCUiFFiVYIHIrM7FqOB/8oPMlae9Z+43m2Z0aA4x8xlq83HDlgUsnZCV/PGRPreA68A9vKtpS1LiaMxytg39iWiDqjhAPFzx8ywCCF4izo74ApsAvPINx9uNAivxYixSYxzyvhBQf9NtFOLPiI3MTYsJde3VXmv7Mc5CRS5KL1LY+sq5lsOUjZX4F74Ap4AL5K+R3DIW+lD8d3+y6xAesd9DylEnXAczD22BfkOIQC+wS4Ebu221L+UolegJk4m8k4K1GNg5qWPQMHrAsksPDJ4dyc5cADi0Yna+CJoSaYEp0EqatWkuxSSCY/rQcOeAMurYkFOBeeMPX3uegbeAQ+GskVPu5rBFqgW4q8wozcqskn6f8CqVV+vpABbsUAAAAASUVORK5CYII=") no-repeat left center transparent;
-		background-size: 100% 100%;
-	}
-
-	</style>
-	
 </head>
 
 <body>
@@ -161,16 +109,9 @@ if($email != false && $password != false){
 			
 			</li>
 			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
-				?>
-			</li>
-			
-			<li><a href="#discover">Discover</a></li>	
-			
-			<li><a href="#aboutus">About Us</a></li>		
+			<li><a href="#aboutus">About Us</a></li>
+
+			<li><a href="#discovermore">Discover More</a></li>			
 			
 			<li><a href="#latestreleases">Latest Releases</a></li>
 			
@@ -411,15 +352,32 @@ if($email != false && $password != false){
 					<br />Song: <br />故海潮生<br />
 					<br />Artist: <br />三无Marblue<br />
 					<br />Released: Nov 1, 2020<br />
-					<br />Requested by: Vivian Quek
-					
+					<br />Requested by: <?php echo $fetch_info['name'] ?>
 					</p>
 					
 				</div>
 			
 			</div>
 			
-			<br><br>
+			<br><br><br><br>
+			
+			<div class="row">
+				
+				<div id="discovermore" class="col-md-12">
+				
+				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
+				
+					<h3>Discover More</h3>
+					
+					<div></div>
+					
+			
+				</div>
+			
+			
+			</div>
+			
+			<br><br><br><br>
 			
 			<div id="aboutus">
 
@@ -464,39 +422,11 @@ if($email != false && $password != false){
 						<strong>Ng Jia Hui</strong>
 					
 					</div>
-					
-					<br><br><br>
-				
-					<p style="text-align: right;">
-						<a href="aboutus.php" class="MoreBtn">More >></a>
-					</p>
 				
 				</div>
 			
 			</div>
 		
-		</div>
-		
-		<br><br>
-		
-		<div class="row">
-				
-				<div id="discover" class="col-md-12">
-				
-				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
-				
-					<h3>Discover</h3>
-					
-					<div><a class="Dbutton" href="playlist.php">Playlists</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="album.php">Albums</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="aboutus.php">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="requestsongs.php">Request Songs</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="friend-system.php">Friend List</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="feedback.php">Feedback</a></div>
-			
-				</div>
-			
-			
 		</div>
 	
 	</div>

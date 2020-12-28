@@ -52,25 +52,7 @@ if($email != false && $password != false){
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	
 	<style>
-		.changee
-		{
-			transform:translate(10%,140%);
-		}
-		.cfbtn
-		{
-			padding:10px;
-			width:20%;
-			color:white;
-			border:none;
-			background:#157DEC;
-			font-style:italic;
-			border-radius:7%;
-		}
-		.cfbtn:hover
-		{
-			background:#4CC417;
-			border:1px solid;
-		}
+
 	</style>
 	
 </head>
@@ -108,7 +90,7 @@ if($email != false && $password != false){
     </div>
 	
 	<div class="profile">
-		<form class="fileform" method="post">
+		<form class="fileform">
 			
 			<ul class="list">
 				<li style="text-align:center;">
@@ -131,18 +113,14 @@ if($email != false && $password != false){
 					<hr style="width:70%;">
 				</li>
 				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
-				<li><a href="edit-profile.php"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
-				<li><a href="change-password.php" id="active"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
+				<li><a href="edit-profile.php"><i class="fa">&#xf044;</i>Edit Account</a></li>
+				<li><a href="change-password.php"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
-				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
+				<li><a href="personal-playlist.php" id="active"><i class='fab'>&#xf3b5;</i>Play list</a></li>
 			</ul>
 			<div class="word">
-				<div class="changee">
-						<label style="margin-right:10px;">Current Password</label><input type="password" name="curpwd"><br><br>
-						<label style="margin-right:33px;">New Password</label><input type="password" name="newpwd"><br><br>
-						<label style="margin-right:7px;">Confirm Password</label><input type="password" name="cpwd"><br><br>
-						<input class="cfbtn" type="submit" name="change" value="Confirm">
-				</div>
+				Still processing
+			
 			</div>
 		</form>
 	</div>

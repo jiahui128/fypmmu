@@ -20,7 +20,7 @@
 		
             <div class="col-md-4 offset-md-4 form login-form">
 			
-				<h1 style="text-align: center;"><a href="newhome.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" /></a></h1>
+				<h1 style="text-align: center;"><a href="index.html"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" /></a></h1>
 				
 				<br>
 			
@@ -63,10 +63,6 @@
 					<div class="form-group">
                         <input class="form-control button" type="submit" name="login" value="Login">
                     </div>
-					
-					<!--<div class="form-group">
-                        <input class="form-control button" type="reset" name="reset" value="Reset">
-                    </div>-->
 					
                     <div class="link login-link text-center">Not yet a member? <a href="signup-user.php">Signup now</a></div>
                 </form>

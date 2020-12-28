@@ -201,7 +201,7 @@ if(isset($_POST['signup'])){
 					echo"<script>alert('Password change!')</script>";
 
 				}else{
-					echo"<script>alert('Password does not match!')</script>";
+					echo"<script>alert('New Password and Confirm Password does not match!')</script>";
 				}
 			}else{
 				echo"<script>alert('Current password wrong!')</script>";

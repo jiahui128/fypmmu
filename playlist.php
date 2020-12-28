@@ -61,7 +61,6 @@ if($email != false && $password != false){
 	<link rel="icon" href="images/sofomusic.jpg">
 
 	<style>
-	
 		form.search input[type=text] {
 			padding: 10px;
 			font-size: 17px;
@@ -100,28 +99,28 @@ if($email != false && $password != false){
            //look for text inside the NEW textbox
            var input = document.getElementById('query').value.toLowerCase();
             switch(input) {
-                case 'kimi ni todoke', '1':
+                case 'kimi ni todoke':
                     window.location.replace('sgpf1.php');
                     break;
-                case 'where you are', '2':
+                case 'where you are':
                     window.location.replace('sgpf2.php');
                     break;
-				case 'everything is alright', '3':
+				case 'everything is alright':
                     window.location.replace('sgpf3.php');
                     break;
-				case 'something there', '4':
+				case 'something there':
                     window.location.replace('sgpf4.php');
                     break;
-				case 'negaraku', '5':
+				case 'negaraku':
                     window.location.replace('sgpf5.php');
                     break;
-				case 'one thousand years later', '6':
+				case 'one thousand years later':
                     window.location.replace('sgpf6.php');
                     break;
-				case 'as a light smoke', '7':
+				case 'as a light smoke':
                     window.location.replace('sgpf7.php');
                     break;
-				case 'amazing grace', '8':
+				case 'amazing grace':
                     window.location.replace('sgpf8.php');
                     break;
 					
@@ -135,7 +134,7 @@ if($email != false && $password != false){
 
 </head>
 	
-<body style="background: lightgray;">
+<body>
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<i class="fa">&#xf102;</i>
@@ -164,17 +163,6 @@ if($email != false && $password != false){
 				
 				</div>
 			
-			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
-				?>
-			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<a href="album.php">Album</a>
 			</li>
 		
 		</ul>
@@ -205,9 +193,9 @@ if($email != false && $password != false){
 						
 						</script>-->
 						
-						<form class="search" style="text-align: center; margin: auto; max-width: 630px;" action="playlist.php" method="get" onsubmit='return redirect();'>
+						<form class="search" style="margin: auto; max-width: 630px;" action="playlist.php" method="get" onsubmit='return redirect();'>
 							<!-- pretty much the same thing except you remove the return false  !-->
-							<input type="text" name="query" id="query" align="center"  placeholder="Type the song name or code no, e.g. 1" columns="2" autocomplete="off" delay="1500"  onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" >
+							<input type="text" name="query" id="query" align="center"  placeholder="Type the song name in lowercase" columns="2" autocomplete="off" delay="1500"  onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" >
 							<!--<input type="submit" value="" id="submit">-->
 							<input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit" width="45px" height="45px">
 							<input type="hidden" name="search" value="1">

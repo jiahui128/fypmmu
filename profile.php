@@ -45,29 +45,15 @@ if($email != false && $password != false){
 	<!-- Home Page CSS -->
 	<link rel="stylesheet" href="css/homepage.css">
 	
+	<!--profile-->
+	<link rel="stylesheet" href="css/profile.css">
+	
 	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	
 	<style>
 		
-		
-		.extra_margin
-		{
-			margin-top: 10px;
-		}
-		
-		#profilepicture
-		{
-			border-radius: 50%;
-			height: 150px;
-			width: 150px;
-			background-size: cover;
-			background-position: center;
-			background-blend-mode: multiply;
-			color: transparent;
-			transition: all .3s ease;
-			@include object-center;
-		}
+
 
 	</style>
 	
@@ -76,7 +62,7 @@ if($email != false && $password != false){
 <body>
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
-		<i class="fa">&#xf102;</i>
+		<i class="fa" style="margin:0px;">&#xf102;</i>
 	</button>
 	
 	<div class="page-header">
@@ -85,130 +71,70 @@ if($email != false && $password != false){
 
 		<ul id="header">
 		
-			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
-				
-				<button onclick="myFunction()" class="dropbtn">
-					<i class="fa fa-account" style="font-size: 18px; color: black;">&#xf2bd;</i>
-					Account
-					<i class='fa fa-angle-down' style="font-size: 18px; color: black;"></i>
-				</button>
-				
-				<div id="myDropdown" class="dropdown-content">
-					<a href="home.php">Back to Home</a>
-					<a href="feedback.php">Feedback</a>
-					<a href="logout-user.php">Log Out</a>
-				</div>
-				
+			<li style="font-size: 14px; color: white; font-weight: bold;">
+				<div class="dropdown">
+					<button onclick="myFunction()" class="dropbtn">
+						<i class="fa fa-account" style="font-size: 18px; color: black;">&#xf2bd;</i>
+						Account
+						<i class='fa fa-angle-down' style="font-size: 18px; color: black;"></i>
+					</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="home.php">Back to Home</a>
+						<a href="feedback.php">Feedback</a>
+						<a href="logout-user.php">Log Out</a>
+					</div>
 				</div>
 			</li>
 		</ul>
 
     </div>
 	
-	<!--Main container. Everything must be contained within a top-level container.-->
-	<div class="container-fluid">
-
-    <!--First row (only row)-->
-    <div class="row extra_margin">
-
-		<!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
-		<div class="col-md-4 col-sm-12 col-xs-12">
-
-			<!-- Div to center the header image/name/social buttons -->
-			<div class="text-center">
-				
-			<br><br><br><br><br><br><br>
-				
-            <!-- Placeholder image -->
-			<span>
-			<?php
-				$email = $_SESSION["email"];
-				$q=mysqli_query($con,"SELECT * FROM usertable WHERE email= '$email'");
-				while($row=mysqli_fetch_assoc($q))
-				{
-					if($row['profile_image'] == "")
-					{
-						echo "<img id='profilepicture' class='image-rounded' src='images/aboutus'  alt='Default Profile Pic'>";
-					}
-					else
-					{
-						echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
-					}
-				}
-			?>
-			</span>
-			<br><br>
-
-			<p><a href="profile_image.php"><i class="icon-cog" style="color: black;"></i>Edit profile image</a></p>
-
-			<!-- Header text (Person's name) -->
-			<h2><?php echo $fetch_info['name'] ?></h2>
-			
-			<br>
-			
-			<!-- Social buttons using anchor elements and btn-primary class to style -->
-            <p>
-                <a class="btn btn-primary btn-xs" href="friend-system.html" role="button">Friend List</a>
-                <a class="btn btn-primary btn-xs" href="album.php" role="button">Album</a>
-                <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
-            </p>
-			
-			<a href="change-password.php">Change Your Password</a>
-
-			</div> <!-- End Col 1 -->
-			
-		</div>
-	
-		<!-- Second column - for small and extra-small screens, will use whatever # cols is available -->
-		<div class="col-md-8 col-sm-* col-xs-*">
-
-		<div class="example">
-
-        <!-- "Lead" text at top of column. -->
-        <h4 class="lead">Personal Playlist</h4>
-
-		</div>
-
-        <!-- Horizontal rule to add some spacing between the "lead" and body text -->
-        <hr />
-		
-		<br>
-		
-		<h1>Contents of Profile Page In Here</h1>
-
-		<br>
-
-        <!-- Body text (paragraph 1) -->
-        <p>
-        Music is composed and performed for many purposes, ranging from aesthetic pleasure, religious or ceremonial purposes, or as an entertainment product for the marketplace.
-        </p>
-
-        <!-- Body text (paragraph 2) -->
-        <p>
-		When music was only available through sheet music scores, such as during the Classical and Romantic eras, music lovers would buy the sheet music of their favourite pieces and songs so that they could perform them at home on the piano.
-		</p>
-
-        <!-- Body text (paragraph 3) -->
-        <p>
-		With the advent of the phonograph, records of popular songs, rather than sheet music became the dominant way that music lovers would enjoy their favourite songs.
-		</p>
-		
-        <!-- Body text (paragraph 4) -->
-        <p>
-		All right reserved. No part of this website may be reproduced or used in any manner without written permission of the copyright owner except for the use of quotations in a website review.
-		</p>
-		
-		<br>
-		
-		<p>
-		PS # Why the content of profile is about strict laws and policy ? xD
-		</p>
-
-		</div> <!-- End column 2 -->
-
-		</div> <!-- End row 1 -->
-
-	</div> <!-- End main container -->
+	<div class="profile">
+		<form class="fileform">
+			<ul>
+				<li style="text-align:center;">
+					<?php
+						$email = $_SESSION["email"];
+						$q=mysqli_query($con,"SELECT * FROM usertable WHERE email= '$email'");
+						while($row=mysqli_fetch_assoc($q))
+						{
+							if($row['profile_image'] == "")
+							{
+								echo "<img id='profilepicture' class='image-rounded' src='images/aboutus.png'  alt='Default Profile Pic'>";
+							}
+							else
+							{
+							echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
+							}
+						}
+					?>
+					<h2 style="text-align:center;margin:10px;"><?php echo $fetch_info['name'] ?></h2>
+					<hr style="width:70%;">
+				</li>
+				<li><a href="profile.php" id="active"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
+				<li><a href="edit-profile.php"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
+				<li><a href="change-password.php"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
+				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
+				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
+			</ul>
+			<div class="word">
+				<div style="margin-left:250px;">
+					<h1><b>Account Overview</b></h1>
+					<h4 style="text-align:left; padding:15px 0px 20px 5px;"> User Information</h4>
+					<table style="margin-left:10px;padding-top:10px;">
+						<tr class="tr">
+							<td class="tdname">User Name</td>
+							<td class="info"><?php echo$fetch_info['name']?></td>
+						</tr>
+						<tr class="tr">
+							<td class="tdname">Email</td>
+							<td class="info"><?php echo$fetch_info['email']?></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</form>
+	</div>
 	
 	<br><br><br><br>
 	
@@ -223,7 +149,6 @@ if($email != false && $password != false){
 </body>
 
 <script>
-// Latest Album
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() 
