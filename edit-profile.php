@@ -52,6 +52,13 @@ if($email != false && $password != false){
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	
 	<style>
+	/*edit image*/
+	.post_img
+	{
+		width:95%;
+		margin-left:10px;
+	}
+	
 	.img
 	{
 		font-size:16px;
@@ -59,27 +66,55 @@ if($email != false && $password != false){
 	
 	#post_button
 	{
-		width: 70px;
+		width: 20%;
 		font-size:14px;
-		border-radius:10px;
 		padding:7px;
 		border:none;
 		background:#157DEC;
 		float:right;
+		border-radius:10px;
+		color:white;
+		font-style:italic;
 	}
 	
 	#post_button:hover
 	{
-		background:#55F27B;
-		color:white;
+		background:#4CC417;
 	}
 	
-	.post_img
+	
+	/*change password*/
+	.changee
 	{
-		width:40%;
-		transform:translate(100%,300%);
+		margin-left:10px;
+		float:left;
+		width:95%;
+	}
+	
+	.pwd
+	{
+	    float: left;
+		width: 80%;
+		height: 25px;
+		margin-bottom:15px;
+	}
+	.cfbtn
+	{
+		padding:7px;
+		width:20%;
+		color:white;
+		border:none;
+		background:#157DEC;
+		font-style:italic;
 		border-radius:10px;
-		padding:30px;
+		border:none;
+		float:right;
+		margin-top:10px;
+	}
+	.cfbtn:hover
+	{
+		background:#4CC417;
+		border:none;
 	}
 	</style>
 	
@@ -119,7 +154,6 @@ if($email != false && $password != false){
 	
 	<div class="profile">
 		<form class="fileform" method="post" enctype="multipart/form-data">
-			
 			<ul class="list">
 				<li style="text-align:center;">
 					<?php
@@ -142,18 +176,26 @@ if($email != false && $password != false){
 				</li>
 				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
 				<li><a href="edit-profile.php" id="active"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
-				<li><a href="change-password.php"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
 				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
 			</ul>
 			<div class="word">
-				<div class="post_img">
-					<input type="file" name="file" class="img">
-					<input id="post_button" type="submit" name="change_pic" value="Change">
+				<div style="width:79%;float:right;">
+					<h1><b>Edit Profile</b></h1>
+					<div class="post_img">
+						<h4>Edit Image</h4>
+						<input type="file" name="file" class="img">
+						<input id="post_button" type="submit" name="change_pic" value="Change">
+					</div>
+					<hr style="width:95%;margin:50 0 0 5;">
+					<div class="changee">
+						<h4>Change Password</h4>
+						<label style="margin-right:10px;float:left;">Current Password</label><input type="password" name="curpwd" class="pwd"><br><br>
+						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd"><br><br>
+						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd"><br><br>
+						<input class="cfbtn" type="submit" name="change" value="Confirm">
+					</div>
 				</div>
-		</form>
-	</div>
-			
 			</div>
 		</form>
 	</div>

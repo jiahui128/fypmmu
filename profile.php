@@ -85,14 +85,6 @@ if($email != false && $password != false){
 					</div>
 				</div>
 			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
-				?>
-			</li>
-			
 		</ul>
 
     </div>
@@ -121,14 +113,13 @@ if($email != false && $password != false){
 				</li>
 				<li><a href="profile.php" id="active"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
 				<li><a href="edit-profile.php"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
-				<li><a href="change-password.php"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
 				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
 			</ul>
 			<div class="word">
-				<div style="margin-left:250px;">
+				<div style="width:79%;float:right;">
 					<h1><b>Account Overview</b></h1>
-					<h4 style="text-align:left; padding:15px 0px 20px 5px;"> User Information</h4>
+					<h4 style="text-align:left; margin:30 0 20 10;"> User Information</h4>
 					<table style="margin-left:10px;padding-top:10px;">
 						<tr class="tr">
 							<td class="tdname">User Name</td>

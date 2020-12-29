@@ -114,13 +114,13 @@ if($email != false && $password != false){
 				</li>
 				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
 				<li><a href="edit-profile.php"><i class="fa">&#xf044;</i>Edit Account</a></li>
-				<li><a href="change-password.php"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
 				<li><a href="friend-list.php" id="active"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
 				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
 			</ul>
 			<div class="word">
-				Still processing
-			
+				<div style="width:79%;float:right;">
+					Still processing
+				</div>
 			</div>
 		</form>
 	</div>
