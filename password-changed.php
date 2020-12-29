@@ -1,7 +1,7 @@
 <?php require_once "controllerUserData.php"; ?>
 <?php
 if($_SESSION['info'] == false){
-    header('Location: login-user.php');  
+    header('Location: newhome.php');  
 }
 ?>
 

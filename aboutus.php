@@ -52,6 +52,7 @@ if($email != false && $password != false){
 	<!-- Several Pages CSS -->
 	
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" href="style.css">
 	
     <!-- Favicon of the Website -->
 	
@@ -106,46 +107,40 @@ if($email != false && $password != false){
 		
 	</div>
 	
-	<div class="container">    
- 
-			<div class="header_under" style="color: black;"></div>
-				<div class="container_wrapper" style="color: black;"><!--Start Container for the web content-->
-				<div class="sidebar_menu" style="color: black;"><!--Sidebar-->
-    	
-				<p class="header_1" style="color: black;">SoFo Music</p>
-					<br>
-					
-					<ul>
-						<li><a href="aboutus.php">About Us</a></li>
-						<li><a href="requestsongs.php">Request Songs</a></li>
-						<li><a href="friend-system.php">Friend List</a></li>
-						<li><a href="feedback.php">Feedback</a></li>
-					</ul>
-			</div><!--End sidebar-->
-    
-			<div class="col2"><!--Start second column-->
-   
-			<div id="header_title" style="color: black;">About Us</div>
-        	<div class="content1_info">
+	<div class="header_under"></div>
+	<!--Start Container for the web content-->
+	<div class="playlist_wrapper">
+		
+        <div class="pcontainer">
+		
+			<br>
+		
+        	<h3 style="text-align: center;">About Us</h3>
 			
-				<p>In this current century, due to the rapid growth of information technology, more and more music is available freely online. People can search for their favorite songs online in ease and download it as mp3 files, etc. </p>
-				<br>
-				<p>SoFo Music is a new released online music streaming website and contains a lots of greatest collections of musical compositions, ranging from well-known standards to new songs by emerging artists.</p>	
-                <br>
-				<p>SoFo Music is created by three enthusiastic amateurs in programming, who just begin to start to learn how to code. The members are : Vivian Quek Jia Yi, Ng Jia Hui, and Tan Wei Chin. All of the members are currently pursuing their diploma in Information Technology in Multimedia University, Melaka.</p>
-				<br>
-				<p>The main objective of developing this Online Music Gallery System web-based application is to provide a user friendly environment for those who is passionate in music and needs a platform for them to store the songs in a list they want to listen, and also play their songs---- either instrumental or with lyrics.</p>
-                
-                
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br>
+		
+			<p>In this current century, due to the rapid growth of information technology, more and more music is available freely online. People can search for their favorite songs online in ease and download it as mp3 files, etc. </p>
+			
+			<br>
+			
+			<p>SoFo Music is a new released online music streaming website and contains a lots of greatest collections of musical compositions, ranging from well-known standards to new songs by emerging artists.</p>	
+            
+			<br>
 				
-				<p style="text-align: right;"><img src="images/anime.jpg" alt="SoFo Logo" style="width: 270px; height: 160px; float:right; " title="This is SoFo Logo" /></p>
+			<p>SoFo Music is created by three enthusiastic amateurs in programming, who just begin to start to learn how to code. The members are : Vivian Quek Jia Yi, Ng Jia Hui, and Tan Wei Chin. All of the members are currently pursuing their diploma in Information Technology in Multimedia University, Melaka.</p>
+				
+			<br>
+			
+			<p>The main objective of developing this Online Music Gallery System web-based application is to provide a user friendly environment for those who is passionate in music and needs a platform for them to store the songs in a list they want to listen, and also play their songs---- either instrumental or with lyrics.</p>
+                
+                
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				
+			<p style="text-align: right;"><img src="images/anime.jpg" alt="SoFo Logo" style="width: 270px; height: 160px; float:right; " title="This is SoFo Logo" /></p>
         	
-			</div>
-    </div><!--End second column-->
+		</div><!--End Container-->
+			
 	</div>
- 
-	</div>  
 	
 	<br><br>
 

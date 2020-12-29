@@ -29,6 +29,7 @@
 	<!-- Home Page CSS -->
 	
 	<link rel="stylesheet" href="css/homepage.css">
+	<link rel="stylesheet" href="css/newhomepage.css">
 	
 	<!-- JQuery Library -->
 	
@@ -107,7 +108,39 @@
 				<label for="i1" class="nxt"></label>
 				<div class="btext">
 				<h1><span style="color: black; font-size:50px; font-style: italic; font-family: Georgia;">Where Music Plays</span></h1>
-				<a href="playlist.php" id="a1">Listen to Music Now</a>
+				
+				<a href="#popupmenu" class="MoreBtn" style="color: black;">Listen to Music Now</a>
+				
+				<div id="popupmenu" class="overlay">
+				
+					<div class="popup">
+								
+							<a href="#" class="close">+</a>
+						
+							<div class="content2" style="font-size: 14px; color: black; font-weight: bold;">
+									
+								<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float: center;" title="This is SoFo Logo" />
+								
+								<br><br>
+								
+								<br><br>
+		
+								<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+        
+								<br><br>
+		
+								<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+					
+								<br><br><br>
+				
+								<a class="accountbtn" href="signup-user.php">Register User</a>
+								
+							</div>
+								
+					</div>
+				
+				</div>		
+				
 				</blockquote>
 				
 				</div>
@@ -173,38 +206,42 @@
 					<h4>Something There</h4>
 					<p>Disney Music Vevo</p>
 					
-					<br>
-				
-					<div id="content" style="text-align: right;">
-						<button class="clickmore MoreBtn">More >></button>
-					</div>
-
-					<div id="overlay"></div>
-
-					<div id="popupBox">
+					<br><br>
 					
-					<div id="popupContent" style="text-align: center;">
-	
-						<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" />
-		
-						<br><br>
-				
-						<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+					<div style="text-align: right;">
+						<a href="#popup2" class="MoreBtn">More >></a>
+					</div>
+					
+					<div id="popup2" class="overlay">
 						
-						<br><br>
-						
-						<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
-									
-						<br><br><br>
+						<div class="popup">
 								
-						<a class="accountbtn" href="signup-user.php">Register User</a>
-    
-					</div>
-    
-					<span class="closebtn">&times;</span>
-	
-					</div>
+								<a class="close" href="#">+</a>
+						
+								<div class="content2" style="font-size: 14px; color: black; font-weight: bold;">
+									
+									<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float: center;" title="This is SoFo Logo" />
+								
+									<br><br>
+								
+									<br><br>
+		
+									<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+        
+									<br><br>
+		
+									<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+					
+									<br><br><br>
 				
+									<a class="accountbtn" href="signup-user.php">Register User</a>
+								
+								</div>
+								
+						</div>
+					
+					</div>
+
 				</div>
 			
 			</div>
@@ -291,34 +328,38 @@
 					
 					<br><br><br>
 					
-					<div id="content" style="text-align: right;">
-						<button class="clickmore MoreBtn">More >></button>
+					<div style="text-align: right;">
+						<a href="#popup2" class="MoreBtn">More >></a>
 					</div>
 					
-					<div id="overlay"></div>
-				
-					<div id="popupBox">
-					
-					<div id="popupContent" style="text-align: center;">
-	
-						<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" />
-		
-						<br><br>
-				
-						<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+					<div id="popup2" class="overlay">
 						
-						<br><br>
-						
-						<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
-									
-						<br><br><br>
+						<div class="popup">
 								
-						<a class="accountbtn" href="signup-user.php">Register User</a>
-    
-					</div>
-    
-					<span class="closebtn">&times;</span>
-	
+								<a class="close" href="#">+</a>
+						
+								<div class="content2" style="font-size: 14px; color: black; font-weight: bold;">
+									
+									<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float: center;" title="This is SoFo Logo" />
+								
+									<br><br>
+								
+									<br><br>
+		
+									<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+        
+									<br><br>
+		
+									<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+					
+									<br><br><br>
+				
+									<a class="accountbtn" href="signup-user.php">Register User</a>
+								
+								</div>
+								
+						</div>
+					
 					</div>
 				
 				</div>
@@ -499,35 +540,6 @@
 	//# sourceURL=pen.js
 	
     </script>
-	
-	<script>
-		$('.clickmore').click(function () {
-		$('#overlay').fadeIn('slow');
-		$('#popupBox').fadeIn('slow');
-		$('#popupContent').fadeIn('slow');
-		});
-
-		// added .closebtn into the selectors
-		$('#overlay, .closebtn').click(function () {
-		$('#overlay').fadeOut('slow');
-		$('#popupBox').fadeOut('slow');
-		$('#popupContent').fadeOut('slow');
-		});
-
-		$('.clickbtn').click(function () {
-		$('#popupContent').fadeOut('slow');
-		$('#overlay').delay(1300).fadeOut('slow');
-		$('#popupBox').delay(1300).fadeOut('slow');
-		});
-
-		function redirect() {
-			window.location.href = "login-user.php";
-		}
-	
-		function redirect2() {
-			window.location.href = "signup-user.php";
-		}
-	</script>
 	
 </body>
 

@@ -1,3 +1,4 @@
+  
 <?php require_once "controllerUserData.php"; ?>
 <?php 
 $email = $_SESSION['email'];
@@ -18,189 +19,124 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: login-user.php');
+    header('Location: newhome.php');
 }
 ?>
-
 <!DOCTYPE html>
 <html>
-
 <head>
 
+	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-    <title>Account - Profile</title>
+	<title>Password Change</title>
 	
 	<!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<!-- Main System CSS -->
-	<link rel="stylesheet" href="style.css">
+	<!-- Font Awesome (Icons) CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	
 	<!-- Home Page CSS -->
 	<link rel="stylesheet" href="css/homepage.css">
-	
-	<!--profile-->
-	<link rel="stylesheet" href="css/profile.css">
-	
-	<!-- Font Awesome JS -->
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	
-	<style>
-		.changee
-		{
-			transform:translate(10%,140%);
-		}
-		.cfbtn
-		{
-			padding:10px;
-			width:20%;
-			color:white;
-			border:none;
-			background:#157DEC;
-			font-style:italic;
-			border-radius:7%;
-		}
-		.cfbtn:hover
-		{
-			background:#4CC417;
-			border:1px solid;
-		}
-	</style>
-	
+
 </head>
-
+<style>
+body{
+	text-align:center;
+	background:url("images/cp.jpg") no-repeat;
+	background-size:100%;
+}
+.change{
+	width:40%;
+	transform:translate(80%,45%);
+}
+.ps{
+	padding:20px;
+	background:#E3E4FA;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cfbtn{
+	padding:10px;
+	width:20%;
+	color:white;
+	border:none;
+	background:#157DEC;
+	font-style:italic;
+	border-radius:7%;
+}
+.cfbtn:hover{
+	background:#4CC417;
+	border:1px solid white;
+}
+</style>
 <body>
-
-	<button onclick="topFunction()" id="myBtn" title="Go to top">
-		<i class="fa" style="margin:0px;">&#xf102;</i>
-	</button>
-	
-	<div class="page-header">
+	<div class="page-header" style="text-align: center;">
 	
 		<a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
-
+	
 		<ul id="header">
-		
+	
 			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
-				
+	
 				<button onclick="myFunction()" class="dropbtn">
-					<i class="fa fa-account" style="font-size: 18px; color: black;">&#xf2bd;</i>
+					<i class="fa fa-account" style="color: black;">&#xf2bd;</i>
 					Account
-					<i class='fa fa-angle-down' style="font-size: 18px; color: black;"></i>
+					<i class='fa fa-angle-down' style="color: black;"></i>
 				</button>
 				
 				<div id="myDropdown" class="dropdown-content">
-					<a href="home.php">Back to Home</a>
+					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
 					<a href="feedback.php">Feedback</a>
+					<a href="home.php">Back to Home</a>
 					<a href="logout-user.php">Log Out</a>
 				</div>
 				
 				</div>
+			
 			</li>
+		
 		</ul>
-
+		
     </div>
 	
-	<div class="profile">
-		<form class="fileform" method="post">
-			
-			<ul class="list">
-				<li style="text-align:center;">
-					<?php
-						$email = $_SESSION["email"];
-						$q=mysqli_query($con,"SELECT * FROM usertable WHERE email= '$email'");
-						while($row=mysqli_fetch_assoc($q))
-						{
-							if($row['profile_image'] == "")
-							{
-								echo "<img id='profilepicture' class='image-rounded' src='images/aboutus.png'  alt='Default Profile Pic'>";
-							}
-							else
-							{
-							echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
-							}
-						}
-					?>
-					<h2 style="text-align:center;margin:10px;"><?php echo $fetch_info['name'] ?></h2>
-					<hr style="width:70%;">
-				</li>
-				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
-				<li><a href="edit-profile.php"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
-				<li><a href="change-password.php" id="active"><i style="margin-right:8px;" class='fas'>&#xf084;</i>Change password</a></li>
-				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
-				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
-			</ul>
-			<div class="word">
-				<div class="changee">
-						<label style="margin-right:10px;">Current Password</label><input type="password" name="curpwd"><br><br>
-						<label style="margin-right:33px;">New Password</label><input type="password" name="newpwd"><br><br>
-						<label style="margin-right:7px;">Confirm Password</label><input type="password" name="cpwd"><br><br>
-						<input class="cfbtn" type="submit" name="change" value="Confirm">
-				</div>
-			</div>
+	<div class="change">
+		<form class="ps" method="post">
+			<label>Current Password</label><br><input type="password" name="curpwd"><br><br>
+			<label>New Password</label><br><input type="password" name="newpwd"><br><br>
+			<label>Confirm Password</label><br><input type="password" name="cpwd"><br><br>
+			<input class="cfbtn" type="submit" name="change" value="Confirm">
 		</form>
 	</div>
 	
-	<br><br><br><br>
-	
-	<footer style="text-align: center;">
-			<p>Posted By : SoFo Team</p>
-			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
-			/ <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
-		
-			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
-	</footer>
-
 </body>
-
 <script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() 
-{
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) 
-{
-  if (!event.target.matches('.dropbtn')) 
-  {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) 
+	function myFunction() 
 	{
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) 
-	  {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
 
-//Scroll top button
-//Get the button
-var mybutton = document.getElementById("myBtn");
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) 
+	{
+		if (!event.target.matches('.dropbtn')) 
+		{
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) 
+			{
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) 
+				{
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
 </script>
-
 </html>
