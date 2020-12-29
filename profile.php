@@ -85,6 +85,14 @@ if($email != false && $password != false){
 					</div>
 				</div>
 			</li>
+			
+			<li style="font-size: 14px; color: white; font-weight: bold;" >
+				<?php
+					$today = date("F j, Y");
+					echo $today;
+				?>
+			</li>
+			
 		</ul>
 
     </div>
