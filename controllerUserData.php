@@ -182,7 +182,7 @@ if(isset($_POST['signup'])){
     }
 	
 	//change password in user page
-	if(isset($_POST['change'])){
+	if(isset($_POST['change_pwd'])){
 		$email = $_SESSION["email"];
 		$cur= mysqli_real_escape_string($con, $_POST['curpwd']);
 		$new= mysqli_real_escape_string($con, $_POST['newpwd']);
@@ -199,6 +199,7 @@ if(isset($_POST['signup'])){
 					$sql="UPDATE usertable SET password='$encpass' WHERE email='$email'";
 					mysqli_query($con,$sql);
 					echo"<script>alert('Password change!')</script>";
+					header('Location:profile.php');
 
 				}else{
 					echo"<script>alert('New Password and Confirm Password does not match!')</script>";
@@ -209,17 +210,93 @@ if(isset($_POST['signup'])){
 		}
 	}
 	
+	//change user profile info
+	if(isset($_POST['change_info']))
+	{
+		$email=$_SESSION["email"];
+		
+		$check_email="SELECT * FROM usertable WHERE email = '$email'";
+		$res=mysqli_query($con, $check_email);
+        if(mysqli_num_rows($res) > 0)
+		{
+			if($_POST['username']=="")
+			{	
+				//update gender
+				if($gender=$_POST['gender'] )
+				{
+					$query="UPDATE usertable SET gender='$gender' WHERE email='$email'";
+					$result= mysqli_query($con,$query);
+				}
+				//update age
+				if($age=$_POST['age'])
+				{
+					$query="UPDATE usertable SET age='$age' WHERE email='$email'";
+					$result= mysqli_query($con,$query);
+				}
+				echo "<script>alert('User Information Updated!')</script>";
+			}
+			else if($_POST['gender']=="")
+			{
+				//update username
+				if($uname=$_POST['username'] )
+				{
+					$query="UPDATE usertable SET name='$uname' WHERE email='$email'";
+					$result= mysqli_query($con,$query);
+				}
+				//update age
+				if($age=$_POST['age'])
+				{
+					$query="UPDATE usertable SET age='$age' WHERE email='$email'";
+					$result= mysqli_query($con,$query);
+				}
+				echo "<script>alert('User Information Updated!')</script>";
+			}
+			else if($_POST['age']=="")
+			{
+				//update username
+				if($uname=$_POST['username'] )
+				{
+					$query="UPDATE usertable SET name='$uname' WHERE email='$email'";
+					$result= mysqli_query($con,$query);
+				}
+				//update gender
+				if($gender=$_POST['gender'] )
+				{
+					$query="UPDATE usertable SET gender='$gender' WHERE email='$email'";
+					$result= mysqli_query($con,$query);
+				}
+				echo "<script>alert('User Information Updated!')</script>";
+			}
+			else
+			{
+				$uname=$_POST['username'];
+				$gender=$_POST['gender'];
+				$age=$_POST['age'];
+				$query="UPDATE usertable SET name='$uname', gender='$gender', age='$age' WHERE email='$email'";
+				$result= mysqli_query($con,$query);
+				if($result)
+				{
+					echo "<script>alert('User Information Updated!')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Fail to Update')</script>";
+				}
+			}
+			
+		}
+	}
+	
 	//change user profile image
-		if(isset($_POST['change_pic']))
-		{
-			move_uploaded_file($_FILES['file']['tmp_name'],"uploads/".$_FILES['file']['name']);
-			$q = mysqli_query($con,"UPDATE usertable SET profile_image = '".$_FILES['file']['name']."' WHERE email = '".$_SESSION['email']."' limit 1");
-			header('Location:profile.php');
-			die;
-		}
-		else
-		{
-			echo "<script>('Please upload a valid image!') </script>";
-		}
+	if(isset($_POST['change_pic']))
+	{
+		move_uploaded_file($_FILES['file']['tmp_name'],"uploads/".$_FILES['file']['name']);
+		$q = mysqli_query($con,"UPDATE usertable SET profile_image = '".$_FILES['file']['name']."' WHERE email = '".$_SESSION['email']."' limit 1");
+		echo "<script>alert('User Image Changed!') </script>";
+	}
+	else
+	{
+		echo "<script>('Please upload a valid image!') </script>";
+	}
 
 ?>

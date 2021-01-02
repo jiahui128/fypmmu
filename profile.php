@@ -126,6 +126,14 @@ if($email != false && $password != false){
 							<td class="info"><?php echo$fetch_info['name']?></td>
 						</tr>
 						<tr class="tr">
+							<td class="tdname">Age</td>
+							<td class="info"><?php echo$fetch_info['age']?></td>
+						</tr>
+						<tr class="tr">
+							<td class="tdname">Gender</td>
+							<td class="info"><?php echo$fetch_info['gender']?></td>
+						</tr>
+						<tr class="tr">
 							<td class="tdname">Email</td>
 							<td class="info"><?php echo$fetch_info['email']?></td>
 						</tr>

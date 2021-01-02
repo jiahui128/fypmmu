@@ -13,6 +13,8 @@
 								email varchar(100),
 								password varchar(255),
 								profile_image varchar(1000),
+								gender varchar(100),
+								age varchar(100),
 								code mediumint(50),
 								status text,
 								created_at DATETIME DEFAULT CURRENT_TIMESTAMP);");

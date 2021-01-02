@@ -58,12 +58,10 @@ if($email != false && $password != false){
 		width:95%;
 		margin-left:10px;
 	}
-	
 	.img
 	{
 		font-size:16px;
 	}
-	
 	#post_button
 	{
 		width: 20%;
@@ -76,12 +74,10 @@ if($email != false && $password != false){
 		color:white;
 		font-style:italic;
 	}
-	
 	#post_button:hover
 	{
 		background:#4CC417;
 	}
-	
 	
 	/*change password*/
 	.changee
@@ -90,7 +86,6 @@ if($email != false && $password != false){
 		float:left;
 		width:95%;
 	}
-	
 	.pwd
 	{
 	    float: left;
@@ -115,6 +110,12 @@ if($email != false && $password != false){
 	{
 		background:#4CC417;
 		border:none;
+	}
+	
+	/*user info*/
+	.info
+	{
+		
 	}
 	</style>
 	
@@ -167,7 +168,7 @@ if($email != false && $password != false){
 							}
 							else
 							{
-							echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
+								echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
 							}
 						}
 					?>
@@ -188,12 +189,20 @@ if($email != false && $password != false){
 						<input id="post_button" type="submit" name="change_pic" value="Change">
 					</div>
 					<hr style="width:95%;margin:50 0 0 5;">
+					<div class="post_img">
+						<h4>Edit Profile Info</h4>
+						<label style="margin-right:20px;float:left;">User Name</label><input type="text" name="username" class="pwd"><br><br>
+						<label style="margin-right:44px;float:left;">Gender</label><input type="text" name="gender" class="pwd"><br><br>
+						<label style="margin-right:67px;float:left;">Age</label><input type="text" name="age" class="pwd"><br><br>
+						<input style="margin-top:10px;" id="post_button" type="submit" name="change_info" value="Change">
+					</div>
+					<hr style="width:95%;margin:90 0 0 5;">
 					<div class="changee">
 						<h4>Change Password</h4>
 						<label style="margin-right:10px;float:left;">Current Password</label><input type="password" name="curpwd" class="pwd"><br><br>
 						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd"><br><br>
 						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd"><br><br>
-						<input class="cfbtn" type="submit" name="change" value="Confirm">
+						<input class="cfbtn" type="submit" name="change_pwd" value="Confirm">
 					</div>
 				</div>
 			</div>
