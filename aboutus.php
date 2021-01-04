@@ -18,7 +18,7 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: login-user.php');
+    header('Location: newhome.php');
 }
 ?>
 
@@ -33,7 +33,7 @@ if($email != false && $password != false){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-	<title>SoFo Music About Us Page</title>
+	<title>SoFo Music Our Team Page</title>
 	
 	<!-- Font Awesome (Icons) CSS -->
 	
@@ -57,12 +57,6 @@ if($email != false && $password != false){
     <!-- Favicon of the Website -->
 	
 	<link rel="icon" href="images/sofomusic.jpg">
-
-	<style>
-		body{
-			background: lightgray;
-		}
-	</style>
 
 </head>    
 
@@ -115,9 +109,50 @@ if($email != false && $password != false){
 		
 			<br>
 		
-        	<h3 style="text-align: center;">About Us</h3>
+        	<h3 style="text-align: center;">Our Team</h3>
 			
-			<br>
+			<div style="margin-top:30px; text-align: center;">
+				
+			<div class="row">
+				
+				<div class="col-md-4 col-sm-4">
+					
+					<div class="aboutus">
+						<img class="about" src="images/aboutus.png" alt="">
+						<br>
+						<strong>Tan Wei Chin</strong>
+					</div>
+				
+				</div>
+				
+				<div class="col-md-4 col-sm-4">
+					
+					<div class="aboutus">
+
+						<img class="about" src="images/vivian_pic.jpg" alt="">
+						<br>
+						<strong>Vivian Quek</strong>
+					
+					</div>
+				
+				</div>
+				
+				<div class="col-md-4 col-sm-4">
+					
+					<div class="aboutus">
+						<img class="about" src="images/aboutus.png" alt="">
+						<br>
+						<strong>Ng Jia Hui</strong>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+		
+			</div>
+			
+			<br><br>
 		
 			<p>In this current century, due to the rapid growth of information technology, more and more music is available freely online. People can search for their favorite songs online in ease and download it as mp3 files, etc. </p>
 			
@@ -133,11 +168,6 @@ if($email != false && $password != false){
 			
 			<p>The main objective of developing this Online Music Gallery System web-based application is to provide a user friendly environment for those who is passionate in music and needs a platform for them to store the songs in a list they want to listen, and also play their songs---- either instrumental or with lyrics.</p>
                 
-                
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				
-			<p style="text-align: right;"><img src="images/anime.jpg" alt="SoFo Logo" style="width: 270px; height: 160px; float:right; " title="This is SoFo Logo" /></p>
-        	
 		</div><!--End Container-->
 			
 	</div>

@@ -139,18 +139,19 @@
 				<?php		
 					if(isset($_POST['submitbtn']))
 					{
+						$songrandomid = rand(999999, 111111);
 						$sp1= $_POST['name'];
 						$sp2= $_POST['album'];
 						$sp3= $_POST['artist'];
 			
-						mysqli_query($con, "INSERT INTO songtable (song_name,song_album,song_artist) VALUES('$sp1','$sp2','$sp3')");
+						mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist) VALUES('$songrandomid', '$sp1','$sp2','$sp3')");
 				}
 				
 				?>
 				
 				<script>
 				function submitForm() {
-					alert("Thank you! We will update your wished song soon!");
+					alert("Thank you! We will check your requested songs. If the song is valid, we will update to the releasing board soon");
 				}
 				</script>
 				
