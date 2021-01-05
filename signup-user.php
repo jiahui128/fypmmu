@@ -91,6 +91,8 @@
 		
             <div class="col-md-4 offset-md-4 form">
 				
+				<br>
+				
 				<h1 style="text-align: center;"><a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px;" title="This is SoFo Logo" /></a></h1>
 				
 				<br>
@@ -219,6 +221,16 @@
         </div>
 		
     </div>
+	
+	<?php		
+			if(isset($_POST['signup']))
+			{
+				$userrandomid = rand(999999, 111111);
+						
+				mysqli_query($con, "INSERT INTO usertable (id) VALUES('$userrandomid')");
+			}
+				
+	?>
 	
     
 </body>

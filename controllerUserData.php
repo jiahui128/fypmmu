@@ -22,6 +22,8 @@ if(isset($_POST['signup'])){
     if(count($errors) === 0){
         $encpass = password_hash($password, PASSWORD_BCRYPT);
         $code = rand(999999, 111111);
+		$userrandomid = rand(999999, 111111);		
+		mysqli_query($con, "INSERT INTO usertable (id) VALUES('$userrandomid')");
         $status = "notverified";
         $insert_data = "INSERT INTO usertable (name, email, password, code, status)
                         values('$name', '$email', '$encpass', '$code', '$status')";
@@ -29,7 +31,7 @@ if(isset($_POST['signup'])){
         if($data_check){
             $subject = "Email Verification Code";
             $message = "Your verification code is $code";
-            $sender = "From: weichin0417@gmail.com";
+            $sender = "From: jyquek32@gmail.com";
             if(mail($email, $subject, $message, $sender)){
                 $info = "We've sent a verification code to your email - $email";
                 $_SESSION['info'] = $info;

@@ -1,0 +1,264 @@
+<!-- This code is just for Fun -->
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<!--<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />-->
+
+	<!-- Favicon of the Website -->
+	<link rel="icon" href="images/sofomusic.jpg">
+
+  <title>Lyrics Player</title>
+  
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:300,400,600'>
+  
+<style>
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background: #222222;
+  background: -webkit-linear-gradient(to top, #232526, #414345);
+}
+body a {
+  color: inherit;
+}
+body a:not(:hover) {
+  text-decoration: none;
+}
+body #link-a-me {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  background: url(https://i.imgur.com/xoxkq1r.png);
+  background-size: cover;
+  z-index: 1;
+  -webkit-animation: pop-in 120s ease-out;
+          animation: pop-in 120s ease-out;
+}
+body .content {
+  overflow: hidden;
+  flex-grow: 1;
+  height: calc(100% - 80px);
+}
+body .content .lyrics {
+  padding: 50vh 0;
+  min-height: calc(100vh - 80px);
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  text-align: center;
+  transition: all 0.25s;
+  position: relative;
+}
+body .content .lyrics > div {
+  position: relative;
+  font-size: 40px;
+  line-height: 80px;
+  color: #666;
+  transition: all 0.25s;
+}
+body .content .lyrics > div:before {
+  content: attr(note);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+body .content .lyrics > div.highlighted {
+  color: #fff;
+  font-size: 48px;
+}
+body .player {
+  z-index: 10;
+  background: #F9F9F9;
+  color: #000;
+  min-height: 80px;
+  max-height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+body .player .left {
+  width: 80px;
+  background-image: url(https://i.scdn.co/image/9ca53beeb365f468b023a8360634f309325b5487);
+  background-size: cover;
+}
+body .player .right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+body .player .right .top {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+body .player .right .top .song {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body .player .right .bottom {
+  display: flex;
+}
+body .player .right .bottom video {
+  flex-grow: 1;
+  height: 32px;
+}
+
+@-webkit-keyframes pop-in {
+  0%, 95% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes pop-in {
+  0%, 95% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="content">
+   <div class="lyrics"></div>
+</div>
+
+<div class="player">
+   <div class="left"></div>
+   <div class="right">
+      <div class="top">
+         <a class="song" href="https://open.spotify.com/album/3h5l9uclx5BSE8jGjqRxmC?highlight=spotify:track:5o78eSjSrTRexSLOjy9f17">Let's Go To the Forest</a>
+         <a class="artist" href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=vQaSwY1DRkyhj-eoKZlMrw">Kero Kero Bonito</a>
+      </div>
+      <div class="bottom">
+         <video controls="" _autoplay="" name="media"><source src="https://i.koya.io/Kero%20Kero%20Bonito%20-%20Let's%20Go%20To%20The%20Forest.mp3" type="audio/mpeg"></video>
+      </div>
+   </div>
+</div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://codepen.io/z-/pen/b80a82399ce296a5ae898314d25aab44'></script>
+<script src='https://codepen.io/z-/pen/2c7364f84f43c21e994e4fb7b08d6ec8'></script>
+<script src='https://codepen.io/z-/pen/3f1e5b5c78c8e29dac7cd9b368c9588b'></script>
+<script src='https://codepen.io/z-/pen/7ea46ddd3f67af5c54c6a85b62e3bf6f'></script>
+<script src='https://codepen.io/z-/pen/f04c48e49111ecc45c269f7982f4d316'></script>
+<script src='https://codepen.io/z-/pen/3fd7d80820b071e01bf9eb0c0c6e1fe3'></script>
+<script src='https://codepen.io/z-/pen/603dce1db8e57ac8da6c8b1cc8c12b98'></script>
+<script src='https://codepen.io/z-/pen/a0fabb58a6dc479728ccc8e33352c007'></script>
+<script src='https://codepen.io/z-/pen/3957cdad8abc3da137905da0c1b89ee7'></script>
+<script src='https://codepen.io/z-/pen/63c6bbb02bfa1dfbeba4d30737a492c6'></script>
+<script src='https://codepen.io/z-/pen/74bbe3852bf75d66a7a0c9534e0b6618'></script>
+<script src='https://codepen.io/z-/pen/4faa8297d50d678f6292098e96079f6e'></script>
+<script src='https://codepen.io/z-/pen/0a1bedbb8ca05b9afd329264fca7b921'></script>
+<script src='https://codepen.io/z-/pen/f883f8c6d04e206547ab007f5b93bc9c'></script>
+<script src='https://codepen.io/z-/pen/981373951584da45d4d6366094974b6d'></script>
+<script src='https://codepen.io/z-/pen/a3625ac432ead8e20af8f059881dca35'></script>
+<script src='https://codepen.io/z-/pen/a3e71dad89f8e720aa76a4cea7d88800'></script>
+<script src='https://codepen.io/z-/pen/9e994e381e79fecd11ec069592abc381'></script>
+      <script id="rendered-js" >
+console.clear();
+var _data = JSON.parse(`{"lyrics":[{"line":"","time":-1},{"line":"Hey, let's all go into the forest","note":"Verse 1","time":16000},{"line":"Nobody will notice for a while","time":20000},{"line":"There we can visit all the creatures","time":24000},{"line":"Maybe they can teach us facts of life","time":27500},{"line":"","time":32000},{"line":"Or we can travel to the ocean","note":"Verse 2","time":55500},{"line":"Don't forget your lotion","time":59500},{"line":"It's quite hot","time":61500},{"line":"I once met seven lovely crabs","time":64000},{"line":"They said I should go back and join them for tea","time":67500},{"line":"","time":72000},{"line":"Oh wait, the forest got demolished","note":"Verse 3","time":95500},{"line":"When they built the airport years ago","time":99000},{"line":"But we can still go see the ocean","time":103500},{"line":"Cause they put it in a bowl at the mall","time":107500},{"line":"","time":112000}]}`);
+var currentLine = "";
+
+function align() {
+  var a = $(".highlighted").height();
+  var c = $(".content").height();
+  var d = $(".highlighted").offset().top - $(".highlighted").parent().offset().top;
+  var e = d + a / 2 - c / 2;
+  $(".content").animate(
+  { scrollTop: e + "px" }, { easing: "swing", duration: 250 });
+
+}
+
+var lyricHeight = $(".lyrics").height();
+$(window).on("resize", function () {
+  if ($(".lyrics").height() != lyricHeight) {//Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
+    lyricHeight = $(".lyrics").height();
+    align();
+  }
+});
+
+$(document).ready(function () {
+  $("video").on('timeupdate', function (e) {
+    var time = this.currentTime * 1000;
+    var past = _data["lyrics"].filter(function (item) {
+      return item.time < time;
+    });
+    if (_data["lyrics"][past.length] != currentLine) {
+      currentLine = _data["lyrics"][past.length];
+      $(".lyrics div").removeClass("highlighted");
+      $(`.lyrics div:nth-child(${past.length})`).addClass("highlighted"); //Text might take up more lines, do before realigning
+      align();
+    }
+  });
+});
+
+generate();
+
+function generate() {
+  var html = "";
+  for (var i = 0; i < _data["lyrics"].length; i++) {if (window.CP.shouldStopExecution(0)) break;
+    html += "<div";
+    if (i == 0) {
+      html += ` class="highlighted"`;
+      currentLine = 0;
+    }
+    if (_data["lyrics"][i]["note"]) {
+      html += ` note="${_data["lyrics"][i]["note"]}"`;
+    }
+    html += ">";
+    html += _data["lyrics"][i]["line"] == "" ? "•" : _data["lyrics"][i]["line"];
+    html += "</div>";
+  }window.CP.exitedLoop(0);
+  $(".lyrics").html(html);
+  align();
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

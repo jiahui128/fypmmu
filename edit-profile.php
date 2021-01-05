@@ -32,7 +32,7 @@ if($email != false && $password != false){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-    <title>Account - Profile</title>
+    <title>Account - Edit Profile</title>
 	
 	<!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -50,6 +50,9 @@ if($email != false && $password != false){
 	
 	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	
+	<!-- Favicon of the Website -->
+	<link rel="icon" href="images/sofomusic.jpg">
 	
 	<style>
 	/*edit image*/
@@ -178,7 +181,7 @@ if($email != false && $password != false){
 				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
 				<li><a href="edit-profile.php" id="active"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
-				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
+				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
 			</ul>
 			<div class="word">
 				<div style="width:79%;float:right;">
@@ -203,6 +206,8 @@ if($email != false && $password != false){
 						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd"><br><br>
 						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd"><br><br>
 						<input class="cfbtn" type="submit" name="change_pwd" value="Confirm">
+						
+						<br>
 					</div>
 				</div>
 			</div>

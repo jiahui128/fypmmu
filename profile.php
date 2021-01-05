@@ -51,6 +51,9 @@ if($email != false && $password != false){
 	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	
+	<!-- Favicon of the Website -->
+	<link rel="icon" href="images/sofomusic.jpg">
+	
 	<style>
 		
 
@@ -114,7 +117,7 @@ if($email != false && $password != false){
 				<li><a href="profile.php" id="active"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
 				<li><a href="edit-profile.php"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
-				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Play list</a></li>
+				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
 			</ul>
 			<div class="word">
 				<div style="width:79%;float:right;">
@@ -124,6 +127,10 @@ if($email != false && $password != false){
 						<tr class="tr">
 							<td class="tdname">User Name</td>
 							<td class="info"><?php echo$fetch_info['name']?></td>
+						</tr>
+						<tr class="tr">
+							<td class="tdname">User ID</td>
+							<td class="info"><?php echo$fetch_info['id']?></td>
 						</tr>
 						<tr class="tr">
 							<td class="tdname">Age</td>

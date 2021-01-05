@@ -31,30 +31,32 @@ if($email != false && $password != false){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	
-    <title>Account - Profile</title>
-	
+
+    <title>Personal Playlist Page</title>
+
 	<!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<!-- Main System CSS -->
 	<link rel="stylesheet" href="style.css">
-	
+
 	<!-- Home Page CSS -->
 	<link rel="stylesheet" href="css/homepage.css">
-	
-	<!--profile-->
+
+	<!-- profile -->
 	<link rel="stylesheet" href="css/profile.css">
-	
+
 	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	
-	<style>
-
-	</style>
+	<!-- Favicon of the Website -->
+	<link rel="icon" href="images/sofomusic.jpg">
 	
+	<!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
 </head>
 
 <body>
@@ -62,36 +64,36 @@ if($email != false && $password != false){
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<i class="fa" style="margin:0px;">&#xf102;</i>
 	</button>
-	
+
 	<div class="page-header">
-	
+
 		<a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
 
 		<ul id="header">
-		
+
 			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
-				
+
 				<button onclick="myFunction()" class="dropbtn">
 					<i class="fa fa-account" style="font-size: 18px; color: black;">&#xf2bd;</i>
 					Account
 					<i class='fa fa-angle-down' style="font-size: 18px; color: black;"></i>
 				</button>
-				
+
 				<div id="myDropdown" class="dropdown-content">
 					<a href="home.php">Back to Home</a>
 					<a href="feedback.php">Feedback</a>
 					<a href="logout-user.php">Log Out</a>
 				</div>
-				
+
 				</div>
 			</li>
 		</ul>
 
     </div>
-	
+
 	<div class="profile">
 		<form class="fileform">
-			
+
 			<ul class="list">
 				<li style="text-align:center;">
 					<?php
@@ -115,23 +117,23 @@ if($email != false && $password != false){
 				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
 				<li><a href="edit-profile.php"><i class="fa">&#xf044;</i>Edit Account</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
-				<li><a href="personal-playlist.php" id="active"><i class='fab'>&#xf3b5;</i>Play list</a></li>
+				<li><a href="personal-playlist.php" id="active"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
 			</ul>
 			<div class="word">
-				<div style="width:79%;float:right;">
-					Still processing
-				</div>
+				
+				Still processing
+				
 			</div>
 		</form>
 	</div>
-	
+
 	<br><br><br><br>
-	
+
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>
 			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
 			/ <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
-		
+
 			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
 	</footer>
 
@@ -181,4 +183,4 @@ function topFunction() {
 }
 </script>
 
-</html>
+</html> 
