@@ -16,6 +16,7 @@
 	<!-- Font Awesome (Icons) CSS -->
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	
 	<!-- Bootstrap CSS Version 3.37 and 4.4.1 -->
 	
@@ -75,7 +76,7 @@
 			
 			<li><a href="signup-user.php">Sign Up</a></li>	
 
-			<li><a href="#aboutus">About Us</a></li>		
+			<li><a href="#ourteam">Our Team</a></li>		
 			
 			<li><a href="#latestreleases">Latest Releases</a></li>
 			
@@ -256,38 +257,104 @@
 			
 				</div>
 				
-				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div class="slide">
+					<input type="radio" name="video" id="v1" checked>
+					<input type="radio" name="video" id="v2">
+					<input type="radio" name="video" id="v3">
+					<div class="slide_video" id="one">	
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">Album: 
+							<br />MarBlue Original Soundtrack<br />
+							<br />Song: <br />故海潮生<br />
+							<br />Artist: <br />三无Marblue<br />
+							<br />Released: Nov 1, 2020<br />
+							<br />Requested by: Vivian Quek
+						</p>
+						<label for="v3" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
+						<label for="v2" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
+						<br><br>
+						<div style="text-align: right;margin-top:10px;">
+						<a href="#popup2" class="MoreBtn">More >></a>
+					</div>
+					</div>
+					<div class="slide_video" id="two">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/OxQLddxnImQ" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">Album: 
+							<br />贰拾玖区Area29<br />
+							<br />Song: <br />阿拉斯加海灣<br />
+							<br />Artist: <br />菲道尔<br />
+							<br />Released: Sep 27, 2020<br />
+							<br />Requested by: Tan Wei Chin
+						</p>
+						<label for="v1" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
+						<label for="v3" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
+						<br><br>
+						<div style="text-align: right;margin-top:10px;">
+						<a href="#popup2" class="MoreBtn">More >></a>
+					</div>
+					</div>
+					<div class="slide_video" id="three">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/CwkzK-F0Y00" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">Album: 
+							<br />LiSA Official YouTube<br />
+							<br />Song: <br />紅蓮華<br />
+							<br />Artist: <br />LiSA<br />
+							<br />Released: May 31, 2019<br />
+							<br />Requested by: Ng Jia Hui
+						</p>
+						<label for="v2" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
+						<label for="v1" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
+						<br><br>
+					
+					<div style="text-align: right;margin-top:10px;">
+						<a href="#popup2" class="MoreBtn">More >></a>
+					</div>
+					
+					<div id="popup2" class="overlay">
+						
+						<div class="popup">
+								
+								<a class="close" href="#">+</a>
+						
+								<div class="content2" style="font-size: 14px; color: black; font-weight: bold;">
+									
+									<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float: center;" title="This is SoFo Logo" />
+								
+									<br><br>
+								
+									<br><br>
+		
+									<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+        
+									<br><br>
+		
+									<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+					
+									<br><br><br>
 				
-				<div>
+									<a class="accountbtn" href="signup-user.php">Register User</a>
+								
+								</div>
+								
+						</div>
 					
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				
-				</div>
-				
-				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-			
-				<div>
-					
-					<p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;">Album: <br />MarBlue Original Soundtrack<br />
-					<br />Song: <br />故海潮生<br />
-					<br />Artist: <br />三无Marblue<br />
-					<br />Released: Nov 1, 2020<br />
-					<br />Requested by: Vivian Quek
-					
-					</p>
-					
+					</div>
+					</div>		
 				</div>
 			
 			</div>
 			
 			<br><br>
 			
-			<div id="aboutus">
+			<div id="ourteam">
 
 			<div class="col-md-12">
 						
 					
-					<h3>About Us</h3>
+					<h3>Our Team</h3>
 			
 			</div>
 		

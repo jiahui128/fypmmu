@@ -169,9 +169,18 @@ if($email != false && $password != false){
 				?>
 			</li>
 			
-			<li><a href="#discover">Discover</a></li>	
+			<li class="drop"> 
+				<a href="#discover" class="dropbtn">Discover</a>
+				<div class="dropdown-content">
+					<a href="playlist.php">Playlist</a>
+					<a href="album.php">Albums</a>
+					<a href="aboutus.php">About us</a>
+					<a href="requestsongs.php">Request Songs</a>
+					<a href="friend-system.php">Friendlist</a>
+				</div>
+			</li>	
 			
-			<li><a href="#aboutus">About Us</a></li>		
+			<li><a href="#ourteam">Our Team</a></li>		
 			
 			<li><a href="#latestreleases">Latest Releases</a></li>
 			
@@ -400,6 +409,7 @@ if($email != false && $password != false){
 					<input type="radio" name="video" id="v1" checked>
 					<input type="radio" name="video" id="v2">
 					<input type="radio" name="video" id="v3">
+					<input type="radio" name="video" id="v4">
 					<div class="slide_video" id="one">	
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -410,7 +420,7 @@ if($email != false && $password != false){
 							<br />Released: Nov 1, 2020<br />
 							<br />Requested by: Vivian Quek
 						</p>
-						<label for="v3" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
+						<label for="v4" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
 						<label for="v2" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
 					</div>
 					<div class="slide_video" id="two">
@@ -437,20 +447,32 @@ if($email != false && $password != false){
 							<br />Requested by: Ng Jia Hui
 						</p>
 						<label for="v2" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
-						<label for="v1" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
+						<label for="v4" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
 					</div>		
+					<div class="slide_video" id="four">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/JGwWNGJdvx8" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">Album: 
+							<br />÷<br />
+							<br />Song: <br />Shape of You<br />
+							<br />Artist: <br />Ed Sheeran<br />
+							<br />Released: Jan 30, 2017<br />
+							<br />Requested by: Tan Wei Chin
+						</p>
+						<label for="v3" class="p"><i style='font-size:24px' class='fas'>&#xf104;</i></label>
+						<label for="v1" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
+					</div>	
 				</div>
 			
 			</div>
 			
 			<br><br>
 			
-			<div id="aboutus">
+			<div id="ourteam">
 
 			<div class="col-md-12">
 						
 					
-					<h3>About Us</h3>
+					<h3>Our Team</h3>
 			
 			</div>
 		
