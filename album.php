@@ -18,7 +18,7 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: login-user.php');
+    header('Location: newhome.php');
 }
 ?>
 
@@ -211,7 +211,7 @@ if($email != false && $password != false){
 
 	<div class="header_under"></div>
 	<!--Start Container for the web content-->
-	<div class="playlist_wrapper">
+	<div class="playlist_wrapper2">
 	
 		<div class="submenu">
         	

@@ -18,7 +18,7 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: login-user.php');
+    header('Location: newhome.php');
 }
 ?>
 
@@ -44,6 +44,7 @@ if($email != false && $password != false){
 
 	<!-- Home Page CSS -->
 	<link rel="stylesheet" href="css/homepage.css">
+	<link rel="stylesheet" href="css/newhomepage.css">
 
 	<!-- profile -->
 	<link rel="stylesheet" href="css/profile.css">
@@ -51,15 +52,23 @@ if($email != false && $password != false){
 	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	
+	<!--t Personal Playlist CSS -->
+  
+	<link rel="stylesheet" href="css/personalplaylist.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	
 	<!-- Favicon of the Website -->
 	<link rel="icon" href="images/sofomusic.jpg">
 	
 	<!-- Include font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
+	<!-- Script JS -->
+	<script src="script.js"></script>
+
 </head>
 
-<body>
+<body style="background: lightgray;">
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">
 		<i class="fa" style="margin:0px;">&#xf102;</i>
@@ -87,47 +96,260 @@ if($email != false && $password != false){
 
 				</div>
 			</li>
+			
+			<li style="font-size: 14px; color: white; font-weight: bold;" >
+				<?php
+					$today = date("F j, Y");
+					echo $today;
+				?>
+			</li>
+			
+			<li class="drop"> 
+				<a href="#discover" class="dropbtn">Personal Info</a>
+				<div class="dropdown-content">
+					<a href="profile.php">Profile</a>
+					<a href="edit-profile.php">Edit Account</a>
+					<a href="friend-system.php">Friend List</a>
+				</div>
+			</li>	
+			
+			<li class="drop"> 
+				<a href="#discover" class="dropbtn">Discover</a>
+				<div class="dropdown-content">
+					<a href="playlist.php">Playlist</a>
+					<a href="album.php">Albums</a>
+					<a href="requestsongs.php">Request Songs</a>
+				</div>
+			</li>	
+			
 		</ul>
 
     </div>
 
-	<div class="profile">
-		<form class="fileform">
+	<div class="example-container" style="background: lightgray;">
+      <div class="left">
+        <div id="white-player">
+          <div class="white-player-top">
+            <div>
+              &nbsp;
+            </div>
+            
+            <div class="center">
+              <span class="now-playing">Playlist</span>
+            </div>
+            
+            <div>
+                <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/show-playlist.svg" class="show-playlist"/>
+            </div>
+          </div>
 
-			<ul class="list">
-				<li style="text-align:center;">
-					<?php
-						$email = $_SESSION["email"];
-						$q=mysqli_query($con,"SELECT * FROM usertable WHERE email= '$email'");
-						while($row=mysqli_fetch_assoc($q))
-						{
-							if($row['profile_image'] == "")
-							{
-								echo "<img id='profilepicture' class='image-rounded' src='images/aboutus.png'  alt='Default Profile Pic'>";
-							}
-							else
-							{
-							echo "<img id='profilepicture' class='image-rounded' src='uploads/".$row['profile_image']."'  alt='Profile Pic'>";					
-							}
-						}
-					?>
-					<h2 style="text-align:center;margin:10px;"><?php echo $fetch_info['name'] ?></h2>
-					<hr style="width:70%;">
-				</li>
-				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
-				<li><a href="edit-profile.php"><i class="fa">&#xf044;</i>Edit Account</a></li>
-				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
-				<li><a href="personal-playlist.php" id="active"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
-			</ul>
-			<div class="word">
+          <div id="white-player-center">
+            <img data-amplitude-song-info="cover_art_url" class="main-album-art"/>
+
+            <div class="song-meta-data">
+              <span data-amplitude-song-info="name" class="song-name"></span>
+              <span data-amplitude-song-info="artist" class="song-artist"></span>
+            </div>
+
+            <div class="time-progress">
+              <div id="progress-container">
+                <input type="range" class="amplitude-song-slider"/>
+                <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+                <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+              </div>
+
+              <div class="time-container">
+                <span class="current-time">
+                  <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span>
+                </span>
+                <span class="duration">
+                    <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="white-player-controls">
+            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+            <div class="amplitude-prev" id="previous"></div>
+            <div class="amplitude-play-pause" id="play-pause"></div>
+            <div class="amplitude-next" id="next"></div>
+            <div class="amplitude-repeat" id="repeat"></div>
+          </div>
+
+          <div id="white-player-playlist-container">
+            <div class="white-player-playlist-top">
+              <div>
+
+              </div>
+              <div>
+                <span class="queue">Queue</span>
+              </div>
+              <div>
+                  <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/close.svg" class="close-playlist"/>
+              </div>
+             </div>
+
+            <div class="white-player-up-next">
+              Up Next
+            </div>
+
+            <div class="white-player-playlist">
+              
+			  <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+					
+					<img src="images/sawako.jpg"/>
+
+					<div class="playlist-song-meta">
+						<span class="playlist-song-name">Kimi Ni Todoke</span>
+						<span class="playlist-artist-album">Tanizawa Tomofumi &bull; Kimi ni Todoke Original Soundtrack</span>
+					</div>
 				
-				Still processing
-				
+              </div>
+			  
+            </div>
+
+            <div class="white-player-playlist-controls">
+              <img data-amplitude-song-info="cover_art_url" class="playlist-album-art"/>
+
+              <div class="playlist-controls">
+                <div class="playlist-meta-data">
+                    <span data-amplitude-song-info="name" class="song-name"></span>
+                    <span data-amplitude-song-info="artist" class="song-artist"></span>
+                </div>
+
+                <div class="playlist-control-wrapper">
+                  <div class="amplitude-prev" id="playlist-previous"></div>
+                  <div class="amplitude-play-pause" id="playlist-play-pause"></div>
+                  <div class="amplitude-next" id="playlist-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+		<!-- This can change into button to playlist.php -->
+		
+        <a href="#popup1" class="more-on-ssu">Tutorial on how to use this playlist</a>
+		
+		<div id="popup1" class="overlay">
+						
+			<div class="popup">
+								
+			<a class="close" href="#">+</a>
+						
+			<div class="content2" style="font-size: 14px; color: black; font-weight: bold;">
+									
+			<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float: center;" title="This is SoFo Logo" />
+								
+			<br><br>
+		
+			<p style="text-align:center; color:black; text-decoration: underline; font-size: 20px;">Steps on using personal playlist</p>
+
+			<p style="text-align:justify; color:black; font-weight: none; font-size: 16px;">1) Add playlist by clicking on the button</p>
+			
+			<img src="images/t1.jpg" alt="Tutorial 1" style="width: 300px; float: center;" title="This is tutorial 1" />
+								
+			<br><br>
+			
+			<p style="text-align:justify; color:black; font-weight: none; font-size: 16px;">2) The selected playlist will now be on the queue</p>
+			
+			<img src="images/t2.jpg" alt="Tutorial 2" style="width: 270px; height: 350px; float: center;" title="This is tutorial 2" />
+								
+			<br><br>
+			
+			<p style="text-align:justify; color:black; font-weight: none; font-size: 16px;">3) Enjoy your music!</p>
+			
+			<img src="images/t3.jpg" alt="Tutorial 3" style="width: 270px; height: 350px; float: center;" title="This is tutorial 3" />
+								
+			<br><br>
+			
+			<p style="text-align:justify; color:black; font-weight: none; font-size: 16px;">4) Refresh the personal playlist page to create a new playlist</p>
+			
+			<img src="images/t4.jpg" alt="Tutorial 4" style="width: 270px; height: 350px; float: center;" title="This is tutorial 4" />
+								
+			<br><br>
+			
 			</div>
-		</form>
-	</div>
+								
+			</div>
+					
+		</div>
+		
+		<br>
+		
+		<p><i class='fa fa-refresh' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="javascript:history.go(0)" style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button">Refresh Playlist</a></p>
+		
+      </div>
+	  
+      <div class="right">
+	  
+		 <div class="song-to-add" song-to-add="0">
+         <img src="images/moana.jpg" style="height: 250px;">
 
-	<br><br><br><br>
+          <a class="add-to-playlist-button" song-to-add="0">
+            Add To Playlist
+          </a>
+        </div>
+		
+		 <div class="song-to-add" song-to-add="1">
+          <img src="images/every.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="1">
+            Add To Playlist
+          </a>
+        </div>
+		
+		 <div class="song-to-add" song-to-add="2">
+          <img src="images/beautyandthebeast.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="2">
+            Add To Playlist
+          </a>
+        </div>
+	  
+        <div class="song-to-add" song-to-add="3">
+          <img src="images/negaraku.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="3">
+            Add To Playlist
+          </a>
+        </div>
+            
+        <div class="song-to-add" song-to-add="4">
+          <img src="images/jjlim.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="4">
+            Add To Playlist
+          </a>
+        </div>
+
+        <div class="song-to-add" song-to-add="5">
+          <img src="images/yohime.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="5">
+            Add To Playlist
+          </a>
+        </div>
+
+        <div class="song-to-add" song-to-add="6">
+          <img src="images/amazinggrace.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="6">
+            Add To Playlist
+          </a>
+        </div>
+		
+		<div class="song-to-add" song-to-add="7">
+          <img src="images/kero.jpg" style="height: 250px;">
+
+          <a class="add-to-playlist-button" song-to-add="7">
+            Add To Playlist
+          </a>
+        </div>
+		
+      </div>
+    </div>
 
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>
@@ -136,6 +358,9 @@ if($email != false && $password != false){
 
 			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
 	</footer>
+	
+	<!-- partial -->
+	<script src='https://cdn.jsdelivr.net/npm/amplitudejs@latest/dist/amplitude.min.js'></script><script  src="./script.js"></script>
 
 </body>
 

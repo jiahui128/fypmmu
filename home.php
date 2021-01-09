@@ -174,9 +174,7 @@ if($email != false && $password != false){
 				<div class="dropdown-content">
 					<a href="playlist.php">Playlist</a>
 					<a href="album.php">Albums</a>
-					<a href="aboutus.php">About us</a>
 					<a href="requestsongs.php">Request Songs</a>
-					<a href="friend-system.php">Friendlist</a>
 				</div>
 			</li>	
 			
@@ -522,32 +520,12 @@ if($email != false && $password != false){
 			</div>
 		
 		</div>
-		
-		<br><br>
-		
-		<div class="row">
-				
-				<div id="discover" class="col-md-12">
-				
-				<!-- New Albums are uploaded by the admins (Another webpage to add in) -->
-				
-					<h3>Discover</h3>
-					
-					<div><a class="Dbutton" href="playlist.php">Playlists</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="album.php">Albums</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="aboutus.php">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="requestsongs.php">Request Songs</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="friend-system.php">Friend List</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="Dbutton" href="feedback.php">Feedback</a></div>
-			
-				</div>
-			
-			
-		</div>
 	
 	</div>
 
 	</div>
+	
+	<br>
 	
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>

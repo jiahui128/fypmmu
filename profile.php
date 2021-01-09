@@ -18,7 +18,7 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: login-user.php');
+    header('Location: newhome.php');
 }
 ?>
 
@@ -88,6 +88,14 @@ if($email != false && $password != false){
 					</div>
 				</div>
 			</li>
+			
+			<li style="font-size: 14px; color: white; font-weight: bold;" >
+				<?php
+					$today = date("F j, Y");
+					echo $today;
+				?>
+			</li>
+			
 		</ul>
 
     </div>

@@ -397,6 +397,7 @@
 					
 					<div style="text-align: right;">
 						<a href="#popup2" class="MoreBtn">More >></a>
+						
 					</div>
 					
 					<div id="popup2" class="overlay">
@@ -438,6 +439,8 @@
 	</div>
 
 	</div>
+	
+	<br>
 	
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>
