@@ -1,0 +1,113 @@
+#profilepicture
+{
+	margin-top:15px;
+	border-radius: 50%;
+	width: 85%;
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: multiply;
+	color: transparent;
+	transition: all .3s ease;
+	@include object-center;
+}
+.profile
+{
+	width:80%;
+	
+}
+.fileform
+{
+	position:relative;
+	margin-top:25px;
+	left:15%;
+	transform:transparent(-50%,-50%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height: 100%;
+}
+
+.fileform ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 20%;
+	background-color: #98AFC7;
+	position: absolute;
+	height: 100%;
+}
+
+.fileform li a
+{
+	display: block;
+	color:black;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align:left;
+	font-size:17px;
+}
+.fileform #active
+{
+    background-color: black;
+	color: white;
+}
+
+.fileform li a:hover:not(.active) 
+{
+  background-color: #555;
+  color: white;
+}
+
+/* text area*/
+.word
+{
+	height:100%;
+	background:#E5E4E2;
+	overflow:auto;
+}
+
+.word h1
+{
+	text-align:left;
+	padding-top:10px;
+	margin-left:5px;
+}
+
+.word .tr
+{
+	border-bottom: 2px solid #12212336;
+}
+
+.tdname
+{
+	font-size:20px;
+	color:#858C8D;
+	width:40%;
+	height:60px;
+}
+
+.info
+{
+    font-size: 15;
+	text-align:left;
+	color:#122123a3;
+	width:60%;
+}
+
+
+/*profile icon*/
+.far
+{
+	font-size:20px;
+	margin-right:7px;
+}
+
+.fas
+{
+	font-size:20px;
+}
+
+.fab
+{
+	font-size:24px;
+	margin-right:11px;
+}

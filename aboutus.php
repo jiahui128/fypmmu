@@ -153,21 +153,21 @@ if($email != false && $password != false){
 			</div>
 			
 			<br><br>
-		
-			<p>In this current century, due to the rapid growth of information technology, more and more music is available freely online. People can search for their favorite songs online in ease and download it as mp3 files, etc. </p>
+			<div style="text-align:justify;font-size:16px;">
+			In this current century, due to the rapid growth of information technology, more and more music is available freely online. People can search for their favorite songs online in ease and download it as mp3 files, etc. 
 			
-			<br>
+			<br><br>
 			
-			<p>SoFo Music is a new released online music streaming website and contains a lots of greatest collections of musical compositions, ranging from well-known standards to new songs by emerging artists.</p>	
+			SoFo Music is a new released online music streaming website and contains a lots of greatest collections of musical compositions, ranging from well-known standards to new songs by emerging artists.	
             
-			<br>
+			<br><br>
 				
-			<p>SoFo Music is created by three enthusiastic amateurs in programming, who just begin to start to learn how to code. The members are : Vivian Quek Jia Yi, Ng Jia Hui, and Tan Wei Chin. All of the members are currently pursuing their diploma in Information Technology in Multimedia University, Melaka.</p>
+			SoFo Music is created by three enthusiastic amateurs in programming, who just begin to start to learn how to code. The members are : Vivian Quek Jia Yi, Ng Jia Hui, and Tan Wei Chin. All of the members are currently pursuing their diploma in Information Technology in Multimedia University, Melaka.
 				
-			<br>
+			<br><br>
 			
-			<p>The main objective of developing this Online Music Gallery System web-based application is to provide a user friendly environment for those who is passionate in music and needs a platform for them to store the songs in a list they want to listen, and also play their songs---- either instrumental or with lyrics.</p>
-                
+			The main objective of developing this Online Music Gallery System web-based application is to provide a user friendly environment for those who is passionate in music and needs a platform for them to store the songs in a list they want to listen, and also play their songs---- either instrumental or with lyrics.
+            </div>  
 		</div><!--End Container-->
 			
 	</div>

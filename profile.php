@@ -131,14 +131,18 @@ if($email != false && $password != false){
 				<div style="width:79%;float:right;">
 					<h1><b>Account Overview</b></h1>
 					<h4 style="text-align:left; margin:30 0 20 10;"> User Information</h4>
-					<table style="margin-left:10px;padding-top:10px;">
-						<tr class="tr">
-							<td class="tdname">User Name</td>
-							<td class="info"><?php echo$fetch_info['name']?></td>
-						</tr>
+					<table style="margin-left:10px;padding-top:10px;width:90%">
 						<tr class="tr">
 							<td class="tdname">User ID</td>
 							<td class="info"><?php echo$fetch_info['id']?></td>
+						</tr>
+						<tr class="tr">
+							<td class="tdname">Full Name</td>
+							<td class="info"><?php echo$fetch_info['name']?></td>
+						</tr>
+						<tr class="tr">
+							<td class="tdname">Email</td>
+							<td class="info"><?php echo$fetch_info['email']?></td>
 						</tr>
 						<tr class="tr">
 							<td class="tdname">Age</td>
@@ -148,10 +152,7 @@ if($email != false && $password != false){
 							<td class="tdname">Gender</td>
 							<td class="info"><?php echo$fetch_info['gender']?></td>
 						</tr>
-						<tr class="tr">
-							<td class="tdname">Email</td>
-							<td class="info"><?php echo$fetch_info['email']?></td>
-						</tr>
+						
 					</table>
 				</div>
 			</div>
