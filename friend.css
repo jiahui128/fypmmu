@@ -2,16 +2,13 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-body{
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-a{
+
+.word a{
     color: inherit;
     text-decoration: none;
     outline: none;
 }
-h1{
+.word h1{
     text-align: center;
     color: #232323;
 }

@@ -39,6 +39,9 @@ else{
 $get_req_num = $frnd_obj->request_notification($_SESSION['user_id'], false);
 // TOTAL FRIENDS
 $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
+$get_all_req_sender = $frnd_obj->request_notification($_SESSION['user_id'], true);
+// GET MY($_SESSION['user_id']) ALL FRIENDS
+$get_all_friends = $frnd_obj->get_all_friends($_SESSION['user_id'], true);
 // CHECK FRIENDS
 $is_already_friends = $frnd_obj->is_already_friends($_SESSION['user_id'], $user_data->id);
 //  IF I AM THE REQUEST SENDER
@@ -156,7 +159,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
 					<hr style="width:70%;">
 				</li>
 				<li><a href="profile.php"><i class='far'>&#xf2bb;</i>Account Overview</a></li>
-				<li><a href="edit-profile.php"><i class="fa">&#xf044;</i>Edit Account</a></li>
+				<li><a href="edit-profile.php"><i style="margin-right:7px;" class="fa">&#xf044;</i>Edit Account</a></li>
 				<li><a href="friend-list.php" id="active"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
 				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
 			</ul>
