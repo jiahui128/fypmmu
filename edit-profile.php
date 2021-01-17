@@ -206,7 +206,7 @@ if($email != false && $password != false){
 						<label style="margin-right:30px;float:left;">Full Name</label><input type="text" name="username" class="pwd"><br><br>
 						<label style="margin-right:59px;float:left;">Email</label><input type="text" name="username" class="pwd" placeholder="<?php echo $fetch_info['email']?>" disabled><br><br>
 						<label style="margin-right:48px;float:left;">Gender</label><input type="text" name="gender" class="pwd"><br><br>
-						<label style="margin-right:71px;float:left;">Age</label><input type="text" name="age" class="pwd"><br><br>
+						<label style="margin-right:71px;float:left;">Age</label><input type="number" name="age" class="pwd" min="1" max="150"><br><br>
 						<input style="margin-top:10px;" id="post_button" type="submit" name="change_info" value="Change">
 					</div>
 					<hr style="width:95%;margin:90 0 0 5;">
