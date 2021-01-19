@@ -74,7 +74,9 @@
 	
 			<li><a href="login-user.php">Login</a></li>	
 			
-			<li><a href="signup-user.php">Sign Up</a></li>	
+			<li><a href="signup-user.php">Sign Up</a></li>
+
+			<li><a href="http://localhost/FYP/admin/login.php">Admin Login</a></li>
 
 			<li><a href="#ourteam">Our Team</a></li>		
 			
