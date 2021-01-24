@@ -76,9 +76,7 @@
 			
 			<li><a href="signup-user.php">Sign Up</a></li>
 
-			<li><a href="http://localhost/FYP/admin/login.php">Admin Login</a></li>
-
-			<li><a href="#ourteam">Our Team</a></li>		
+			<li><a href="http://localhost/FYP/admin/login.php">Admin Login</a></li>		
 			
 			<li><a href="#latestreleases">Latest Releases</a></li>
 			
@@ -112,9 +110,9 @@
 				<div class="btext">
 				<h1><span style="color: black; font-size:50px; font-style: italic; font-family: Georgia;">Where Music Plays</span></h1>
 				
-				<a href="#popupmenu" class="MoreBtn" style="color: black;">Listen to Music Now</a>
+				<!--<a href="#popupmenu" class="MoreBtn" style="color: black;">Listen to Music Now</a>-->
 				
-				<div id="popupmenu" class="overlay">
+				<!--<div id="popupmenu" class="overlay">
 				
 					<div class="popup">
 								
@@ -142,11 +140,13 @@
 								
 					</div>
 				
-				</div>		
+				</div>-->	
 				
+				<blockquote contenteditable="true"><q style="font-size: 16px; color: black;">Be ready for a new whole world of music</q>
+					<!-- <cite style="color: black;">Sidney Lanier</cite>-->
 				</blockquote>
 				
-				</div>
+				</div>-
 		</div>
 		<div class="nav">
 			<label class="dots" id="dot1" for="i1"></label>
@@ -351,7 +351,7 @@
 			
 			<br><br>
 			
-			<div id="ourteam">
+			<!--<div id="ourteam">
 
 			<div class="col-md-12">
 						
@@ -434,7 +434,7 @@
 				
 				</div>
 			
-			</div>
+			</div>-->
 		
 		</div>
 	
