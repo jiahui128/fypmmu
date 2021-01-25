@@ -481,7 +481,7 @@ if($email != false && $password != false){
 				<div class="col-md-4 col-sm-4">
 					
 					<div class="aboutus">
-						<img class="about" src="images/aboutus.png" alt="">
+						<img class="about" src="images/weichin.jpeg" alt="">
 						<br>
 						<strong>Tan Wei Chin</strong>
 					</div>
@@ -503,7 +503,7 @@ if($email != false && $password != false){
 				<div class="col-md-4 col-sm-4">
 					
 					<div class="aboutus">
-						<img class="about" src="images/aboutus.png" alt="">
+						<img class="about" src="images/jiahui.jpeg" alt="">
 						<br>
 						<strong>Ng Jia Hui</strong>
 					
