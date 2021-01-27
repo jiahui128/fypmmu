@@ -143,8 +143,9 @@
 						$sp1= $_POST['name'];
 						$sp2= $_POST['album'];
 						$sp3= $_POST['artist'];
+						$songstatus = "Pending";
 			
-						mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist) VALUES('$songrandomid', '$sp1','$sp2','$sp3')");
+						mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist,song_status) VALUES('$songrandomid', '$sp1','$sp2','$sp3', '$songstatus')");
 				}
 				
 				?>
