@@ -150,7 +150,7 @@
 						
 							<i class="fa fa-key icon"></i>
 							
-							<input class="form-control" id="password-field" type="password" name="password" placeholder="Enter your password" required>
+							<input class="form-control" id="password-field" type="password" name="password" minlength=8 placeholder="Enter your password" required>
 						</div>	
 							
 						<div class="toggle-password">
@@ -180,7 +180,7 @@
 					
 						<i class="fa fa-key icon"></i>
 						
-                        <input class="form-control" id="password-field1" type="password" name="cpassword" placeholder="Re-enter your password" required>
+                        <input class="form-control" id="password-field1" type="password" name="cpassword" minlength="8" placeholder="Re-enter your password" required>
                     </div>
 					<div class="toggle-password">
 							<i class="fa fa-eye"></i>
@@ -202,7 +202,6 @@
 					
 						function register(){
 							alert('Succesfully Registered!');
-							window.location.href = 'login-user.php';
 						}
 					</script>
 					

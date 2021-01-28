@@ -133,7 +133,7 @@ if($email == false){
 						
 							<i class="fa fa-key icon"></i>
                     
-							<input class="form-control" id="password-field" type="password" name="password" placeholder="Create new password" required>
+							<input class="form-control" id="password-field" type="password" name="password" minlength="8" placeholder="Create new password" required>
 						</div>
 						<div class="toggle-password">
 							<i class="fa fa-eye"></i>
@@ -162,7 +162,7 @@ if($email == false){
 						
 							<i class="fa fa-key icon"></i>
                     
-							<input class="form-control" id="password-field1" type="password" name="cpassword" placeholder="Confirm your password" required>
+							<input class="form-control" id="password-field1" type="password" name="cpassword" minlength="8" placeholder="Confirm your password" required>
 						</div>
 						<div class="toggle-password">
 							<i class="fa fa-eye"></i>
