@@ -49,7 +49,6 @@ $get_all_friends = $frnd_obj->get_all_friends($_SESSION['user_id'], true);
                 }
                 ?>"><?php echo $get_req_num;?></span></a></li>
                 <li><a href="friends.php" rel="noopener noreferrer" class="active">Friends<span class="badge"><?php echo $get_frnd_num;?></span></a></li>
-                <li><a href="logout.php" rel="noopener noreferrer">Logout</a></li>
             </ul>
         </nav>
         <div class="all_users">

@@ -48,7 +48,6 @@ $get_all_req_sender = $frnd_obj->request_notification($_SESSION['user_id'], true
                 }
                 ?>"><?php echo $get_req_num;?></span></a></li>
                 <li><a href="friends.php" rel="noopener noreferrer">Friends<span class="badge"><?php echo $get_frnd_num;?></span></a></li>
-                <li><a href="logout.php" rel="noopener noreferrer">Logout</a></li>
             </ul>
         </nav>
         <div class="all_users">
