@@ -1,4 +1,4 @@
-<?php require_once "requestcon.php"; ?>
+<?php require_once "requestdata.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,8 +100,21 @@
 						
                 <p class="text-align: center;">Please enter the song's information</p>
 			
-                <form action="requestsongs.php" method="POST" autocomplete="">
-					
+				<?php
+					if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+					{
+						echo '<p class="bg-success text-white"> '.$_SESSION['success'].'</p>';
+						unset($_SESSION['success']);
+					}
+
+					if(isset($_SESSION['status']) && $_SESSION['status'] !='')
+					{
+						echo '<p class="bg-secondary text-white"> '.$_SESSION['status'].'</p>';
+						unset($_SESSION['status']);
+					}
+				?>
+			
+                <form action="requestdata.php" method="POST" autocomplete="">		
 					
                     <div class="form-group input-container">
 					
@@ -135,20 +148,6 @@
 					
                     <div class="link login-link text-center"><a href="home.php">Back to Home Page</a></div>
                 </form>
-				
-				<?php		
-					if(isset($_POST['submitbtn']))
-					{
-						$songrandomid = rand(999999, 111111);
-						$sp1= $_POST['name'];
-						$sp2= $_POST['album'];
-						$sp3= $_POST['artist'];
-						$songstatus = "Pending";
-			
-						mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist,song_status) VALUES('$songrandomid', '$sp1','$sp2','$sp3', '$songstatus')");
-				}
-				
-				?>
 				
 				<script>
 				function submitForm() {
