@@ -90,9 +90,14 @@ if(isset($_POST['signup'])){
                 $_SESSION['email'] = $email;
                 $status = $fetch['status'];
 				if($status == 'verified'){
-					$_SESSION['email'] = $email;
-					$_SESSION['password'] = $password;
-					header('location: home.php');
+					if($fetch['situation']==0){
+						$_SESSION['email'] = $email;
+						$_SESSION['password'] = $password;
+						header('location: home.php');
+					}
+					else{
+						$errors['email'] = "You are removed by admin! Please contact to our servise.";
+					}
 				}else{
 					$info = "It's look like you haven't still verify your email - $email";
 					$_SESSION['info'] = $info;
@@ -199,10 +204,11 @@ if(isset($_POST['signup'])){
 				if($new==$cf){
 					$encpass = password_hash($cf, PASSWORD_BCRYPT);
 					$sql="UPDATE usertable SET password='$encpass' WHERE email='$email'";
-					mysqli_query($con,$sql);
-					echo"<script>alert('Password change!')</script>";
-					header('Location:profile.php');
-
+					$result=mysqli_query($con,$sql);										
+						echo '<script>';
+						echo 'alert("Password change");';
+						echo '</script>';
+					
 				}else{
 					echo"<script>alert('New Password and Confirm Password does not match!')</script>";
 				}
@@ -226,7 +232,8 @@ if(isset($_POST['signup'])){
 				//update gender
 				if($gender=$_POST['gender'] )
 				{
-					$query="UPDATE usertable SET gender='$gender' WHERE email='$email'";
+					$result=ucwords($gender);
+					$query="UPDATE usertable SET gender='$result' WHERE email='$email'";
 					$result= mysqli_query($con,$query);
 				}
 				//update age
@@ -264,7 +271,8 @@ if(isset($_POST['signup'])){
 				//update gender
 				if($gender=$_POST['gender'] )
 				{
-					$query="UPDATE usertable SET gender='$gender' WHERE email='$email'";
+					$result=ucwords($gender);
+					$query="UPDATE usertable SET gender='$result' WHERE email='$email'";
 					$result= mysqli_query($con,$query);
 				}
 				echo "<script>alert('User Information Updated!')</script>";
@@ -274,7 +282,8 @@ if(isset($_POST['signup'])){
 				$uname=$_POST['username'];
 				$gender=$_POST['gender'];
 				$age=$_POST['age'];
-				$query="UPDATE usertable SET name='$uname', gender='$gender', age='$age' WHERE email='$email'";
+				$result=ucwords($gender);
+				$query="UPDATE usertable SET name='$uname', gender='$result', age='$age' WHERE email='$email'";
 				$result= mysqli_query($con,$query);
 				if($result)
 				{
