@@ -1,24 +1,24 @@
 <?php require_once "controllerUserData.php"; ?>
-<?php 
+<?php
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
-if($email != false && $password != false){
-    $sql = "SELECT * FROM usertable WHERE email = '$email'";
-    $run_Sql = mysqli_query($con, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
-        $status = $fetch_info['status'];
-        $code = $fetch_info['code'];
-        if($status == "verified"){
-            if($code != 0){
-                header('Location: reset-code.php');
-            }
-        }else{
-            header('Location: user-otp.php');
-        }
-    }
-}else{
-    header('Location: login-user.php');
+if ($email != false && $password != false) {
+	$sql = "SELECT * FROM usertable WHERE email = '$email'";
+	$run_Sql = mysqli_query($con, $sql);
+	if ($run_Sql) {
+		$fetch_info = mysqli_fetch_assoc($run_Sql);
+		$status = $fetch_info['status'];
+		$code = $fetch_info['code'];
+		if ($status == "verified") {
+			if ($code != 0) {
+				header('Location: reset-code.php');
+			}
+		} else {
+			header('Location: user-otp.php');
+		}
+	}
+} else {
+	header('Location: login-user.php');
 }
 ?>
 
@@ -30,298 +30,333 @@ if($email != false && $password != false){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	
-    <title>Song 1 - Profile</title>
-	
-	<!-- Font Awesome (Icons) CSS -->
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-	
-	<!-- Bootstrap CSS Version 3.37 and 4.4.1 -->
-	
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-	
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    
-	<!-- APlayer CSS --> <!-- Note : A Player (Audio Player) is a custom HTML5 Audio Player with Javascript -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
-	
-	<!-- Home Page CSS -->
-	
-	<link rel="stylesheet" href="css/homepage.css">
-	
-	<!-- JQuery Library -->
-	
-	<script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
-	
-    <!-- Favicon of the Website -->
-	
-	<link rel="icon" href="images/sofomusic.jpg">
-	
-	<style>
-		
-		#profilepicture
-		{
-			border-radius: 100%;
-			height: 150px;
-			width: 150px;
-			background-size: cover;
-			background-position: center;
-			background-blend-mode: multiply;
-			color: transparent;
-			transition: all .3s ease;
-			@include object-center;
-		}
-		
-		.songprofilepic{
-    		position: relative;
-    		border-radius: 7px;
-    		overflow: hidden;
-    		box-shadow: 0 15px 35px #3d2173a1;
-    		transition: all ease 0.4s;
-    	}
-		
-    	.songprofilepic:hover{
-    		box-shadow: none;
-    		transform: scale(0.98) translateY(5px);
-    	}
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	</style>
-	
+    <title>Song 1 - Profile</title>
+
+    <!-- Font Awesome (Icons) CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Bootstrap CSS Version 3.37 and 4.4.1 -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- APlayer CSS -->
+    <!-- Note : A Player (Audio Player) is a custom HTML5 Audio Player with Javascript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" />
+
+    <!-- Home Page CSS -->
+
+    <link rel="stylesheet" href="css/homepage.css">
+
+    <!-- JQuery Library -->
+
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+
+    <!-- Favicon of the Website -->
+
+    <link rel="icon" href="images/sofomusic.jpg">
+
+    <style>
+    #profilepicture {
+        border-radius: 100%;
+        height: 150px;
+        width: 150px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        color: transparent;
+        transition: all .3s ease;
+        @include object-center;
+    }
+
+    .songprofilepic {
+        position: relative;
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px #3d2173a1;
+        transition: all ease 0.4s;
+    }
+
+    .songprofilepic:hover {
+        box-shadow: none;
+        transform: scale(0.98) translateY(5px);
+    }
+    </style>
+
 </head>
 
 <body style="background: lightgray;">
 
-	<button onclick="topFunction()" id="myBtn" title="Go to top">
-		<i class="fa">&#xf102;</i>
-	</button>
-	
-	<div class="page-header" style="text-align: center;">
-	
-		<a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa">&#xf102;</i>
+    </button>
 
-		<ul id="header">
-		
-			<li style="font-size: 14px; color: white; font-weight: bold;"><div class="dropdown">
-				
-				<button onclick="myFunction()" class="dropbtn">
-					<i class="fa fa-account" style="font-size: 18px; color: black; text-align: center;">&#xf2bd;</i>
-					Account
-					<i class='fa fa-angle-down' style="font-size: 18px; color: black; text-align: center;"></i>
-				</button>
-				
-				<div id="myDropdown" class="dropdown-content">
-					<a href="profile.php"><?php echo $fetch_info['name'] ?></a>
-					<a href="feedback.php">Feedback</a>
-					<a href="home.php">Back to Home</a>
-					<a href="logout-user.php">Log Out</a>
-				</div>
-				
-				</div>
-			</li>
-			
-			<li style="font-size: 14px; color: white; font-weight: bold;" >
-				<?php
-					$today = date("F j, Y");
-					echo $today;
+    <div class="page-header" style="text-align: center;">
+
+        <a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; "
+                title="This is SoFo Logo" /></a>
+
+        <ul id="header">
+
+            <li style="font-size: 14px; color: white; font-weight: bold;">
+                <div class="dropdown">
+
+                    <button onclick="myFunction()" class="dropbtn">
+                        <i class="fa fa-account" style="font-size: 18px; color: black; text-align: center;">&#xf2bd;</i>
+                        Account
+                        <i class='fa fa-angle-down' style="font-size: 18px; color: black; text-align: center;"></i>
+                    </button>
+
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="profile.php"><?php echo $fetch_info['name'] ?></a>
+                        <a href="feedback.php">Feedback</a>
+                        <a href="home.php">Back to Home</a>
+                        <a href="logout-user.php">Log Out</a>
+                    </div>
+
+                </div>
+            </li>
+
+            <li style="font-size: 14px; color: white; font-weight: bold;">
+                <?php
+				$today = date("F j, Y");
+				echo $today;
 				?>
-			</li>
-			
-		</ul>
+            </li>
+
+        </ul>
 
     </div>
-	
-	<!--Main container. Everything must be contained within a top-level container.-->
-	<div class="container-fluid">
 
-    <!--First row (only row)-->
-    <div class="row extra_margin">
+    <!--Main container. Everything must be contained within a top-level container.-->
+    <div class="container-fluid">
 
-		<!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
-		<div class="col-md-4 col-sm-12 col-xs-12">
+        <!--First row (only row)-->
+        <div class="row extra_margin">
 
-			<!-- Div to decorate the border of the profile of the song -->
-			<div class="songbox">
-				
-            <!-- Placeholder image -->
-			<a href="javascript:void();" class="songprofilepic" style="text-align: left;" data-switch="0"><img id="profilepicture" src="images/sawako.jpg"></a>
-				
-			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for music <i class='fa fa-arrow-up'></i></p>
-				
-			<p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album: <br />Kimi ni Todoke Original Soundtrack<br />
-			Song: <br />Kimi ni Todoke<br />
-			Artist: <br />Tanizawa Tomofumi<br />
-			Released: 2010</p>
-			
-			<p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="songs/Kimi_Ni_Todoke.mp3" role="button" download style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download MP3</a></p>
-			
-			<br>
-			
-			<p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="pdf/songlyrics1.pdf" role="button" download style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download Lyrics</a></p>
-			
-			<br>
-			
-			<!-- Social buttons using anchor elements and btn-primary class to style -->
-			
-			<!--<a class="btn btn-primary btn-xs" href="sgpf1.php" role="button">Previous</a>-->	
-			<p style="text-align: left;">
-				<a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
-				<a class="btn btn-primary btn-xs" href="sgpf2.php" role="button">Next</a>
-			</p>
-			
-			</div> <!-- End Col 1 -->
-			
-		</div>
-	
-		<!-- Second column - for small and extra-small screens, will use whatever # cols is available -->
-		<div class="col-md-8 col-sm-* col-xs-*">
+            <!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
+            <div class="col-md-4 col-sm-12 col-xs-12">
 
-		<div class="example">
+                <!-- Div to decorate the border of the profile of the song -->
+                <div class="songbox">
 
-        <!-- "Lead" text at top of column. -->
-        <h4 class="lead" style="font-family: Garamond; font-weight: bold;">Lyrics</h4>
+                    <!-- Placeholder image -->
+                    <a href="javascript:void();" class="songprofilepic" style="text-align: left;" data-switch="0"><img
+                            id="profilepicture" src="images/fireworks.jpg"></a>
 
-		<!-- Horizontal rule to add some spacing between the "lead" and body text -->
-        <hr />
+                    <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for
+                        music <i class='fa fa-arrow-up'></i></p>
 
-		</div>
-		
-		<p style="font-family: Times New Roman; font-size: 16px; font-weight: bold; text-align: center;">
-			在溫和的日光下上課鈴放慢了腳步<br>
-			やさしい日だまりに チャイムがディレイする<br>
-			Yasashii hidamari ni chaimu ga direi suru<br><br>
+                    <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album:
+                        <br />Uchiage Hanabi<br />
+                        Song: <br />Fireworks<br />
+                        Artist: <br />DAOKO × Kenshi Yonezu<br />
+                        Released: 2017
+                    </p>
 
-			撫摸著臉頰的微風 使呼吸也變得平靜<br>
-			ほほをなでる風　息吹は深くなってく<br>
-			Hoho wo naderu kaze ibuki wa fukakunatteku<br><br>
+                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
+                            href="songs/Fireworks.mp3" role="button" download
+                            style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
+                            MP3</a></p>
 
-			嘗過曲折的淚珠 想過明天的稱呼 當未來的輪廓線 漸漸與你同步<br>
-			遠まわりの涙 名前つけた明日 重なる未来色のライン<br>
-			Toomawari no namida namae tsuketa ashita kasanaru miraiiro no rain<br><br>
+                    <br>
 
-			無論是這份純真的感情 還是一起縱情大笑的日子<br>
-			あどけないこんな気持ちも はじけ飛ぶほど笑い合えた日も<br>
-			Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br><br>
+                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
+                            href="pdf/songlyrics1.pdf" role="button" download
+                            style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
+                            Lyrics</a></p>
 
-			我都希望永遠細心呵護下去<br>
-			大切に育てていけるように<br>
-			Taisetsu ni sodateteikeru youni<br><br>
+                    <br>
 
-			帶我走過了最難過的時光 給了我數不清的第一次<br>
-			とぎれとぎれの時を越えて たくさんの初めてをくれた<br>
-			Togiretogire no toki wo koete takusan no hajimete wo kureta<br><br>
+                    <!-- Social buttons using anchor elements and btn-primary class to style -->
 
-			只想將這份心意 告訴你<br>
-			つながってゆけ とどけ<br>
-			Tsunagatteyuke todoke<br><br>
+                    <!--<a class="btn btn-primary btn-xs" href="sgpf1.php" role="button">Previous</a>-->
+                    <p style="text-align: left;">
+                        <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf2.php" role="button">Next</a>
+                    </p>
 
-			放學後的黃昏 望著笑著的你的背影<br>
-			放課後の夕闇 笑うきみの背中<br>
-			Houkago no yuuyami warau kimi no senaka<br><br>
+                </div> <!-- End Col 1 -->
 
-			我默默自語　品味著從未體會的心情<br>
-			ひそかなささやき 触れたことのない想いの中<br>
-			Hisokana sasayaki fureta koto no nai omoi no naka<br><br>
+            </div>
 
-			在我心中的你 與你心中的我之間<br>
-			僕の中のきみと きみの中の僕で<br>
-			Boku no naka no kimi to kimi no naka no boku de<br><br>
+            <!-- Second column - for small and extra-small screens, will use whatever # cols is available -->
+            <div class="col-md-8 col-sm-* col-xs-*">
 
+                <div class="example">
 
-			未來的輪廓線 漸漸交疊在一起<br>
-			絡まる未来色のライン<br>
-			Karamaru miraiiro no rain<br><br>
+                    <!-- "Lead" text at top of column. -->
+                    <h4 class="lead" style="font-family: Garamond; font-weight: bold;">Lyrics</h4>
 
-			擁抱著雨過天晴的芬芳 懷著與夢一般的秘密心事<br>
-			雨上がりの街の匂いと 夢みたいな秘密を胸に抱いて<br>
-			Ameagari no machi no nioi to yumemitaina himitsu wo mune ni daite<br><br>
+                    <!-- Horizontal rule to add some spacing between the "lead" and body text -->
+                    <hr />
 
-			多少次因為有你才破涕為笑<br>
-			何度も泣きそうになってまた笑う<br>
-			Nandomo nakisou ni natte mata warau<br><br>
+                </div>
 
-			要是我能拋開重重的心緒<br>
-			考えるよりずっとはやく<br>
-			Kangaeru yori zutto hayaku<br><br>
+                <p style="font-family: Times New Roman; font-size: 16px; font-weight: bold; text-align: center;">
+                    あの日見渡した渚を 今も思い出すんだ<br>
+                    ano hi miwatashita nagisa wo ima mo omoidasun da<br>
+                    那日眺望過的海岸 如今仍能憶起<br><br>
 
-			飛快地撲到你的懷中該多好<br>
-			その胸に飛び込めたらいい<br>
-			Sono mune ni tobikometara ii<br><br>
+                    砂の上に刻んだ言葉 君の後ろ姿<br>
+                    suna no ue ni kizanda kotoba kimi no ushiro sugata<br>
+                    沙灘上刻劃下的文字 你的背影<br><br>
 
-			只想將這份心意 告訴你<br>
-			つながってゆけ とどけ<br>
-			Tsunagatteyuke todoke<br><br>
+                    寄り返す波が 足元をよぎり何かを攫う<br>
+                    yori kaesu nami ga ashimoto wo yogiri nanikawo sarau<br>
+                    浪花往返 沖過腳邊帶走了些什麼<br><br>
 
-			明明面對著最在意的你<br>
-			何よりも大事なきみの前で<br>
-			Nani yori mo daijina kimi no mae de<br><br>
+                    夕凪の中 日暮れだけが通り過ぎて行く<br>
+                    yuunagi no naka higure dake ga toori sugite yuku<br>
+                    風平浪靜之中 日暮獨自溜走<br><br>
 
-			為何從前的我卻更在意自己會受傷<br>
-			傷つかないように大事にしてたのは そう自分<br>
-			Kizutsukanai youni daiji ni shiteta no wa sou jibun<br><br>
+                    パッと光って咲いた 花火を見ていた<br>
+                    patto hikatte saita hanabi wo miteita<br>
+                    啪一聲綻放光芒 我們看著煙花<br><br>
 
-			即使這一句話說出口就意味著再見<br>
-			その一言がもしもサヨナラのかわりになってしまっても<br>
-			Sono hitogoto ga moshimo sayonara no kawari ni natteshimattemo<br><br>
+                    きっとまだ 終わらない夏が<br>
+                    kitto mada owaranai natsu ga<br>
+                    還未結束的夏天 一定會將<br><br>
 
-			我也要說出　心中的一切<br>
-			ありのまま すべて<br>
-			Ari no mama subete<br><br>
+                    曖昧な心を 解かして繋いだ<br>
+                    aimai na kokoro wo tokashite tsunaida<br>
+                    曖昧的心 融化後相繫一起<br><br>
 
-			無論是這份純真的感情 還是一起縱情大笑的日子<br>
-			あどけないこんな気持ちも はじけ飛ぶほど笑いあえた日も<br>
-			Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br><br>
+                    この夜が 続いて欲しかった<br>
+                    kono yoru ga tsuzuite hoshikatta<br>
+                    多希望 這個夜晚繼續下去<br><br>
 
-			我都希望永遠細心呵護下去<br>
-			大切に育てていけるように<br>
-			Taisetsu ni sodateteikeru youni<br><br>
+                    「あと何度君と同じ花火を見られるかな」って<br>
+                    ato nando kimi to onaji hanabi wo mirareru kanatte<br>
+                    「還能再與你共賞幾次同樣的煙花呢」<br><br>
 
-			我要一點點學會長大成人<br>
-			ほんの少し大人になってく<br>
-			Honno sukoshi otona ni natteku<br><br>
+                    笑う顔に何ができるだろうか<br>
+                    warau kao ni nani ga dekiru darouka<br>
+                    為那笑臉我又能做些什麼<br><br>
 
-			超越只會憧憬著你的自己<br>
-			君になりたい僕を超えて<br>
-			Kimi ni naritai boku wo koete<br><br>
+                    傷つくこと 喜ぶこと 繰り返す波と情動<br>
+                    kizutsuku koto yorokobu koto kurikaesu nami to joudou<br>
+                    受傷 喜悅 浪來浪去與情動<br><br>
 
-			只想將這份心意<br>
-			つながってゆけ<br>
-			Tsunagatteyuke<br><br>
+                    焦燥 最終列車の音<br>
+                    shousou saishuu ressha no oto<br>
+                    焦躁 末班列車的聲音<br><br>
 
-			馬上將這份心意<br>
-			今すぐきみに<br>
-			Ima sugu kimi ni<br><br>
+                    何度でも 言葉にして君を呼ぶよ<br>
+                    nando demo kotoba ni shite kimi wo yobuyo<br>
+                    無論幾次 我都會化作話語呼喚你<br><br>
 
-			告訴你<br>
-			とどけ<br>
-			Todoke<br><br>
-		</p>
+                    波間を選び もう一度<br>
+                    namima wo erabi mou ichido<br>
+                    待浪退時 再一次<br><br>
 
-		</div> <!-- End column 2 -->
+                    もう二度と悲しまずに済むように<br>
+                    mou nidoto kanashi mazu ni sumuyou ni<br>
+                    是為了讓悲傷不再繼續就此而終<br><br>
 
-		</div> <!-- End row 1 -->
+                    はっと息を飲めば 消えちゃいそうな光が<br>
+                    hatto iki wo nomeba kiechai souna hikari ga<br>
+                    深深倒吸一口氣 那即將消失的光芒<br><br>
 
-	</div> <!-- End main container -->
-	
-	<!-- Jquery Link -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-	
-	<!-- Bootstrap Link -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	
-	<!-- APlayer Jquery link -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>	
-	
-	<div id="aplayer"></div>
-	
-	<footer style="text-align: center;">
-			<p>Posted By : SoFo Team</p>
-			<p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
-			/ <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
-		
-			<small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights Reserved.</small>
-	</footer>
+                    きっとまだ 胸に住んでいた<br>
+                    kitto mada mune ni sundeita<br>
+                    一定仍會 久留在胸中<br><br>
+
+                    手を伸ばせば触れた あったかい未来は<br>
+                    te wo nobaseba fureta attakai mirai wa<br>
+                    只要伸出手便能觸碰 那溫暖的未來<br><br>
+
+                    ひそかに二人を見ていた<br>
+                    hisoka ni futari wo miteita<br>
+                    正暗中窺伺著我倆<br><br>
+
+                    パッと花火が<br>
+                    patto hanabi ga<br>
+                    啪一聲煙花<br><br>
+
+                    夜に咲いた<br>
+                    yoru ni saita<br>
+                    於夜裡綻放<br><br>
+
+                    夜に咲いて<br>
+                    yoru ni saite<br>
+                    夜裡綻放後<br><br>
+
+                    静かに消えた<br>
+                    shizuka ni kieta<br>
+                    悄悄消失無蹤<br><br>
+
+                    離さないで<br>
+                    hanasa naide<br>
+                    別讓我走<br><br>
+
+                    もう少しだけ<br>
+                    mou sukoshi dake<br>
+                    再一下下就好<br><br>
+
+                    もう少しだけ<br>
+                    mou sukoshi dake<br>
+                    再一下下就好<br><br>
+
+                    このままで<br>
+                    kono mama de<br>
+                    維持現在這樣<br><br>
+
+                    あの日見渡した渚を 今も思い出すんだ<br>
+                    ano hi miwatashita nagisa wo ima mo omoidasun da<br>
+                    那日眺望過的海岸 如今仍能憶起<br><br>
+
+                    砂の上に刻んだ言葉 君の後ろ姿<br>
+                    suna no ue ni kizanda kotoba kimi no ushiro sugata<br>
+                    沙灘上刻劃下的文字 你的背影<br><br>
+
+                    パッと光って咲いた 花火を見ていた<br>
+                    patto hikatte saita hanabi wo miteita<br>
+                    啪一聲綻放光芒 我們看著煙花<br><br>
+
+                    きっとまだ 終わらない夏が<br>
+                    kitto mada owaranai natsu ga<br>
+                    還未結束的夏天 一定會將<br><br>
+
+                    曖昧な心を 解かして繋いだ<br>
+                    aimai na kokoro wo tokashite tsunaida<br>
+                    曖昧的心 融化後相繫一起<br><br>
+
+                    この夜が 続いて欲しかった<br>
+                    kono yoru ga tsuzuite hoshikatta<br>
+                    多希望 這個夜晚繼續下去<br><br>
+                </p>
+
+            </div> <!-- End column 2 -->
+
+        </div> <!-- End row 1 -->
+
+    </div> <!-- End main container -->
+
+    <!-- Jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- Bootstrap Link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- APlayer Jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+    <div id="aplayer"></div>
+
+    <footer style="text-align: center;">
+        <p>Posted By : SoFo Team</p>
+        <p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
+            / <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a
+                href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
+
+        <small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights
+            Reserved.</small>
+    </footer>
 
 </body>
 
@@ -329,77 +364,73 @@ if($email != false && $password != false){
 // Latest Album
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() 
-{
-  document.getElementById("myDropdown").classList.toggle("show");
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
 }
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) 
-{
-  if (!event.target.matches('.dropbtn')) 
-  {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) 
-	{
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) 
-	  {
-        openDropdown.classList.remove('show');
-      }
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
     }
-  }
 }
 
 //Scroll top button
 //Get the button
 var mybutton = document.getElementById("myBtn");
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    scrollFunction()
+};
+
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 
-		// NOW I CLICK album-poster TO GET CURRENT SONG ID
-		$(".songprofilepic").on('click', function(e){
-			var dataSwitchId = $(this).attr('data-switch');
-			//console.log(dataSwitchId);
+// NOW I CLICK album-poster TO GET CURRENT SONG ID
+$(".songprofilepic").on('click', function(e) {
+    var dataSwitchId = $(this).attr('data-switch');
+    //console.log(dataSwitchId);
 
-			// and now i use aplayer switch function see
-			ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+    // and now i use aplayer switch function see
+    ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
 
-			// aplayer play function
-			// when i click any song to play
-			ap.play();
+    // aplayer play function
+    // when i click any song to play
+    ap.play();
 
-			// click to slideUp player see
-			$("#aplayer").addClass('showPlayer');
-		});
-		
-		const ap = new APlayer({
-		    container: document.getElementById('aplayer'),
-		    listFolded: true,
-		    audio: [
-		    {
-		        name: 'Kimi Ni Todoke', // SONG NAME
-		        artist: 'Tanizawa Tomofumi', //ARTIST NAME
-		        url: 'songs/Kimi_Ni_Todoke.mp3', // PATH NAME AND SONG URL
-		        cover: 'images/sawako.jpg'
-		    },
+    // click to slideUp player see
+    $("#aplayer").addClass('showPlayer');
+});
 
-		    ]
-		});
-		
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    listFolded: true,
+    audio: [{
+            name: 'Fireworks', // SONG NAME
+            artist: 'DAOKO x Kenshi Yonezu', //ARTIST NAME
+            url: 'songs/Fireworks.mp3', // PATH NAME AND SONG URL
+            cover: 'images/fireworks.jpg'
+        },
+
+    ]
+});
 </script>
 
 </html>

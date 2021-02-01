@@ -145,38 +145,38 @@ if ($email != false && $password != false) {
                 <div class="songbox">
 
                     <!-- Placeholder image -->
-                    <a href="javascript:void();" class="songprofilepic" style="text-align: center;" data-switch="0"><img
-                            id="profilepicture" src="images/白月光与朱砂痣.jpg"></a>
+                    <a href="javascript:void();" class="songprofilepic" style="text-align: left;" data-switch="0"><img
+                            id="profilepicture" src="images/sawako.jpg"></a>
 
                     <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for
                         music <i class='fa fa-arrow-up'></i></p>
 
                     <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album:
-                        <br />大籽<br />
-                        Song: <br />白月光与朱砂痣<br />
-                        Artist: 大籽<br />
-                        Released: 2021
-                    </p>
+                        <br />Kimi ni Todoke Original Soundtrack<br />
+                        Song: <br />Kimi ni Todoke<br />
+                        Artist: <br />Tanizawa Tomofumi<br />
+                        Released: 2010</p>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="songs/白月光与朱砂痣.mp3" role="button" download
+                            href="songs/Kimi_Ni_Todoke.mp3" role="button" download
                             style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
                             MP3</a></p>
 
                     <br>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="pdf/songlyrics9.pdf"
-                            style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;"
-                            role="button" download>Download Lyrics</a></p>
+                            href="pdf/songlyrics1.pdf" role="button" download
+                            style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
+                            Lyrics</a></p>
 
                     <br>
 
                     <!-- Social buttons using anchor elements and btn-primary class to style -->
-                    <p>
-                        <a class="btn btn-primary btn-xs" href="sgpf8.php" role="button">Previous</a>
+
+                    <!--<a class="btn btn-primary btn-xs" href="sgpf1.php" role="button">Previous</a>-->
+                    <p style="text-align: left;">
                         <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
-                        <!--<a class="btn btn-primary btn-xs" href="sgpf9.php" role="button">Next</a>-->
+                        <a class="btn btn-primary btn-xs" href="sgpf2.php" role="button">Next</a>
                     </p>
 
                 </div> <!-- End Col 1 -->
@@ -196,67 +196,115 @@ if ($email != false && $password != false) {
 
                 </div>
 
-                <p style="font-family: Times New Roman; font-weight: bold; text-align: center;">
-                    从前的歌谣<br>
-                    都在指尖绕<br>
-                    得不到的美好<br>
-                    总在心间挠<br><br>
+                <p style="font-family: Times New Roman; font-size: 16px; font-weight: bold; text-align: center;">
+                    在溫和的日光下上課鈴放慢了腳步<br>
+                    やさしい日だまりに チャイムがディレイする<br>
+                    Yasashii hidamari ni chaimu ga direi suru<br><br>
 
-                    白饭粒无处抛<br>
-                    蚊子血也抹不掉<br>
-                    触不可及刚刚好<br>
-                    日久天长让人恼<br><br>
+                    撫摸著臉頰的微風 使呼吸也變得平靜<br>
+                    ほほをなでる風　息吹は深くなってく<br>
+                    Hoho wo naderu kaze ibuki wa fukakunatteku<br><br>
 
-                    那时滚烫的心跳<br>
-                    也曾无处遁逃<br>
-                    像一团烈火燃烧<br>
-                    烧尽跨不过的桥<br><br>
+                    嘗過曲折的淚珠 想過明天的稱呼 當未來的輪廓線 漸漸與你同步<br>
+                    遠まわりの涙 名前つけた明日 重なる未来色のライン<br>
+                    Toomawari no namida namae tsuketa ashita kasanaru miraiiro no rain<br><br>
 
-                    时光匆匆地跑<br>
-                    火焰化作月遥遥<br>
-                    再无激荡的波涛<br>
-                    也从不在梦里飘摇<br><br>
+                    無論是這份純真的感情 還是一起縱情大笑的日子<br>
+                    あどけないこんな気持ちも はじけ飛ぶほど笑い合えた日も<br>
+                    Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br><br>
 
-                    白月光在照耀<br>
-                    你才想起她的好<br>
-                    朱砂痣久难消<br>
-                    你是否能知道<br><br>
+                    我都希望永遠細心呵護下去<br>
+                    大切に育てていけるように<br>
+                    Taisetsu ni sodateteikeru youni<br><br>
 
-                    窗前的明月照<br>
-                    你独自一人远眺<br>
-                    白月光是年少<br>
-                    是她的笑<br><br>
+                    帶我走過了最難過的時光 給了我數不清的第一次<br>
+                    とぎれとぎれの時を越えて たくさんの初めてをくれた<br>
+                    Togiretogire no toki wo koete takusan no hajimete wo kureta<br><br>
 
-                    那时滚烫的心跳<br>
-                    也曾无处遁逃<br>
-                    像一团烈火燃烧<br>
-                    烧尽跨不过的桥<br><br>
+                    只想將這份心意 告訴你<br>
+                    つながってゆけ とどけ<br>
+                    Tsunagatteyuke todoke<br><br>
 
-                    时光匆匆地跑<br>
-                    火焰化作月遥遥<br>
-                    再无激荡的波涛<br>
-                    也从不在梦里飘摇<br><br>
+                    放學後的黃昏 望著笑著的你的背影<br>
+                    放課後の夕闇 笑うきみの背中<br>
+                    Houkago no yuuyami warau kimi no senaka<br><br>
 
-                    白月光在照耀<br>
-                    你才想起她的好<br>
-                    朱砂痣久难消<br>
-                    你是否能知道<br><br>
+                    我默默自語　品味著從未體會的心情<br>
+                    ひそかなささやき 触れたことのない想いの中<br>
+                    Hisokana sasayaki fureta koto no nai omoi no naka<br><br>
 
-                    窗前的明月照<br>
-                    你独自一人远眺<br>
-                    白月光是年少<br>
-                    是她的笑<br><br>
+                    在我心中的你 與你心中的我之間<br>
+                    僕の中のきみと きみの中の僕で<br>
+                    Boku no naka no kimi to kimi no naka no boku de<br><br>
 
-                    白月光在照耀<br>
-                    你才想起她的好<br>
-                    朱砂痣久难消<br>
-                    你是否能知道<br><br>
 
-                    窗前的明月照<br>
-                    你独自一人远眺<br>
-                    白月光是年少<br>
-                    是她的笑<br><br>
+                    未來的輪廓線 漸漸交疊在一起<br>
+                    絡まる未来色のライン<br>
+                    Karamaru miraiiro no rain<br><br>
 
+                    擁抱著雨過天晴的芬芳 懷著與夢一般的秘密心事<br>
+                    雨上がりの街の匂いと 夢みたいな秘密を胸に抱いて<br>
+                    Ameagari no machi no nioi to yumemitaina himitsu wo mune ni daite<br><br>
+
+                    多少次因為有你才破涕為笑<br>
+                    何度も泣きそうになってまた笑う<br>
+                    Nandomo nakisou ni natte mata warau<br><br>
+
+                    要是我能拋開重重的心緒<br>
+                    考えるよりずっとはやく<br>
+                    Kangaeru yori zutto hayaku<br><br>
+
+                    飛快地撲到你的懷中該多好<br>
+                    その胸に飛び込めたらいい<br>
+                    Sono mune ni tobikometara ii<br><br>
+
+                    只想將這份心意 告訴你<br>
+                    つながってゆけ とどけ<br>
+                    Tsunagatteyuke todoke<br><br>
+
+                    明明面對著最在意的你<br>
+                    何よりも大事なきみの前で<br>
+                    Nani yori mo daijina kimi no mae de<br><br>
+
+                    為何從前的我卻更在意自己會受傷<br>
+                    傷つかないように大事にしてたのは そう自分<br>
+                    Kizutsukanai youni daiji ni shiteta no wa sou jibun<br><br>
+
+                    即使這一句話說出口就意味著再見<br>
+                    その一言がもしもサヨナラのかわりになってしまっても<br>
+                    Sono hitogoto ga moshimo sayonara no kawari ni natteshimattemo<br><br>
+
+                    我也要說出　心中的一切<br>
+                    ありのまま すべて<br>
+                    Ari no mama subete<br><br>
+
+                    無論是這份純真的感情 還是一起縱情大笑的日子<br>
+                    あどけないこんな気持ちも はじけ飛ぶほど笑いあえた日も<br>
+                    Adokenai konna kimochi mo hajiketobu hodo waraiaeta hi mo<br><br>
+
+                    我都希望永遠細心呵護下去<br>
+                    大切に育てていけるように<br>
+                    Taisetsu ni sodateteikeru youni<br><br>
+
+                    我要一點點學會長大成人<br>
+                    ほんの少し大人になってく<br>
+                    Honno sukoshi otona ni natteku<br><br>
+
+                    超越只會憧憬著你的自己<br>
+                    君になりたい僕を超えて<br>
+                    Kimi ni naritai boku wo koete<br><br>
+
+                    只想將這份心意<br>
+                    つながってゆけ<br>
+                    Tsunagatteyuke<br><br>
+
+                    馬上將這份心意<br>
+                    今すぐきみに<br>
+                    Ima sugu kimi ni<br><br>
+
+                    告訴你<br>
+                    とどけ<br>
+                    Todoke<br><br>
                 </p>
 
             </div> <!-- End column 2 -->
@@ -351,10 +399,10 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     listFolded: true,
     audio: [{
-            name: '白月光与朱砂痣',
-            artist: '大籽',
-            url: 'songs/白月光与朱砂痣.mp3',
-            cover: 'images/白月光与朱砂痣.jpg',
+            name: 'Kimi Ni Todoke', // SONG NAME
+            artist: 'Tanizawa Tomofumi', //ARTIST NAME
+            url: 'songs/Kimi_Ni_Todoke.mp3', // PATH NAME AND SONG URL
+            cover: 'images/sawako.jpg'
         },
 
     ]

@@ -1,0 +1,16 @@
+INSERT INTO recordedsong (rsong_id, rsong_no, rsong_name, rsong_album, rsong_artist, rsong_files) VALUES
+			('101', '1', 'Fireworks', 'UCHIAGE HANABI', 'DAOKO × Kenshi Yonezu', 'Fireworks.mp3'),
+			('102', '2', 'How You Like That', 'The Album', 'Blackpink', 'HowYouLikeThat.mp3'),
+			('103', '3', '白月光与朱砂痣', '大籽', '大籽', '白月光与朱砂痣.mp3'),
+			('104', '4', 'Vibez', 'Nobody Is Listening', 'Zayn Malik', 'vibez.mp3'),
+			('105', '5', 'River Flows In You', 'First Love', 'Yiruma', 'riverflowsinyou.mp3'),
+			('106', '6', 'Photograph', 'X', 'Ed Sheeran', 'Photograph.mp3'),
+			('107', '7', 'Love Story', 'Fearless', 'Taylor Swift', 'LoveStory.mp3'),
+			('108', '8', 'Negaraku', 'Malaysia Records', 'Pierre-Jean de Beranger', 'Negaraku.mp3'),
+			('109', '9', 'Kimi Ni Todoke', 'Kimi Ni Todoke', 'Tanizawa Tomofumi', 'Kimi_Ni_Todoke.mp3'),
+			('110', '10', 'Where You Are', 'Moana', 'Disney Music Vevo', 'whereyouare.mp3'),
+			('111', '11', 'Everything is Alright', 'To the Moon', 'Laura Shigihara', 'every.mp3'),
+			('112', '12', 'Something There', 'Beauty and the Beast', 'Disney Music Vevo', 'something.mp3'),
+			('113', '13', 'One Thousand Years Later', 'Code 89757', 'Wayne Lin Jun Jie', 'onethousandyears.mp3'),
+			('114', '14', 'As a Light Smoke', 'Unknown', 'IRiS (Tomo)', 'onmyoji.mp3'),
+			('115', '15', 'Amazing Grace', 'On a Blue Ridge Sunday', 'John Newton', 'amazinggrace.mp3');

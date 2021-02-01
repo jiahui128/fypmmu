@@ -1,5 +1,68 @@
 var songsToAdd = [
 	{
+      "name": "How You Like That",
+      "artist": "Blackpink",
+      "album": "The Album",
+      "url": "songs/howyoulikethat.mp3",
+      "cover_art_url": "images/blackpink.jpg"
+    },
+    {
+      "name": "白月光与朱砂痣",
+      "artist": "大籽",
+      "album": "大籽",
+      "url": "songs/白月光与朱砂痣.mp3",
+      "cover_art_url": "images/白月光与朱砂痣.jpg"
+    },
+    {
+      "name": "Vibez",
+      "artist": "Zayn Malik",
+      "album": "Nobody Is Listening",
+      "url": "songs/vibez.mp3",
+      "cover_art_url": "images/vibez.jpg"
+    },
+    {
+      "name": "Rivers Flows In You",
+      "artist": "Yiruma",
+      "album": "First Love",
+      "url": "songs/riverflowsinyou.mp3",
+      "cover_art_url": "images/rfiy.jpg"
+    },
+    {
+      "name": "Photograph",
+      "artist": "Ed Sheeran",
+      "album": "X",
+      "url": "songs/Photograph.mp3",
+      "cover_art_url": "images/X.jpg"
+    },
+    {
+      "name": "Love Story",
+      "artist": "Taylor Swift",
+      "album": "Fearless",
+      "url": "songs/LoveStory.mp3",
+      "cover_art_url": "images/lovestory.png"
+    },
+    {
+      "name": "Negaraku",
+      "artist": "Pierre-Jean de Béranger",
+      "album": "Malaysia's National Anthem",
+      "url": "songs/Negaraku.mp3",
+      "cover_art_url": "images/negaraku.jpg"
+    },
+    {
+      "name": "Let's Go To the Forest",
+      "artist": "Kero Kero Bonito",
+      "album": "Intro Bonito",
+      "url": "https://i.koya.io/Kero%20Kero%20Bonito%20-%20Let's%20Go%20To%20The%20Forest.mp3",
+      "cover_art_url": "images/kero.jpg"
+    },
+    {
+      "name": "Kimi Ni Todoke", 
+      "artist": "Tanizawa Tomofumi", 
+      "album": "Kimi Ni Todoke Original Soundtrack", 
+      "url": "songs/Kimi_Ni_Todoke.mp3",
+      "cover_art_url": "images/sawako.jpg"
+    },
+    {
       "name": "Where You Are",
       "artist": "Various Artists",
       "album": "Moana Original Soundtrack (Disney)",
@@ -20,51 +83,37 @@ var songsToAdd = [
       "url": "songs/something.mp3",
       "cover_art_url": "images/beautyandthebeast.jpg"
     },
-  {
-    "name": "Negaraku",
-    "artist": "Pierre-Jean de Béranger",
-    "album": "Malaysia's National Anthem",
-    "url": "songs/Negaraku.mp3",
-    "cover_art_url": "images/negaraku.jpg"
-  },
-  {
-    "name": "One Thousand Years Later",
-    "artist": "Wayne Lin Jun Jie",
-    "album": "Code 89757",
-    "url": "songs/onethousandyears.mp3",
-    "cover_art_url": "images/jjlim.jpg"
-  },
-  {
-    "name": "As A Light Smoke",
-    "artist": "IRiS (Tomo)",
-    "album": "Unknown",
-    "url": "songs/onmyoji.mp3",
-    "cover_art_url": "images/yohime.jpg"
-  },
-  {
-    "name": "Amazing Grace",
-    "artist": "John Newton",
-    "album": "On a Blue Ridge Sunday",
-    "url": "songs/amazinggrace.mp3",
-    "cover_art_url": "images/amazinggrace.jpg"
-  },
-  {
-    "name": "Let's Go To the Forest",
-    "artist": "Kero Kero Bonito",
-    "album": "Intro Bonito",
-    "url": "https://i.koya.io/Kero%20Kero%20Bonito%20-%20Let's%20Go%20To%20The%20Forest.mp3",
-    "cover_art_url": "images/kero.jpg"
-  }
+    {
+      "name": "One Thousand Years Later",
+      "artist": "Wayne Lin Jun Jie",
+      "album": "Code 89757",
+      "url": "songs/onethousandyears.mp3",
+      "cover_art_url": "images/jjlim.jpg"
+    },
+    {
+      "name": "As A Light Smoke",
+      "artist": "IRiS (Tomo)",
+      "album": "Unknown",
+      "url": "songs/onmyoji.mp3",
+      "cover_art_url": "images/yohime.jpg"
+    },
+    {
+      "name": "Amazing Grace",
+      "artist": "John Newton",
+      "album": "On a Blue Ridge Sunday",
+      "url": "songs/amazinggrace.mp3",
+      "cover_art_url": "images/amazinggrace.jpg"
+    }
 ];
 
 Amplitude.init({
   "songs": [
     {
-      "name": "Kimi Ni Todoke", // SONG NAME
-      "artist": "Tanizawa Tomofumi", //ARTIST NAME
-      "album": "Kimi Ni Todoke Original Soundtrack", //ALBUM NAME
-      "url": "songs/Kimi_Ni_Todoke.mp3", // PATH NAME AND SONG URL
-      "cover_art_url": "images/sawako.jpg"
+      "name": "Fireworks", // SONG NAME
+      "artist": "DAOKO × Kenshi Yonezu", //ARTIST NAME
+      "album": "Uchiage Hanabi", //ALBUM NAME
+      "url": "songs/fireworks.mp3", // PATH NAME AND SONG URL
+      "cover_art_url": "images/fireworks.jpg"
     }
   ]
 });

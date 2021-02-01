@@ -3,22 +3,22 @@
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if ($email != false && $password != false) {
-	$sql = "SELECT * FROM usertable WHERE email = '$email'";
-	$run_Sql = mysqli_query($con, $sql);
-	if ($run_Sql) {
-		$fetch_info = mysqli_fetch_assoc($run_Sql);
-		$status = $fetch_info['status'];
-		$code = $fetch_info['code'];
-		if ($status == "verified") {
-			if ($code != 0) {
-				header('Location: reset-code.php');
-			}
-		} else {
-			header('Location: user-otp.php');
-		}
-	}
+    $sql = "SELECT * FROM usertable WHERE email = '$email'";
+    $run_Sql = mysqli_query($con, $sql);
+    if ($run_Sql) {
+        $fetch_info = mysqli_fetch_assoc($run_Sql);
+        $status = $fetch_info['status'];
+        $code = $fetch_info['code'];
+        if ($status == "verified") {
+            if ($code != 0) {
+                header('Location: reset-code.php');
+            }
+        } else {
+            header('Location: user-otp.php');
+        }
+    }
 } else {
-	header('Location: newhome.php');
+    header('Location: newhome.php');
 }
 ?>
 
@@ -99,29 +99,50 @@ if ($email != false && $password != false) {
         //look for text inside the NEW textbox
         var input = document.getElementById('query').value.toLowerCase();
         switch (input) {
-            case 'kimi ni todoke', '1':
+            case 'fireworks', '1':
                 window.location.replace('sgpf1.php');
                 break;
-            case 'where you are', '2':
+            case 'how you like that', '2':
                 window.location.replace('sgpf2.php');
                 break;
-            case 'everything is alright', '3':
+            case '白月光与朱砂痣', '3':
                 window.location.replace('sgpf3.php');
                 break;
-            case 'something there', '4':
+            case 'vibez', '4':
                 window.location.replace('sgpf4.php');
                 break;
-            case 'negaraku', '5':
+            case 'river flows in you', '5':
                 window.location.replace('sgpf5.php');
                 break;
-            case 'one thousand years later', '6':
+            case 'photograph', '6':
                 window.location.replace('sgpf6.php');
                 break;
-            case 'as a light smoke', '7':
+            case 'love story', '7':
                 window.location.replace('sgpf7.php');
                 break;
-            case 'amazing grace', '8':
+            case 'negaraku', '8':
                 window.location.replace('sgpf8.php');
+                break;
+            case 'kimi ni todoke', '9':
+                window.location.replace('sgpf9.php');
+                break;
+            case 'where you are', '10':
+                window.location.replace('sgpf10.php');
+                break;
+            case 'everything is alright', '11':
+                window.location.replace('sgpf11.php');
+                break;
+            case 'something there', '12':
+                window.location.replace('sgpf12.php');
+                break;
+            case 'one thousand years later', '13':
+                window.location.replace('sgpf13.php');
+                break;
+            case 'as a light smoke', '14':
+                window.location.replace('sgpf14.php');
+                break;
+            case 'amazing grace', '15':
+                window.location.replace('sgpf15.php');
                 break;
 
             default: //no keyword detected so we submit the form.
@@ -169,9 +190,9 @@ if ($email != false && $password != false) {
 
             <li style="font-size: 14px; color: white; font-weight: bold;">
                 <?php
-				$today = date("F j, Y");
-				echo $today;
-				?>
+                $today = date("F j, Y");
+                echo $today;
+                ?>
             </li>
 
             <li style="font-size: 14px; color: white; font-weight: bold;">
@@ -241,6 +262,94 @@ if ($email != false && $password != false) {
                 <div class="col-md-3">
 
                     <a href="sgpf1.php" class="album-poster" data-switch="0">
+                        <img class="songimg" src="images/fireworks.jpg" alt="Fireworks">
+                    </a>
+
+                    <h4>Fireworks</h4>
+                    <p>DAOKO × Kenshi Yonezu</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf2.php" class="album-poster" data-switch="1">
+                        <img class="songimg" src="images/blackpink.jpg" alt="How You Like That">
+                    </a>
+
+                    <h4>How You Like That</h4>
+                    <p>Blackpink</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf3.php" class="album-poster" data-switch="2">
+                        <img class="songimg" src="images/白月光与朱砂痣.jpg" alt="白月光与朱砂痣">
+                    </a>
+
+                    <h4>白月光与朱砂痣</h4>
+                    <p>大籽</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf4.php" class="album-poster" data-switch="7">
+                        <img class="songimg" src="images/vibez.jpg" alt="Vibez">
+                    </a>
+
+                    <h4>Vibez</h4>
+                    <p>Zayn Malik</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf5.php" class="album-poster" data-switch="4">
+                        <img class="songimg" src="images/rfiy.jpg" alt="Rivers Flows In You">
+                    </a>
+
+                    <h4>Rivers Flows In You</h4>
+                    <p>Yiruma</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf6.php" class="album-poster" data-switch="5">
+                        <img class="songimg" src="images/X.jpg" alt="Photograph">
+                    </a>
+
+                    <h4>Photograph</h4>
+                    <p>Ed Sheeran</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf7.php" class="album-poster" data-switch="6">
+                        <img class="songimg" src="images/lovestory.png" style="height: 250px;" alt="Love Story">
+                    </a>
+
+                    <h4>Love Story</h4>
+                    <p>Talyor Swift</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf8.php" class="album-poster" data-switch="4">
+                        <img class="songimg" src="images/negaraku.jpg" alt="National Anthem">
+                    </a>
+
+                    <h4>Negaraku</h4>
+                    <p>Pierre-Jean de Béranger</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="sgpf9.php" class="album-poster" data-switch="0">
                         <img class="songimg" src="images/sawako.jpg" alt="Kimi_Ni_Todoke">
                     </a>
 
@@ -251,7 +360,7 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="sgpf2.php" class="album-poster" data-switch="1">
+                    <a href="sgpf10.php" class="album-poster" data-switch="1">
                         <img class="songimg" src="images/moana.jpg" alt="Moana Movie Clip">
                     </a>
 
@@ -262,7 +371,7 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="sgpf3.php" class="album-poster" data-switch="2">
+                    <a href="sgpf11.php" class="album-poster" data-switch="2">
                         <img class="songimg" src="images/every.jpg" alt="To The Moon">
                     </a>
 
@@ -273,7 +382,7 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="sgpf4.php" class="album-poster" data-switch="3">
+                    <a href="sgpf12.php" class="album-poster" data-switch="3">
                         <img class="songimg" src="images/beautyandthebeast.jpg" style="height: 250px;"
                             alt="Beauty and the Beast">
                     </a>
@@ -285,18 +394,7 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="sgpf5.php" class="album-poster" data-switch="4">
-                        <img class="songimg" src="images/negaraku.jpg" alt="National Anthem">
-                    </a>
-
-                    <h4>Negaraku</h4>
-                    <p>Pierre-Jean de Béranger</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="sgpf6.php" class="album-poster" data-switch="5">
+                    <a href="sgpf13.php" class="album-poster" data-switch="5">
                         <img class="songimg" src="images/jjlim.jpg" alt="Chinese Song">
                     </a>
 
@@ -307,7 +405,7 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="sgpf7.php" class="album-poster" data-switch="6">
+                    <a href="sgpf14.php" class="album-poster" data-switch="6">
                         <img class="songimg" src="images/yohime.jpg" style="height: 250px;" alt="Onmyoji Song">
                     </a>
 
@@ -318,23 +416,12 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="sgpf8.php" class="album-poster" data-switch="7">
+                    <a href="sgpf15.php" class="album-poster" data-switch="7">
                         <img class="songimg" src="images/amazinggrace.jpg" alt="Amazing Grace">
                     </a>
 
                     <h4>Amazing Grace</h4>
                     <p>John Newton</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="sgpf9.php" class="album-poster" data-switch="7">
-                        <img class="songimg" src="images/白月光与朱砂痣.jpg" alt="白月光与朱砂痣">
-                    </a>
-
-                    <h4>白月光与朱砂痣</h4>
-                    <p>大籽</p>
 
                 </div>
 
@@ -397,52 +484,52 @@ if ($email != false && $password != false) {
         container: document.getElementById('aplayer'),
         listFolded: true,
         audio: [{
-                name: 'Kimi Ni Todoke', // SONG NAME
-                artist: 'Tanizawa Tomofumi', //ARTIST NAME
-                url: 'songs/Kimi_Ni_Todoke.mp3', // PATH NAME AND SONG URL
-                cover: 'images/sawako.jpg',
+                name: 'Fireworks', // SONG NAME
+                artist: 'DAOKO × Kenshi Yonezu', //ARTIST NAME
+                url: 'songs/fireworks.mp3', // PATH NAME AND SONG URL
+                cover: 'images/fireworks.jpg',
             },
             {
-                name: 'Where You Are',
-                artist: 'Disney Music Vevo',
-                url: 'songs/whereyouare.mp3',
-                cover: 'images/moana.jpg',
+                name: 'How You Like That',
+                artist: 'Blackpink',
+                url: 'songs/HowYouLikeThat.mp3',
+                cover: 'images/blackpink.jpg',
             },
             {
-                name: 'Everything is Alright',
-                artist: 'Laura Shigihara',
-                url: 'songs/every.mp3',
-                cover: 'images/every.jpg',
+                name: '白月光与朱砂痣',
+                artist: '大籽',
+                url: 'songs/白月光与朱砂痣.mp3',
+                cover: 'images/白月光与朱砂痣.jpg',
             },
             {
-                name: 'Something There',
-                artist: 'Disney Music Vevo',
-                url: 'songs/something.mp3',
-                cover: 'images/beautyandthebeast.jpg',
+                name: 'Vibez',
+                artist: 'Zayn Malik',
+                url: 'songs/vibez.mp3',
+                cover: 'images/vibez.jpg',
+            },
+            {
+                name: 'River Flows In You',
+                artist: 'Yiruma',
+                url: 'songs/riverflowsinyou.mp3',
+                cover: 'images/rfiy.jpg',
+            },
+            {
+                name: 'Photograph',
+                artist: 'Ed Sheeran',
+                url: 'songs/Photograph.mp3',
+                cover: 'images/X.jpg',
+            },
+            {
+                name: 'Love Story',
+                artist: 'Taylor Swift',
+                url: 'songs/LoveStory.mp3',
+                cover: 'images/lovestory.png',
             },
             {
                 name: 'Negaraku',
                 artist: 'Pierre-Jean de Béranger',
                 url: 'songs/Negaraku.mp3',
                 cover: 'images/negaraku.jpg',
-            },
-            {
-                name: 'One Thousand Years Later',
-                artist: 'JJ Lin',
-                url: 'songs/onethousandyears.mp3',
-                cover: 'images/jjlim.jpg',
-            },
-            {
-                name: 'As A Light Smoke',
-                artist: 'IRiS (Tomo)',
-                url: 'songs/onmyoji.mp3',
-                cover: 'images/yohime.jpg',
-            },
-            {
-                name: 'Amazing Grace',
-                artist: 'John Newton',
-                url: 'songs/amazinggrace.mp3',
-                cover: 'images/amazinggrace.jpg',
             },
 
 
