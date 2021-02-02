@@ -17,6 +17,7 @@
 								age varchar(100),
 								code mediumint(50),
 								status text,
+								situation int(10) NOT NULL,
 								created_at DATETIME DEFAULT CURRENT_TIMESTAMP);");
 		}
 		
