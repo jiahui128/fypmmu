@@ -13,6 +13,7 @@
 								song_album varchar(100),
 								song_artist varchar(100),
 								song_status varchar(100),
+								song_situation int(10),
 								created_at DATETIME DEFAULT CURRENT_TIMESTAMP);");
 		}
  
