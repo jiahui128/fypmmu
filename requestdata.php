@@ -12,7 +12,7 @@
 		$songstatus = "Pending";
 						
 		$sql_u = "SELECT * FROM songtable WHERE song_name='$sp1'";
-		$sql_e = "SELECT * FROM songtable WHERE song_artist='$sp3'";
+		$sql_e = "SELECT * FROM songtable WHERE song_name='$sp1' AND song_artist='$sp3'";
 		$res_u = mysqli_query($con, $sql_u);
 		$res_e = mysqli_query($con, $sql_e);
 
