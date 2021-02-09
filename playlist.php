@@ -99,64 +99,79 @@ if ($email != false && $password != false) {
         //look for text inside the NEW textbox
         var input = document.getElementById('query').value.toLowerCase();
         switch (input) {
+            case "daoko × kenshi yonezu":
             case "fireworks":
-			case "1":
+            case "1":
                 window.location.replace('sgpf1.php');
                 break;
+            case "blackpink":
             case "how you like that":
-			case "2":
+            case "2":
                 window.location.replace('sgpf2.php');
                 break;
+            case "大籽":
             case "白月光与朱砂痣":
-			case "3":
+            case "3":
                 window.location.replace('sgpf3.php');
                 break;
+            case "zayn malik":
             case "vibez":
-			case "4":
+            case "4":
                 window.location.replace('sgpf4.php');
                 break;
-            case "river flows in you":
-			case "5":
+            case "yiruma":
+            case "rivers flows in you":
+            case "5":
                 window.location.replace('sgpf5.php');
                 break;
             case "photograph":
-			case "6":
+            case "ed sheeran":
+            case "6":
                 window.location.replace('sgpf6.php');
                 break;
             case "love story":
-			case "7":
+            case "taylor swift":
+            case "7":
                 window.location.replace('sgpf7.php');
                 break;
             case "negaraku":
-			case "8":
+            case "pierre-jean de béranger":
+            case "8":
                 window.location.replace('sgpf8.php');
                 break;
             case "kimi ni todoke":
-			case "9":
+            case "tanizawa tomofumi":
+            case "9":
                 window.location.replace('sgpf9.php');
                 break;
             case "where you are":
-			case "10":
+            case "various artists":
+            case "10":
                 window.location.replace('sgpf10.php');
                 break;
             case "everything is alright":
-			case "11":
+            case "laura shigihara":
+            case "11":
                 window.location.replace('sgpf11.php');
                 break;
             case "something there":
-			case "12":
+            case "emma watson, dans steven":
+            case "12":
                 window.location.replace('sgpf12.php');
                 break;
             case "one thousand years later":
-			case "13":
+            case "wayne lin jun jie":
+            case "13":
                 window.location.replace('sgpf13.php');
                 break;
             case "as a light smoke":
-			case "14":
+            case "iris (tomo)":
+            case "14":
                 window.location.replace('sgpf14.php');
                 break;
             case "amazing grace":
-			case "15":
+            case "john newton":
+            case "15":
                 window.location.replace('sgpf15.php');
                 break;
 
@@ -164,7 +179,7 @@ if ($email != false && $password != false) {
                 return true;
                 break;
         }
-		
+
         return false; //don't let the form submit
     }
     </script>
@@ -243,9 +258,14 @@ if ($email != false && $password != false) {
 						
 						</script>-->
 
-                        <form class="search" style="text-transform: capitalize; text-align: center; margin: auto; max-width: 630px;" action="playlist.php" method="get" onsubmit='return redirect();'>
-                        <!-- pretty much the same thing except you remove the return false  !-->
-                            <input type="text" name="query" id="query" align="center" style="text-transform: capitalize;" placeholder="Type the song name or code no, e.g. 1" columns="2" autocomplete="off">
+                        <form class="search"
+                            style="text-transform: capitalize; text-align: center; margin: auto; max-width: 630px;"
+                            action="playlist.php" method="get" onsubmit='return redirect();'>
+                            <!-- pretty much the same thing except you remove the return false  !-->
+                            <input type="text" name="query" id="query" align="center"
+                                style="text-transform: capitalize;"
+                                placeholder="Type the song name, artist name or code no, e.g. 1" columns="2"
+                                autocomplete="off">
                             <!--<input type="submit" value="" id="submit">-->
                             <input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit"
                                 width="45px" height="45px">
@@ -543,48 +563,48 @@ if ($email != false && $password != false) {
                 url: 'songs/Negaraku.mp3',
                 cover: 'images/negaraku.jpg',
             },
-			{
-				name: 'Kimi Ni Todoke', 
-				artist: 'Tanizawa Tomofumi', 
-				url: 'songs/Kimi_Ni_Todoke.mp3', 
-				cover: 'images/sawako.jpg'
-			},
-			{
-				name: 'Where You Are',
-				artist: 'Disney Music Vevo',
-				url: 'songs/whereyouare.mp3',
-				cover: 'images/moana.jpg',
-			},
-			{
-				name: 'Everything is Alright',
-				artist: 'Laura Shigihara',
-				url: 'songs/every.mp3',
-				cover: 'images/every.jpg',
-			},
-			{
-				name: 'Something There',
-				artist: 'Disney Music Vevo',
-				url: 'songs/something.mp3',
-				cover: 'images/beautyandthebeast.jpg',
-			},
-			{
-				name: 'One Thousand Years Later',
-				artist: 'Wayne Lim Jun Jie',
-				url: 'songs/onethousandyears.mp3',
-				cover: 'images/jjlim.jpg',
-			},
-			{
-				name: 'As A Light Smoke',
-				artist: 'IRiS (Tomo)',
-				url: 'songs/onmyoji.mp3',
-				cover: 'images/yohime.jpg',
-			},
-			{
-				name: 'Amazing Grace',
-				artist: 'John Newton',
-				url: 'songs/amazinggrace.mp3',
-				cover: 'images/amazinggrace.jpg',
-			},
+            {
+                name: 'Kimi Ni Todoke',
+                artist: 'Tanizawa Tomofumi',
+                url: 'songs/Kimi_Ni_Todoke.mp3',
+                cover: 'images/sawako.jpg'
+            },
+            {
+                name: 'Where You Are',
+                artist: 'Disney Music Vevo',
+                url: 'songs/whereyouare.mp3',
+                cover: 'images/moana.jpg',
+            },
+            {
+                name: 'Everything is Alright',
+                artist: 'Laura Shigihara',
+                url: 'songs/every.mp3',
+                cover: 'images/every.jpg',
+            },
+            {
+                name: 'Something There',
+                artist: 'Disney Music Vevo',
+                url: 'songs/something.mp3',
+                cover: 'images/beautyandthebeast.jpg',
+            },
+            {
+                name: 'One Thousand Years Later',
+                artist: 'Wayne Lim Jun Jie',
+                url: 'songs/onethousandyears.mp3',
+                cover: 'images/jjlim.jpg',
+            },
+            {
+                name: 'As A Light Smoke',
+                artist: 'IRiS (Tomo)',
+                url: 'songs/onmyoji.mp3',
+                cover: 'images/yohime.jpg',
+            },
+            {
+                name: 'Amazing Grace',
+                artist: 'John Newton',
+                url: 'songs/amazinggrace.mp3',
+                cover: 'images/amazinggrace.jpg',
+            },
 
 
         ]
@@ -592,7 +612,7 @@ if ($email != false && $password != false) {
     </script>
 
     <footer style="text-align: center;">
-      <p>Posted By : SoFo Team</p>
+        <p>Posted By : SoFo Team</p>
         <p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
             / <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a
                 href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
