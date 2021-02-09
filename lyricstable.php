@@ -119,6 +119,7 @@ include('includes/navbar.php');
             <th>Lyrics ID</th>
 			<th>Lyrics No</th>
             <th>Song Name</th>
+			<th>Song Artist</th>
             <th>Status</th>
 			<th>Preview</th>
 			<th>Download</th>
@@ -139,6 +140,7 @@ include('includes/navbar.php');
             <td><?php echo $row['lyrics_id']; ?></td>
 			<td><?php echo $row['lyrics_no']; ?></td>
             <td><?php echo $row['lyrics_song']; ?></td>
+            <td><?php echo $row['lyrics_artist']; ?></td>			
             <td><?php echo $row['lyrics_status']; ?></td>
 			
 			<td style="text-align: center;">

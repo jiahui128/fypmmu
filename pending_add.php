@@ -59,10 +59,6 @@ include('includes/navbar.php');
 						<input type="text" name="lyricsname" class="form-control" value="<?php echo $row['song_name']; ?>">
 					</div>
 					<div class="form-group">
-						<label> Lyrics Status </label>
-						<input type="text" name="lyricsstatus" class="form-control" value="Pending" placeholder="Enter Lyrics Status (Completed/Pending)">
-					</div>
-					<div class="form-group">
 						<label>Lyrics File</label>
 						<br>
 						<input type="file" name="lyricsfile" placeholder="Enter Lyrics File">

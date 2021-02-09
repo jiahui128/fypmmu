@@ -26,12 +26,12 @@ if(isset($_POST['registerbtn']))
         {
             // echo "Saved";
             $_SESSION['status'] = "Completed Song Added";
-            header('Location: completesong.php');
+            header('Location: completesongs.php');
         }
         else 
         {
             $_SESSION['status'] = "Completed Song Not Added";
-            header('Location: completesong.php');  
+            header('Location: completesongs.php');  
         }
 }
 
@@ -42,9 +42,13 @@ if(isset($_POST['addbtn']))
     $artist = $_POST['artist'];
 	$file = $_POST['file'];
 	$lyricsname = $_POST['lyricsname'];
-    $lyricsstatus = $_POST['lyricsstatus'];
 	$lyricsfile = $_POST['lyricsfile'];
-	
+		
+	if($lyricsfile=="")
+		$lyricsstatus="Pending";
+	else 
+		$lyricsstatus="Completed";
+
     $q = "SELECT lyrics_no FROM lyricstable ORDER BY lyrics_no";
     $q_run = mysqli_query($connection, $q);
 
@@ -60,7 +64,7 @@ if(isset($_POST['addbtn']))
 	$no = $row+1;
 	
 	$sql_r = "SELECT * FROM recordedsong WHERE rsong_name='$name'";
-	$sql_k = "SELECT * FROM recordedsong WHERE rsong_artist='$artist'";
+	$sql_k = "SELECT * FROM recordedsong WHERE rsong_name='$name' AND rsong_artist='$artist'";
 	$res_r = mysqli_query($connection, $sql_r);
 	$res_k = mysqli_query($connection, $sql_k);
 
@@ -69,28 +73,32 @@ if(isset($_POST['addbtn']))
 		{
 			$_SESSION['status'] = "This Song Name and Artist Name is Already Exists!";
 			
-			header('Location: completesong.php');
+			header('Location: pendingsongs.php');
 		}	
 		else
 		{
 			mysqli_query($connection, "INSERT INTO recordedsong (rsong_no, rsong_name,rsong_album,rsong_artist, rsong_files) VALUES ('$no', '$name','$album','$artist', '$file')");
 			
-			mysqli_query($connection, "INSERT INTO lyricstable (lyrics_no, lyrics_song, lyrics_status, lyrics_files) VALUES ('$lyricsno', '$lyricsname','$lyricsstatus', '$lyricsfile')");
+			mysqli_query($connection, "INSERT INTO lyricstable (lyrics_no, lyrics_song, lyrics_artist, lyrics_status, lyrics_files) VALUES ('$lyricsno', '$lyricsname', '$artist', '$lyricsstatus', '$lyricsfile')");
+			
+			mysqli_query($connection, "UPDATE songtable SET song_status='$lyricsstatus' WHERE song_name='$name' AND song_artist='$artist'");
 			
 			$_SESSION['success'] = "Completed Song and Lyrics Data Added";
 		
-			header('Location: completesong.php');
+			header('Location: pendingsongs.php');
 		}
 	}
 	else
 	{
 		mysqli_query($connection, "INSERT INTO recordedsong (rsong_no, rsong_name,rsong_album,rsong_artist, rsong_files) VALUES ('$no', '$name','$album','$artist', '$file')");
-			
-		mysqli_query($connection, "INSERT INTO lyricstable (lyrics_no, lyrics_song, lyrics_status, lyrics_files) VALUES ('$lyricsno', '$lyricsname','$lyricsstatus', '$lyricsfile')");
-			
+	
+		mysqli_query($connection, "INSERT INTO lyricstable (lyrics_no, lyrics_song, lyrics_artist, lyrics_status, lyrics_files) VALUES ('$lyricsno', '$lyricsname', '$artist', '$lyricsstatus', '$lyricsfile')");
+		
+		mysqli_query($connection, "UPDATE songtable SET song_status='$lyricsstatus' WHERE song_name='$name' AND song_artist='$artist'");
+
 		$_SESSION['success'] = "Completed Song and Lyrics Data Added";
 	
-		header('Location: completesong.php');
+		header('Location: pendingsongs.php');
 	}
           
 }
@@ -166,12 +174,12 @@ if(isset($_POST['restore_btn']))
 
     if($query_run)
     {
-        $_SESSION['success'] = "Your Data is Removed";
+        $_SESSION['success'] = "Your Data is Restored";
         header('Location: completesong.php');
     }
     else
     {
-        $_SESSION['status'] = "Your Data is NOT Removed";
+        $_SESSION['status'] = "Your Data is NOT Restored";
         header('Location: completesong.php');
     }
 }
