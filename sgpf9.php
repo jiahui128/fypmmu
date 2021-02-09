@@ -173,10 +173,11 @@ if ($email != false && $password != false) {
 
                     <!-- Social buttons using anchor elements and btn-primary class to style -->
 
-                    <!--<a class="btn btn-primary btn-xs" href="sgpf1.php" role="button">Previous</a>-->
-                    <p style="text-align: left;">
+                    <!-- Social buttons using anchor elements and btn-primary class to style -->
+                    <p>
+                        <a class="btn btn-primary btn-xs" href="sgpf8.php" role="button">Previous</a>
                         <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
-                        <a class="btn btn-primary btn-xs" href="sgpf2.php" role="button">Next</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf10.php" role="button">Next</a>
                     </p>
 
                 </div> <!-- End Col 1 -->
