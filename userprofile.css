@@ -1,0 +1,14 @@
+.container {
+  padding: 5%;
+}
+.container .img {
+  left: 120px;
+  float: left;
+}
+.container .details {
+  border-right: 3px solid #ded4da;
+}
+.container .details p {
+  font-size: 15px;
+  font-weight: bold;
+}

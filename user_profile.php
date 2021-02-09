@@ -1,5 +1,6 @@
 <?php require_once "controllerUserData.php"; ?>
 <?php
+$conuser = mysqli_connect("localhost", "root", "", "userform");
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if ($email != false && $password != false) {
@@ -97,6 +98,12 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
     <link rel="stylesheet" href="try.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <!-- User Profile -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="userprofile.css">
 
 </head>
 
@@ -196,9 +203,31 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 ?>
                             </div>
                         </div>
+                        <div class="container">
+                            <div class="row" style="margin-left:50px">
+                                <div class="col-md-6 img">
+                                    <div class="img">
+                                        <img src="profile_images/<?php echo $user_data->user_image ?>" class="
+                                            image-rounded" style="width: 150px; height: 150px" alt=" Profile image">
+                                    </div>
+
+                                    <div>
+
+                                        <br><br>
+                                        <h3><b>Name: </b><i><?php echo  $user_data->username; ?></i></h3>
+
+                                        <p>
+                                            <b>ID:</b> <?php echo  $user_data->id; ?><br>
+                                            <b>Email:</b> <?php echo  $user_data->user_email; ?>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
         </form>
     </div>
 </body>
