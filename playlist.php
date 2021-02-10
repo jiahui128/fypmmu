@@ -101,77 +101,62 @@ if ($email != false && $password != false) {
         switch (input) {
             case "daoko × kenshi yonezu":
             case "fireworks":
-            case "1":
                 window.location.replace('sgpf1.php');
                 break;
             case "blackpink":
             case "how you like that":
-            case "2":
                 window.location.replace('sgpf2.php');
                 break;
             case "大籽":
             case "白月光与朱砂痣":
-            case "3":
                 window.location.replace('sgpf3.php');
                 break;
             case "zayn malik":
             case "vibez":
-            case "4":
                 window.location.replace('sgpf4.php');
                 break;
             case "yiruma":
             case "rivers flows in you":
-            case "5":
                 window.location.replace('sgpf5.php');
                 break;
             case "photograph":
             case "ed sheeran":
-            case "6":
                 window.location.replace('sgpf6.php');
                 break;
             case "love story":
             case "taylor swift":
-            case "7":
                 window.location.replace('sgpf7.php');
                 break;
             case "negaraku":
             case "pierre-jean de béranger":
-            case "8":
                 window.location.replace('sgpf8.php');
                 break;
             case "kimi ni todoke":
             case "tanizawa tomofumi":
-            case "9":
                 window.location.replace('sgpf9.php');
                 break;
             case "where you are":
             case "various artists":
-            case "10":
                 window.location.replace('sgpf10.php');
                 break;
             case "everything is alright":
             case "laura shigihara":
-            case "11":
                 window.location.replace('sgpf11.php');
                 break;
             case "something there":
             case "emma watson, dans steven":
-            case "12":
                 window.location.replace('sgpf12.php');
                 break;
             case "one thousand years later":
             case "wayne lin jun jie":
-            case "13":
                 window.location.replace('sgpf13.php');
                 break;
             case "as a light smoke":
             case "iris (tomo)":
-            case "14":
                 window.location.replace('sgpf14.php');
                 break;
             case "amazing grace":
             case "john newton":
-            case "15":
                 window.location.replace('sgpf15.php');
                 break;
 
@@ -263,9 +248,8 @@ if ($email != false && $password != false) {
                             action="playlist.php" method="get" onsubmit='return redirect();'>
                             <!-- pretty much the same thing except you remove the return false  !-->
                             <input type="text" name="query" id="query" align="center"
-                                style="text-transform: capitalize;"
-                                placeholder="Type the song name, artist name or code no, e.g. 1" columns="2"
-                                autocomplete="off">
+                                style="text-transform: capitalize;" placeholder="Type the song name or artist name"
+                                columns="2" autocomplete="off">
                             <!--<input type="submit" value="" id="submit">-->
                             <input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit"
                                 width="45px" height="45px">
@@ -297,7 +281,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/fireworks.jpg" alt="Fireworks">
                     </a>
 
-                    <h4>#1 Fireworks</h4>
+                    <h4> Fireworks</h4>
                     <p>DAOKO × Kenshi Yonezu</p>
 
                 </div>
@@ -308,7 +292,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/blackpink.jpg" alt="How You Like That">
                     </a>
 
-                    <h4>#2 How You Like That</h4>
+                    <h4> How You Like That</h4>
                     <p>Blackpink</p>
 
                 </div>
@@ -319,7 +303,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/白月光与朱砂痣.jpg" alt="白月光与朱砂痣">
                     </a>
 
-                    <h4>#3 白月光与朱砂痣</h4>
+                    <h4> 白月光与朱砂痣</h4>
                     <p>大籽</p>
 
                 </div>
@@ -330,7 +314,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/vibez.jpg" alt="Vibez">
                     </a>
 
-                    <h4>#4 Vibez</h4>
+                    <h4> Vibez</h4>
                     <p>Zayn Malik</p>
 
                 </div>
@@ -341,7 +325,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/rfiy.jpg" alt="Rivers Flows In You">
                     </a>
 
-                    <h4>#5 Rivers Flows In You</h4>
+                    <h4> Rivers Flows In You</h4>
                     <p>Yiruma</p>
 
                 </div>
@@ -352,7 +336,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/X.jpg" alt="Photograph">
                     </a>
 
-                    <h4>#6 Photograph</h4>
+                    <h4> Photograph</h4>
                     <p>Ed Sheeran</p>
 
                 </div>
@@ -363,7 +347,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/lovestory.png" style="height: 250px;" alt="Love Story">
                     </a>
 
-                    <h4>#7 Love Story</h4>
+                    <h4> Love Story</h4>
                     <p>Talyor Swift</p>
 
                 </div>
@@ -374,7 +358,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/negaraku.jpg" alt="National Anthem">
                     </a>
 
-                    <h4>#8 Negaraku</h4>
+                    <h4> Negaraku</h4>
                     <p>Pierre-Jean de Béranger</p>
 
                 </div>
@@ -385,7 +369,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/sawako.jpg" alt="Kimi_Ni_Todoke">
                     </a>
 
-                    <h4>#9 Kimi Ni Todoke</h4>
+                    <h4> Kimi Ni Todoke</h4>
                     <p>Tanizawa Tomofumi</p>
 
                 </div>
@@ -396,7 +380,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/moana.jpg" alt="Moana Movie Clip">
                     </a>
 
-                    <h4>#10 Where You Are</h4>
+                    <h4> Where You Are</h4>
                     <p>Disney Music Vevo</p>
 
                 </div>
@@ -407,7 +391,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/every.jpg" alt="To The Moon">
                     </a>
 
-                    <h4>#11 Everything&#180s Alright</h4>
+                    <h4> Everything&#180s Alright</h4>
                     <p>Laura Shigihara</p>
 
                 </div>
@@ -419,7 +403,7 @@ if ($email != false && $password != false) {
                             alt="Beauty and the Beast">
                     </a>
 
-                    <h4>#12 Something There</h4>
+                    <h4> Something There</h4>
                     <p>Disney Music Vevo</p>
 
                 </div>
@@ -430,7 +414,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/jjlim.jpg" alt="Chinese Song">
                     </a>
 
-                    <h4>#13 One Thousand Years Later</h4>
+                    <h4> One Thousand Years Later</h4>
                     <p>Wayne Lin Jun Jie</p>
 
                 </div>
@@ -441,7 +425,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/yohime.jpg" style="height: 250px;" alt="Onmyoji Song">
                     </a>
 
-                    <h4>#14 As A Light Smoke</h4>
+                    <h4> As A Light Smoke</h4>
                     <p>IRiS (Tomo)</p>
 
                 </div>
@@ -452,7 +436,7 @@ if ($email != false && $password != false) {
                         <img class="songimg" src="images/amazinggrace.jpg" alt="Amazing Grace">
                     </a>
 
-                    <h4>#15 Amazing Grace</h4>
+                    <h4> Amazing Grace</h4>
                     <p>John Newton</p>
 
                 </div>
