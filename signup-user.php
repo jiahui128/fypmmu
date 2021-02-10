@@ -141,7 +141,7 @@
 					
 						<i class="fa fa-envelope icon"></i>
 						
-                        <input class="form-control" type="email" name="email" placeholder="Enter your email address" required value="<?php echo $email ?>">
+                        <input class="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email address" required value="<?php echo $email ?>">
                     </div>
 					
 					<div class="form-element">
