@@ -105,6 +105,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="userprofile.css">
 
+
 </head>
 
 <body style="background-color: lightgray;">
@@ -203,24 +204,25 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 ?>
                             </div>
                         </div>
-                        <div class="container">
-                            <div class="row" style="margin-left:50px">
-                                <div class="col-md-6 img">
-                                    <div class="img">
-                                        <img src="profile_images/<?php echo $user_data->user_image ?>" class="
-                                            image-rounded" style="width: 150px; height: 150px" alt=" Profile image">
-                                    </div>
+
+                        <div class="row">
+                            <div class="col-md-3 img">
+                                <div style=margin:10px>
+                                    <br><br>
+                                    <h3><b>Name: </b><?php echo  $user_data->username; ?></h3>
+
+                                    <p>
+                                        <b>ID:</b> <?php echo  $user_data->id; ?><br>
+                                        <b>Age:</b> <?php echo  $user_data->age; ?><br>
+                                        <b>Gender:</b> <?php echo  $user_data->Gender ?><br>
+                                        <b>Email:</b> <?php echo  $user_data->user_email; ?>
+
+
+                                    </p>
 
                                     <div>
 
-                                        <br><br>
-                                        <h3><b>Name: </b><i><?php echo  $user_data->username; ?></i></h3>
 
-                                        <p>
-                                            <b>ID:</b> <?php echo  $user_data->id; ?><br>
-                                            <b>Email:</b> <?php echo  $user_data->user_email; ?>
-
-                                        </p>
                                     </div>
                                 </div>
                             </div>
