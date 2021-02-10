@@ -206,15 +206,15 @@ if($email != false && $password != false){
 						<label style="margin-right:30px;float:left;">Full Name</label><input type="text" name="username" class="pwd"><br><br>
 						<label style="margin-right:59px;float:left;">Email</label><input type="text" name="username" class="pwd" placeholder="<?php echo $fetch_info['email']?>" disabled><br><br>
 						<label style="margin-right:48px;float:left;">Gender</label><input type="text" name="gender" class="pwd"><br><br>
-						<label style="margin-right:71px;float:left;">Age</label><input type="number" name="age" class="pwd" min="1" max="150"><br><br>
+						<label style="margin-right:71px;float:left;">Age</label><input type="text" name="age" class="pwd"><br><br>
 						<input style="margin-top:10px;" id="post_button" type="submit" name="change_info" value="Change">
 					</div>
 					<hr style="width:95%;margin:90 0 0 5;">
 					<div class="changee">
 						<h4>Change Password</h4>
 						<label style="margin-right:10px;float:left;">Current Password</label><input type="password" name="curpwd" class="pwd"><br><br>
-						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd"><br><br>
-						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd"><br><br>
+						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}"><br><br>
+						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}"><br><br>
 						<input class="cfbtn" type="submit" name="change_pwd" value="Confirm">
 						
 						<br>
