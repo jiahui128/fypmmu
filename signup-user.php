@@ -150,7 +150,7 @@
 						
 							<i class="fa fa-key icon"></i>
 							
-							<input class="form-control" id="password-field" type="password" name="password" minlength=8 placeholder="Enter your password" required>
+							<input class="form-control" id="password-field" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}" placeholder="Enter your password" required>
 						</div>	
 							
 						<div class="toggle-password">
@@ -180,7 +180,7 @@
 					
 						<i class="fa fa-key icon"></i>
 						
-                        <input class="form-control" id="password-field1" type="password" name="cpassword" minlength="8" placeholder="Re-enter your password" required>
+                        <input class="form-control" id="password-field1" type="password" name="cpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}" placeholder="Re-enter your password" required>
                     </div>
 					<div class="toggle-password">
 							<i class="fa fa-eye"></i>
@@ -189,23 +189,14 @@
 				</div>
 					
                     <div class="form-group">
-                        <input class="form-control button" type="submit" name="signup" value="Create Account" onclick="register();">
+                        <input class="form-control button" type="submit" name="signup" value="Create Account">
                     </div>
 					
 					<!--<br>
 					
 					<div class="form-group">
                         <input class="form-control button" type="reset" name="reset" value="Reset">
-                    </div>-->
-					
-					<script>
-					
-						function register(){
-							alert('Succesfully Registered!');
-						}
-					</script>
-					
-					
+                    </div>-->															
 					
                     <div class="link login-link text-center">Already have an account? <a href="login-user.php">Login here</a></div>
                     
