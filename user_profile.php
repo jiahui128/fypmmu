@@ -206,7 +206,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3 img">
+                            <div class="col-md-4 img">
                                 <div style=margin:10px>
                                     <br><br>
                                     <h3><b>Name: </b><?php echo  $user_data->username; ?></h3>
