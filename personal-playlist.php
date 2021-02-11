@@ -331,7 +331,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="3">
-                <img src="images/negaraku.jpg" style="height: 250px;">
+                <img src="images/rfiy.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="3">
                     Add To Playlist
@@ -339,7 +339,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="4">
-                <img src="images/rfiy.jpg" style="height: 250px;">
+                <img src="images/X.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="4">
                     Add To Playlist
@@ -347,7 +347,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="5">
-                <img src="images/X.jpg" style="height: 250px;">
+                <img src="images/lovestory.png" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="5">
                     Add To Playlist
@@ -355,7 +355,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="6">
-                <img src="images/lovestory.png" style="height: 250px;">
+                <img src="images/negaraku.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="6">
                     Add To Playlist
@@ -363,22 +363,22 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="7">
-                <img src="images/negaraku.jpg" style="height: 250px;">
+                <img src="images/kero.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="7">
                     Add To Playlist
                 </a>
             </div>
-
             <div class="song-to-add" song-to-add="8">
-                <img src="images/kero.jpg" style="height: 250px;">
+                <img src="images/sawako.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="8">
                     Add To Playlist
                 </a>
             </div>
+
             <div class="song-to-add" song-to-add="9">
-                <img src="images/sawako.jpg" style="height: 250px;">
+                <img src="images/moana.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="9">
                     Add To Playlist
@@ -386,7 +386,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="10">
-                <img src="images/moana.jpg" style="height: 250px;">
+                <img src="images/every.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="10">
                     Add To Playlist
@@ -394,7 +394,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="11">
-                <img src="images/every.jpg" style="height: 250px;">
+                <img src="images/beautyandthebeast.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="11">
                     Add To Playlist
@@ -402,7 +402,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="12">
-                <img src="images/beautyandthebeast.jpg" style="height: 250px;">
+                <img src="images/jjlim.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="12">
                     Add To Playlist
@@ -410,7 +410,7 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="13">
-                <img src="images/jjlim.jpg" style="height: 250px;">
+                <img src="images/yohime.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="13">
                     Add To Playlist
@@ -418,17 +418,9 @@ if ($email != false && $password != false) {
             </div>
 
             <div class="song-to-add" song-to-add="14">
-                <img src="images/yohime.jpg" style="height: 250px;">
-
-                <a class="add-to-playlist-button" song-to-add="14">
-                    Add To Playlist
-                </a>
-            </div>
-
-            <div class="song-to-add" song-to-add="15">
                 <img src="images/amazinggrace.jpg" style="height: 250px;">
 
-                <a class="add-to-playlist-button" song-to-add="15">
+                <a class="add-to-playlist-button" song-to-add="14">
                     Add To Playlist
                 </a>
             </div>
