@@ -13,4 +13,7 @@ INSERT INTO recordedsong (rsong_id, rsong_no, rsong_name, rsong_album, rsong_art
 			('112', '12', 'Something There', 'Beauty and the Beast', 'Disney Music Vevo', 'something.mp3'),
 			('113', '13', 'One Thousand Years Later', 'Code 89757', 'Wayne Lin Jun Jie', 'onethousandyears.mp3'),
 			('114', '14', 'As a Light Smoke', 'Unknown', 'IRiS (Tomo)', 'onmyoji.mp3'),
-			('115', '15', 'Amazing Grace', 'On a Blue Ridge Sunday', 'John Newton', 'amazinggrace.mp3');
+			('115', '15', 'Amazing Grace', 'On a Blue Ridge Sunday', 'John Newton', 'amazinggrace.mp3'),
+			('116', '16', 'BaNG!!!', 'Paradox Live', 'BAE', 'bae1.mp3'),
+			('117', '17', 'FaBulous', 'Paradox Live', 'BAE', 'bae2.mp3'),
+			('118', '18', 'PaRaDISE', 'Paradox Live', 'BAE (Feat.ISSA)', 'bae3.mp3'); 

@@ -103,6 +103,27 @@ var songsToAdd = [
       "album": "On a Blue Ridge Sunday",
       "url": "songs/amazinggrace.mp3",
       "cover_art_url": "images/amazinggrace.jpg"
+    },
+	{
+      "name": "BaNG!!!",
+      "artist": "BAE",
+      "album": "Paradox Live",
+      "url": "songs/bae1.mp3",
+      "cover_art_url": "images/bae1.jpg"
+    },
+	{
+      "name": "F△Bulous",
+      "artist": "BAE",
+      "album": "Paradox Live",
+      "url": "songs/bae2.mp3",
+      "cover_art_url": "images/bae2.jpg"
+    },
+	{
+      "name": "P△R△DISE",
+      "artist": "BAE (Feat. ISSA)",
+      "album": "Paradox Live",
+      "url": "songs/bae3.mp3",
+      "cover_art_url": "images/bae3.jpg"
     }
 ];
 

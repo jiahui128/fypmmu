@@ -424,6 +424,30 @@ if ($email != false && $password != false) {
                     Add To Playlist
                 </a>
             </div>
+			
+			<div class="song-to-add" song-to-add="15">
+                <img src="images/bae1.jpg" style="height: 250px;">
+
+                <a class="add-to-playlist-button" song-to-add="15">
+                    Add To Playlist
+                </a>
+            </div>
+			
+			<div class="song-to-add" song-to-add="16">
+                <img src="images/bae2.jpg" style="height: 250px;">
+
+                <a class="add-to-playlist-button" song-to-add="16">
+                    Add To Playlist
+                </a>
+            </div>
+			
+			<div class="song-to-add" song-to-add="17">
+                <img src="images/bae3.jpg" style="height: 250px;">
+
+                <a class="add-to-playlist-button" song-to-add="17">
+                    Add To Playlist
+                </a>
+            </div>
 
         </div>
     </div>

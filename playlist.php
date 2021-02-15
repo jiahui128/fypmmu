@@ -52,6 +52,7 @@ if ($email != false && $password != false) {
     <!-- Home Page CSS -->
 
     <link rel="stylesheet" href="css/homepage.css">
+	<link rel="stylesheet" href="css/newhomepage.css">
 
     <!-- JQuery Library -->
 
@@ -99,7 +100,8 @@ if ($email != false && $password != false) {
         //look for text inside the NEW textbox
         var input = document.getElementById('query').value.toLowerCase();
         switch (input) {
-            case "daoko × kenshi yonezu":
+            case "daoko":
+			case "kenshi yonezu":
 			case "fireworks":
                 window.location.replace('sgpf1.php');
                 break;
@@ -136,7 +138,7 @@ if ($email != false && $password != false) {
                 window.location.replace('sgpf9.php');
                 break;
             case "where you are":
-			case "various artists":
+			case "disney music vevo":
                 window.location.replace('sgpf10.php');
                 break;
             case "everything is alright":
@@ -144,7 +146,8 @@ if ($email != false && $password != false) {
                 window.location.replace('sgpf11.php');
                 break;
             case "something there":
-			case "emma watson, dans steven":
+			case "emma watson":
+			case "dans steven":
                 window.location.replace('sgpf12.php');
                 break;
             case "one thousand years later":
@@ -152,12 +155,29 @@ if ($email != false && $password != false) {
                 window.location.replace('sgpf13.php');
                 break;
             case "as a light smoke":
-			case "iris (tomo)":
+			case "iris":
+			case "tomo":
                 window.location.replace('sgpf14.php');
                 break;
             case "amazing grace":
 			case "john newton":
                 window.location.replace('sgpf15.php');
+                break;
+			case "bang":
+			case "bang!!!":
+			case "bae1":
+                window.location.replace('sgpf16.php');
+                break;
+			case "fabulous":
+			case "f△bulous":
+			case "bae2":
+				window.location.replace('sgpf17.php');
+                break;
+			case "paradise":
+			case "p△r△dise":
+			case "bae3":
+			case "issa":
+				window.location.replace('sgpf18.php');
                 break;
 
             default: //no keyword detected so we submit the form.
@@ -436,6 +456,39 @@ if ($email != false && $password != false) {
                     <p>John Newton</p>
 
                 </div>
+				
+				<div class="col-md-3">
+
+                    <a href="#" class="album-poster" data-switch="15">
+                        <img class="songimg" src="images/bae1.jpg" alt="BaNG!!!">
+                    </a>
+
+                    <h4>BaNG!!!</h4>
+                    <p>BAE</p>
+
+                </div>
+				
+				<div class="col-md-3">
+
+                    <a href="#" class="album-poster" data-switch="16">
+                        <img class="songimg" src="images/bae2.jpg" width="250px" height="250px" alt="F△Bulous">
+                    </a>
+
+                    <h4>F△Bulous</h4>
+                    <p>BAE</p>
+
+                </div>
+				
+				<div class="col-md-3">
+
+                    <a href="#" class="album-poster" data-switch="17">
+                        <img class="songimg" src="images/bae3.jpg" width="250px" height="250px" alt="P△R△DISE">
+                    </a>
+
+                    <h4>P△R△DISE</h4>
+                    <p>BAE</p>
+
+                </div>
 
             </div>
 
@@ -585,7 +638,24 @@ if ($email != false && $password != false) {
 				url: 'songs/amazinggrace.mp3',
 				cover: 'images/amazinggrace.jpg',
 			},
-
+			{
+				name: 'BaNG!!!',
+				artist: 'BAE',
+				url: 'songs/bae1.mp3',
+				cover: 'images/bae1.jpg',
+			},
+			{
+				name: 'F△Bulous',
+				artist: 'BAE',
+				url: 'songs/bae2.mp3',
+				cover: 'images/bae2.jpg',
+			},
+			{
+				name: 'P△R△DISE',
+				artist: 'BAE (Feat. ISSA)',
+				url: 'songs/bae3.mp3',
+				cover: 'images/bae3.jpg',
+			},
 
         ]
     });

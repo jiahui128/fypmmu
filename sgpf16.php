@@ -32,7 +32,7 @@ if ($email != false && $password != false) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Song 15 - Profile</title>
+    <title>Song 16 - Profile</title>
 
     <!-- Font Awesome (Icons) CSS -->
 
@@ -145,38 +145,37 @@ if ($email != false && $password != false) {
                 <div class="songbox">
 
                     <!-- Placeholder image -->
-                    <a href="javascript:void();" class="songprofilepic" style="text-align: center;" data-switch="0"><img
-                            id="profilepicture" src="images/amazinggrace.jpg"></a>
+                    <a href="javascript:void();" class="songprofilepic" data-switch="0" style="text-align: center;"><img
+                            id="profilepicture" src="images/bae1.jpg"></a>
 
                     <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for
                         music <i class='fa fa-arrow-up'></i></p>
 
                     <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album:
-                        <br />On A Blue Ridge Sunday <br />
-                        Song: <br />Amazing Grace<br />
-                        Artist: John Newton<br />
-                        Released: 2003
-                    </p>
+                        <br />Paradox Live<br />
+                        Song: <br />BaNG!!!<br />
+                        Artist: BAE<br />
+                        Released: 2019</p>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="songs/amazinggrace.mp3" role="button" download
+                            href="songs/bae1.mp3" role="button" download
                             style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
                             MP3</a></p>
 
                     <br>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="pdf/songlyrics8.pdf"
-                            style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;"
-                            role="button" download>Download Lyrics</a></p>
+                            href="pdf/songlyrics17.pdf"
+                            style="font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button"
+                            download>Download Lyrics</a></p>
 
                     <br>
 
                     <!-- Social buttons using anchor elements and btn-primary class to style -->
                     <p>
-                        <a class="btn btn-primary btn-xs" href="sgpf14.php" role="button">Previous</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf15.php" role="button">Previous</a>
                         <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
-                        <a class="btn btn-primary btn-xs" href="sgpf16.php" role="button">Next</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf17.php" role="button">Next</a>
                     </p>
 
                 </div> <!-- End Col 1 -->
@@ -197,35 +196,102 @@ if ($email != false && $password != false) {
                 </div>
 
                 <p style="font-family: Times New Roman; font-weight: bold; text-align: center;">
-                    Amazing grace<br>
-                    How sweet the sound<br>
-                    That saved a wretch like me<br>
-                    I once was lost<br>
-                    But now I'm found<br>
-                    Was blind, but now I see<br><br>
-                    'Twas grace that taught<br>
-                    My heart to fear<br>
-                    And grace my Fears relieved<br>
-                    How precious did<br>
-                    That grace appear<br>
-                    The hour I first believed<br><br>
-                    Through many dangers<br>
-                    Toils and snares<br>
-                    We have already come<br>
-                    'Twas grace hath brought<br>
-                    Us safe thus far<br>
-                    And grace will lead us home<br><br>
-                    When we've been there<br>
-                    Ten thousand years<br>
-                    Bright shining as the sun<br>
-                    We'll have no less days to sing God's praise<br>
-                    Than when we first begun<br><br>
-                    Amazing grace<br>
-                    How sweet the sound<br>
-                    That saved a wretch like<br>
-                    I once was lost<br>
-                    But now I'm found<br>
-                    Was blind, but now I see<br><br>
+                    Everybody Let it Bang!<br>
+					B.A.E gonna Blow Your Brain!<br>
+					限界撃ち抜けBang!<br>
+					Let's Get Start it with Da BAE<br>
+					We the Best<br><br>
+
+					My rhyme is damn exclusive<br>
+					他の Wack MC's は so bull shit<br>
+					僕は微笑みの貴公子<br>
+					撃ち抜くmusicのCupid<br>
+					좋습니까？ 나는 최고지(ちょすむにか なぬん ちぇごし)<br>
+					いつのまにか ハメる手口<br>
+					誰が一番かその体によ〜く教えてあげますよhoney<br><br>
+
+					Rock Rock Y'All<br>
+					To the Beat Y'All<br>
+					皆How you doing?<br>
+					What's Up?<br>
+					このMicrophoneで劈くRapstar<br>
+					What's my Name!? SUZAKU<br>
+					譜面どうりじゃつまんねぇRoutine<br>
+					ブッ壊してLet's get stupid<br>
+					All you need is a 爆発だろ!?<br>
+					起こしたいのは革命だろ!?<br><br>
+
+					There's nothing to hide<br>
+					Just open your mind<br>
+					Tonight Tonight<br>
+					Baby<br>
+					Look up at the sky<br>
+					We are the starlight<br>
+					So bright So bright<br>
+					Stay there<br><br>
+
+					それぞれが放つ光<br>
+					Like a diamond one and only<br>
+					眠る才能全てを Show me<br>
+					閉じ込めずに Spread your feeling<br><br>
+
+					For once in your life<br>
+					本音で Collide<br>
+					Tonight Tonight<br><br>
+
+					Everybody Let it Bang!<br>
+					B.A.E gonna Blow Your Brain!<br>
+					限界撃ち抜けBang!<br>
+					Let's Get Start It with Da BAE<br>
+					We the Best<br><br>
+
+					I'm Fresh<br>
+					I'm Tight<br>
+					自由に Living my life<br>
+					No Tag<br>
+					No price<br>
+					価値観はお金じゃない<br>
+					男とか女とかどうでもよくない？<br>
+					Fuck da ボーダーラインv
+					I gotta right to be me<br>
+					anZ That's my ID<br><br>
+	
+					SUZAKU anZに48<br>
+					All the FlavaがぶつかりBoom!アチー!<br>
+					It's Like Dopamine ＋ DopeなBeats<br>
+					一度ハマればCan't Get Over It<br>
+					HEY Yo B.A.E<br>
+					Right Down To The X.Y.Z<br>
+					Now C'mon<br>
+					自己解放ガンガンDo It<br>
+					込める弾丸 三つのBullet<br><br>
+
+					There's nothing to hide<br>
+					Just open your mind<br>
+					Tonight Tonight<br>
+					Baby<br>
+					Look up at the sky<br>
+					We are the starlight<br>
+					So bright So bright<br>
+					Stay there<br><br>
+
+					それぞれが放つ光<br>
+					Like a diamond one and only<br>
+					眠る才能全てを Show me<br>
+					閉じ込めずに Spread your feeling<br><br>
+
+					For once in your life<br>
+					本音で Collide<br>
+					Tonight Tonight<br><br>
+
+					Everybody Let it Bang!<br>
+					B.A.E gonna Blow Your Brain!<br>
+					限界撃ち抜けBang!<br>
+					Let's Get Start It with Da BAE<br>
+					We the Best<br><br>
+
+					Everybody Let it Bang!<br>
+					Everybody Let it Bang!<br><br>
                 </p>
 
             </div> <!-- End column 2 -->
@@ -320,10 +386,10 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     listFolded: true,
     audio: [{
-            name: 'Amazing Grace',
-            artist: 'John Newton',
-            url: 'songs/amazinggrace.mp3',
-            cover: 'images/amazinggrace.jpg',
+            name: 'BaNG!!!',
+            artist: 'BAE',
+            url: 'songs/bae1.mp3',
+            cover: 'images/bae1.jpg',
         },
 
     ]

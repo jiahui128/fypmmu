@@ -52,6 +52,7 @@ if ($email != false && $password != false) {
     <!-- Home Page CSS -->
 
     <link rel="stylesheet" href="css/homepage.css">
+	<link rel="stylesheet" href="css/newhomepage.css">
 
     <!-- Several Pages CSS -->
 
@@ -96,6 +97,23 @@ if ($email != false && $password != false) {
         clear: both;
         display: table;
     }
+	
+	.player {
+		width: 30px;
+		height: 30px;
+		cursor : pointer;
+	}
+	
+	audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel 
+	{
+                background: url("images/cute.jpg");
+	}
+	
+	.audioplayer {
+		display: block; 
+		width: auto; 
+		margin: 0 auto;  
+	}
     </style>
 
     <script type='text/javascript'>
@@ -103,65 +121,78 @@ if ($email != false && $password != false) {
         //look for text inside the NEW textbox
         var input = document.getElementById('query').value.toLowerCase();
         switch (input) {
-            case "uchiage hanabi":
-			case "1":
-                window.location.replace('sgpf1.php');
+            case "daoko":
+			case "kenshi yonezu":
+			case "fireworks":
+                window.location.replace('#popup1');
                 break;
-            case "the album":
-			case "2":
-                window.location.replace('sgpf2.php');
+            case "blackpink":
+			case "how you like that":
+                window.location.replace('#popup2');
                 break;
             case "大籽":
-			case "3":
-                window.location.replace('sgpf3.php');
+			case "白月光与朱砂痣":
+                window.location.replace('#popup3');
                 break;
-            case "nobody is listening":
-			case "4":
-                window.location.replace('sgpf4.php');
+            case "zayn malik":
+			case "vibez":
+                window.location.replace('#popup4');
                 break;
-            case "first love":
-			case "5":
-                window.location.replace('sgpf5.php');
+            case "yiruma":
+			case "rivers flows in you":
+                window.location.replace('#popup5');
                 break;
-            case "x":
-			case "6":
-                window.location.replace('sgpf6.php');
+            case "photograph":
+			case "ed sheeran":
+                window.location.replace('#popup6');
                 break;
-            case "fearless":
-			case "7":
-                window.location.replace('sgpf7.php');
+            case "love story":
+			case "taylor swift":
+                window.location.replace('#popup7');
                 break;
-            case "malaysia records":
-			case "8":
-                window.location.replace('sgpf8.php');
+            case "negaraku":
+			case "pierre-jean de béranger":
+                window.location.replace('#popup8');
                 break;
             case "kimi ni todoke":
-			case "9":
-                window.location.replace('sgpf9.php');
+			case "tanizawa tomofumi":
+                window.location.replace('#popup9');
                 break;
-            case "moana":
-			case "10":
-                window.location.replace('sgpf10.php');
+            case "where you are":
+			case "disney music vevo":
+                window.location.replace('#popup10');
                 break;
-            case "to the moon":
-			case "11":
-                window.location.replace('sgpf11.php');
+            case "everything is alright":
+			case "laura shigihara":
+                window.location.replace('#popup11');
                 break;
-            case "beauty and the beast":
-			case "12":
-                window.location.replace('sgpf12.php');
+            case "something there":
+			case "emma watson":
+			case "dans steven":
+                window.location.replace('#popup12');
                 break;
-            case "code 89757":
-			case "13":
-                window.location.replace('sgpf13.php');
+            case "one thousand years later":
+			case "wayne lin jun jie":
+                window.location.replace('#popup13');
                 break;
-            case "unknown":
-			case "14":
-                window.location.replace('sgpf14.php');
+            case "as a light smoke":
+			case "iris":
+			case "tomo":
+                window.location.replace('#popup14');
                 break;
-            case "on a blue ridge sunday":
-			case "15":
-                window.location.replace('sgpf15.php');
+            case "amazing grace":
+			case "john newton":
+                window.location.replace('#popup15');
+                break;
+			case "bang":
+			case "bang!!!":
+			case "fabulous":
+			case "f△bulous":
+			case "paradise":
+			case "p△r△dise":
+			case "bae":
+			case "issa":
+                window.location.replace('#popup16');
                 break;
 
             default: //no keyword detected so we submit the form.
@@ -229,7 +260,7 @@ if ($email != false && $password != false) {
 
         <form class="search" style="text-transform: capitalize; text-align: center; margin: auto; max-width: 630px;" action="album.php" method="get" onsubmit='return redirect();'>
                         <!-- pretty much the same thing except you remove the return false  !-->
-                            <input type="text" name="query" id="query" align="center" style="text-transform: capitalize;" placeholder="Type the album name or code no, e.g. 1" columns="2" autocomplete="off">
+                            <input type="text" name="query" id="query" align="center" style="text-transform: capitalize;" placeholder="Type the song name or artist name" columns="2" autocomplete="off">
                             <!--<input type="submit" value="" id="submit">-->
                             <input type="image" src="images/search.jpg" id="submit" align="center" alt="Submit"
                                 width="45px" height="45px">
@@ -242,7 +273,7 @@ if ($email != false && $password != false) {
 
     <div class="col-md-12" style="text-align: center;">
 
-        <p style="font-family: Comic Sans MS; font-size: 12px;">Checkout our playlists to enjoy a variety of popular
+        <p style="font-family: Comic Sans MS; font-size: 12px;">Checkout our album to enjoy a variety of popular
             songs to fit your mood. Enjoy your music anytime, anywhere.</p>
 
         <br>
@@ -283,7 +314,7 @@ if ($email != false && $password != false) {
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="0">
+                    <a href="#popup1" class="album-poster" data-switch="0">
                         <img class="songimg" src="album/fw1.jpg" alt="Fireworks">
                     </a>
 
@@ -291,10 +322,64 @@ if ($email != false && $password != false) {
                     <p>DAOKO × Kenshi Yonezu</p>
 
                 </div>
+				
+				<div id="popup1" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Uchiage Hanabi</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/fireworks.jpg" width="100px" height="100px">
+											<a href="sgpf1.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Fireworks</p>
+											<p>Artist : DAOKO × Kenshi Yonezu</p>
+											<p>Released : 2017</p>
+											
+											<!--<div class="player"  onclick="togglePlay(this)">
+												
+												<img src="images/playbutton.png" id="button" width="30px" height="30px">
+												
+												<audio>
+													<source src="songs/fireworks.mp3" />
+												</audio>
+									
+											</div>-->
+											
+									</div>
+									
+									<div class="audioplayer">
+									
+										<p>&nbsp;</p>
+									
+										<audio controls>
+												<source src="songs/fireworks.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="1">
+                    <a href="#popup2" class="album-poster" data-switch="1">
                         <img class="songimg" src="album/fw2.jpg" alt="How You Like That">
                     </a>
 
@@ -302,21 +387,108 @@ if ($email != false && $password != false) {
                     <p>Blackpink</p>
 
                 </div>
+				
+				<div id="popup2" class="overlay">
 
-                <div class="col-md-3">
+                    <div class="popup">
 
-                    <a href="#" class="album-poster" data-switch="2">
-                        <img class="songimg" src="album/fw3.jpg" alt="白月光与朱砂痣">
-                    </a>
+                        <a class="close" href="#">+</a>
 
-                    <h4>#3 大籽</h4>
-                    <p>大籽</p>
+                        <div class="content1">
+
+								<h3>The Album</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/blackpink.jpg" width="100px" height="100px">
+											<a href="sgpf2.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : How You Like That</p>
+											<p>Artist : Blackpink</p>
+											<p>Released : 2020</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+									
+										<p>&nbsp;</p>
+									
+										<audio controls>
+												<source src="songs/HowYouLikeThat.mp3">
+											</audio>
+									</div>
+   
+								</div>
+
+						</div>
+
+                    </div>
 
                 </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="3">
+                    <a href="#popup3" class="album-poster" data-switch="2">
+                        <img class="songimg" src="album/fw3.jpg" alt="白月光与朱砂痣">
+                    </a>
+
+                    <h4>#3 大籽</h4>
+                    <p>大籽</p>
+					
+					<div id="popup3" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>大籽</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/白月光与朱砂痣.jpg" width="100px" height="100px">
+											<a href="sgpf3.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : 白月光与朱砂痣</p>
+											<p>Artist : 大籽</p>
+											<p>Released : 2021</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										<p>&nbsp;</p>
+									
+										<audio controls>
+												<source src="songs/白月光与朱砂痣.mp3">
+											</audio>
+									</div>
+   
+								</div>
+
+						</div>
+						
+						</div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="#popup4" class="album-poster" data-switch="3">
                         <img class="songimg" src="album/fw4.jpg" alt="Vibez">
                     </a>
 
@@ -324,10 +496,54 @@ if ($email != false && $password != false) {
                     <p>Zayn Malik</p>
 
                 </div>
+				
+				<div id="popup4" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>NobodyIsListening</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/vibez.jpg" width="100px" height="100px">
+											<a href="sgpf4.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Vibez</p>
+											<p>Artist : Zayn Malik</p>
+											<p>Released : 2021</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/vibez.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="4">
+                    <a href="#popup5" class="album-poster" data-switch="4">
                         <img class="songimg" src="album/fw5.png" alt="Rivers Flows In You">
                     </a>
 
@@ -335,10 +551,54 @@ if ($email != false && $password != false) {
                     <p>Yiruma</p>
 
                 </div>
+				
+				<div id="popup5" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>First Love</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/rfiy.jpg" width="100px" height="100px">
+											<a href="sgpf5.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : River Flows in You</p>
+											<p>Artist : Yiruma</p>
+											<p>Released : 2001</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/riverflowsinyou.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="5">
+                    <a href="#popup6" class="album-poster" data-switch="5">
                         <img class="songimg" src="album/fw6.png" alt="Photograph">
                     </a>
 
@@ -346,10 +606,54 @@ if ($email != false && $password != false) {
                     <p>Ed Sheeran</p>
 
                 </div>
+				
+				<div id="popup6" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>X</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/X.jpg" width="100px" height="100px">
+											<a href="sgpf6.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Photograph</p>
+											<p>Artist : Ed Sheeran</p>
+											<p>Released : 2015</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/Photograph.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="6">
+                    <a href="#popup7" class="album-poster" data-switch="6">
                         <img class="songimg" src="album/fw7.png" style="height: 250px;" alt="Love Story">
                     </a>
 
@@ -357,10 +661,54 @@ if ($email != false && $password != false) {
                     <p>Talyor Swift</p>
 
                 </div>
+				
+				<div id="popup7" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Fearless</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/lovestory.png" width="100px" height="100px">
+											<a href="sgpf7.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Love Story</p>
+											<p>Artist : Taylor Swift</p>
+											<p>Released : 2009</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/LoveStory.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="7">
+                    <a href="#popup8" class="album-poster" data-switch="7">
                         <img class="songimg" src="album/ab4.jpg" alt="National Anthem">
                     </a>
 
@@ -368,10 +716,54 @@ if ($email != false && $password != false) {
                     <p>Pierre-Jean de Béranger</p>
 
                 </div>
+				
+				<div id="popup8" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Malaysia Records</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/negaraku.jpg" width="100px" height="100px">
+											<a href="sgpf8.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Negaraku</p>
+											<p>Artist : Pierre-Jean de Béranger</p>
+											<p>Released : 1957</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/Negaraku.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="8">
+                    <a href="#popup9" class="album-poster" data-switch="8">
                         <img class="songimg" src="album/ab1.jpg" alt="Kimi_Ni_Todoke">
                     </a>
 
@@ -379,10 +771,56 @@ if ($email != false && $password != false) {
                     <p>Tanizawa Tomofumi</p>
 
                 </div>
+				
+				<div id="popup9" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Kimi Ni Todoke</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/sawako.jpg" width="100px" height="100px">
+											<a href="sgpf9.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Kimi ni Todoke</p>
+											<p>Artist : Tanizawa Tomofumi</p>
+											<p>Released : 2010</p>
+											
+											
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/Kimi_Ni_Todoke.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="9">
+                    <a href="#popup10" class="album-poster" data-switch="9">
                         <img class="songimg" src="album/ab2.jpg" alt="Moana Movie Clip">
                     </a>
 
@@ -390,10 +828,54 @@ if ($email != false && $password != false) {
                     <p>Disney Music Vevo</p>
 
                 </div>
+				
+				<div id="popup10" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Moana</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/moana.jpg" width="100px" height="100px">
+											<a href="sgpf10.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Where You Are</p>
+											<p>Artist : Disney Music Vevo</p>
+											<p>Released : 2016</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/whereyouare.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="10">
+                    <a href="#popup11" class="album-poster" data-switch="10">
                         <img class="songimg" src="album/ab3.jpg" alt="To The Moon">
                     </a>
 
@@ -401,10 +883,54 @@ if ($email != false && $password != false) {
                     <p>Laura Shigihara</p>
 
                 </div>
+				
+				<div id="popup11" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>To the Moon</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/every.jpg" width="100px" height="100px">
+											<a href="sgpf11.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Everything's Alright</p>
+											<p>Artist : Laura Shigihara</p>
+											<p>Released : 2011</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/every.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="11">
+                    <a href="#popup12" class="album-poster" data-switch="11">
                         <img class="songimg" src="album/ab8.jpg" style="height: 250px;"
                             alt="Beauty and the Beast">
                     </a>
@@ -413,10 +939,54 @@ if ($email != false && $password != false) {
                     <p>Disney Music Vevo</p>
 
                 </div>
+				
+				<div id="popup12" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>BeautyAndTheBeast</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/beautyandthebeast.jpg" width="100px" height="100px">
+											<a href="sgpf12.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Something There</p>
+											<p>Artist : Disney Music Vevo</p>
+											<p>Released : 2017</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/something.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="12">
+                    <a href="#popup13" class="album-poster" data-switch="12">
                         <img class="songimg" src="album/ab5.jpg" alt="Chinese Song">
                     </a>
 
@@ -424,10 +994,54 @@ if ($email != false && $password != false) {
                     <p>Wayne Lin Jun Jie</p>
 
                 </div>
+				
+				<div id="popup13" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Code 89757</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/jjlim.jpg" width="100px" height="100px">
+											<a href="sgpf13.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : 1000 Years Later</p>
+											<p>Artist : Wayne Lin Jun Jie</p>
+											<p>Released : 2011</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/onethousandyears.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
 
                 <div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="13">
+                    <a href="#popup14" class="album-poster" data-switch="13">
                         <img class="songimg" src="album/ab6.jpg" style="height: 250px;" alt="Onmyoji Song">
                     </a>
 
@@ -435,26 +1049,230 @@ if ($email != false && $password != false) {
                     <p>IRiS (Tomo)</p>
 
                 </div>
+				
+				<div id="popup14" class="overlay">
 
-                <div class="col-md-3">
+                    <div class="popup">
 
-                    <a href="#" class="album-poster" data-switch="14">
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>Unknown</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/yohime.jpg" width="100px" height="100px">
+											<a href="sgpf14.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : As a Light Smoke</p>
+											<p>Artist : IRiS (Tomo)</p>
+											<p>Released : 2020</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/onmyoji.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
+				
+				<div class="col-md-3">
+
+                    <a href="#popup15" class="album-poster" data-switch="14">
                         <img class="songimg" src="album/ab7.jpg" alt="Amazing Grace">
                     </a>
 
-                    <h4>#15 On a Blue Ridge Sunday</h4>
+                    <h4>#15 On A Blue Ridge Sunday</h4>
                     <p>John Newton</p>
 
                 </div>
+				
+				<div id="popup15" class="overlay">
 
-            </div>
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content1">
+
+								<h3>On a <br />Blue Ridge Sunday</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/amazinggrace.jpg" width="100px" height="100px">
+											<a href="sgpf15.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+									
+											<p>Song Name : Amazing Grace</p>
+											<p>Artist : John Newton</p>
+											<p>Released : 2003</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/amazinggrace.mp3">
+											</audio>
+									</div>
+   
+								</div>
+								
+						</div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <a href="#popup16" class="album-poster" data-switch="14">
+                        <img class="songimg" src="album/ab9.jpg" alt="Bae Paradox Live">
+                    </a>
+
+                    <h4>#16 Paradox Live</h4>
+                    <p>BAE</p>
+
+                </div>
+				
+				<div id="popup16" class="overlay">
+
+                    <div class="popup">
+
+                        <a class="close" href="#">+</a>
+
+                        <div class="content2">
+
+								<h3>Paradox Live</h3>
+								
+								<div class="row">
+									
+									<div class="col-sm-4">
+											<image src="images/bae1.jpg" width="100px" height="100px">
+											<a href="sgpf16.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<br>
+											
+											<p>Song Name : BaNG!!!</p>
+											<p>Artist : BAE</p>
+											<p>Released : 2019</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/bae1.mp3">
+											</audio>
+											
+									</div>
+									
+									<p>_______________________________________</p>
+									
+									<div class="col-sm-4">
+									
+											<br>
+									
+											<image src="images/bae2.jpg" width="100px" height="100px">
+											<a href="sgpf17.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<p>&nbsp;</p>
+											
+											<p>Song Name : F△Bulous</p>
+											<p>Artist : BAE</p>
+											<p>Released : 2021</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/bae2.mp3">
+											</audio>
+											
+									</div>
+									
+									<p>_______________________________________</p>
+									
+									<div class="col-sm-4">
+									
+											<br>
+									
+											<image src="images/bae3.jpg" width="100px" height="100px">
+											<a href="sgpf18.php">Song Profile</a>
+									</div>
+									
+									<div style="font-size: 14px; color: black; text-align: left;">
+									
+											<p>&nbsp;</p>
+											
+											<p>Song Name : P△R△DISE</p>
+											<p>Artist : BAE &amp; ISSA</p>
+											<p>Released : 2020</p>
+											
+									</div>
+									
+									<div class="audioplayer">
+										
+										<p>&nbsp;</p>
+									
+											<audio controls>
+												<source src="songs/bae3.mp3">
+											</audio>
+											
+									</div>
+									
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+			</div>
 
     </div>
     <!--End Container-->
 
     <br><br>
 
-    <div id="aplayer"></div>
+    <!--<div id="aplayer"></div>-->
 	
 	<footer style="text-align: center;">
 			<p>Posted By : SoFo Team</p>
@@ -606,6 +1424,12 @@ if ($email != false && $password != false) {
 				url: 'songs/amazinggrace.mp3',
 				cover: 'images/amazinggrace.jpg',
 			},
+			{
+				name: 'BaNG!!!',
+				artist: 'BAE',
+				url: 'songs/bae1.mp3',
+				cover: 'images/bae1.jpg',
+			},
 			
         ]
     });
@@ -632,6 +1456,22 @@ if ($email != false && $password != false) {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+	
+	//Album song lists to listen to song
+	//function togglePlay(video) {
+		//var audio = document.getElementsByTagName("audio")[0];
+		
+		//if (audio) {
+			//if (audio.paused) {
+			//	audio.play();
+			//	document.getElementById("button").src = "images/circled-pause.png";
+			//} else {
+			//	audio.pause();
+			//	document.getElementById("button").src = "images/playbutton.png";
+			//}
+		//}
+	//}
+	
     </script>
 
 </body>

@@ -32,7 +32,7 @@ if ($email != false && $password != false) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Song 15 - Profile</title>
+    <title>Song 18 - Profile</title>
 
     <!-- Font Awesome (Icons) CSS -->
 
@@ -145,38 +145,37 @@ if ($email != false && $password != false) {
                 <div class="songbox">
 
                     <!-- Placeholder image -->
-                    <a href="javascript:void();" class="songprofilepic" style="text-align: center;" data-switch="0"><img
-                            id="profilepicture" src="images/amazinggrace.jpg"></a>
+                    <a href="javascript:void();" class="songprofilepic" data-switch="0" style="text-align: center;"><img
+                            id="profilepicture" src="images/bae2.jpg"></a>
 
                     <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Click for
                         music <i class='fa fa-arrow-up'></i></p>
 
                     <p class="example" style="text-align: left; font-family: Garamond; font-weight: bold;">Album:
-                        <br />On A Blue Ridge Sunday <br />
-                        Song: <br />Amazing Grace<br />
-                        Artist: John Newton<br />
-                        Released: 2003
-                    </p>
+                        <br />Paradox Live<br />
+                        Song: <br />F△Bulous<br />
+                        Artist: BAE<br />
+                        Released: 2021</p>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="songs/amazinggrace.mp3" role="button" download
+                            href="songs/bae2.mp3" role="button" download
                             style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
                             MP3</a></p>
 
                     <br>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="pdf/songlyrics8.pdf"
-                            style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;"
-                            role="button" download>Download Lyrics</a></p>
+                            href="pdf/songlyrics18.pdf"
+                            style="font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button"
+                            download>Download Lyrics</a></p>
 
                     <br>
 
                     <!-- Social buttons using anchor elements and btn-primary class to style -->
                     <p>
-                        <a class="btn btn-primary btn-xs" href="sgpf14.php" role="button">Previous</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf16.php" role="button">Previous</a>
                         <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
-                        <a class="btn btn-primary btn-xs" href="sgpf16.php" role="button">Next</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf18.php" role="button">Next</a>
                     </p>
 
                 </div> <!-- End Col 1 -->
@@ -197,35 +196,48 @@ if ($email != false && $password != false) {
                 </div>
 
                 <p style="font-family: Times New Roman; font-weight: bold; text-align: center;">
-                    Amazing grace<br>
-                    How sweet the sound<br>
-                    That saved a wretch like me<br>
-                    I once was lost<br>
-                    But now I'm found<br>
-                    Was blind, but now I see<br><br>
-                    'Twas grace that taught<br>
-                    My heart to fear<br>
-                    And grace my Fears relieved<br>
-                    How precious did<br>
-                    That grace appear<br>
-                    The hour I first believed<br><br>
-                    Through many dangers<br>
-                    Toils and snares<br>
-                    We have already come<br>
-                    'Twas grace hath brought<br>
-                    Us safe thus far<br>
-                    And grace will lead us home<br><br>
-                    When we've been there<br>
-                    Ten thousand years<br>
-                    Bright shining as the sun<br>
-                    We'll have no less days to sing God's praise<br>
-                    Than when we first begun<br><br>
-                    Amazing grace<br>
-                    How sweet the sound<br>
-                    That saved a wretch like<br>
-                    I once was lost<br>
-                    But now I'm found<br>
-                    Was blind, but now I see<br><br>
+					My Life Is Brilliant (Hey!)<br>
+					I’m One In A Billion (Hey!)<br>
+					生き様だって絶対曲げない Opinion (Hey!)<br>
+					SUZAKU the Pheonix (Pheonix)<br>
+					Never Die Like Remix (Remix)<br>
+					You Can’t Stop Me Lovin’ Myself<br>
+					Cuz I’m so Genius Yeah<br><br>
+
+					Be Me Be Me Ey Just Be Me<br>
+					生まれ変わったって Wanna Be Me<br>
+					誰かのコピーなんて Cheesy<br>
+					生きたいように生きなきゃ No Meaning<br>
+					クラスの隅っこの Lonely One<br>
+					いつか光り出す Only One<br>
+					枠からハミ出せ　殻から飛びBussin’<br><br>
+
+					I’m Just The Way I’m<br>
+					後ろ指も I don’t care<br>
+					Some People Say I’m Wrong<br>
+					But 신경 쓰지 않래<br>
+					誰かの基準じゃない<br>
+					Only One This Is My Style<br>
+					I’m Gonna Be who I Wanna Be<br><br>
+
+					誰よりも I’m so<br>
+					F△Bulous! F△Bulous!<br>
+					ありのまま You’re so<br>
+					F△Bulous! F△Bulous!<br>
+					ブレない生き様で<br>
+					Coming Out! Coming Out!<br>
+					One & Only We All<br>
+					F△Bulous! F△Bulous!<br>
+					Never Lose yourself Believe It<br><br>
+
+					Shout out! Na na na<br>
+					Shout out! Na na na<br>
+					Shout out! Na na na<br>
+					誰よりも I’m So<br>
+					F△Bulous! F△Bulous!<br>
+					ありのまま You’re so<br>
+					F△Bulous! F△Bulous!<br>
+					So be yourself<br><br>
                 </p>
 
             </div> <!-- End column 2 -->
@@ -320,10 +332,10 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     listFolded: true,
     audio: [{
-            name: 'Amazing Grace',
-            artist: 'John Newton',
-            url: 'songs/amazinggrace.mp3',
-            cover: 'images/amazinggrace.jpg',
+            name: 'F△Bulous',
+			artist: 'BAE',
+			url: 'songs/bae2.mp3',
+			cover: 'images/bae2.jpg',
         },
 
     ]

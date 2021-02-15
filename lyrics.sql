@@ -13,4 +13,7 @@ INSERT INTO lyricstable (lyrics_id, lyrics_no, lyrics_song, lyrics_artist, lyric
 			('112', '12', 'Something There', 'Disney Music Vevo', 'Completed', 'songlyrics12.pdf'),
 			('113', '13', 'One Thousand Years Later', 'Wayne Lin Jun Jie', 'Completed', 'songlyrics13.pdf'),
 			('114', '14', 'As a Light Smoke', 'IRiS (Tomo)', 'Completed', 'songlyrics14.pdf'),
-			('115', '15', 'Amazing Grace', 'John Newton', 'Completed', 'songlyrics15.pdf');
+			('115', '15', 'Amazing Grace', 'John Newton', 'Completed', 'songlyrics15.pdf'),
+			('116', '16', 'BaNG!!!', 'BAE', 'Completed', 'songlyrics17.pdf'),
+			('117', '17', 'FaBulous', 'BAE', 'Completed', 'songlyrics18.pdf'),
+			('118', '18', 'PaRaDISE', 'BAE (Feat.ISSA)', 'Completed', 'songlyrics19.pdf');
