@@ -49,7 +49,7 @@ if($email != false && $password != false){
 	<link rel="stylesheet" href="css/profile.css">
 	
 	<!-- Font Awesome JS -->
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 	
 	<!-- Favicon of the Website -->
 	<link rel="icon" href="images/sofomusic.jpg">
@@ -126,6 +126,7 @@ if($email != false && $password != false){
 				<li><a href="edit-profile.php"><i style="margin-right:7px; font-size:20px;" class="fa">&#xf044;</i>Edit Account</a></li>
 				<li><a href="friend-list.php"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend list</a></li>
 				<li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
+				<li><a href="requesthistory.php"><i style='margin-right:10px;' class='far'>&#xf017;</i>Request History</a></li>
 			</ul>
 			<div class="word">
 				<div style="width:79%;float:right;">

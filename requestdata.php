@@ -1,11 +1,11 @@
-<?php		
+<?php			
 	session_start();
-
 	$con = mysqli_connect('localhost', 'root', '', 'songform');
-	
+	mysqli_connect('localhost', 'root', '', 'userform');
 	if(isset($_POST['submitbtn']))
 	{
 		$songrandomid = rand(999999, 111111);
+		$email=$_SESSION['email'];
 		$sp1= $_POST['name'];
 		$sp2= $_POST['album'];
 		$sp3= $_POST['artist'];
@@ -23,14 +23,14 @@
 			}
 			else
 			{
-				mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist,song_status) VALUES('$songrandomid', '$sp1','$sp2','$sp3', '$songstatus')");
+				mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist,song_status,email) VALUES('$songrandomid', '$sp1','$sp2','$sp3', '$songstatus','$email')");
 			
 				$_SESSION['success'] = "Your Request is Successful";
 			}
 		}
 		else
 		{
-			mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist,song_status) VALUES('$songrandomid', '$sp1','$sp2','$sp3', '$songstatus')");
+			mysqli_query($con, "INSERT INTO songtable (song_id, song_name,song_album,song_artist,song_status,email) VALUES('$songrandomid', '$sp1','$sp2','$sp3', '$songstatus','$email')");
 			
 			$_SESSION['success'] = "Your Request is Successful";
 		}
