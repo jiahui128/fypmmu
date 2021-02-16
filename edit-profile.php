@@ -213,9 +213,9 @@ if($email != false && $password != false){
 					<hr style="width:95%;margin:90 0 0 5;">
 					<div class="changee">
 						<h4>Change Password</h4>
-						<label style="margin-right:10px;float:left;">Current Password</label><input type="password" name="curpwd" class="pwd" minlength="8"><br><br>
-						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd" minlength="8"><br><br>
-						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd" minlength="8"><br><br>
+						<label style="margin-right:10px;float:left;">Current Password</label><input type="password" name="curpwd" class="pwd" pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.?[!_-@#$%^&*+`~=?\|<>/]).{8,}"><br><br>
+						<label style="margin-right:33px;float:left;">New Password</label><input type="password" name="newpwd" class="pwd" pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.?[!_-@#$%^&*+`~=?\|<>/]).{8,}"><br><br>
+						<label style="margin-right:7px;float:left;">Confirm Password</label><input type="password" name="cpwd" class="pwd" pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.?[!_-@#$%^&*+`~=?\|<>/]).{8,}"><br><br>
 						<input class="cfbtn" type="submit" name="change_pwd" value="Confirm">
 						
 						<br>

@@ -16,7 +16,7 @@
     <!-- Font Awesome (Icons) CSS -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS Version 3.37 and 4.4.1 -->
 
@@ -75,12 +75,12 @@
                 title="This is SoFo Logo" /></a>
 
         <ul id="header">
-		
-		<li><a href="http://localhost/FYP/admin/login.php">Admin Login</a></li>
+			
+			<li><a href="http://localhost/FYP/admin/login.php">Admin Login</a></li>
+            
+			<li><a href="login-user.php">Login</a></li>
 
-            <li><a href="login-user.php">Login</a></li>
-
-            <li><a href="signup-user.php">Sign Up</a></li>
+            <li><a href="signup-user.php">Sign Up</a></li>            
 
             <li><a href="#latestreleases">Latest Releases</a></li>
 
@@ -116,14 +116,45 @@
             <div class="btext">
                 <h1><span style="color: black; font-size:50px; font-style: italic; font-family: Georgia;">Where Music
                         Plays</span></h1>
-			</div>
+
+                <!--<a href="#popupmenu" class="MoreBtn" style="color: black;">Listen to Music Now</a>-->
+
+                <!--<div id="popupmenu" class="overlay">
+				
+					<div class="popup">
+								
+							<a href="#" class="close">+</a>
+						
+							<div class="content2" style="font-size: 14px; color: black; font-weight: bold;">
+									
+								<img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float: center;" title="This is SoFo Logo" />
+								
+								<br><br>
+								
+								<br><br>
+		
+								<p style="text-align:center; color:black; font-size: 20px;">Login or Sign Up to our website to access for more features!</p>
+        
+								<br><br>
+		
+								<a class="accountbtn" href="login-user.php">&nbsp;&nbsp;Login User&nbsp;&nbsp;</a>
+					
+								<br><br><br>
+				
+								<a class="accountbtn" href="signup-user.php">Register User</a>
+								
+							</div>
+								
+					</div>
+				
+				</div>-->
 
                 <blockquote contenteditable="true"><q style="font-size: 16px; color: black;">Be ready for a new whole
                         world of music</q>
                     <!-- <cite style="color: black;">Sidney Lanier</cite>-->
                 </blockquote>
 
-            </div>
+            </div>-
         </div>
         <div class="nav">
             <label class="dots" id="dot1" for="i1"></label>

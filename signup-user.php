@@ -150,7 +150,7 @@
 						
 							<i class="fa fa-key icon"></i>
 							
-							<input class="form-control" id="password-field" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}" placeholder="Enter your password" required>
+							<input class="form-control" id="password-field" type="password" name="password" pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.?[!_-@#$%^&*+`~=?\|<>/]).{8,}" placeholder="Enter your password" required>
 						</div>	
 							
 						<div class="toggle-password">
@@ -180,7 +180,7 @@
 					
 						<i class="fa fa-key icon"></i>
 						
-                        <input class="form-control" id="password-field1" type="password" name="cpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}" placeholder="Re-enter your password" required>
+                        <input class="form-control" id="password-field1" type="password" name="cpassword" pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.?[!_-@#$%^&*+`~=?\|<>/]).{8,}" placeholder="Re-enter your password" required>
                     </div>
 					<div class="toggle-password">
 							<i class="fa fa-eye"></i>
