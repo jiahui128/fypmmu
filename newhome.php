@@ -154,7 +154,7 @@
                     <!-- <cite style="color: black;">Sidney Lanier</cite>-->
                 </blockquote>
 
-            </div>-
+            </div>
         </div>
         <div class="nav">
             <label class="dots" id="dot1" for="i1"></label>
