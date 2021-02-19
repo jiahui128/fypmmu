@@ -74,8 +74,10 @@ if(isset($_POST['remove_btn']))
 	$situation = 1;
 	$query = "UPDATE lyricstable SET lyrics_situation='$situation' WHERE lyrics_id='$id'";
     $query_run = mysqli_query($connection, $query);
+	$query2 = "UPDATE recordedsong SET status='$situation' WHERE rsong_id='$id'";
+    $query_run2 = mysqli_query($connection, $query2);
 
-    if($query_run)
+    if($query_run && $query_run2)
     {
         $_SESSION['success'] = "Your Data is Removed";
         header('Location: removed_lyrics.php');
@@ -95,8 +97,10 @@ if(isset($_POST['restore_btn']))
 	$situation = 0;
 	$query = "UPDATE lyricstable SET lyrics_situation='$situation' WHERE lyrics_id='$id'";
     $query_run = mysqli_query($connection, $query);
+	$query2 = "UPDATE recordedsong SET status='$situation' WHERE rsong_id='$id'";
+    $query_run2 = mysqli_query($connection, $query2);
 
-    if($query_run)
+    if($query_run && $query_run2)
     {
         $_SESSION['success'] = "Your Data is Restored";
         header('Location: lyricstable.php');
@@ -114,8 +118,10 @@ if(isset($_POST['delete_btn']))
 
     $query = "DELETE FROM lyricstable WHERE lyrics_id='$id' ";
     $query_run = mysqli_query($connection, $query);
+	$query2 = "DELETE FROM recordedsong WHERE rsong_id='$id' ";
+    $query_run2 = mysqli_query($connection, $query2);
 
-    if($query_run)
+    if($query_run && $query_run2)
     {
         $_SESSION['success'] = "Your Data is DELETED";
         header('Location: removed_lyrics.php');
