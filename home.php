@@ -59,8 +59,7 @@ if ($email != false && $password != false) {
     <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
 
     <!-- Font Header Javascript -->
-    <script
-        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js">
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js">
     </script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js'></script>
@@ -72,63 +71,63 @@ if ($email != false && $password != false) {
     <!-- Text Javascript -->
 
     <script>
-    window.console = window.console || function(t) {};
+        window.console = window.console || function(t) {};
     </script>
 
     <script>
-    if (document.location.search.match(/type=embed/gi)) {
-        window.parent.postMessage("resize", "*");
-    }
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
     </script>
 
     <style>
-    .Dbutton {
-        display: inline-block;
-        text-align: center;
-        vertical-align: middle;
-        padding: 10px 10px;
-        border: 1px solid #000000;
-        border-radius: 8px;
-        background: #fff2f2;
-        background: -webkit-gradient(linear, left top, left bottom, from(#fff2f2), to(#a19e9e));
-        background: -moz-linear-gradient(top, #fff2f2, #a19e9e);
-        background: linear-gradient(to bottom, #fff2f2, #a19e9e);
-        text-shadow: #591717 1px 1px 1px;
-        font: normal normal bold 20px comic sans ms;
-        color: #ffffff;
-        text-decoration: none;
-    }
+        .Dbutton {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px 10px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            background: #fff2f2;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fff2f2), to(#a19e9e));
+            background: -moz-linear-gradient(top, #fff2f2, #a19e9e);
+            background: linear-gradient(to bottom, #fff2f2, #a19e9e);
+            text-shadow: #591717 1px 1px 1px;
+            font: normal normal bold 20px comic sans ms;
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-    .Dbutton:hover,
-    .button:focus {
-        background: #ffffff;
-        background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#c1bebe));
-        background: -moz-linear-gradient(top, #ffffff, #c1bebe);
-        background: linear-gradient(to bottom, #ffffff, #c1bebe);
-        color: #ffffff;
-        text-decoration: none;
-    }
+        .Dbutton:hover,
+        .button:focus {
+            background: #ffffff;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#c1bebe));
+            background: -moz-linear-gradient(top, #ffffff, #c1bebe);
+            background: linear-gradient(to bottom, #ffffff, #c1bebe);
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-    .Dbutton:active {
-        background: #999191;
-        background: -webkit-gradient(linear, left top, left bottom, from(#999191), to(#a19e9e));
-        background: -moz-linear-gradient(top, #999191, #a19e9e);
-        background: linear-gradient(to bottom, #999191, #a19e9e);
-    }
+        .Dbutton:active {
+            background: #999191;
+            background: -webkit-gradient(linear, left top, left bottom, from(#999191), to(#a19e9e));
+            background: -moz-linear-gradient(top, #999191, #a19e9e);
+            background: linear-gradient(to bottom, #999191, #a19e9e);
+        }
 
-    .Dbutton:before {
-        content: "\0000a0";
-        display: inline-block;
-        height: 24px;
-        width: 24px;
-        line-height: 24px;
-        margin: 0 4px -6px -4px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOklEQVRIibWVPU4DMRCFv1gpIqAPVNyAA1BEUNDnFhHislwAGoRCUiFFiVYIHIrM7FqOB/8oPMlae9Z+43m2Z0aA4x8xlq83HDlgUsnZCV/PGRPreA68A9vKtpS1LiaMxytg39iWiDqjhAPFzx8ywCCF4izo74ApsAvPINx9uNAivxYixSYxzyvhBQf9NtFOLPiI3MTYsJde3VXmv7Mc5CRS5KL1LY+sq5lsOUjZX4F74Ap4AL5K+R3DIW+lD8d3+y6xAesd9DylEnXAczD22BfkOIQC+wS4Ebu221L+UolegJk4m8k4K1GNg5qWPQMHrAsksPDJ4dyc5cADi0Yna+CJoSaYEp0EqatWkuxSSCY/rQcOeAMurYkFOBeeMPX3uegbeAQ+GskVPu5rBFqgW4q8wozcqskn6f8CqVV+vpABbsUAAAAASUVORK5CYII=") no-repeat left center transparent;
-        background-size: 100% 100%;
-    }
+        .Dbutton:before {
+            content: "\0000a0";
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            line-height: 24px;
+            margin: 0 4px -6px -4px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOklEQVRIibWVPU4DMRCFv1gpIqAPVNyAA1BEUNDnFhHislwAGoRCUiFFiVYIHIrM7FqOB/8oPMlae9Z+43m2Z0aA4x8xlq83HDlgUsnZCV/PGRPreA68A9vKtpS1LiaMxytg39iWiDqjhAPFzx8ywCCF4izo74ApsAvPINx9uNAivxYixSYxzyvhBQf9NtFOLPiI3MTYsJde3VXmv7Mc5CRS5KL1LY+sq5lsOUjZX4F74Ap4AL5K+R3DIW+lD8d3+y6xAesd9DylEnXAczD22BfkOIQC+wS4Ebu221L+UolegJk4m8k4K1GNg5qWPQMHrAsksPDJ4dyc5cADi0Yna+CJoSaYEp0EqatWkuxSSCY/rQcOeAMurYkFOBeeMPX3uegbeAQ+GskVPu5rBFqgW4q8wozcqskn6f8CqVV+vpABbsUAAAAASUVORK5CYII=") no-repeat left center transparent;
+            background-size: 100% 100%;
+        }
     </style>
 
 </head>
@@ -141,8 +140,7 @@ if ($email != false && $password != false) {
 
     <div class="page-header" style="text-align: center;">
 
-        <a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; "
-                title="This is SoFo Logo" /></a>
+        <a href="home.php"><img src="images/SoFo.png" alt="SoFo Logo" style="width: 270px; height: 80px; float:left; " title="This is SoFo Logo" /></a>
 
         <ul id="header">
 
@@ -244,8 +242,7 @@ if ($email != false && $password != false) {
             <div class="col-md-3">
 
                 <a href="javascript:void();" class="album-poster" data-switch="0">
-                    <img class="songimg" src="images/fireworks.jpg" style="height: 250px; object-fit: cover;"
-                        alt="Fireworks">
+                    <img class="songimg" src="images/fireworks.jpg" style="height: 250px; object-fit: cover;" alt="Fireworks">
                 </a>
 
                 <h4>Fireworks</h4>
@@ -256,8 +253,7 @@ if ($email != false && $password != false) {
             <div class="col-md-3">
 
                 <a href="#" class="album-poster" data-switch="1">
-                    <img class="songimg" src="images/blackpink.jpg" style="height: 250px; object-fit: cover;"
-                        alt="How You Like That">
+                    <img class="songimg" src="images/blackpink.jpg" style="height: 250px; object-fit: cover;" alt="How You Like That">
                 </a>
 
                 <h4>How You Like That</h4>
@@ -268,8 +264,7 @@ if ($email != false && $password != false) {
             <div class="col-md-3">
 
                 <a href="#" class="album-poster" data-switch="2">
-                    <img class="songimg" src="images/白月光与朱砂痣.jpg" style="height: 250px; object-fit: cover;"
-                        alt="白月光与朱砂痣">
+                    <img class="songimg" src="images/白月光与朱砂痣.jpg" style="height: 250px; object-fit: cover;" alt="白月光与朱砂痣">
                 </a>
 
                 <h4>白月光与朱砂痣</h4>
@@ -418,13 +413,9 @@ if ($email != false && $password != false) {
                 <input type="radio" name="video" id="v3">
                 <input type="radio" name="video" id="v4">
                 <div class="slide_video" id="one">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw"
-                        style="cursor: pointer;" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MPIMlO_09Cw" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p class="example"
-                        style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
+                    <p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
                         Album:
                         <br />MarBlue Original Soundtrack<br />
                         <br />Song: <br />故海潮生<br />
@@ -436,13 +427,9 @@ if ($email != false && $password != false) {
                     <label for="v2" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
                 </div>
                 <div class="slide_video" id="two">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OxQLddxnImQ"
-                        style="cursor: pointer;" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OxQLddxnImQ" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p class="example"
-                        style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
+                    <p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
                         Album:
                         <br />贰拾玖区Area29<br />
                         <br />Song: <br />阿拉斯加海灣<br />
@@ -454,13 +441,9 @@ if ($email != false && $password != false) {
                     <label for="v3" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
                 </div>
                 <div class="slide_video" id="three">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CwkzK-F0Y00"
-                        style="cursor: pointer;" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CwkzK-F0Y00" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p class="example"
-                        style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
+                    <p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
                         Album:
                         <br />LiSA Official YouTube<br />
                         <br />Song: <br />紅蓮華<br />
@@ -472,12 +455,8 @@ if ($email != false && $password != false) {
                     <label for="v4" class="n"><i style='font-size:24px' class='fas'>&#xf105;</i></label>
                 </div>
                 <div class="slide_video" id="four">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JGwWNGJdvx8"
-                        style="cursor: pointer;" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p class="example"
-                        style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JGwWNGJdvx8" style="cursor: pointer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="example" style="text-align: left; font-family: Garamond; font-size: 20px; font-weight: bold;float:right;">
                         Album:
                         <br />÷<br />
                         <br />Song: <br />Shape of You<br />
@@ -532,7 +511,7 @@ if ($email != false && $password != false) {
                     <div class="col-md-4 col-sm-4">
 
                         <div class="aboutus">
-                            <img class="about" src="images/jiahui.jpeg" alt="">
+                            <img class="about" src="images/Jiahui.jpg" alt="">
                             <br>
                             <strong>Ng Jia Hui</strong>
 
@@ -559,8 +538,7 @@ if ($email != false && $password != false) {
     <footer style="text-align: center;">
         <p>Posted By : SoFo Team</p>
         <p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
-            / <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a
-                href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
+            / <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
 
         <small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights
             Reserved.</small>
@@ -578,153 +556,153 @@ if ($email != false && $password != false) {
     <div id="aplayer"></div>
 
     <script>
-    // Latest Album
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
+        // Latest Album
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
                 }
             }
         }
-    }
 
-    //Scroll top button
-    //Get the button
-    var mybutton = document.getElementById("myBtn");
+        //Scroll top button
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-        scrollFunction()
-    };
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-    }
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
 
-    // NOW I CLICK album-poster TO GET CURRENT SONG ID
-    $(".album-poster").on('click', function(e) {
-        var dataSwitchId = $(this).attr('data-switch');
-        //console.log(dataSwitchId);
+        // NOW I CLICK album-poster TO GET CURRENT SONG ID
+        $(".album-poster").on('click', function(e) {
+            var dataSwitchId = $(this).attr('data-switch');
+            //console.log(dataSwitchId);
 
-        // and now i use aplayer switch function see
-        ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+            // and now i use aplayer switch function see
+            ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
 
-        // aplayer play function
-        // when i click any song to play
-        ap.play();
+            // aplayer play function
+            // when i click any song to play
+            ap.play();
 
-        // click to slideUp player see
-        $("#aplayer").addClass('showPlayer');
-    });
+            // click to slideUp player see
+            $("#aplayer").addClass('showPlayer');
+        });
 
-    const ap = new APlayer({
-        container: document.getElementById('aplayer'),
-        listFolded: true,
-        audio: [{
-                name: 'Fireworks', // SONG NAME
-                artist: 'DAOKO × Kenshi Yonezu', //ARTIST NAME
-                url: 'songs/fireworks.mp3', // PATH NAME AND SONG URL
-                cover: 'images/fireworks.jpg',
-            },
-            {
-                name: 'How You Like That',
-                artist: 'Blackpink',
-                url: 'songs/HowYouLikeThat.mp3',
-                cover: 'images/blackpink.jpg',
-            },
-            {
-                name: '白月光与朱砂痣',
-                artist: '大籽',
-                url: 'songs/白月光与朱砂痣.mp3',
-                cover: 'images/白月光与朱砂痣.jpg',
-            },
-            {
-                name: 'Vibez',
-                artist: 'Zayn Malik',
-                url: 'songs/vibez.mp3',
-                cover: 'images/vibez.jpg',
-            },
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: [{
+                    name: 'Fireworks', // SONG NAME
+                    artist: 'DAOKO × Kenshi Yonezu', //ARTIST NAME
+                    url: 'songs/fireworks.mp3', // PATH NAME AND SONG URL
+                    cover: 'images/fireworks.jpg',
+                },
+                {
+                    name: 'How You Like That',
+                    artist: 'Blackpink',
+                    url: 'songs/HowYouLikeThat.mp3',
+                    cover: 'images/blackpink.jpg',
+                },
+                {
+                    name: '白月光与朱砂痣',
+                    artist: '大籽',
+                    url: 'songs/白月光与朱砂痣.mp3',
+                    cover: 'images/白月光与朱砂痣.jpg',
+                },
+                {
+                    name: 'Vibez',
+                    artist: 'Zayn Malik',
+                    url: 'songs/vibez.mp3',
+                    cover: 'images/vibez.jpg',
+                },
 
-        ]
-    });
+            ]
+        });
     </script>
 
     <script id="rendered-js">
-    function splitWords() {
-        let quote = document.querySelector("blockquote q");
-        quote.innerText.replace(/(<([^>]+)>)/ig, "");
-        quotewords = quote.innerText.split(" "),
-            wordCount = quotewords.length;
-        quote.innerHTML = "";
+        function splitWords() {
+            let quote = document.querySelector("blockquote q");
+            quote.innerText.replace(/(<([^>]+)>)/ig, "");
+            quotewords = quote.innerText.split(" "),
+                wordCount = quotewords.length;
+            quote.innerHTML = "";
 
-        for (let i = 0; i < wordCount; i++) {
-            if (window.CP.shouldStopExecution(0)) break;
-            quote.innerHTML += "<span>" + quotewords[i] + "</span>";
+            for (let i = 0; i < wordCount; i++) {
+                if (window.CP.shouldStopExecution(0)) break;
+                quote.innerHTML += "<span>" + quotewords[i] + "</span>";
 
-            if (i < quotewords.length - 1) {
-                quote.innerHTML += " ";
+                if (i < quotewords.length - 1) {
+                    quote.innerHTML += " ";
+                }
+
             }
+            window.CP.exitedLoop(0);
+
+            quotewords = document.querySelectorAll("blockquote q span");
+            fadeWords(quotewords);
 
         }
-        window.CP.exitedLoop(0);
 
-        quotewords = document.querySelectorAll("blockquote q span");
-        fadeWords(quotewords);
+        function getRandom(min, max) {
+            return Math.random() * (max - min) + min;
+        }
 
-    }
+        function fadeWords(quotewords) {
+            Array.prototype.forEach.call(quotewords, function(word) {
 
-    function getRandom(min, max) {
-        return Math.random() * (max - min) + min;
-    }
+                let animate = word.animate([{
+                            opacity: 0,
+                            filter: "blur(" + getRandom(2, 5) + "px)"
+                        },
 
-    function fadeWords(quotewords) {
-        Array.prototype.forEach.call(quotewords, function(word) {
-
-            let animate = word.animate([{
-                        opacity: 0,
-                        filter: "blur(" + getRandom(2, 5) + "px)"
-                    },
+                        {
+                            opacity: 1,
+                            filter: "blur(0px)"
+                        }
+                    ],
 
                     {
-                        opacity: 1,
-                        filter: "blur(0px)"
-                    }
-                ],
 
-                {
-
-                    duration: 1000,
-                    delay: getRandom(500, 3300),
-                    fill: 'forwards'
-                });
+                        duration: 1000,
+                        delay: getRandom(500, 3300),
+                        fill: 'forwards'
+                    });
 
 
-        });
-    }
+            });
+        }
 
-    splitWords();
-    //# sourceURL=pen.js
+        splitWords();
+        //# sourceURL=pen.js
     </script>
 
 </body>
