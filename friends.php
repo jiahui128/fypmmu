@@ -1,5 +1,5 @@
 <?php
-require 'includes/init.php';
+require 'init.php';
 
 if(isset($_SESSION['user_id']) && isset($_SESSION['email'])){
     $user_data = $user_obj->find_user_by_id($_SESSION['user_id']);
@@ -27,7 +27,7 @@ $get_all_friends = $frnd_obj->get_all_friends($_SESSION['user_id'], true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo  $user_data->username;?></title>
-    <link rel="stylesheet" href="friend.css">
+    <link rel="stylesheet" href="css/friend.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 <body style="background-color: lightgray;">
@@ -49,6 +49,7 @@ $get_all_friends = $frnd_obj->get_all_friends($_SESSION['user_id'], true);
                 }
                 ?>"><?php echo $get_req_num;?></span></a></li>
                 <li><a href="friends.php" rel="noopener noreferrer" class="active">Friends<span class="badge"><?php echo $get_frnd_num;?></span></a></li>
+                <li><a href="logout.php" rel="noopener noreferrer">Logout</a></li>
             </ul>
         </nav>
         <div class="all_users">

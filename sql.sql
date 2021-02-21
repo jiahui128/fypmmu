@@ -38,7 +38,10 @@ CREATE TABLE `users` (
   `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_image` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
+  `user_image` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_gender` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_age` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_country` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --

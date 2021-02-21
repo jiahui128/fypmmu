@@ -1,5 +1,5 @@
 <?php
-require 'includes/init.php';
+require 'init.php';
 // IF USER MAKING LOGIN REQUEST
 if (isset($_POST['email']) && isset($_POST['password'])) {
   $result = $user_obj->loginUser($_POST['email'], $_POST['password']);
@@ -18,7 +18,7 @@ if (isset($_SESSION['email'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="friend.css">
+    <link rel="stylesheet" href="css/friend.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 

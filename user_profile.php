@@ -21,8 +21,7 @@ if ($email != false && $password != false) {
 } else {
     header('Location: newhome.php');
 }
-
-require 'includes/init.php';
+require 'init.php';
 if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
     if (isset($_GET['id'])) {
         $user_data = $user_obj->find_user_by_id($_GET['id']);
@@ -81,13 +80,13 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
     <link rel="stylesheet" href="css/profile.css">
 
     <!-- Font Awesome JS -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Favicon of the Website -->
     <link rel="icon" href="images/sofomusic.jpg">
 
     <!-- friend system-->
-    <link rel="stylesheet" href="friend.css">
+    <link rel="stylesheet" href="css/friend.css">
     <link rel="stylesheet" href="try.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <style>
@@ -104,7 +103,6 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="userprofile.css">
-
 
 </head>
 
@@ -159,9 +157,9 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                     $q = mysqli_query($con, "SELECT * FROM usertable WHERE email= '$email'");
                     while ($row = mysqli_fetch_assoc($q)) {
                         if ($row['profile_image'] == "") {
-                            echo "<img id='profilepicture' class='image-rounded' src='images/aboutus.png'  alt='Default Profile Pic'>";
+                            echo "<img id='profilepicture' src='images/aboutus.png'  alt='Default Profile Pic'>";
                         } else {
-                            echo "<img id='profilepicture' class='image-rounded' src='uploads/" . $row['profile_image'] . "'  alt='Profile Pic'>";
+                            echo "<img id='profilepicture' src='uploads/" . $row['profile_image'] . "'  alt='Profile Pic'>";
                         }
                     }
                     ?>
@@ -182,7 +180,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 <a href="friend-list.php" class="close">+</a>
                             </div>
                             <div class="img">
-                                <img src="profile_images/<?php echo $user_data->user_image; ?>" alt="Profile image">
+                                <img src="images/<?php echo $user_data->user_image; ?>" alt="Profile image">
                             </div>
 
                             <h1><?php echo  $user_data->username; ?></h1>
@@ -204,25 +202,23 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 ?>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-4 img">
-                                <div style=margin:10px>
-                                    <br><br>
-                                    <h3><b>Name: </b><?php echo  $user_data->username; ?></h3>
-
-                                    <p>
-                                        <b>ID:</b> <?php echo  $user_data->id; ?><br>
-                                        <b>Age:</b> <?php echo  $user_data->age; ?><br>
-                                        <b>Gender:</b> <?php echo  $user_data->Gender ?><br>
-                                        <b>Email:</b> <?php echo  $user_data->user_email; ?>
-
-
-                                    </p>
+                        <div class="container">
+                            <div class="row" style="margin-left:50px">
+                                <div class="col-md-6 img">
 
                                     <div>
 
+                                        <br><br><br>
+                                        <h3><b>Name: </b><i><?php echo  $user_data->username; ?></i></h3>
 
+                                        <p>
+                                            <b>ID:</b> <?php echo  $user_data->id; ?><br>
+                                            <b>Email:</b> <?php echo  $user_data->user_email; ?><br>
+                                            <b>Gender:</b> <?php echo  $user_data->user_gender; ?><br>
+                                            <b>Age:</b> <?php echo  $user_data->user_age; ?><br>
+                                            <b>Country:</b> <?php echo  $user_data->user_country; ?><br>
+
+                                        </p>
                                     </div>
                                 </div>
                             </div>
