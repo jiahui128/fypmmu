@@ -32,7 +32,7 @@ if ($email != false && $password != false) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Song 18 - Profile</title>
+    <title>Song 17 - Profile</title>
 
     <!-- Font Awesome (Icons) CSS -->
 
