@@ -212,7 +212,6 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                         <h3><b>Name: </b><i><?php echo  $user_data->username; ?></i></h3>
 
                                         <p>
-                                            <b>ID:</b> <?php echo  $user_data->id; ?><br>
                                             <b>Email:</b> <?php echo  $user_data->user_email; ?><br>
                                             <b>Gender:</b> <?php echo  $user_data->user_gender; ?><br>
                                             <b>Age:</b> <?php echo  $user_data->user_age; ?><br>
