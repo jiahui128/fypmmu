@@ -177,7 +177,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                     <div class="profile_container">
                         <div class="inner_profile">
                             <div style="margin-bottom:20px;font-size:20px;">
-                                <a href="friend-list.php" class="close">+</a>
+                                <a href="friend-list.php" class="close" style="font-size: 45px;">+</a>
                             </div>
                             <div class="img">
                                 <img src="images/<?php echo $user_data->user_image; ?>" alt="Profile image">
