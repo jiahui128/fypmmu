@@ -8,51 +8,6 @@ class User{
     public function __construct($db_connection){
         $this->db = $db_connection;
     }
-	
-	// SIGNUP USER
-    function signup()
-    {
-		//If user submit the signup form 
-		if(isset($_POST['signup']))
-		{
-			$con = mysqli_connect("localhost","root","","frnd_req_system");
-		
-			$name = $_POST['username'];
-			$email = $_POST['email'];
-			$password = $_POST['password'];
-			$gender = $_POST['gender'];
-			$age = $_POST['age'];
-			$image = $_POST['file'];
-			$country = $_POST['country'];
-		
-			$encpass = password_hash($password, PASSWORD_BCRYPT);
-			$userrandomid = rand(999999, 111111);		
-						
-			$sql_u = "SELECT * FROM users WHERE username='$name'";
-			$sql_e = "SELECT * FROM users WHERE user_email ='$email'";
-			$res_u = mysqli_query($con, $sql_u);
-			$res_e = mysqli_query($con, $sql_e);
-
-			if (mysqli_num_rows($res_u) > 0) {
-				if(mysqli_num_rows($res_e) > 0)
-				{
-					$_SESSION['status'] = "Your Name or Email is Already Exists!";
-				}
-				else
-				{
-					mysqli_query($con, "INSERT INTO users (id, username, user_email, user_password, user_gender, user_age, user_image, user_country) VALUES('$userrandomid', '$name','$email','$encpass', '$gender','$age', '$image', '$country')");
-				}
-				
-			}
-			else
-			{
-				mysqli_query($con, "INSERT INTO users (id, username, user_email, user_password, user_gender, user_age, user_image, user_country) VALUES('$userrandomid', '$name','$email','$encpass', '$gender','$age', '$image', '$country')");
-			
-			}
-           
-			header('Location: signup.php');
-		}
-	}
 
     // LOGIN USER
     function loginUser($email, $password)
@@ -76,7 +31,7 @@ class User{
                     ];
                     header('Location: profile.php');
                 } else {
-                    return ['errorMessage' => 'Invalid password'];
+                    return ['errorMessage' => 'Invalid password!'];
                 }
             } else {
                 return ['errorMessage' => 'Invalid email address!'];

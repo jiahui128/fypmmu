@@ -24,13 +24,15 @@ if (isset($_SESSION['email'])) {
     <div class="main_container login_signup_container">
 
         <h1>Sign Up</h1>
-
-        <form action="user.php" method="POST" autocomplete="" novalidate>
+		
+        <form action="" method="POST" autocomplete="" novalidate>
 
             <label for="username">Full Name</label>
-            <input type="text" id="username" name="username" spellcheck="false" placeholder="Enter your full name" required>
+            <input type="text" id="username" name="username" spellcheck="false" placeholder="Enter your full name"
+                required>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" spellcheck="false" placeholder="Enter your email address" required>
+            <input type="email" id="email" name="email" spellcheck="false" placeholder="Enter your email address"
+                required>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
             <label for="gender">Gender</label>
@@ -294,14 +296,56 @@ if (isset($_SESSION['email'])) {
                 </select><br><br>
             </div>
 
-            <input type="submit" name="signup" value="Sign Up">
+            <input type="submit" name="signupform" value="Sign Up">
         </form>
+		
+		<?php
+			//If user submit the signup form 
+		if(isset($_POST['signupform']))
+		{
+			$con = mysqli_connect("localhost","root","","frnd_req_system");
+		
+			$name = $_POST['username'];
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+			$gender = $_POST['gender'];
+			$age = $_POST['age'];
+			$image = $_POST['file'];
+			$country = $_POST['country'];
+		
+			$encpass = password_hash($password, PASSWORD_BCRYPT);
+			$userrandomid = rand(999999, 111111);		
+						
+			$sql_u = "SELECT * FROM users WHERE username='$name'";
+			$sql_e = "SELECT * FROM users WHERE user_email ='$email'";
+			$res_u = mysqli_query($con, $sql_u);
+			$res_e = mysqli_query($con, $sql_e);
 
-        <script>
-            function submitForm() {
-                alert("Data is added successfully!");
-            }
-        </script>
+			if (mysqli_num_rows($res_u) > 0) {
+				if(mysqli_num_rows($res_e) > 0)
+				{
+					$_SESSION['status'] = "Your Name or Email is Already Exists!";
+				}
+				else
+				{
+					mysqli_query($con, "INSERT INTO users (id, username, user_email, user_password, user_gender, user_age, user_image, user_country) VALUES('$userrandomid', '$name','$email','$encpass', '$gender','$age', '$image', '$country')");
+				}
+				
+			}
+			else
+			{
+				mysqli_query($con, "INSERT INTO users (id, username, user_email, user_password, user_gender, user_age, user_image, user_country) VALUES('$userrandomid', '$name','$email','$encpass', '$gender','$age', '$image', '$country')");
+			
+			}
+		}
+		
+		?>
+		
+		<script>
+				function submitForm() {
+					alert("Data is added successfully!");
+				}
+		</script>
 
     </div>
 </body>
