@@ -39,7 +39,16 @@ include('includes/navbar.php');
 			<div class="form-group">
                 <label>Song File</label>
 				<br>
-				<input type="file" name="file" placeholder="Enter Song File">
+				<input type="file" name="file" placeholder="Enter Song File" required>
+			</div>
+			<hr>
+					
+			<h4 style="color: #5d76c4;">Lyrics Information</h4>
+					
+			<div class="form-group">
+				<label>Lyrics File</label>
+				<br>
+				<input type="file" name="lyricsfile" placeholder="Enter Lyrics File">
 			</div>
         
         </div>
@@ -83,9 +92,9 @@ include('includes/navbar.php');
 		
 			<p><i class="fas fa-exclamation-circle fa-sm"></i> Completed songs are songs that were already uploaded in the main home system</p>
 		
-			<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
              Add New Song
-            </button>-->
+            </button>
 		</div>
   
   <div class="card-body">
