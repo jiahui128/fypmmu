@@ -3,36 +3,36 @@
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if ($email != false && $password != false) {
-	$sql = "SELECT * FROM usertable WHERE email = '$email'";
-	$run_Sql = mysqli_query($con, $sql);
-	if ($run_Sql) {
-		$fetch_info = mysqli_fetch_assoc($run_Sql);
-		$status = $fetch_info['status'];
-		$code = $fetch_info['code'];
-		if ($status == "verified") {
-			if ($code != 0) {
-				header('Location: reset-code.php');
-			}
-		} else {
-			header('Location: user-otp.php');
-		}
-	}
+    $sql = "SELECT * FROM usertable WHERE email = '$email'";
+    $run_Sql = mysqli_query($con, $sql);
+    if ($run_Sql) {
+        $fetch_info = mysqli_fetch_assoc($run_Sql);
+        $status = $fetch_info['status'];
+        $code = $fetch_info['code'];
+        if ($status == "verified") {
+            if ($code != 0) {
+                header('Location: reset-code.php');
+            }
+        } else {
+            header('Location: user-otp.php');
+        }
+    }
 } else {
-	header('Location: newhome.php');
+    header('Location: newhome.php');
 }
 
 require 'init.php';
 if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
-	$user_data = $user_obj->find_user_by_id($_SESSION['user_id']);
-	if ($user_data ===  false) {
-		header('Location: logout.php');
-		exit;
-	}
-	// FETCH ALL USERS WHERE ID IS NOT EQUAL TO MY ID
-	$all_users = $user_obj->all_users($_SESSION['user_id']);
+    $user_data = $user_obj->find_user_by_id($_SESSION['user_id']);
+    if ($user_data ===  false) {
+        header('Location: logout.php');
+        exit;
+    }
+    // FETCH ALL USERS WHERE ID IS NOT EQUAL TO MY ID
+    $all_users = $user_obj->all_users($_SESSION['user_id']);
 } else {
-	header('Location: logout.php');
-	exit;
+    header('Location: logout.php');
+    exit;
 }
 // REQUEST NOTIFICATION NUMBER
 $get_req_num = $frnd_obj->request_notification($_SESSION['user_id'], false);
@@ -128,9 +128,9 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
 
             <li style="font-size: 14px; color: white; font-weight: bold;">
                 <?php
-				$today = date("F j, Y");
-				echo $today;
-				?>
+                $today = date("F j, Y");
+                echo $today;
+                ?>
             </li>
 
         </ul>
@@ -142,16 +142,16 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
             <ul class="list">
                 <li style="text-align:center;">
                     <?php
-					$email = $_SESSION["email"];
-					$q = mysqli_query($con, "SELECT * FROM usertable WHERE email= '$email'");
-					while ($row = mysqli_fetch_assoc($q)) {
-						if ($row['profile_image'] == "") {
-							echo "<img id='profilepicture' class='image-rounded' src='images/aboutus.png'  alt='Default Profile Pic'>";
-						} else {
-							echo "<img id='profilepicture' class='image-rounded' src='uploads/" . $row['profile_image'] . "'  alt='Profile Pic'>";
-						}
-					}
-					?>
+                    $email = $_SESSION["email"];
+                    $q = mysqli_query($con, "SELECT * FROM usertable WHERE email= '$email'");
+                    while ($row = mysqli_fetch_assoc($q)) {
+                        if ($row['profile_image'] == "") {
+                            echo "<img id='profilepicture' class='image-rounded' src='images/aboutus.png'  alt='Default Profile Pic'>";
+                        } else {
+                            echo "<img id='profilepicture' class='image-rounded' src='uploads/" . $row['profile_image'] . "'  alt='Profile Pic'>";
+                        }
+                    }
+                    ?>
                     <h2 style="text-align:center;margin:10px;"><?php echo $fetch_info['name'] ?></h2>
                     <hr style="width:70%;">
                 </li>
@@ -173,10 +173,10 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 <li><label class="ch" id="pa1" for="p1">Home</label></li>
                                 <li><label class="ch" id="pa2" for="p2">Requests
                                         <span class="badge <?php
-															if ($get_req_num > 0) {
-																echo 'redBadge';
-															}
-															?>"><?php echo $get_req_num; ?>
+                                                            if ($get_req_num > 0) {
+                                                                echo 'redBadge';
+                                                            }
+                                                            ?>"><?php echo $get_req_num; ?>
                                     </label></a></li>
                                 <li><label class="ch" id="pa3" for="p3">Friends<span
                                             class="badge"><?php echo $get_frnd_num; ?></span></label></li>
@@ -189,18 +189,18 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 <h3>All Users</h3>
                                 <div class="usersWrapper">
                                     <?php
-									if ($all_users) {
-										foreach ($all_users as $row) {
-											echo '<div class="user_box">
+                                    if ($all_users) {
+                                        foreach ($all_users as $row) {
+                                            echo '<div class="user_box">
 													<div class="user_img"><img src="images/' . $row->user_image . '" alt="Profile image"></div>
 													<div class="user_info"><span>' . $row->username . '</span>
 														<span><a href="user_profile.php?id=' . $row->id . '" class="see_profileBtn" id="pa4" for="p4" style="color: white;">See profile</a></div>
 													</div>';
-										}
-									} else {
-										echo '<h4>There is no user!</h4>';
-									}
-									?>
+                                        }
+                                    } else {
+                                        echo '<h4>There is no user!</h4>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -212,18 +212,18 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 <h3>All request senders</h3>
                                 <div class="usersWrapper">
                                     <?php
-									if ($get_req_num > 0) {
-										foreach ($get_all_req_sender as $row) {
-											echo '<div class="user_box">
+                                    if ($get_req_num > 0) {
+                                        foreach ($get_all_req_sender as $row) {
+                                            echo '<div class="user_box">
 													<div class="user_img"><img src="images/' . $row->user_image . '" alt="Profile image"></div>
 													<div class="user_info"><span>' . $row->username . '</span>
 														<span><a href="user_profile.php?id=' . $row->sender . '" class="see_profileBtn" style="color: white;">See profile</a></div>
 													</div>';
-										}
-									} else {
-										echo '<h4>You have no friend requests!</h4>';
-									}
-									?>
+                                        }
+                                    } else {
+                                        echo '<h4>You have no friend requests!</h4>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -235,18 +235,18 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                 <h3>All friends</h3>
                                 <div class="usersWrapper">
                                     <?php
-									if ($get_frnd_num > 0) {
-										foreach ($get_all_friends as $row) {
-											echo '<div class="user_box">
+                                    if ($get_frnd_num > 0) {
+                                        foreach ($get_all_friends as $row) {
+                                            echo '<div class="user_box">
 													  <div class="user_img"><img src="images/' . $row->user_image . '" alt="Profile image"></div>
 													  <div class="user_info"><span>' . $row->username . '</span>
 														<span><a href="user_profile.php?id=' . $row->id . '" class="see_profileBtn" style="color: white;">See profile</a></div>
 													  </div>';
-										}
-									} else {
-										echo '<h4>You have no friends!</h4>';
-									}
-									?>
+                                        }
+                                    } else {
+                                        echo '<h4>You have no friends!</h4>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -255,24 +255,24 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                         <!--friends profile-->
                         <div class="page" id="page4">
                             <div class="img">
-                                <img src="profile_images/<?php echo $user_data->user_image; ?>" alt="Profile image">
+                                <img src="images/<?php echo $user_data->user_image; ?>" alt="Profile image">
                             </div>
                             <h1><?php echo  $user_data->username; ?></h1>
                             <div class="actions">
                                 <p>How on earth to add this thing into our web oh</p>
                                 <br>
                                 <?php
-								if ($is_already_friends) {
-									echo '<a href="functions.php?action=unfriend_req&id=' . $user_data->id . '" class="req_actionBtn unfriend">Unfriend</a>';
-								} else if ($check_req_sender) {
-									echo '<a href="functions.php?action=cancel_req&id=' . $user_data->id . '" class="req_actionBtn cancleRequest">Cancel Request</a>';
-								} else if ($check_req_receiver) {
-									echo '<a href="functions.php?action=ignore_req&id=' . $user_data->id . '" class="req_actionBtn ignoreRequest">Decline</a>&nbsp;
+                                if ($is_already_friends) {
+                                    echo '<a href="functions.php?action=unfriend_req&id=' . $user_data->id . '" class="req_actionBtn unfriend">Unfriend</a>';
+                                } else if ($check_req_sender) {
+                                    echo '<a href="functions.php?action=cancel_req&id=' . $user_data->id . '" class="req_actionBtn cancleRequest">Cancel Request</a>';
+                                } else if ($check_req_receiver) {
+                                    echo '<a href="functions.php?action=ignore_req&id=' . $user_data->id . '" class="req_actionBtn ignoreRequest">Decline</a>&nbsp;
 										<a href="functions.php?action=accept_req&id=' . $user_data->id . '" class="req_actionBtn acceptRequest">Accept</a>';
-								} else {
-									echo '<a href="functions.php?action=send_req&id=' . $user_data->id . '" class="req_actionBtn sendRequest">Send Request</a>';
-								}
-								?>
+                                } else {
+                                    echo '<a href="functions.php?action=send_req&id=' . $user_data->id . '" class="req_actionBtn sendRequest">Send Request</a>';
+                                }
+                                ?>
                             </div>
                         </div>
                         <!-- end friends profile-->
