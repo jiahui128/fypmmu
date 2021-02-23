@@ -155,17 +155,18 @@ if ($email != false && $password != false) {
                         <br />Paradox Live<br />
                         Song: <br />P△R△DISE<br />
                         Artist: BAE <br />(Feat. ISSA)<br />
-                        Released: 2020</p>
+                        Released: 2020
+                    </p>
 
-                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="songs/bae3.mp3" role="button" download
+                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="songs/bae3.mp3"
+                            role="button" download
                             style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
                             MP3</a></p>
 
                     <br>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="pdf/songlyrics19.pdf"
+                            href="pdf/songlyrics18.pdf"
                             style="font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button"
                             download>Download Lyrics</a></p>
 
@@ -195,46 +196,46 @@ if ($email != false && $password != false) {
                 </div>
 
                 <p style="font-family: Times New Roman; font-weight: bold; text-align: center;">
-					Oh Oh Oh Oh Oh<br>
-					Oh Oh Oh Oh<br>
-					Oh Oh Oh Oh<br><br>
- 
-					So How You Doing Baby (Uh Ha)<br>
-					平凡な暮らしから Wanna Get A Away？<br>
-					世界中 Going Crazy (Uh Ha)<br>
-					Yeah　ウィルスも蔓延遊べない Days<br>
-					なら OK Just Press The プレイボタン<br>
-					Locate　繋がる Party の情景<br>
-					Oh Yeah Alright No Matter Where You At<br>
-					C’mon Get On The Ride<br><br>
- 
-					24/7 I’ll Be There For You<br>
-					キミの側に寄り添う<br>
-					地図に載ってないオアシスへと<br>
-					連れ出す Yeah<br>
-					どこにいくかより誰といくのか<br>
-					Baby Don’t You Worry I’m Always Here To Take You Out<br><br>
- 
-					No Matter Where We’re Feelin’ Good (Feelin’ Good)<br>
-					プレイボタンひとつで Hit Yo Groove<br>
-					踊れ Through The Night<br>
-					Welcome To The P△R△DISE<br><br>
- 
-					Don’t Be Shy Baby　おいでよ<br>
-					裸のキミを見せて Oh Yeah<br>
-					扉をあければ P△R△DISE<br>
-					So Come Along<br>
-					Yeah We Got It Going On<br><br>
- 
-					Oh Oh Oh Oh Oh<br>
-					Oh Oh Oh Oh<br>
-					We Gonna Have A Good Time<br>
-					Welcome To The P△R△DISE<br><br>
-					
-					Oh Oh Oh Oh Oh<br>
-					Oh Oh Oh Oh<br>
-					We Gonna Have A Good Time<br>
-					Welcome To The P△R△DISE<br><br>
+                    Oh Oh Oh Oh Oh<br>
+                    Oh Oh Oh Oh<br>
+                    Oh Oh Oh Oh<br><br>
+
+                    So How You Doing Baby (Uh Ha)<br>
+                    平凡な暮らしから Wanna Get A Away？<br>
+                    世界中 Going Crazy (Uh Ha)<br>
+                    Yeah　ウィルスも蔓延遊べない Days<br>
+                    なら OK Just Press The プレイボタン<br>
+                    Locate　繋がる Party の情景<br>
+                    Oh Yeah Alright No Matter Where You At<br>
+                    C’mon Get On The Ride<br><br>
+
+                    24/7 I’ll Be There For You<br>
+                    キミの側に寄り添う<br>
+                    地図に載ってないオアシスへと<br>
+                    連れ出す Yeah<br>
+                    どこにいくかより誰といくのか<br>
+                    Baby Don’t You Worry I’m Always Here To Take You Out<br><br>
+
+                    No Matter Where We’re Feelin’ Good (Feelin’ Good)<br>
+                    プレイボタンひとつで Hit Yo Groove<br>
+                    踊れ Through The Night<br>
+                    Welcome To The P△R△DISE<br><br>
+
+                    Don’t Be Shy Baby　おいでよ<br>
+                    裸のキミを見せて Oh Yeah<br>
+                    扉をあければ P△R△DISE<br>
+                    So Come Along<br>
+                    Yeah We Got It Going On<br><br>
+
+                    Oh Oh Oh Oh Oh<br>
+                    Oh Oh Oh Oh<br>
+                    We Gonna Have A Good Time<br>
+                    Welcome To The P△R△DISE<br><br>
+
+                    Oh Oh Oh Oh Oh<br>
+                    Oh Oh Oh Oh<br>
+                    We Gonna Have A Good Time<br>
+                    Welcome To The P△R△DISE<br><br>
                 </p>
 
             </div> <!-- End column 2 -->
@@ -330,9 +331,9 @@ const ap = new APlayer({
     listFolded: true,
     audio: [{
             name: 'P△R△DISE',
-			artist: 'BAE (Feat. ISSA)',
-			url: 'songs/bae3.mp3',
-			cover: 'images/bae3.jpg',
+            artist: 'BAE (Feat. ISSA)',
+            url: 'songs/bae3.mp3',
+            cover: 'images/bae3.jpg',
         },
 
     ]

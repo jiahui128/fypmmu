@@ -155,17 +155,18 @@ if ($email != false && $password != false) {
                         <br />Paradox Live<br />
                         Song: <br />BaNG!!!<br />
                         Artist: BAE<br />
-                        Released: 2019</p>
+                        Released: 2019
+                    </p>
 
-                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="songs/bae1.mp3" role="button" download
+                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="songs/bae1.mp3"
+                            role="button" download
                             style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
                             MP3</a></p>
 
                     <br>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="pdf/songlyrics17.pdf"
+                            href="pdf/songlyrics16.pdf"
                             style="font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button"
                             download>Download Lyrics</a></p>
 
@@ -197,101 +198,101 @@ if ($email != false && $password != false) {
 
                 <p style="font-family: Times New Roman; font-weight: bold; text-align: center;">
                     Everybody Let it Bang!<br>
-					B.A.E gonna Blow Your Brain!<br>
-					限界撃ち抜けBang!<br>
-					Let's Get Start it with Da BAE<br>
-					We the Best<br><br>
+                    B.A.E gonna Blow Your Brain!<br>
+                    限界撃ち抜けBang!<br>
+                    Let's Get Start it with Da BAE<br>
+                    We the Best<br><br>
 
-					My rhyme is damn exclusive<br>
-					他の Wack MC's は so bull shit<br>
-					僕は微笑みの貴公子<br>
-					撃ち抜くmusicのCupid<br>
-					좋습니까？ 나는 최고지(ちょすむにか なぬん ちぇごし)<br>
-					いつのまにか ハメる手口<br>
-					誰が一番かその体によ〜く教えてあげますよhoney<br><br>
+                    My rhyme is damn exclusive<br>
+                    他の Wack MC's は so bull shit<br>
+                    僕は微笑みの貴公子<br>
+                    撃ち抜くmusicのCupid<br>
+                    좋습니까？ 나는 최고지(ちょすむにか なぬん ちぇごし)<br>
+                    いつのまにか ハメる手口<br>
+                    誰が一番かその体によ〜く教えてあげますよhoney<br><br>
 
-					Rock Rock Y'All<br>
-					To the Beat Y'All<br>
-					皆How you doing?<br>
-					What's Up?<br>
-					このMicrophoneで劈くRapstar<br>
-					What's my Name!? SUZAKU<br>
-					譜面どうりじゃつまんねぇRoutine<br>
-					ブッ壊してLet's get stupid<br>
-					All you need is a 爆発だろ!?<br>
-					起こしたいのは革命だろ!?<br><br>
+                    Rock Rock Y'All<br>
+                    To the Beat Y'All<br>
+                    皆How you doing?<br>
+                    What's Up?<br>
+                    このMicrophoneで劈くRapstar<br>
+                    What's my Name!? SUZAKU<br>
+                    譜面どうりじゃつまんねぇRoutine<br>
+                    ブッ壊してLet's get stupid<br>
+                    All you need is a 爆発だろ!?<br>
+                    起こしたいのは革命だろ!?<br><br>
 
-					There's nothing to hide<br>
-					Just open your mind<br>
-					Tonight Tonight<br>
-					Baby<br>
-					Look up at the sky<br>
-					We are the starlight<br>
-					So bright So bright<br>
-					Stay there<br><br>
+                    There's nothing to hide<br>
+                    Just open your mind<br>
+                    Tonight Tonight<br>
+                    Baby<br>
+                    Look up at the sky<br>
+                    We are the starlight<br>
+                    So bright So bright<br>
+                    Stay there<br><br>
 
-					それぞれが放つ光<br>
-					Like a diamond one and only<br>
-					眠る才能全てを Show me<br>
-					閉じ込めずに Spread your feeling<br><br>
+                    それぞれが放つ光<br>
+                    Like a diamond one and only<br>
+                    眠る才能全てを Show me<br>
+                    閉じ込めずに Spread your feeling<br><br>
 
-					For once in your life<br>
-					本音で Collide<br>
-					Tonight Tonight<br><br>
+                    For once in your life<br>
+                    本音で Collide<br>
+                    Tonight Tonight<br><br>
 
-					Everybody Let it Bang!<br>
-					B.A.E gonna Blow Your Brain!<br>
-					限界撃ち抜けBang!<br>
-					Let's Get Start It with Da BAE<br>
-					We the Best<br><br>
+                    Everybody Let it Bang!<br>
+                    B.A.E gonna Blow Your Brain!<br>
+                    限界撃ち抜けBang!<br>
+                    Let's Get Start It with Da BAE<br>
+                    We the Best<br><br>
 
-					I'm Fresh<br>
-					I'm Tight<br>
-					自由に Living my life<br>
-					No Tag<br>
-					No price<br>
-					価値観はお金じゃない<br>
-					男とか女とかどうでもよくない？<br>
-					Fuck da ボーダーラインv
-					I gotta right to be me<br>
-					anZ That's my ID<br><br>
-	
-					SUZAKU anZに48<br>
-					All the FlavaがぶつかりBoom!アチー!<br>
-					It's Like Dopamine ＋ DopeなBeats<br>
-					一度ハマればCan't Get Over It<br>
-					HEY Yo B.A.E<br>
-					Right Down To The X.Y.Z<br>
-					Now C'mon<br>
-					自己解放ガンガンDo It<br>
-					込める弾丸 三つのBullet<br><br>
+                    I'm Fresh<br>
+                    I'm Tight<br>
+                    自由に Living my life<br>
+                    No Tag<br>
+                    No price<br>
+                    価値観はお金じゃない<br>
+                    男とか女とかどうでもよくない？<br>
+                    Fuck da ボーダーラインv
+                    I gotta right to be me<br>
+                    anZ That's my ID<br><br>
 
-					There's nothing to hide<br>
-					Just open your mind<br>
-					Tonight Tonight<br>
-					Baby<br>
-					Look up at the sky<br>
-					We are the starlight<br>
-					So bright So bright<br>
-					Stay there<br><br>
+                    SUZAKU anZに48<br>
+                    All the FlavaがぶつかりBoom!アチー!<br>
+                    It's Like Dopamine ＋ DopeなBeats<br>
+                    一度ハマればCan't Get Over It<br>
+                    HEY Yo B.A.E<br>
+                    Right Down To The X.Y.Z<br>
+                    Now C'mon<br>
+                    自己解放ガンガンDo It<br>
+                    込める弾丸 三つのBullet<br><br>
 
-					それぞれが放つ光<br>
-					Like a diamond one and only<br>
-					眠る才能全てを Show me<br>
-					閉じ込めずに Spread your feeling<br><br>
+                    There's nothing to hide<br>
+                    Just open your mind<br>
+                    Tonight Tonight<br>
+                    Baby<br>
+                    Look up at the sky<br>
+                    We are the starlight<br>
+                    So bright So bright<br>
+                    Stay there<br><br>
 
-					For once in your life<br>
-					本音で Collide<br>
-					Tonight Tonight<br><br>
+                    それぞれが放つ光<br>
+                    Like a diamond one and only<br>
+                    眠る才能全てを Show me<br>
+                    閉じ込めずに Spread your feeling<br><br>
 
-					Everybody Let it Bang!<br>
-					B.A.E gonna Blow Your Brain!<br>
-					限界撃ち抜けBang!<br>
-					Let's Get Start It with Da BAE<br>
-					We the Best<br><br>
+                    For once in your life<br>
+                    本音で Collide<br>
+                    Tonight Tonight<br><br>
 
-					Everybody Let it Bang!<br>
-					Everybody Let it Bang!<br><br>
+                    Everybody Let it Bang!<br>
+                    B.A.E gonna Blow Your Brain!<br>
+                    限界撃ち抜けBang!<br>
+                    Let's Get Start It with Da BAE<br>
+                    We the Best<br><br>
+
+                    Everybody Let it Bang!<br>
+                    Everybody Let it Bang!<br><br>
                 </p>
 
             </div> <!-- End column 2 -->

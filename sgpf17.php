@@ -155,17 +155,18 @@ if ($email != false && $password != false) {
                         <br />Paradox Live<br />
                         Song: <br />F△Bulous<br />
                         Artist: BAE<br />
-                        Released: 2021</p>
+                        Released: 2021
+                    </p>
 
-                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="songs/bae2.mp3" role="button" download
+                    <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a href="songs/bae2.mp3"
+                            role="button" download
                             style="text-align: left; font-family: Garamond; font-weight: bold; text-decoration: underline;">Download
                             MP3</a></p>
 
                     <br>
 
                     <p><i class='fa fa-download' style="text-decoration: none;">&nbsp;&nbsp;</i><a
-                            href="pdf/songlyrics18.pdf"
+                            href="pdf/songlyrics17.pdf"
                             style="font-family: Garamond; font-weight: bold; text-decoration: underline;" role="button"
                             download>Download Lyrics</a></p>
 
@@ -196,48 +197,48 @@ if ($email != false && $password != false) {
                 </div>
 
                 <p style="font-family: Times New Roman; font-weight: bold; text-align: center;">
-					My Life Is Brilliant (Hey!)<br>
-					I’m One In A Billion (Hey!)<br>
-					生き様だって絶対曲げない Opinion (Hey!)<br>
-					SUZAKU the Pheonix (Pheonix)<br>
-					Never Die Like Remix (Remix)<br>
-					You Can’t Stop Me Lovin’ Myself<br>
-					Cuz I’m so Genius Yeah<br><br>
+                    My Life Is Brilliant (Hey!)<br>
+                    I’m One In A Billion (Hey!)<br>
+                    生き様だって絶対曲げない Opinion (Hey!)<br>
+                    SUZAKU the Pheonix (Pheonix)<br>
+                    Never Die Like Remix (Remix)<br>
+                    You Can’t Stop Me Lovin’ Myself<br>
+                    Cuz I’m so Genius Yeah<br><br>
 
-					Be Me Be Me Ey Just Be Me<br>
-					生まれ変わったって Wanna Be Me<br>
-					誰かのコピーなんて Cheesy<br>
-					生きたいように生きなきゃ No Meaning<br>
-					クラスの隅っこの Lonely One<br>
-					いつか光り出す Only One<br>
-					枠からハミ出せ　殻から飛びBussin’<br><br>
+                    Be Me Be Me Ey Just Be Me<br>
+                    生まれ変わったって Wanna Be Me<br>
+                    誰かのコピーなんて Cheesy<br>
+                    生きたいように生きなきゃ No Meaning<br>
+                    クラスの隅っこの Lonely One<br>
+                    いつか光り出す Only One<br>
+                    枠からハミ出せ　殻から飛びBussin’<br><br>
 
-					I’m Just The Way I’m<br>
-					後ろ指も I don’t care<br>
-					Some People Say I’m Wrong<br>
-					But 신경 쓰지 않래<br>
-					誰かの基準じゃない<br>
-					Only One This Is My Style<br>
-					I’m Gonna Be who I Wanna Be<br><br>
+                    I’m Just The Way I’m<br>
+                    後ろ指も I don’t care<br>
+                    Some People Say I’m Wrong<br>
+                    But 신경 쓰지 않래<br>
+                    誰かの基準じゃない<br>
+                    Only One This Is My Style<br>
+                    I’m Gonna Be who I Wanna Be<br><br>
 
-					誰よりも I’m so<br>
-					F△Bulous! F△Bulous!<br>
-					ありのまま You’re so<br>
-					F△Bulous! F△Bulous!<br>
-					ブレない生き様で<br>
-					Coming Out! Coming Out!<br>
-					One & Only We All<br>
-					F△Bulous! F△Bulous!<br>
-					Never Lose yourself Believe It<br><br>
+                    誰よりも I’m so<br>
+                    F△Bulous! F△Bulous!<br>
+                    ありのまま You’re so<br>
+                    F△Bulous! F△Bulous!<br>
+                    ブレない生き様で<br>
+                    Coming Out! Coming Out!<br>
+                    One & Only We All<br>
+                    F△Bulous! F△Bulous!<br>
+                    Never Lose yourself Believe It<br><br>
 
-					Shout out! Na na na<br>
-					Shout out! Na na na<br>
-					Shout out! Na na na<br>
-					誰よりも I’m So<br>
-					F△Bulous! F△Bulous!<br>
-					ありのまま You’re so<br>
-					F△Bulous! F△Bulous!<br>
-					So be yourself<br><br>
+                    Shout out! Na na na<br>
+                    Shout out! Na na na<br>
+                    Shout out! Na na na<br>
+                    誰よりも I’m So<br>
+                    F△Bulous! F△Bulous!<br>
+                    ありのまま You’re so<br>
+                    F△Bulous! F△Bulous!<br>
+                    So be yourself<br><br>
                 </p>
 
             </div> <!-- End column 2 -->
@@ -333,9 +334,9 @@ const ap = new APlayer({
     listFolded: true,
     audio: [{
             name: 'F△Bulous',
-			artist: 'BAE',
-			url: 'songs/bae2.mp3',
-			cover: 'images/bae2.jpg',
+            artist: 'BAE',
+            url: 'songs/bae2.mp3',
+            cover: 'images/bae2.jpg',
         },
 
     ]
