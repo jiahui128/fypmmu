@@ -120,7 +120,7 @@ if ($email != false && $password != false) {
                     <div class="col-md-4 col-sm-4">
 
                         <div class="aboutus">
-                            <img class="about" src="images/weichin.jpeg" alt="">
+                            <img class="about" src="images/Weichin.png" height="120px" alt="">
                             <br>
                             <strong>Tan Wei Chin</strong>
                         </div>
