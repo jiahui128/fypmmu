@@ -25,6 +25,7 @@ if (isset($_GET['action']) && isset($_GET['id'])) {
                 // CHECK IS REQUEST ALREADY SENT OR NOT
                 // is_request_already_sent() FUNCTION RETURN TRUE OR FLASE
                 if ($frnd_obj->is_request_already_sent($my_id, $user_id)) {
+
                     redirect_to_profile();
                 }
                 // CHECK IF THIS ID IS ALREADY IN MY FRIENDS LIST.

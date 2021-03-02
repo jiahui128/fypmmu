@@ -160,13 +160,15 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                 <li><a href="friend-list.php" id="active"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend
                         List</a></li>
                 <li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
+                <li><a href="requesthistory.php"><i style='margin-right:10px;' class='far'>&#xf017;</i>Request
+                        History</a></li>
             </ul>
             <div class="word">
                 <div style="width:80%;float:right;">
                     <div class="profile_container">
-                        <input type="radio" name="img" id="p1" checked>
+                        <input type="radio" name="img" id="p1">
                         <input type="radio" name="img" id="p2">
-                        <input type="radio" name="img" id="p3">
+                        <input type="radio" name="img" id="p3" checked>
                         <input type="radio" name="img" id="p4">
                         <nav>
                             <ul style="width:100%;height:5%;float:center;">
@@ -268,7 +270,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                                     echo '<a href="functions.php?action=cancel_req&id=' . $user_data->id . '" class="req_actionBtn cancleRequest">Cancel Request</a>';
                                 } else if ($check_req_receiver) {
                                     echo '<a href="functions.php?action=ignore_req&id=' . $user_data->id . '" class="req_actionBtn ignoreRequest">Decline</a>&nbsp;
-										<a href="functions.php?action=accept_req&id=' . $user_data->id . '" class="req_actionBtn acceptRequest">Accept</a>';
+										<a href="functions.php?action=accept_req&id=' . $user_data->id . '" onclick="document.getElementById("p3").checked=true;" class="req_actionBtn acceptRequest">Accept</a>';
                                 } else {
                                     echo '<a href="functions.php?action=send_req&id=' . $user_data->id . '" class="req_actionBtn sendRequest">Send Request</a>';
                                 }

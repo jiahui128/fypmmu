@@ -171,6 +171,8 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                 <li><a href="friend-list.php" id="active"><i style="margin-right:5px;" class='fas'>&#xf500;</i>Friend
                         list</a></li>
                 <li><a href="personal-playlist.php"><i class='fab'>&#xf3b5;</i>Personal Playlist</a></li>
+                <li><a href="requesthistory.php"><i style='margin-right:10px;' class='far'>&#xf017;</i>Request
+                        History</a></li>
             </ul>
             <div class="word">
                 <div style="width:80%;float:right;">
@@ -190,14 +192,14 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
 
                                 <?php
                                 if ($is_already_friends) {
-                                    echo '<a href="functions.php?action=unfriend_req&id=' . $user_data->id . '" class="req_actionBtn unfriend">Unfriend</a>';
+                                    echo '<a href="functions.php?action=unfriend_req&id=' . $user_data->id . '" class="req_actionBtn unfriend" onclick="alert(\'You are not friend now!\')";>Unfriend</a>';
                                 } elseif ($check_req_sender) {
-                                    echo '<a href="functions.php?action=cancel_req&id=' . $user_data->id . '" class="req_actionBtn cancleRequest">Cancel Request</a>';
+                                    echo '<a href="functions.php?action=cancel_req&id=' . $user_data->id . '" class="req_actionBtn cancleRequest" onclick="alert(\'Your request has been canceled!\')";>Cancel Request</a>';
                                 } elseif ($check_req_receiver) {
-                                    echo '<a href="functions.php?action=ignore_req&id=' . $user_data->id . '" class="req_actionBtn ignoreRequest">Decline</a>&nbsp;
-										<a href="functions.php?action=accept_req&id=' . $user_data->id . '" class="req_actionBtn acceptRequest">Accept</a>';
+                                    echo '<a href="functions.php?action=ignore_req&id=' . $user_data->id . '" class="req_actionBtn ignoreRequest" onclick="alert(\'You had rejected the friend request!\')";>Decline</a>&nbsp;
+										<a href="functions.php?action=accept_req&id=' . $user_data->id . '" class="req_actionBtn acceptRequest" onclick="acceptf()">Accept</a>';
                                 } else {
-                                    echo '<a href="functions.php?action=send_req&id=' . $user_data->id . '" class="req_actionBtn sendRequest">Send Request</a>';
+                                    echo '<a href="functions.php?action=send_req&id=' . $user_data->id . '" class="req_actionBtn sendRequest" onclick="alert(\'Your request has been send!\')";>Send Request</a>';
                                 }
                                 ?>
                             </div>
@@ -228,5 +230,46 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
         </form>
     </div>
 </body>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+//Scroll top button
+//Get the button
+var mybutton = document.getElementById("myBtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
 
 </html>
