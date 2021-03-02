@@ -172,7 +172,7 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                         <input type="radio" name="img" id="p4">
                         <nav>
                             <ul style="width:100%;height:5%;float:center;">
-                                <li><label class="ch" id="pa1" for="p1">Home</label></li>
+                                <li><label class="ch" id="pa1" for="p1">Users</label></li>
                                 <li><label class="ch" id="pa2" for="p2">Requests
                                         <span class="badge <?php
                                                             if ($get_req_num > 0) {
