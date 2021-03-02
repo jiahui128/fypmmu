@@ -176,6 +176,7 @@ if ($email != false && $password != false) {
                     <p>
                         <a class="btn btn-primary btn-xs" href="sgpf17.php" role="button">Previous</a>
                         <a class="btn btn-primary btn-xs" href="playlist.php" role="button">Playlist</a>
+                        <a class="btn btn-primary btn-xs" href="sgpf19.php" role="button">Next</a>
                     </p>
 
                 </div> <!-- End Col 1 -->
