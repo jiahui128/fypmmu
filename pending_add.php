@@ -47,7 +47,7 @@ include('includes/navbar.php');
 					<div class="form-group">
 						<label>Song File</label>
 						<br>
-						<input type="file" name="file" placeholder="Enter Song File" required>
+						<input type="file" name="file" placeholder="Enter Song File" accept=".mp3" required>
 					</div>
 					
 					<hr>
@@ -61,7 +61,7 @@ include('includes/navbar.php');
 					<div class="form-group">
 						<label>Lyrics File</label>
 						<br>
-						<input type="file" name="lyricsfile" placeholder="Enter Lyrics File">
+						<input type="file" name="lyricsfile" placeholder="Enter Lyrics File" accept=".pdf">
 					</div>
         
 				</div>

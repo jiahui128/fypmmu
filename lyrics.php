@@ -38,33 +38,42 @@ $connection = mysqli_connect("localhost","root","","songform");
 if(isset($_POST['updatebtn']))
 {
     $id = $_POST['edit_id'];
-    $no = $_POST['edit_no'];
-    $name = $_POST['edit_name'];
-	$artist = $_POST['edit_artist'];
     $status = "Pending";
 	$file = $_POST['edit_file'];
-
-    $query = "UPDATE lyricstable SET lyrics_no = '$no', lyrics_song='$name', lyrics_status='$status', lyrics_files='$file' WHERE lyrics_id='$id' ";
 	
-	$query_run = mysqli_query($connection,$query);
+	$sql_n = "SELECT * FROM lyricstable WHERE lyrics_files='$lyricsfile'";
+	$res_n = mysqli_query($connection, $sql_n);
 	
-    if($query_run)
-    {
-        $_SESSION['success'] = "Your Data is Updated";
-		//check if file no null
-		$status2="Completed";
-		$null=NULL;
-		$sta="UPDATE lyricstable SET lyrics_status='$status2' WHERE lyrics_id='$id' AND lyrics_files!='$null'";
-		$result=mysqli_query($connection,$sta);
-		if($result)
-			mysqli_query($connection,"UPDATE songtable SET song_status='$status2' WHERE song_artist='$artist' AND song_name='$name'");
-        header('Location: lyricstable.php');
-    }
-    else
-    {
-        $_SESSION['status'] = "Your Data is NOT Updated";
-        header('Location: lyricstable.php');
-    }
+	if (mysqli_num_rows($res_n) > 0) 
+	{
+		$_SESSION['status'] = "This Lyrics File is Already Exists!";
+			
+		header('Location: lyricstable.php');
+	}
+	else 
+	{
+		$query = "UPDATE lyricstable SET lyrics_files='$file' WHERE lyrics_id='$id' ";
+		
+		$query_run = mysqli_query($connection,$query);
+		
+		if($query_run)
+		{
+			$_SESSION['success'] = "Your Data is Updated";
+			//check if file no null
+			$status2="Completed";
+			$null=NULL;
+			$sta="UPDATE lyricstable SET lyrics_status='$status2' WHERE lyrics_id='$id' AND lyrics_files!='$null'";
+			$result=mysqli_query($connection,$sta);
+			if($result)
+				mysqli_query($connection,"UPDATE songtable SET song_status='$status2' WHERE lyrics_id='$id' AND lyrics_no = '$no'");
+			header('Location: lyricstable.php');
+		}
+		else
+		{
+			$_SESSION['status'] = "Your Data is NOT Updated";
+			header('Location: lyricstable.php');
+		}
+	}
 }
 
 // Remove Lyrics

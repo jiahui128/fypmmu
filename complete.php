@@ -5,8 +5,8 @@ session_start();
 $connection = mysqli_connect("localhost","root","","songform");
 
 if(isset($_POST['registerbtn']))
-{ 		
-	$name = $_POST['name'];
+{ 
+    $name = $_POST['name'];
     $album = $_POST['album'];
     $artist = $_POST['artist'];
 	$file = $_POST['file'];
@@ -47,7 +47,7 @@ if(isset($_POST['registerbtn']))
 		{
 			$_SESSION['status'] = "This Song Name and Artist Name is Already Exists!";
 			
-			header('Location: pendingsongs.php');
+			header('Location: completesong.php');
 		}	
 		else
 		{
@@ -57,7 +57,7 @@ if(isset($_POST['registerbtn']))
 			
 			$_SESSION['success'] = "Completed Song and Lyrics Data Added";
 		
-			header('Location: pendingsongs.php');
+			header('Location: completesong.php');
 		}
 	}
 	else if (mysqli_num_rows($res_m) > 0) 
@@ -66,19 +66,19 @@ if(isset($_POST['registerbtn']))
 		{
 			$_SESSION['status'] = "This Song Name and Artist Name is Already Exists!";
 			
-			header('Location: pendingsongs.php');
+			header('Location: completesong.php');
 		}	
 		else if(mysqli_num_rows($res_n) > 0)
 		{
 			$_SESSION['status'] = "This Song File and Lyrics File is Already Exists!";
 			
-			header('Location: pendingsongs.php');
+			header('Location: completesong.php');
 		}
 		else
 		{
 				$_SESSION['status'] = "This Song File is Already Exists!";
 		
-				header('Location: pendingsongs.php');
+				header('Location: completesong.php');
 			
 		}
 	}
@@ -86,7 +86,7 @@ if(isset($_POST['registerbtn']))
 	{
 		$_SESSION['status'] = "This Lyrics File is Already Exists!";
 			
-		header('Location: pendingsongs.php');
+		header('Location: completesong.php');
 	}
 	else
 	{
@@ -96,8 +96,8 @@ if(isset($_POST['registerbtn']))
 		
 		$_SESSION['success'] = "Completed Song and Lyrics Data Added";
 	
-		header('Location: pendingsongs.php');
-	}                 
+		header('Location: completesong.php');
+	}  
 }
 
 if(isset($_POST['addbtn']))
@@ -203,26 +203,73 @@ if(isset($_POST['addbtn']))
 
 if(isset($_POST['updatebtn']))
 {
-    $id = $_POST['edit_id'];
+   $id = $_POST['edit_id'];
 	$no = $_POST['edit_no'];
     $name = $_POST['edit_name'];
     $album = $_POST['edit_album'];
     $artist = $_POST['edit_artist'];
 	$file = $_POST['edit_file'];
+	$status = "Pending";
+	
+	$sql_r = "SELECT * FROM recordedsong WHERE rsong_name='$name'";
+	$sql_m = "SELECT * FROM recordedsong WHERE rsong_files='$file'";
+	$sql_k = "SELECT * FROM recordedsong WHERE rsong_name='$name' AND rsong_artist='$artist'";
+	$res_r = mysqli_query($connection, $sql_r);
+	$res_m = mysqli_query($connection, $sql_m);
+	$res_k = mysqli_query($connection, $sql_k);
 
-    $query = "UPDATE recordedsong SET rsong_name='$name', rsong_no = '$no', rsong_album='$album', rsong_artist='$artist', rsong_files='$file' WHERE rsong_id='$id' ";
-    $query_run = mysqli_query($connection,$query);
+	if (mysqli_num_rows($res_r) > 0) 
+	{
+		if(mysqli_num_rows($res_k) > 0)
+		{
+			$_SESSION['status'] = "This Song Name and Artist Name are Already Existed!";
+			
+			header('Location: completesong.php');
+		}	
+		else if(mysqli_num_rows($res_m) > 0)
+		{
+			$_SESSION['status'] = "This Song File is Already Exists!";
+			
+			header('Location: completesong.php');
+		}
+		else
+		{
+			$query = "UPDATE recordedsong SET rsong_name='$name', rsong_no = '$no', rsong_album='$album', rsong_artist='$artist', rsong_files='$file' WHERE rsong_id='$id' ";
+			$query2 = "UPDATE lyricstable SET lyrics_no = '$no', lyrics_song='$name' , lyrics_artist = '$artist' WHERE lyrics_id='$id' ";
+			$query_run = mysqli_query($connection,$query);
+			$query_run2 = mysqli_query($connection,$query2);
 
-    if($query_run)
-    {
-        $_SESSION['success'] = "Your Data is Updated";
-        header('Location: completesong.php');
-    }
-    else
-    {
-        $_SESSION['status'] = "Your Data is NOT Updated";
-        header('Location: completesong.php');
-    }
+			if($query_run)
+			{
+				$_SESSION['success'] = "Your Data is Updated";
+				header('Location: completesong.php');
+			}
+			else
+			{
+				$_SESSION['status'] = "Your Data is NOT Updated";
+				header('Location: completesong.php');
+			}
+		
+		}
+	}
+	else
+	{
+		$query = "UPDATE recordedsong SET rsong_name='$name', rsong_no = '$no', rsong_album='$album', rsong_artist='$artist', rsong_files='$file' WHERE rsong_id='$id' ";
+		$query2 = "UPDATE lyricstable SET lyrics_no = '$no', lyrics_song='$name' , lyrics_artist = '$artist' WHERE lyrics_id='$id' ";
+		$query_run = mysqli_query($connection,$query);
+		$query_run2 = mysqli_query($connection,$query2);
+
+		if($query_run)
+		{
+			$_SESSION['success'] = "Your Data is Updated";
+			header('Location: completesong.php');
+		}
+		else
+		{
+			$_SESSION['status'] = "Your Data is NOT Updated";
+			header('Location: completesong.php');
+		}
+	}
 }
 
 //Remove Lyrics
@@ -232,8 +279,10 @@ if(isset($_POST['remove_btn']))
 	$situation = 1;
 	$query = "UPDATE recordedsong SET status='$situation' WHERE rsong_id='$id'";
     $query_run = mysqli_query($connection, $query);
+	$query2 = "UPDATE lyricstable SET lyrics_situation='$situation' WHERE lyrics_id='$id'";
+    $query_run2 = mysqli_query($connection, $query2);
 
-    if($query_run)
+    if($query_run && $query_run2)
     {
         $_SESSION['success'] = "Your Data is Removed";
         header('Location: removed_song.php');
@@ -253,8 +302,10 @@ if(isset($_POST['restore_btn']))
 	$situation = 0;
 	$query = "UPDATE recordedsong SET status='$situation' WHERE rsong_id='$id'";
     $query_run = mysqli_query($connection, $query);
+	$query2 = "UPDATE lyricstable SET lyrics_situation='$situation' WHERE lyrics_id='$id'";
+    $query_run2 = mysqli_query($connection, $query2);
 
-    if($query_run)
+    if($query_run && $query_run2)
     {
         $_SESSION['success'] = "Your Data is Restored";
         header('Location: completesong.php');
@@ -272,8 +323,10 @@ if(isset($_POST['delete_btn']))
 
     $query = "DELETE FROM recordedsong WHERE rsong_id='$id' ";
     $query_run = mysqli_query($connection, $query);
+	$query2 = "DELETE FROM lyricstable WHERE lyrics_id='$id'";
+    $query_run2 = mysqli_query($connection, $query2);
 
-    if($query_run)
+    if($query_run && $query_run2)
     {
         $_SESSION['success'] = "Your Data is DELETED";
         header('Location: completesong.php');

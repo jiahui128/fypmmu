@@ -31,23 +31,23 @@ include('includes/navbar.php');
                 <form action="lyrics.php" method="POST">
 
                     <input type="hidden" name="edit_id" value="<?php echo $row['lyrics_id'] ?>" >
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label>Lyrics No</label>
                         <input type="text" name="edit_no" value="<?php echo $row['lyrics_no']?>" class="form-control" placeholder="Enter Lyrics Number">
                     </div>
-                    <div class="form-group">
+						<div class="form-group">
                         <label>Song Name</label>
                         <input type="text" name="edit_name" value="<?php echo $row['lyrics_song']?>" class="form-control" placeholder="Enter Song Name">
                     </div>
 					<div class="form-group">
                         <label>Song Artist</label>
                         <input type="text" name="edit_artist" value="<?php echo $row['lyrics_artist']?>" class="form-control" placeholder="Enter Song Name">
-                    </div>
+                    </div>-->
 					
 					<div class="form-group">
                         <label>Lyrics File</label>
 						<br>
-						<input type="file" name="edit_file" value="<?php echo $row['lyrics_files']?>" placeholder="Enter Lyrics File">
+						<input type="file" name="edit_file" value="<?php echo $row['lyrics_files']?>" placeholder="Enter Lyrics File" accept=".pdf" required>
 					</div>
 					
                     <a href="lyricstable.php" class="btn btn-danger"> CANCEL </a>
