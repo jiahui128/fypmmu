@@ -3,22 +3,22 @@
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if ($email != false && $password != false) {
-  $sql = "SELECT * FROM usertable WHERE email = '$email'";
-  $run_Sql = mysqli_query($con, $sql);
-  if ($run_Sql) {
-    $fetch_info = mysqli_fetch_assoc($run_Sql);
-    $status = $fetch_info['status'];
-    $code = $fetch_info['code'];
-    if ($status == "verified") {
-      if ($code != 0) {
-        header('Location: reset-code.php');
-      }
-    } else {
-      header('Location: user-otp.php');
+    $sql = "SELECT * FROM usertable WHERE email = '$email'";
+    $run_Sql = mysqli_query($con, $sql);
+    if ($run_Sql) {
+        $fetch_info = mysqli_fetch_assoc($run_Sql);
+        $status = $fetch_info['status'];
+        $code = $fetch_info['code'];
+        if ($status == "verified") {
+            if ($code != 0) {
+                header('Location: reset-code.php');
+            }
+        } else {
+            header('Location: user-otp.php');
+        }
     }
-  }
 } else {
-  header('Location: newhome.php');
+    header('Location: newhome.php');
 }
 ?>
 
@@ -102,9 +102,9 @@ if ($email != false && $password != false) {
 
             <li style="font-size: 14px; color: white; font-weight: bold;">
                 <?php
-        $today = date("F j, Y");
-        echo $today;
-        ?>
+                $today = date("F j, Y");
+                echo $today;
+                ?>
             </li>
 
             <li class="drop">
@@ -112,7 +112,8 @@ if ($email != false && $password != false) {
                 <div class="dropdown-content">
                     <a href="profile.php">Profile</a>
                     <a href="edit-profile.php">Edit Account</a>
-                    <a href="friend-system.php">Friend List</a>
+                    <a href="friend-list.php">Friend List</a>
+                    <a href="requesthistory.php">Request History</a>
                 </div>
             </li>
 
@@ -182,6 +183,8 @@ if ($email != false && $password != false) {
                     <div class="amplitude-play-pause" id="play-pause"></div>
                     <div class="amplitude-next" id="next"></div>
                     <div class="amplitude-repeat" id="repeat"></div>
+
+
                 </div>
 
                 <div id="white-player-playlist-container">
@@ -233,6 +236,7 @@ if ($email != false && $password != false) {
                                 <div class="amplitude-next" id="playlist-next"></div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -424,27 +428,34 @@ if ($email != false && $password != false) {
                     Add To Playlist
                 </a>
             </div>
-			
-			<div class="song-to-add" song-to-add="15">
+
+            <div class="song-to-add" song-to-add="15">
                 <img src="images/bae1.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="15">
                     Add To Playlist
                 </a>
             </div>
-			
-			<div class="song-to-add" song-to-add="16">
+
+            <div class="song-to-add" song-to-add="16">
                 <img src="images/bae2.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="16">
                     Add To Playlist
                 </a>
             </div>
-			
-			<div class="song-to-add" song-to-add="17">
+
+            <div class="song-to-add" song-to-add="17">
                 <img src="images/bae3.jpg" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="17">
+                    Add To Playlist
+                </a>
+            </div>
+            <div class="song-to-add" song-to-add="18">
+                <img src="images/lonely.png" style="height: 250px;">
+
+                <a class="add-to-playlist-button" song-to-add="18">
                     Add To Playlist
                 </a>
             </div>
