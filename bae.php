@@ -234,6 +234,10 @@ if ($email != false && $password != false) {
             <li style="font-size: 14px; color: white; font-weight: bold;">
                 <a href="album.php">Album</a>
             </li>
+			
+			 <li style="font-size: 14px; color: white; font-weight: bold;">
+                <a href="playlist.php">Playlist</a>
+            </li>
 
         </ul>
 
@@ -281,185 +285,17 @@ if ($email != false && $password != false) {
                         <p style="font-family: Comic Sans MS; font-size: 12px;">Checkout our playlists to enjoy a
                             variety of popular songs to fit your mood. Enjoy your music anytime, anywhere.</p>
 
-                        <br>
-
                         <!-- New Albums are uploaded by the admins (Another webpage to add in) -->
 
-                        <h3>Updated Playlists</h3>
-
+                        <h3>Artist that you had searched : BAE</h3>
+						
                     </div>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="0">
-                        <img class="songimg" src="images/fireworks.jpg" alt="Fireworks">
-                    </a>
-
-                    <h4>Fireworks</h4>
-                    <p>DAOKO × Kenshi Yonezu</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="1">
-                        <img class="songimg" src="images/blackpink.jpg" alt="How You Like That">
-                    </a>
-
-                    <h4>How You Like That</h4>
-                    <p>Blackpink</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="2">
-                        <img class="songimg" src="images/白月光与朱砂痣.jpg" alt="白月光与朱砂痣">
-                    </a>
-
-                    <h4>白月光与朱砂痣</h4>
-                    <p>大籽</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="3">
-                        <img class="songimg" src="images/vibez.jpg" alt="Vibez">
-                    </a>
-
-                    <h4>Vibez</h4>
-                    <p>Zayn Malik</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="4">
-                        <img class="songimg" src="images/rfiy.jpg" alt="Rivers Flows In You">
-                    </a>
-
-                    <h4>Rivers Flows In You</h4>
-                    <p>Yiruma</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="5">
-                        <img class="songimg" src="images/X.jpg" alt="Photograph">
-                    </a>
-
-                    <h4>Photograph</h4>
-                    <p>Ed Sheeran</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="6">
-                        <img class="songimg" src="images/lovestory.png" style="height: 250px;" alt="Love Story">
-                    </a>
-
-                    <h4>Love Story</h4>
-                    <p>Talyor Swift</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="7">
-                        <img class="songimg" src="images/negaraku.jpg" alt="National Anthem">
-                    </a>
-
-                    <h4>Negaraku</h4>
-                    <p>Pierre-Jean de Béranger</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="8">
-                        <img class="songimg" src="images/sawako.jpg" alt="Kimi_Ni_Todoke">
-                    </a>
-
-                    <h4>Kimi Ni Todoke</h4>
-                    <p>Tanizawa Tomofumi</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="9">
-                        <img class="songimg" src="images/moana.jpg" alt="Moana Movie Clip">
-                    </a>
-
-                    <h4>Where You Are</h4>
-                    <p>Disney Music Vevo</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="10">
-                        <img class="songimg" src="images/every.jpg" alt="To The Moon">
-                    </a>
-
-                    <h4>Everything&#180s Alright</h4>
-                    <p>Laura Shigihara</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="11">
-                        <img class="songimg" src="images/beautyandthebeast.jpg" style="height: 250px;"
-                            alt="Beauty and the Beast">
-                    </a>
-
-                    <h4>Something There</h4>
-                    <p>Disney Music Vevo</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="12">
-                        <img class="songimg" src="images/jjlim.jpg" alt="Chinese Song">
-                    </a>
-
-                    <h4>One Thousand Years Later</h4>
-                    <p>Wayne Lin Jun Jie</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="13">
-                        <img class="songimg" src="images/yohime.jpg" style="height: 250px;" alt="Onmyoji Song">
-                    </a>
-
-                    <h4>As A Light Smoke</h4>
-                    <p>IRiS (Tomo)</p>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <a href="#" class="album-poster" data-switch="14">
-                        <img class="songimg" src="images/amazinggrace.jpg" alt="Amazing Grace">
-                    </a>
-
-                    <h4>Amazing Grace</h4>
-                    <p>John Newton</p>
 
                 </div>
 				
 				<div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="15">
+                    <a href="sgpf16.php" class="album-poster" data-switch="0">
                         <img class="songimg" src="images/bae1.jpg" alt="BaNG!!!">
                     </a>
 
@@ -470,7 +306,7 @@ if ($email != false && $password != false) {
 				
 				<div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="16">
+                    <a href="sgpf17.php" class="album-poster" data-switch="1">
                         <img class="songimg" src="images/bae2.jpg" width="250px" height="250px" alt="F△Bulous">
                     </a>
 
@@ -481,7 +317,7 @@ if ($email != false && $password != false) {
 				
 				<div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="17">
+                    <a href="sgpf18.php" class="album-poster" data-switch="2">
                         <img class="songimg" src="images/bae3.jpg" width="250px" height="250px" alt="P△R△DISE">
                     </a>
 
@@ -548,96 +384,7 @@ if ($email != false && $password != false) {
     const ap = new APlayer({
         container: document.getElementById('aplayer'),
         listFolded: true,
-        audio: [{
-                name: 'Fireworks', // SONG NAME
-                artist: 'DAOKO × Kenshi Yonezu', //ARTIST NAME
-                url: 'songs/fireworks.mp3', // PATH NAME AND SONG URL
-                cover: 'images/fireworks.jpg',
-            },
-            {
-                name: 'How You Like That',
-                artist: 'Blackpink',
-                url: 'songs/HowYouLikeThat.mp3',
-                cover: 'images/blackpink.jpg',
-            },
-            {
-                name: '白月光与朱砂痣',
-                artist: '大籽',
-                url: 'songs/白月光与朱砂痣.mp3',
-                cover: 'images/白月光与朱砂痣.jpg',
-            },
-            {
-                name: 'Vibez',
-                artist: 'Zayn Malik',
-                url: 'songs/vibez.mp3',
-                cover: 'images/vibez.jpg',
-            },
-            {
-                name: 'River Flows In You',
-                artist: 'Yiruma',
-                url: 'songs/riverflowsinyou.mp3',
-                cover: 'images/rfiy.jpg',
-            },
-            {
-                name: 'Photograph',
-                artist: 'Ed Sheeran',
-                url: 'songs/Photograph.mp3',
-                cover: 'images/X.jpg',
-            },
-            {
-                name: 'Love Story',
-                artist: 'Taylor Swift',
-                url: 'songs/LoveStory.mp3',
-                cover: 'images/lovestory.png',
-            },
-            {
-                name: 'Negaraku',
-                artist: 'Pierre-Jean de Béranger',
-                url: 'songs/Negaraku.mp3',
-                cover: 'images/negaraku.jpg',
-            },
-			{
-				name: 'Kimi Ni Todoke', 
-				artist: 'Tanizawa Tomofumi', 
-				url: 'songs/Kimi_Ni_Todoke.mp3', 
-				cover: 'images/sawako.jpg'
-			},
-			{
-				name: 'Where You Are',
-				artist: 'Disney Music Vevo',
-				url: 'songs/whereyouare.mp3',
-				cover: 'images/moana.jpg',
-			},
-			{
-				name: 'Everything is Alright',
-				artist: 'Laura Shigihara',
-				url: 'songs/every.mp3',
-				cover: 'images/every.jpg',
-			},
-			{
-				name: 'Something There',
-				artist: 'Disney Music Vevo',
-				url: 'songs/something.mp3',
-				cover: 'images/beautyandthebeast.jpg',
-			},
-			{
-				name: 'One Thousand Years Later',
-				artist: 'Wayne Lim Jun Jie',
-				url: 'songs/onethousandyears.mp3',
-				cover: 'images/jjlim.jpg',
-			},
-			{
-				name: 'As A Light Smoke',
-				artist: 'IRiS (Tomo)',
-				url: 'songs/onmyoji.mp3',
-				cover: 'images/yohime.jpg',
-			},
-			{
-				name: 'Amazing Grace',
-				artist: 'John Newton',
-				url: 'songs/amazinggrace.mp3',
-				cover: 'images/amazinggrace.jpg',
-			},
+        audio: [
 			{
 				name: 'BaNG!!!',
 				artist: 'BAE',

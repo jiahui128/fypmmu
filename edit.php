@@ -39,8 +39,8 @@ include('includes/navbar.php');
                 <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
             </div>
 			<div class="form-group">
-                <label> Phone No </label>
-                <input type="text" name="phoneno" class="form-control" placeholder="Enter Phone Number" required>
+                <label> Phone Number (Mobile Phone) </label>
+				<input type="tel" id="PhoneNumber" name="phoneno" class="form-control" placeholder="Enter Phone Number" minlength="10" required>
             </div>
 			<!--<div class="form-group">
                 <label> Gender </label>
@@ -183,6 +183,28 @@ include('includes/navbar.php');
 
 </div>
 <!-- /.container-fluid -->
+
+<script>
+const el = document.querySelector("#PhoneNumber");
+
+const littleClean = input => input.replace(/(\d)\D+|^[^\d+]/g, "$1")
+                                  .slice(0, 12);
+const bigClean = input => !input ? ""
+                                 : input.replace(/^\+(27)?/, "")
+                                        .padStart(10, "0")
+                                        .slice(0, 11);
+const format = clean => {
+    const [i, j] = [el.selectionStart, el.selectionEnd].map(i => 
+        clean(el.value.slice(0, i)).length
+    );
+    el.value = clean(el.value);
+    el.setSelectionRange(i, j);
+};
+
+el.addEventListener("input", () => format(littleClean));
+el.addEventListener("focus", () => format(bigClean));
+el.addEventListener("blur", () => format(bigClean));
+</script>
 
 
 </div>

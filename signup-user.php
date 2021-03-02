@@ -134,7 +134,7 @@
 					
 						<i class="fa fa-user icon"></i>
 						
-                        <input class="form-control" type="text" name="name" placeholder="Enter your username" required value="<?php echo $name ?>">
+                        <input class="form-control" type="text" name="name" placeholder="Enter your username" required value="<?php echo $name ?>" onkeypress="clsAlphaNoOnly(event)" onpaste="return false;">
                     </div>
 					
                     <div class="form-group input-container">
@@ -212,17 +212,6 @@
 		
     </div>
 	
-	<?php		
-			if(isset($_POST['signup']))
-			{
-				$userrandomid = rand(999999, 111111);
-						
-				mysqli_query($con, "INSERT INTO usertable (id) VALUES('$userrandomid')");
-			}
-				
-	?>
-	
-    
 </body>
 
 <script>
@@ -307,6 +296,17 @@
 			_class("policy-length")[0].classList.remove("active");
 		}
 		});
+		
+	function clsAlphaNoOnly (e) {  // Accept only alpha numerics, no special characters 
+    var regex = new RegExp("^[a-zA-Z0-9 ]+$");
+    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(str)) {
+        return true;
+    }
+
+    e.preventDefault();
+    return false;
+	}
 </script>
 
 </html>

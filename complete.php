@@ -203,7 +203,7 @@ if(isset($_POST['addbtn']))
 
 if(isset($_POST['updatebtn']))
 {
-   $id = $_POST['edit_id'];
+    $id = $_POST['edit_id'];
 	$no = $_POST['edit_no'];
     $name = $_POST['edit_name'];
     $album = $_POST['edit_album'];
@@ -255,7 +255,7 @@ if(isset($_POST['updatebtn']))
 	else
 	{
 		$query = "UPDATE recordedsong SET rsong_name='$name', rsong_no = '$no', rsong_album='$album', rsong_artist='$artist', rsong_files='$file' WHERE rsong_id='$id' ";
-		$query2 = "UPDATE lyricstable SET lyrics_no = '$no', lyrics_song='$name' , lyrics_artist = '$artist' WHERE lyrics_id='$id' ";
+		$query2 = "UPDATE lyricstable SET lyrics_no = '$no', lyrics_song='$name' , lyrics_artist = '$artist' WHERE lyrics_no='$no' ";
 		$query_run = mysqli_query($connection,$query);
 		$query_run2 = mysqli_query($connection,$query2);
 
