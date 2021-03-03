@@ -212,10 +212,8 @@ if(isset($_POST['updatebtn']))
 	$status = "Pending";
 	
 	$sql_r = "SELECT * FROM recordedsong WHERE rsong_name='$name'";
-	$sql_m = "SELECT * FROM recordedsong WHERE rsong_files='$file'";
 	$sql_k = "SELECT * FROM recordedsong WHERE rsong_name='$name' AND rsong_artist='$artist'";
 	$res_r = mysqli_query($connection, $sql_r);
-	$res_m = mysqli_query($connection, $sql_m);
 	$res_k = mysqli_query($connection, $sql_k);
 
 	if (mysqli_num_rows($res_r) > 0) 
@@ -226,12 +224,6 @@ if(isset($_POST['updatebtn']))
 			
 			header('Location: completesong.php');
 		}	
-		else if(mysqli_num_rows($res_m) > 0)
-		{
-			$_SESSION['status'] = "This Song File is Already Exists!";
-			
-			header('Location: completesong.php');
-		}
 		else
 		{
 			$query = "UPDATE recordedsong SET rsong_name='$name', rsong_no = '$no', rsong_album='$album', rsong_artist='$artist', rsong_files='$file' WHERE rsong_id='$id' ";
