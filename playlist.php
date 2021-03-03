@@ -179,11 +179,11 @@ if ($email != false && $password != false) {
             case "bae":
                 window.location.replace('bae.php');
                 break;
-            case "justin bieber":
-            case "benny blanco":
-            case "lonely":
-                window.location.replace('sgpf19.php');
-                break;
+                //case "justin bieber":
+                //case "benny blanco":
+                //case "lonely":
+                //  window.location.replace('sgpf19.php');
+                // break;
 
             default: //no keyword detected so we submit the form.
                 alert("Data not found! Please try again.");
@@ -499,17 +499,16 @@ if ($email != false && $password != false) {
 
                 </div>
 
-                <div class="col-md-3">
+                <!--<div class="col-md-3">
 
-                    <a href="#" class="album-poster" data-switch="0">
+                    <a href="#" class="album-poster" data-switch="18">
                         <img class="songimg" src="images/lonely.png" alt="Lonely">
                     </a>
 
                     <h4>Lonely</h4>
                     <p>Justin Bieber, Benny Blanco</p>
 
-                </div>
-
+                </div> -->
             </div>
 
         </div>
@@ -676,12 +675,12 @@ if ($email != false && $password != false) {
                 url: 'songs/bae3.mp3',
                 cover: 'images/bae3.jpg',
             },
-            {
-                name: 'Lonely',
-                artist: 'Justin Bieber, Benny Blanco',
-                url: 'songs/lonely.mp3',
-                cover: 'images/lonely.png',
-            },
+            // {
+            // name: 'Lonely',
+            //artist: 'Justin Bieber, Benny Blanco',
+            //url: 'songs/lonely.mp3',
+            // cover: 'images/lonely.png',
+            // },
 
         ]
     });

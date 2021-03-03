@@ -194,10 +194,10 @@ if ($email != false && $password != false) {
             case "issa":
                 window.location.replace('#popup16');
                 break;
-            case "Lonely":
-            case "Justin Bieber, Benny Blanco":
-                window.location.replace('#popup17');
-                break;
+                //case "Lonely":
+                //case "Justin Bieber, Benny Blanco":
+                //window.location.replace('#popup17');
+                // break;
 
             default: //no keyword detected so we submit the form.
                 alert("Data not found! Please try again.");
@@ -1270,7 +1270,7 @@ if ($email != false && $password != false) {
 
                 </div>
 
-                <div class="col-md-3">
+                <!--<div class="col-md-3">
 
                     <a href="#popup17" class="album-poster" data-switch="14">
                         <img class="songimg" src="album/ab10.jpg" alt="Lonely">
@@ -1314,229 +1314,229 @@ if ($email != false && $password != false) {
                                     <audio controls>
                                         <source src="songs/lonely.mp3">
                                     </audio>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                                </div>-->
 
             </div>
 
         </div>
-        <!--End Container-->
 
-        <br><br>
+    </div>
 
-        <!--<div id="aplayer"></div>-->
+    </div>
 
-        <footer style="text-align: center;">
-            <p>Posted By : SoFo Team</p>
-            <p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
-                / <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a
-                    href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
+    </div>
 
-            <small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights
-                Reserved.</small>
-        </footer>
+    </div>
+    <!--End Container-->
 
-        <!-- Jquery Link -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <br><br>
 
-        <!-- Bootstrap Link -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!--<div id="aplayer"></div>-->
 
-        <!-- APlayer Jquery link -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+    <footer style="text-align: center;">
+        <p>Posted By : SoFo Team</p>
+        <p>Contact Us : <a href="mailto:1181202878@student.mmu.edu.my">Email(Vivian Quek)</a>
+            / <a href="mailto:1181203410@student.mmu.edu.my">Email(Ng Jia Hui)</a> / <a
+                href="mailto:1191200801@student.mmu.edu.my">Email(Tan Wei Chin)</a></p>
 
-        <script>
-        // Latest Album
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+        <small style="font-size: 14px; font: 14px sans-serif;">&copy; Copyright 2020, SoFo Team. All Rights
+            Reserved.</small>
+    </footer>
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
+    <!-- Jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- Bootstrap Link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- APlayer Jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+    <script>
+    // Latest Album
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
                 }
             }
         }
+    }
 
-        // NOW I CLICK album-poster TO GET CURRENT SONG ID
-        $(".album-poster").on('click', function(e) {
-            var dataSwitchId = $(this).attr('data-switch');
-            //console.log(dataSwitchId);
+    // NOW I CLICK album-poster TO GET CURRENT SONG ID
+    $(".album-poster").on('click', function(e) {
+        var dataSwitchId = $(this).attr('data-switch');
+        //console.log(dataSwitchId);
 
-            // and now i use aplayer switch function see
-            ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+        // and now i use aplayer switch function see
+        ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
 
-            // aplayer play function
-            // when i click any song to play
-            ap.play();
+        // aplayer play function
+        // when i click any song to play
+        ap.play();
 
-            // click to slideUp player see
-            $("#aplayer").addClass('showPlayer');
-        });
+        // click to slideUp player see
+        $("#aplayer").addClass('showPlayer');
+    });
 
-        const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            listFolded: true,
-            audio: [{
-                    name: 'Fireworks', // SONG NAME
-                    artist: 'DAOKO × Kenshi Yonezu', //ARTIST NAME
-                    url: 'songs/fireworks.mp3', // PATH NAME AND SONG URL
-                    cover: 'images/fireworks.jpg',
-                },
-                {
-                    name: 'How You Like That',
-                    artist: 'Blackpink',
-                    url: 'songs/HowYouLikeThat.mp3',
-                    cover: 'images/blackpink.jpg',
-                },
-                {
-                    name: '白月光与朱砂痣',
-                    artist: '大籽',
-                    url: 'songs/白月光与朱砂痣.mp3',
-                    cover: 'images/白月光与朱砂痣.jpg',
-                },
-                {
-                    name: 'Vibez',
-                    artist: 'Zayn Malik',
-                    url: 'songs/vibez.mp3',
-                    cover: 'images/vibez.jpg',
-                },
-                {
-                    name: 'River Flows In You',
-                    artist: 'Yiruma',
-                    url: 'songs/riverflowsinyou.mp3',
-                    cover: 'images/rfiy.jpg',
-                },
-                {
-                    name: 'Photograph',
-                    artist: 'Ed Sheeran',
-                    url: 'songs/Photograph.mp3',
-                    cover: 'images/X.jpg',
-                },
-                {
-                    name: 'Love Story',
-                    artist: 'Taylor Swift',
-                    url: 'songs/LoveStory.mp3',
-                    cover: 'images/lovestory.png',
-                },
-                {
-                    name: 'Negaraku',
-                    artist: 'Pierre-Jean de Béranger',
-                    url: 'songs/Negaraku.mp3',
-                    cover: 'images/negaraku.jpg',
-                },
-                {
-                    name: 'Kimi Ni Todoke',
-                    artist: 'Tanizawa Tomofumi',
-                    url: 'songs/Kimi_Ni_Todoke.mp3',
-                    cover: 'images/sawako.jpg'
-                },
-                {
-                    name: 'Where You Are',
-                    artist: 'Disney Music Vevo',
-                    url: 'songs/whereyouare.mp3',
-                    cover: 'images/moana.jpg',
-                },
-                {
-                    name: 'Everything is Alright',
-                    artist: 'Laura Shigihara',
-                    url: 'songs/every.mp3',
-                    cover: 'images/every.jpg',
-                },
-                {
-                    name: 'Something There',
-                    artist: 'Disney Music Vevo',
-                    url: 'songs/something.mp3',
-                    cover: 'images/beautyandthebeast.jpg',
-                },
-                {
-                    name: 'One Thousand Years Later',
-                    artist: 'Wayne Lim Jun Jie',
-                    url: 'songs/onethousandyears.mp3',
-                    cover: 'images/jjlim.jpg',
-                },
-                {
-                    name: 'As A Light Smoke',
-                    artist: 'IRiS (Tomo)',
-                    url: 'songs/onmyoji.mp3',
-                    cover: 'images/yohime.jpg',
-                },
-                {
-                    name: 'Amazing Grace',
-                    artist: 'John Newton',
-                    url: 'songs/amazinggrace.mp3',
-                    cover: 'images/amazinggrace.jpg',
-                },
-                {
-                    name: 'BaNG!!!',
-                    artist: 'BAE',
-                    url: 'songs/bae1.mp3',
-                    cover: 'images/bae1.jpg',
-                },
-                //{
-                //name: 'Lonely',
-                //artist: 'Justin Bieber, Benny Blanco',
-                //url: 'songs/lonely.mp3',
-                //cover: 'images/lonely.png',
-                //},
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        listFolded: true,
+        audio: [{
+                name: 'Fireworks', // SONG NAME
+                artist: 'DAOKO × Kenshi Yonezu', //ARTIST NAME
+                url: 'songs/fireworks.mp3', // PATH NAME AND SONG URL
+                cover: 'images/fireworks.jpg',
+            },
+            {
+                name: 'How You Like That',
+                artist: 'Blackpink',
+                url: 'songs/HowYouLikeThat.mp3',
+                cover: 'images/blackpink.jpg',
+            },
+            {
+                name: '白月光与朱砂痣',
+                artist: '大籽',
+                url: 'songs/白月光与朱砂痣.mp3',
+                cover: 'images/白月光与朱砂痣.jpg',
+            },
+            {
+                name: 'Vibez',
+                artist: 'Zayn Malik',
+                url: 'songs/vibez.mp3',
+                cover: 'images/vibez.jpg',
+            },
+            {
+                name: 'River Flows In You',
+                artist: 'Yiruma',
+                url: 'songs/riverflowsinyou.mp3',
+                cover: 'images/rfiy.jpg',
+            },
+            {
+                name: 'Photograph',
+                artist: 'Ed Sheeran',
+                url: 'songs/Photograph.mp3',
+                cover: 'images/X.jpg',
+            },
+            {
+                name: 'Love Story',
+                artist: 'Taylor Swift',
+                url: 'songs/LoveStory.mp3',
+                cover: 'images/lovestory.png',
+            },
+            {
+                name: 'Negaraku',
+                artist: 'Pierre-Jean de Béranger',
+                url: 'songs/Negaraku.mp3',
+                cover: 'images/negaraku.jpg',
+            },
+            {
+                name: 'Kimi Ni Todoke',
+                artist: 'Tanizawa Tomofumi',
+                url: 'songs/Kimi_Ni_Todoke.mp3',
+                cover: 'images/sawako.jpg'
+            },
+            {
+                name: 'Where You Are',
+                artist: 'Disney Music Vevo',
+                url: 'songs/whereyouare.mp3',
+                cover: 'images/moana.jpg',
+            },
+            {
+                name: 'Everything is Alright',
+                artist: 'Laura Shigihara',
+                url: 'songs/every.mp3',
+                cover: 'images/every.jpg',
+            },
+            {
+                name: 'Something There',
+                artist: 'Disney Music Vevo',
+                url: 'songs/something.mp3',
+                cover: 'images/beautyandthebeast.jpg',
+            },
+            {
+                name: 'One Thousand Years Later',
+                artist: 'Wayne Lim Jun Jie',
+                url: 'songs/onethousandyears.mp3',
+                cover: 'images/jjlim.jpg',
+            },
+            {
+                name: 'As A Light Smoke',
+                artist: 'IRiS (Tomo)',
+                url: 'songs/onmyoji.mp3',
+                cover: 'images/yohime.jpg',
+            },
+            {
+                name: 'Amazing Grace',
+                artist: 'John Newton',
+                url: 'songs/amazinggrace.mp3',
+                cover: 'images/amazinggrace.jpg',
+            },
+            {
+                name: 'BaNG!!!',
+                artist: 'BAE',
+                url: 'songs/bae1.mp3',
+                cover: 'images/bae1.jpg',
+            },
+            //{
+            //name: 'Lonely',
+            //artist: 'Justin Bieber, Benny Blanco',
+            //url: 'songs/lonely.mp3',
+            //cover: 'images/lonely.png',
+            //},
 
-            ]
-        });
+        ]
+    });
 
-        //Scroll top button
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
+    //Scroll top button
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
         }
+    }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
-        //Album song lists to listen to song
-        //function togglePlay(video) {
-        //var audio = document.getElementsByTagName("audio")[0];
+    //Album song lists to listen to song
+    //function togglePlay(video) {
+    //var audio = document.getElementsByTagName("audio")[0];
 
-        //if (audio) {
-        //if (audio.paused) {
-        //	audio.play();
-        //	document.getElementById("button").src = "images/circled-pause.png";
-        //} else {
-        //	audio.pause();
-        //	document.getElementById("button").src = "images/playbutton.png";
-        //}
-        //}
-        //}
-        </script>
+    //if (audio) {
+    //if (audio.paused) {
+    //	audio.play();
+    //	document.getElementById("button").src = "images/circled-pause.png";
+    //} else {
+    //	audio.pause();
+    //	document.getElementById("button").src = "images/playbutton.png";
+    //}
+    //}
+    //}
+    </script>
 
 </body>
 

@@ -261,7 +261,6 @@ $get_frnd_num = $frnd_obj->get_all_friends($_SESSION['user_id'], false);
                             </div>
                             <h1><?php echo  $user_data->username; ?></h1>
                             <div class="actions">
-                                <p>How on earth to add this thing into our web oh</p>
                                 <br>
                                 <?php
                                 if ($is_already_friends) {

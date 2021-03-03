@@ -125,13 +125,13 @@ var songsToAdd = [
       "url": "songs/bae3.mp3",
       "cover_art_url": "images/bae3.jpg"
     }
-    {
-      "name": "Lonely",
-      "artist": "Justin Bieber, Benny Blanco",
-      "album": "JB6",
-      "url": "songs/lonely.mp3",
-      "cover_art_url": "images/lonely.png"
-    }
+    //{
+      //"name": "Lonely",
+     // "artist": "Justin Bieber, Benny Blanco",
+     // "album": "JB6",
+     // "url": "songs/lonely.mp3",
+      //"cover_art_url": "images/lonely.png"
+   // }
 ];
 
 Amplitude.init({

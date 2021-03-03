@@ -452,13 +452,13 @@ if ($email != false && $password != false) {
                     Add To Playlist
                 </a>
             </div>
-            <div class="song-to-add" song-to-add="18">
+            <!--<div class="song-to-add" song-to-add="18">
                 <img src="images/lonely.png" style="height: 250px;">
 
                 <a class="add-to-playlist-button" song-to-add="18">
                     Add To Playlist
                 </a>
-            </div>
+            </div>-->
 
         </div>
     </div>
