@@ -16,8 +16,10 @@ if(isset($_POST['registerbtn']))
 	
 	$sql_r = "SELECT * FROM register WHERE admin_email='$email'";
 	$sql_n = "SELECT * FROM register WHERE admin_email='$email' AND admin_name='$adminname'";
+	$sql_q = "SELECT * FROM register WHERE admin_phoneno='$phoneno'";
 	$res_r = mysqli_query($connection, $sql_r);
 	$res_n = mysqli_query($connection, $sql_n);
+	$res_q = mysqli_query($connection, $sql_q);
 	
 	if (mysqli_num_rows($res_r) > 0) 
 	{
@@ -27,7 +29,13 @@ if(isset($_POST['registerbtn']))
 	}
 	else if (mysqli_num_rows($res_n) > 0) 
 	{
-		$_SESSION['status'] = "This Admin Email and Admin Name is Already Exists!";
+		$_SESSION['status'] = "This Admin Email and Admin Name are Already Existed!";
+		
+		header('Location: edit.php');
+	}
+	else if (mysqli_num_rows($res_q) > 0) 
+	{
+		$_SESSION['status'] = "This Phone Number is Already Existed!";
 		
 		header('Location: edit.php');
 	}
