@@ -1,7 +1,7 @@
 INSERT INTO recordedsong (rsong_id, rsong_no, rsong_name, rsong_album, rsong_artist, rsong_files) VALUES
-			('101', '1', 'Fireworks', 'UCHIAGE HANABI', 'DAOKO × Kenshi Yonezu', 'Fireworks.mp3'),
+			('101', '1', 'Fireworks', 'UCHIAGE HANABI', 'DAOKO x Kenshi Yonezu', 'fireworks.mp3'),
 			('102', '2', 'How You Like That', 'The Album', 'Blackpink', 'HowYouLikeThat.mp3'),
-			('103', '3', '白月光与朱砂痣', '大籽', '大籽', '白月光与朱砂痣.mp3'),
+			('103', '3', 'White Moon', 'Da Zi', 'Da Zi', 'whitemoon.mp3'),
 			('104', '4', 'Vibez', 'Nobody Is Listening', 'Zayn Malik', 'vibez.mp3'),
 			('105', '5', 'River Flows In You', 'First Love', 'Yiruma', 'riverflowsinyou.mp3'),
 			('106', '6', 'Photograph', 'X', 'Ed Sheeran', 'Photograph.mp3'),
